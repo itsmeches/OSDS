@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Filament\Resources\Institutions;
+
+use App\Filament\Resources\Institutions\Pages\CreateInstitution;
+use App\Filament\Resources\Institutions\Pages\EditInstitution;
+use App\Filament\Resources\Institutions\Pages\ListInstitutions;
+use App\Filament\Resources\Institutions\Schemas\InstitutionForm;
+use App\Filament\Resources\Institutions\Tables\InstitutionsTable;
+use App\Models\Institution;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class InstitutionResource extends Resource
+{
+    protected static ?string $model = Institution::class;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    public static function form(Schema $schema): Schema
+    {
+        return InstitutionForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return InstitutionsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListInstitutions::route('/'),
+            'create' => CreateInstitution::route('/create'),
+            'edit' => EditInstitution::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+        $regionIds = $user?->regionAssignments()->whereNull('revoked_at')->pluck('region_id') ?? collect();
+
+        return parent::getEloquentQuery()->where(function (Builder $query) use ($user, $regionIds): void {
+            $query->whereIn('primary_region_id', $regionIds)
+                ->orWhereHas('representatives', fn (Builder $representatives) => $representatives->whereKey($user?->id)->whereNull('institution_representatives.revoked_at'));
+        });
+    }
+}
