@@ -22,6 +22,18 @@ Laravel 13, PHP 8.3 or newer, Filament 5, Livewire 4, Blade, Tailwind CSS 4, Pos
 6. Run `npm run build`, then `php artisan test`. Run `vendor/bin/pint --test` to check formatting.
 7. Start the app with `php artisan serve` and, for CSS development, `npm run dev` in another terminal. By default the landing page is at `http://127.0.0.1:8000/`, health at `/up`, and the Filament panel at `/admin`.
 
+### Current Windows portable environment
+
+The Phase 1 tools on this workstation are portable and were not added to the system `PATH`. In a new PowerShell window, run the following from the repository root before using `php`, `composer`, `node`, or `npm`:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+. .\scripts\Enter-DevShell.ps1
+.\scripts\Start-LocalPostgres.ps1
+```
+
+The policy change applies only to the current PowerShell window. The leading dot and space on the second command are required: they load the tool paths into that session. The third command starts the local PostgreSQL server when needed. You can then run `php artisan test`, `npm run build`, or `php artisan serve`. These helpers depend on tools under the Windows temporary directory; install the prerequisites normally if that directory is cleared.
+
 The panel login route is available to active users with the explicit `platform.admin.access` permission. SCHOOL fixtures do not receive it. Resource policies also require active region or institution scope; a role name alone never grants nationwide access.
 
 ### Synthetic development fixtures
