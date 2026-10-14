@@ -51,5 +51,8 @@ class DevelopmentFixtureSeeder extends Seeder
                 );
             }
         }
+
+        $this->call(QuestionnaireReferenceSeeder::class);
+        $this->call(SyntheticQuestionnaireSeeder::class);
     }
 }

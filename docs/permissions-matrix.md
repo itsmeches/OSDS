@@ -1,6 +1,6 @@
 # Provisional account and permission matrix
 
-**Phase 2 refinement, 14 October 2026.** These are conditionally approved technical defaults for implementation and testing. They are not final CHED policy and confer no COR, ACSA, certificate, registry, approval, signing, issuance, export, or RA 11180 authority.
+**Phase 3A checkpoint, 14 October 2026.** These are approved technical defaults for implementation and synthetic testing. They are not final CHED policy and confer no COR, ACSA validation, certificate, registry, approval, signing, issuance, export, or RA 11180 authority.
 
 The five roles do not inherit from one another. Every operation requires an explicit permission plus current region, institution, or nationwide scope. Nationwide visibility is never implied by a role.
 
@@ -30,6 +30,21 @@ Target-specific creation permissions are configured in `config/account-governanc
 - Lifecycle: `accounts.verify.school`, `accounts.activate`, `accounts.suspend`, `accounts.deactivate`, `accounts.reactivate`.
 - Delegation: `roles.assign`, `region_scopes.assign`, `region_scopes.revoke`, `institution_representatives.assign`, `institution_representatives.revoke`, `nationwide_scopes.assign`, `nationwide_scopes.revoke`.
 - Audit: `audit.view`, `audit.view.national`.
+- Questionnaire configuration: `questionnaires.view`, `questionnaires.draft.manage`, `questionnaires.review.submit`, `questionnaires.review`, `questionnaires.publish.sandbox`, `questionnaires.retire`, `questionnaires.preview.sandbox`, `questionnaires.publication.view`.
+
+## Questionnaire configuration
+
+| Action | Super User | Admin | OSDS | CHEDRO | SCHOOL |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| View configuration | Deny | Allow | Allow | Deny | Deny |
+| Create/edit/reorder draft | Deny | Deny | Allow | Deny | Deny |
+| Submit exact versions for review | Deny | Deny | Allow | Deny | Deny |
+| Approve/reject reviewed hash | Deny | Allow | Deny | Deny | Deny |
+| Publish to synthetic sandbox | Deny | Allow | Deny | Deny | Deny |
+| Preview synthetic manifest | Deny | Allow | Allow | Deny | Deny |
+| Retire sandbox manifest | Deny | Allow | Deny | Deny | Deny |
+
+Super User deliberately receives no questionnaire permission through its role bundle. Production publication has no permission, channel, or service in Phase 3A.
 
 `users.manage` remains for backward-compatible directory editing. It does not by itself authorize account creation, role assignment, lifecycle changes, or scope delegation.
 

@@ -29,4 +29,12 @@ enum FoundationPermission: string
     case RevokeInstitutionRepresentatives = 'institution_representatives.revoke';
     case ViewAudit = 'audit.view';
     case ViewNationalAudit = 'audit.view.national';
+    case ViewQuestionnaires = 'questionnaires.view';
+    case ManageQuestionnaireDrafts = 'questionnaires.draft.manage';
+    case SubmitQuestionnaireReview = 'questionnaires.review.submit';
+    case ReviewQuestionnaires = 'questionnaires.review';
+    case PublishQuestionnaireSandbox = 'questionnaires.publish.sandbox';
+    case RetireQuestionnaires = 'questionnaires.retire';
+    case PreviewQuestionnaireSandbox = 'questionnaires.preview.sandbox';
+    case ViewQuestionnairePublications = 'questionnaires.publication.view';
 }

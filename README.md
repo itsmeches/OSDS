@@ -1,6 +1,6 @@
 # CHED OSDS Management Platform
 
-Phase 2 foundation for a modular OSDS web platform. It provides identity, five provisional account roles, explicit foundational permissions, regional/institutional scope, core directories, and append-only audit events. COR, ACSA, RA 11180, questionnaires, applications, approvals, certificates, and issuance are not implemented. See the [Phase 0 requirements](docs/requirements.md), [architecture](docs/architecture.md), and [open decisions](docs/assumptions-and-open-questions.md) before adding business rules.
+Phase 3A foundation for a modular OSDS web platform. It provides the Phase 2 identity and scoped authorization controls plus configurable, versioned Registration/ACSA questionnaires, documentary requirements, controlled review, immutable synthetic publication manifests, and a staff-only preview. Applicant submissions, evidence references, COR/ACSA validation, registry, certificates, issuance, and RA 11180 are not implemented. See the [requirements](docs/requirements.md), [technical specification](OSDS_TECHNICAL_SPECIFICATION.md), and [open decisions](docs/assumptions-and-open-questions.md) before adding business rules.
 
 ## Stack
 
@@ -18,7 +18,7 @@ Laravel 13, PHP 8.3 or newer, Filament 5, Livewire 4, Blade, Tailwind CSS 4, Pos
 2. Create separate local PostgreSQL databases named `osds_dev` and `osds_test` (or choose your own names). Grant your local development role access to each. Keep the server listening on localhost only.
 3. Copy `.env.example` to `.env`. Set `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` for `osds_dev`. Run `php artisan key:generate`.
 4. Copy `.env` to `.env.testing`. Set `APP_ENV=testing`, `APP_DEBUG=false`, and `DB_DATABASE=osds_test`; use the test database credentials. Run `php artisan key:generate --env=testing`. Both files are ignored by Git.
-5. Run `php artisan migrate --force` and `php artisan migrate --env=testing --force`. Only Laravel baseline user/session, cache, and queue tables are created. No OSDS tables or real accounts are created.
+5. Run `php artisan migrate --force` and `php artisan migrate --env=testing --force`. Core OSDS and questionnaire-configuration tables are created; no real accounts, submissions, evidence, or official records are created.
 6. Run `npm run build`, then `php artisan test`. Run `vendor/bin/pint --test` to check formatting.
 7. Start the app with `php artisan serve` and, for CSS development, `npm run dev` in another terminal. By default the landing page is at `http://127.0.0.1:8000/`, health at `/up`, and the Filament panel at `/admin`.
 

@@ -1,6 +1,10 @@
 # OSDS Management Platform: technical specification and development roadmap
 
-**Review draft — updated 14 October 2026.** This specification refines the [preliminary requirements and architecture report](./OSDS_REQUIREMENTS_ARCHITECTURE_REPORT.md) and incorporates findings from the [complete timestamped meeting transcript](<C:/Users/LocalUser.LAPTOP-MGEP8F46/.codex/attachments/12984036-6a0a-4146-9a14-9e2dcf1e57c1/Pasted text.txt>), which supersedes two partial excerpts for chronology. The transcript is machine-generated and remains discovery evidence rather than approved minutes. This is a build design for review, not CHED policy or authority to implement policy-dependent workflows or issue official records. Phases 1–2 have implemented the approved project foundation and identity/authorization baseline; Phase 3 remains gated.
+**Review draft — updated 14 October 2026.** This specification refines the [preliminary requirements and architecture report](./OSDS_REQUIREMENTS_ARCHITECTURE_REPORT.md) and incorporates findings from the [complete timestamped meeting transcript](<C:/Users/LocalUser.LAPTOP-MGEP8F46/.codex/attachments/12984036-6a0a-4146-9a14-9e2dcf1e57c1/Pasted text.txt>), which supersedes two partial excerpts for chronology. The transcript is machine-generated and remains discovery evidence rather than approved minutes. This is not CHED policy or authority to implement policy-dependent workflows or issue official records. Phases 1–2 and the synthetic configuration Checkpoint 3A are implemented; applicant intake and evidence remain gated.
+
+### Checkpoint 3A implementation boundary
+
+Checkpoint 3A implements relational form and requirement versions, a controlled declarative condition language, exact-hash review approval, immutable `review_sandbox` publication manifests, and staff-only preview. The manifest is now the authoritative technical binding between a form version and requirement-set version; later submissions must reference it rather than independently selecting versions. No production publication channel, response, evidence reference, CHEDRO finding, application workflow, registry, certificate, issuance, or RA 11180 table was added. See the [completion report](./docs/phase-3a-completion-report.md).
 
 ## 1. Evidence, scope, and decision status
 

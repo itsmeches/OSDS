@@ -1,6 +1,6 @@
 # Development roadmap and standards
 
-**Phases 0–2 have been authorized.** Phase 2 implements identity, scoped authorization, core directories, and audit infrastructure. Phase 3 questionnaires and evidence remain unauthorized. See [open decisions](./assumptions-and-open-questions.md) and the [Phase 2 completion report](./phase-2-completion-report.md).
+**Phases 0–2 and Checkpoint 3A have been authorized.** Phase 3A implements versioned questionnaire configuration and a staff-only synthetic publication sandbox. Applicant submissions and evidence remain for later checkpoints and are not implemented. See [open decisions](./assumptions-and-open-questions.md) and the [Phase 3A completion report](./phase-3a-completion-report.md).
 
 ## Phase gates and acceptance
 
@@ -9,7 +9,8 @@
 | 0 — documentation | Seven review documents; environment check; artifact/legacy-system discovery list | Documents distinguish source statements from proposals, link to open decisions, and name owner for each blocker. |
 | 1 — project foundation, **proposed next milestone** | Install verified compatible PHP/Composer/Node/PostgreSQL; initialize Git/Laravel; configure Filament/Livewire/Tailwind/Pest; local environment, health check, CI | Fresh checkout installs and tests reproducibly; secrets excluded; PostgreSQL connection and basic smoke test pass. Requires user approval first. |
 | 2 — identity/data base | Users/five role names, regions, organizations/grants, audit/outbox, first migrations and policies | Deny-by-default cross-region/organization tests and transaction/audit tests pass; no policy-dependent approval grants. |
-| 3 — questionnaire and evidence | Draft/published versioned forms/requirements; answer revisions; selected evidence custody | Published version immutable; conditional validation server-side; old submissions readable; unauthorized evidence denied. |
+| 3A — configuration, completed locally | Draft/review/published form and requirement versions; controlled conditions; immutable sandbox manifests | Exact reviewed hash is published; PostgreSQL protects published configuration; sandbox is staff-only. |
+| 3B–3D — not authorized | Organization compatibility, applicant drafts/submissions, provider-neutral evidence references, CHEDRO findings and corrections | Requires separate checkpoint approval; preserve immutable manifests and Phase 2 scope controls. |
 | 4 — COR/ACSA intake | Separate module configs, applicant draft/submit, CHEDRO screening/correction, status tracking | Process-owner scenarios pass independently; no COR prerequisite or automatic approval unless approved. |
 | 5 — controlled registry/issuance | Number assignment, approved templates, draft rendering, signature/undertaking evidence, issuance | Only delegated actor can issue after approved prerequisites; duplicate number/issuance tests pass; signed template accepted. |
 | 6 — reporting and rollout | Scoped dashboards/exports; pilot; restore, accessibility, load and security assessment; support handover | Data reconciles, no scope leaks, approved VAPT/hosting gate met, runbook and maintenance owner accepted. |

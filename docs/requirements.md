@@ -1,6 +1,6 @@
 # OSDS platform requirements baseline
 
-**Review draft, updated 14 October 2026.** Primary sources: [requirements report](../OSDS_REQUIREMENTS_ARCHITECTURE_REPORT.md), [technical specification](../OSDS_TECHNICAL_SPECIFICATION.md), supplied artifacts, and the complete timestamped meeting transcript provided on 14 October 2026. This document distinguishes requested capabilities from meeting discussion and design proposals. It is not an approved user requirements analysis (URA).
+**Review draft, updated 14 October 2026.** Primary sources: [requirements report](../OSDS_REQUIREMENTS_ARCHITECTURE_REPORT.md), [technical specification](../OSDS_TECHNICAL_SPECIFICATION.md), supplied artifacts, and the complete timestamped meeting transcript provided on 14 October 2026. This document distinguishes requested capabilities from meeting discussion and design proposals. Checkpoint 3A implements synthetic questionnaire configuration only; this document is not an approved user requirements analysis (URA).
 
 ## Evidence grades
 
