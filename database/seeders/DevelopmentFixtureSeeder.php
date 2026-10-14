@@ -42,12 +42,13 @@ class DevelopmentFixtureSeeder extends Seeder
 
             if ($role !== AccountRole::School) {
                 UserRegionAssignment::query()->firstOrCreate(
-                    ['user_id' => $user->id, 'region_id' => $role === AccountRole::Chedro ? $north->id : $south->id, 'starts_at' => now()->startOfDay()],
+                    ['user_id' => $user->id, 'region_id' => $role === AccountRole::Chedro ? $north->id : $south->id, 'revoked_at' => null],
+                    ['starts_at' => now()->startOfDay()],
                 );
             } else {
                 InstitutionRepresentative::query()->firstOrCreate(
-                    ['user_id' => $user->id, 'institution_id' => $academy->id, 'starts_at' => now()->startOfDay()],
-                    ['verified_at' => now(), 'verified_by' => $user->id],
+                    ['user_id' => $user->id, 'institution_id' => $academy->id, 'revoked_at' => null],
+                    ['starts_at' => now()->startOfDay(), 'verified_at' => now(), 'verified_by' => $user->id],
                 );
             }
         }
