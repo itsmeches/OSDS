@@ -15,6 +15,19 @@ The detailed, meeting-ready question register is maintained in [Stakeholder ques
 | Private hosted evidence is the baseline technical option | User's preferred stack names private storage | Do not finalize intake until hosted/link/hybrid custody is approved. |
 | Approximately 3,000 schools is a load-test scenario | Number was spoken in meeting | Replace with verified volume/concurrency before setting targets. |
 
+## Phase 2 conditionally approved technical defaults
+
+The user conditionally approved these defaults on 14 October 2026 for Phase 2 implementation and testing. They remain provisional until formal CHED approval:
+
+1. Permission-driven account creation follows Super User creates Admin, Admin creates OSDS, OSDS creates CHEDRO, and CHEDRO creates SCHOOL.
+2. A user has one primary role. PostgreSQL enforces this on the existing Spatie role pivot; a later multi-role decision requires a forward migration and conflict-policy review.
+3. Regional, institutional, and nationwide access require explicit effective grants. No role receives nationwide access automatically.
+4. SCHOOL accounts begin pending verification. Creation and verification are distinct audit events. Whether one CHEDRO staff member may perform both is configuration controlled and defaults to denied.
+5. Account states are pending verification, active, suspended, and inactive. Controlled services perform transitions, record immutable history, and invalidate sessions when access is removed.
+6. Local authentication remains the development method. Production MFA, SSO, recovery, emergency access, and retention are deployment gates rather than completed controls.
+
+Permission-bundle changes and the creator-verifier toggle are configuration changes. New states, multi-role support, delegation semantics, and organization types require code or database migrations. See [the provisional permission matrix](./permissions-matrix.md).
+
 ## Decisions requiring stakeholder sign-off
 
 | Priority | Decision and options | Proposed owner | Why it matters |
@@ -32,6 +45,16 @@ The detailed, meeting-ready question register is maintained in [Stakeholder ques
 | High | Nine-day clock: calendar/working days, pauses, and module applicability | Process owner | Prevents false SLA notices/reports. |
 | High | Hosting resources, support owner, backup retention/recovery targets, school counts and peak concurrency | IT/operations | Determines capacity and maintenance. |
 | High | Questionnaire link audience, anonymous use, expiry/reuse, and response ownership | OSDS/privacy owner | Limits unauthorized submissions and leakage. |
+
+### Identity decisions still requiring formal approval
+
+- Designated production Super User custodians, bootstrap, recovery, and replacement procedure.
+- Whether a CHEDRO account creator may verify and activate the same SCHOOL account, and what evidence proves representation.
+- Final account lifecycle and transfer authorities, required reasons, and any second-person approval.
+- Offices eligible for nationwide access and who may grant or revoke it.
+- Production MFA enrollment/recovery, future SSO provider, emergency-access custodians and review.
+- Audit reviewers, infrastructure-level tamper resistance, records classification, and retention/disposal periods.
+- Whether athletic associations are a separate organization category using SCHOOL accounts or require another account role.
 
 ## Known source-quality concerns
 

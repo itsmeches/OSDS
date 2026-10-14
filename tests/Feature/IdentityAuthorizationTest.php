@@ -101,7 +101,7 @@ class IdentityAuthorizationTest extends TestCase
         $school = $this->userWithRole(AccountRole::School);
         $represented = Institution::query()->create(['name' => 'Represented Institute', 'primary_region_id' => $north->id]);
         $other = Institution::query()->create(['name' => 'Other Institute', 'primary_region_id' => $north->id]);
-        $grant = InstitutionRepresentative::query()->create(['user_id' => $school->id, 'institution_id' => $represented->id, 'starts_at' => now()->subMinute()]);
+        $grant = InstitutionRepresentative::query()->create(['user_id' => $school->id, 'institution_id' => $represented->id, 'starts_at' => now()->subMinute(), 'verified_at' => now()]);
 
         $this->assertTrue(app(ScopeAuthorizer::class)->canAccessInstitution($school, $represented));
         $this->assertFalse(app(ScopeAuthorizer::class)->canAccessInstitution($school, $other));

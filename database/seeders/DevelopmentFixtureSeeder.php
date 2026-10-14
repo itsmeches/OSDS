@@ -47,6 +47,7 @@ class DevelopmentFixtureSeeder extends Seeder
             } else {
                 InstitutionRepresentative::query()->firstOrCreate(
                     ['user_id' => $user->id, 'institution_id' => $academy->id, 'starts_at' => now()->startOfDay()],
+                    ['verified_at' => now(), 'verified_by' => $user->id],
                 );
             }
         }

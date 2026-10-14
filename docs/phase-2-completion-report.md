@@ -1,71 +1,92 @@
-# Phase 2 completion report
+# Phase 2 refinement completion report
 
-**Date:** 13 October 2026. **Scope:** identity, authorization, regional/institutional scope, core directories, development fixtures, and audit infrastructure only. Phase 3 has not started.
+**Date:** 14 October 2026. **Scope:** incremental refinement of Phase 2 identity, authorization, regional/institutional/nationwide access, account lifecycle, and audit controls. Phase 3 has not started. The rules in this report are conditionally approved technical defaults, not final CHED policy.
 
-## Handoff findings
+## Baseline and repository control
 
-The six Phase 1 tests passed before implementation and both local PostgreSQL databases were reachable. The Phase 1 baseline was not committed: `main` has no commits and all workspace files remain untracked. GitHub CI could not be observed because no GitHub CLI or connected run was available. These gaps limit change provenance and remote reproducibility; this report does not claim CI success.
+- The existing Phase 2 implementation was preserved. No baseline migration was edited; one forward migration extends it.
+- Before refinement, the original 13 PostgreSQL tests passed with 49 assertions.
+- Previously reviewed Windows development helpers were isolated in baseline commit `654c21b`.
+- `main` was synchronized with `origin/main` before that local commit. The GitHub CLI was unavailable and the GitHub Actions page could not be read without access, so remote CI remains **unverified**.
 
-## Delivered data model
+## Delivered refinement
 
-| Tables | Purpose and controls |
-| --- | --- |
-| `users` | Added immutable public UUID, active/inactive status, deactivation time/actor; deactivation invalidates database sessions. |
-| `roles`, `permissions`, Spatie pivots | Five exact role names on the `web` guard and ten explicit foundational permission keys; no hierarchy or wildcard permission. |
-| `regions`, `institutions` | UUID directory records, unique region codes, partial unique official institution ID, active state, and optional primary region. |
-| `user_region_assignments` | Effective, expiring, and revocable regional scope with grant/revocation actors; indexed active lookup and valid-range constraint. |
-| `institution_representatives` | Effective and revocable user-to-institution representation with actor history and scope indexes. |
-| `scoped_authorization_grants` | Permission plus exactly one region or institution scope, effective range, grantor, and revocation fields. No policy-dependent grant is seeded. |
-| `audit_events` | Append-only actor/action/resource/context/outcome/correlation/timestamp and sanitized JSON metadata; indexed timelines. |
+### Account creation and primary roles
 
-Foreign keys restrict deletion of referenced directory and scope records. PostgreSQL check constraints reject invalid statuses, outcomes, date ranges, and unscoped or ambiguously scoped permission grants. Public UUIDs are assigned by models and backfilled during migration.
+- Account creation is target-permission driven: Super User creates Admin, Admin creates OSDS, OSDS creates CHEDRO, and CHEDRO creates SCHOOL.
+- Laravel policies and `AccountGovernance` enforce account status, explicit permission, target account type, region/institution scope, and self-escalation denial.
+- Filament account creation delegates to the domain service; role and scope rules are not implemented in the resource class.
+- A PostgreSQL partial unique index on Spatie's existing `model_has_roles` pivot enforces one User role. This was selected over a second primary-role relationship to avoid two sources of truth. A later multi-role decision can use a forward migration to drop the index and introduce conflict rules.
 
-## Provisional roles and permissions
+### Account lifecycle and SCHOOL verification
 
-The roles are `Super User`, `Admin`, `OSDS`, `CHEDRO`, and `SCHOOL`. The implemented permission keys are `platform.admin.access`, `users.view`, `users.manage`, `regions.view`, `regions.manage`, `region_scopes.assign`, `institutions.view`, `institutions.manage`, `institution_representatives.assign`, and `audit.view`.
+- Supported states are `pending_verification`, `active`, `suspended`, and `inactive`.
+- SCHOOL accounts start pending and have a pending institution-representative record.
+- Account creation, role assignment, verification, activation, suspension, reactivation, and deactivation use semantic audit events.
+- `account_status_events` preserves append-only state history with actor, reason, correlation ID, and timestamp.
+- Whether the SCHOOL creator may also verify is configured by `OSDS_ALLOW_SCHOOL_CREATOR_TO_VERIFY` and defaults to false pending supervisor approval.
+- Status and access revocation invalidates database sessions and clears remember tokens.
 
-Super User and Admin receive all ten foundational permissions for validation. OSDS receives panel and read permissions including audit. CHEDRO receives panel and directory access plus institution/representative management. SCHOOL receives institution view permission but no staff-panel permission. Every record operation still requires active region or represented-institution scope. No role inherits from another, and no role has an unconditional authorization bypass.
+### Explicit scope and delegation
 
-These assignments are technical defaults pending supervisor approval. They confer no COR/ACSA approval, signature, registry, issuance, certificate, export, or RA 11180 authority because those permissions do not exist.
+- Region and institution grants remain effective-dated and revocable.
+- Nationwide access now uses its own effective and revocable grant record. No role receives it automatically.
+- `AccessGovernance` performs grant, revoke, and regional transfer operations transactionally.
+- An actor cannot grant themselves access, manage an account type outside their creation authority, or delegate a region/institution they cannot access.
+- Partial unique indexes prevent duplicate active region, institution, and nationwide grants.
+- User queries and policies ignore future, expired, and revoked region assignments.
 
-## Security controls
+### Audit integrity and security
 
-- Filament requires authentication, active account state, and `platform.admin.access`. SCHOOL accounts are separated from the staff panel.
-- Resource policies deny by default; queries are restricted before rendering so guessed out-of-scope identifiers return no record. Model hooks also reject forged cross-region creation and assignment writes.
-- Account deactivation timestamps the change, records its actor when available, removes database sessions, and blocks the next request.
-- Scope and representation grants support start/end time and explicit revocation. A higher role name does not create national visibility.
-- Core identity changes create audit events containing changed field names rather than before/after personal values. The recorder removes password, token, secret, authorization, and cookie keys. Audit rows reject model update/delete operations.
-- Local fixtures require an environment-supplied password, use only `example.invalid` identities and fictional organizations, are not loaded automatically, and refuse non-local/non-test environments.
+- Sensitive changes and their semantic audit events commit in the same database transaction.
+- PostgreSQL triggers reject direct update or deletion of `audit_events` and `account_status_events`; model-level append-only protection remains in place.
+- SCHOOL receives no security-audit permission. Institution-scoped audit authorization now evaluates institution access correctly.
+- National audit viewing requires both `audit.view.national` and an active nationwide grant.
+- MFA role requirements are represented as a deployment policy only. MFA, recovery, emergency access, SSO, and retention remain production approval gates and are not claimed as completed controls.
 
-## Minimal administrative interfaces
+## Database changes
 
-Filament provides staff login, scoped user listing/editing and deactivation, region and institution directories, region assignment and institution representative records, and a read-only audit list. User creation and initial SCHOOL enrollment are intentionally absent from the panel until provisioning, identity verification, and privilege-assignment rules are approved. Records are deactivated or revoked rather than deleted.
+The forward migration `2026_10_14_000001_refine_identity_authorization.php`:
 
-## Verification
+1. expands the user status constraint;
+2. adds verification metadata to institution representatives;
+3. creates append-only account status history;
+4. creates explicit nationwide access grants;
+5. enforces one User role on the Spatie pivot;
+6. prevents duplicate active grants; and
+7. adds database-level append-only triggers.
+
+Existing users, roles, permissions, regions, institutions, grants, and audit records are preserved. Existing institution representatives are treated as verified during migration to avoid silently removing established access.
+
+## Configuration versus code
+
+Permission bundles, target-role creation permission mapping, the SCHOOL creator-verifier toggle, and future production MFA role selection are configuration driven. One-role enforcement, state transitions, transaction boundaries, scope ceilings, self-escalation denial, session invalidation, and append-only guarantees remain in code and database constraints. See [permissions matrix](./permissions-matrix.md).
+
+## Verification results
+
+The final result table must reflect the verification commands run after the last code change:
 
 | Check | Result |
 | --- | --- |
-| Clean PostgreSQL test migration | Passed: baseline, user extension, Spatie permission, and core identity/audit migrations |
-| Development migration | Passed; all Phase 2 migrations applied |
-| Authorization seed | Passed on development and test databases |
-| Synthetic development fixtures | Passed with a generated temporary local password; five account types, two regions, three institutions |
-| Automated tests | 13 passed, 49 assertions, PostgreSQL; includes authentication, inactive account/session, roles, panel access, regional and institutional isolation, direct-route concealment, direct-write denial, revocation, auditing, and constraints |
-| Formatter | Laravel Pint passed after formatting |
-| Frontend | Vite/Tailwind production build passed |
+| PostgreSQL clean migration | Passed through the full PostgreSQL test rebuild; all migrations apply from empty state |
+| Development forward migration | Passed; refinement migration applied without rebuilding existing data |
+| Automated tests | Passed: 26 tests, 80 assertions on PostgreSQL |
+| Laravel Pint | Passed after formatting |
+| Frontend production build | Passed with Vite 8.3.4 |
+| IDE/static problem scan | Tool unavailable; PHP execution, tests, and formatter provide the local evidence |
+| GitHub Actions | Unverified: no observable authenticated run available |
 
-The local fixture password was generated outside the repository in the Phase 1 temporary tools directory and was not printed or committed. Local URLs remain `http://127.0.0.1:8000/`, `/up`, and `/admin` when `php artisan serve` is running.
+## Formal CHED decisions and production blockers
 
-## Outstanding decisions and limits
+1. Designate production Super User custodians and approve bootstrap, replacement, and recovery.
+2. Decide whether one CHEDRO staff member may create and verify the same SCHOOL account, and approve verification evidence.
+3. Approve final lifecycle, transfer, and delegation authorities and any second-person controls.
+4. Identify offices eligible for nationwide access and its grant/revocation custodians.
+5. Implement and approve privileged MFA, recovery, emergency access, and any SSO integration.
+6. Approve audit reviewers, records classification, retention, legal hold, archival, and disposal.
+7. Decide how athletic associations map to organization and account types.
+8. Observe a successful GitHub CI run for the committed refinement.
 
-1. Approve the provisional permission assignments and decide who provisions, deactivates, recovers, and assigns each account type. Initial user creation is kept out of the panel until this is settled.
-2. Define SCHOOL representative verification and association handling. The current data model supports representation but does not establish legal authority.
-3. Decide whether Admin or OSDS receives any national detailed-data or audit access. Current access requires explicit region/institution scope.
-4. Approve staff MFA/identity-provider integration, session lifetime, recovery, and emergency-access procedure before production use.
-5. Define retention and archive rules. Audit records are application-level append-only; database-owner tamper resistance and archival controls still require infrastructure design.
-6. Confirm whether multiple top-level roles are allowed. Fixtures assign one role, but the database package can technically hold more than one until an approved application rule is added.
-7. Remote CI remains unverified, and the repository still has no baseline commit. Establish a reviewed commit and observe a successful CI run before treating this as a controlled shared baseline.
-8. Filament scope selectors intentionally cannot discover unscoped SCHOOL users. A controlled enrollment workflow is needed after stakeholder approval.
+## Scope stop
 
-## Readiness for Phase 3
-
-The Phase 2 implementation passes all local acceptance checks and supplies the database and policy boundaries needed for Phase 3. Phase 3 should remain blocked from production-oriented work until the permission matrix, enrollment procedure, MFA approach, baseline commit, and remote CI run are reviewed. No questionnaire or evidence implementation is authorized by this report.
+No COR workflow, ACSA workflow, questionnaire engine, certificate generation, document intake, or RA 11180 reporting work is included. Phase 3 remains blocked pending separate approval.

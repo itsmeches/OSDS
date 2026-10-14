@@ -8,6 +8,21 @@ use Carbon\CarbonImmutable;
 
 class ScopeAuthorizer
 {
+    public function hasNationwideAccess(User $user): bool
+    {
+        if (! $user->isActive()) {
+            return false;
+        }
+
+        $now = CarbonImmutable::now();
+
+        return $user->nationwideAccessGrants()
+            ->whereNull('revoked_at')
+            ->where('starts_at', '<=', $now)
+            ->where(fn ($query) => $query->whereNull('ends_at')->orWhere('ends_at', '>', $now))
+            ->exists();
+    }
+
     public function canAccessRegion(User $user, int $regionId): bool
     {
         if (! $user->isActive()) {
@@ -16,7 +31,7 @@ class ScopeAuthorizer
 
         $now = CarbonImmutable::now();
 
-        return $user->regionAssignments()
+        return $this->hasNationwideAccess($user) || $user->regionAssignments()
             ->where('region_id', $regionId)
             ->whereNull('revoked_at')
             ->where('starts_at', '<=', $now)
@@ -34,12 +49,13 @@ class ScopeAuthorizer
         $represented = $user->representedInstitutions()
             ->whereKey($institution->id)
             ->wherePivotNull('revoked_at')
+            ->wherePivotNotNull('verified_at')
             ->wherePivot('starts_at', '<=', $now)
             ->where(fn ($query) => $query->whereNull('institution_representatives.ends_at')
                 ->orWhere('institution_representatives.ends_at', '>', $now))
             ->exists();
 
-        return $represented || ($institution->primary_region_id !== null
+        return $this->hasNationwideAccess($user) || $represented || ($institution->primary_region_id !== null
             && $this->canAccessRegion($user, $institution->primary_region_id));
     }
 }

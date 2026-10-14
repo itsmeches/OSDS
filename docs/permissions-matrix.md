@@ -1,43 +1,54 @@
 # Provisional account and permission matrix
 
-**Review draft.** The five account names/order were confirmed to the user by a supervisor but are not final. The hierarchy `Super User → Admin → OSDS → CHEDRO → SCHOOL` gives **no automatic permission inheritance**. This matrix proposes access for review; it does not authorize any CHED action.
+**Phase 2 refinement, 14 October 2026.** These are conditionally approved technical defaults for implementation and testing. They are not final CHED policy and confer no COR, ACSA, certificate, registry, approval, signing, issuance, export, or RA 11180 authority.
 
-**Phase 2 implementation note:** The five role names and foundational directory permissions are implemented for technical validation. Role grants remain provisional. No COR/ACSA approval, signature, issuance, registry, certificate, export, or RA 11180 permission exists in code. Region and institution scope is checked independently of the role label.
+The five roles do not inherit from one another. Every operation requires an explicit permission plus current region, institution, or nationwide scope. Nationwide visibility is never implied by a role.
 
-## Enforcement model
-
-Use one top-level Spatie role per account on the `web` guard. Name permissions by resource and action, such as `application.screen`, `registry.create`, `certificate.issue`, `form.publish`, `export.case_data`. Laravel policies additionally check user status, active regional/organization grant, case state, and formal delegation. Deny by default. Filament navigation and UI visibility never replace policy checks. Audit role/grant changes and privileged access.
-
-`P` = proposed within assigned scope; `C` = only with a separate, approved action grant/delegation; `—` = deny. No `C` permission is seeded as effective by default.
+## Account governance
 
 | Action | Super User | Admin | OSDS | CHEDRO | SCHOOL |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Change platform configuration | P | C | — | — | — |
-| Provision/deactivate accounts and scope grants | P | P | C | C | — |
-| Draft/publish forms, requirements, templates | C | C | C | — | — |
-| View national aggregate counts | C | C | P | — | — |
-| View detailed case | C | C | C | P, region | P, represented organization |
-| Submit/correct own case | — | — | — | — | P |
-| Screen and request correction | — | — | C | P, region | — |
-| Validate and record findings | — | — | C | P, region | — |
-| Create registry entry or official number | — | — | C | C, region | — |
-| Record approval/signature/issuance | — | — | C | C, delegated case | — |
-| Export case-level data or audit | C | C | C | C, region | — |
-| View own released certificate | — | — | — | — | P |
+| Create Admin | Allow | Deny | Deny | Deny | Deny |
+| Create OSDS | Deny | Allow | Deny | Deny | Deny |
+| Create CHEDRO | Deny | Deny | Allow | Deny | Deny |
+| Create SCHOOL | Deny | Deny | Deny | Allow in authorized institution | Deny |
+| Assign the permitted target role | Allow for Admin | Allow for OSDS | Allow for CHEDRO | Allow for SCHOOL | Deny |
+| Verify SCHOOL representative | Deny | Deny | Deny | Allow in authorized institution | Deny |
+| Activate, suspend, deactivate, reactivate | Only directly managed account type | Only directly managed account type | Only directly managed account type | Only directly managed SCHOOL | Deny |
+| Assign/revoke regional scope | Explicit permission and scope | Explicit permission and scope | Explicit permission and scope | Deny | Deny |
+| Assign/revoke institution representation | Explicit permission and scope | Explicit permission and scope | Deny | Explicit permission and scope | Deny |
+| Assign/revoke nationwide scope | Explicit permission | Deny | Deny | Deny | Deny |
+| View security audit | Scoped permission | Scoped permission | Scoped permission | Deny by default | Deny |
+| View national security audit | Requires `audit.view.national` and an active nationwide grant | Deny | Deny | Deny | Deny |
 
-**Nationwide recognition lookup:** Candidate SCHOOL/HEI and staff capability over a small approved registry projection (association name, certificate/status, validity if authorized). It does not grant case detail or document access. Its audience and visible fields need registry-owner approval.
+Target-specific creation permissions are configured in `config/account-governance.php`. Policies and domain services enforce them; the displayed role order is never compared as a rank. Self-assignment, self-escalation, and delegation outside the actor's scope are denied.
 
-**Applicant representation:** A school/association user may submit only for organizations with a verified `user_organization_grant`. The meeting mentioned school athletic directors/sports coordinators and association secretariats as likely focal persons; these are not approved identity checks. Decide whether associations use SCHOOL-tier accounts or another future account type before enrollment.
+## Implemented permission keys
 
-## Supervisor and process-owner decisions
+- Panel and directories: `platform.admin.access`, `users.view`, `users.manage`, `regions.view`, `regions.manage`, `institutions.view`, `institutions.manage`.
+- Creation: `accounts.create.admin`, `accounts.create.osds`, `accounts.create.chedro`, `accounts.create.school`.
+- Lifecycle: `accounts.verify.school`, `accounts.activate`, `accounts.suspend`, `accounts.deactivate`, `accounts.reactivate`.
+- Delegation: `roles.assign`, `region_scopes.assign`, `region_scopes.revoke`, `institution_representatives.assign`, `institution_representatives.revoke`, `nationwide_scopes.assign`, `nationwide_scopes.revoke`.
+- Audit: `audit.view`, `audit.view.national`.
 
-1. Who creates the first Super User and administers recovery; who provisions each lower tier; whether regional staff may provision SCHOOL accounts.
-2. Whether Admin/OSDS can view national case details or only aggregates; export approval; emergency access and audit review.
-3. Whether a person can hold multiple top-level roles; if not, how temporary assignments work; whether CHEDRO screening and validation must be separate people.
-4. Which office owns national versus regional athletic association cases and transfers across regions.
-5. Who is legally authorized to approve, sign, assign registry/certificate numbers, and issue COR/ACSA. The account label alone never establishes authority.
-6. RA 11180 HEI, regional sports-coordinator, and Central Office mapping into these tiers, separately from certificate duties.
+`users.manage` remains for backward-compatible directory editing. It does not by itself authorize account creation, role assignment, lifecycle changes, or scope delegation.
 
-## Acceptance tests for implementation
+## Configuration and code boundaries
 
-For every role/action combination, test allow and deny at route, Filament resource/action, Livewire action, export, and file/link retrieval. Repeat with wrong region, wrong organization, deactivated user, revoked grant, stale delegation, and forged case ID. Test that a higher account tier cannot infer lower-tier privileges or sign/issue without explicit authority.
+| Change requested later | Mechanism |
+| --- | --- |
+| Which role receives an existing permission | Seeder/configuration change plus review and tests |
+| Which permission is required to create a target account type | `account-governance.creation_permissions` configuration |
+| Whether a SCHOOL creator may also verify | `OSDS_ALLOW_SCHOOL_CREATOR_TO_VERIFY`; defaults to false |
+| Which production roles require MFA | Deployment configuration after MFA is implemented |
+| Add a new lifecycle state or transition | Code, migration, policy, and tests |
+| Permit multiple primary roles | Forward migration dropping the single-role index, redesigned conflict rules, policies, UI, and tests |
+| Change scope/delegation semantics | Policy/domain-service code and tests |
+| Add an athletic-association account type | Stakeholder decision followed by organization/schema and authorization review |
+| Set retention durations | Approved records schedule plus configuration; deletion remains disabled until approved |
+
+Security configuration is version controlled and deployment reviewed. It is not editable through a general Filament settings page.
+
+## Formal approval still required
+
+CHED must approve the first Super User custodian and recovery process; creator-versus-verifier separation; verification evidence; final lifecycle authorities; nationwide grant custodians; production MFA and SSO policy; emergency access; audit reviewers; retention periods; transfers; and athletic-association mapping.

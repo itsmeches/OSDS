@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\Models\AuditEvent;
+use App\Models\Institution;
 use App\Models\User;
 use App\Services\Authorization\ScopeAuthorizer;
 
@@ -18,11 +19,20 @@ class AuditEventPolicy
         if (! $user->can('audit.view')) {
             return false;
         }
+        if ($user->can('audit.view.national') && app(ScopeAuthorizer::class)->hasNationwideAccess($user)) {
+            return true;
+        }
         if ($event->region_id !== null) {
             return app(ScopeAuthorizer::class)->canAccessRegion($user, $event->region_id);
         }
 
-        return $event->institution_id === null && $event->actor_id === $user->id;
+        if ($event->institution_id !== null) {
+            $institution = Institution::query()->find($event->institution_id);
+
+            return $institution !== null && app(ScopeAuthorizer::class)->canAccessInstitution($user, $institution);
+        }
+
+        return $event->actor_id === $user->id;
     }
 
     public function create(User $user): bool

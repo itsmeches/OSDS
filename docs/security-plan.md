@@ -29,6 +29,16 @@ For both digital modes, deny access to unverified evidence and reauthorize each 
 - Queue jobs are idempotent, start after commit, and surface failed scans, rendering, notifications, and link checks. Failure cannot automatically advance official status.
 - Monitor authentication anomalies, privileged changes, queue failures, storage capacity, and backup status. Define incident responder and escalation route.
 
+## Production identity deployment gates
+
+The following controls must be approved and completed before production launch. Local synthetic accounts are exempt from MFA only in local development and test environments.
+
+1. **MFA:** select a supported Laravel-compatible method, require it for Super User, Admin, OSDS, and CHEDRO accounts, protect enrollment and recovery, and prove enforcement with production-like tests.
+2. **Account recovery:** designate CHED custodians, verify requester identity through an approved channel, invalidate existing sessions and recovery material, audit the action, and notify the account holder. Development fixture ownership cannot transfer into production.
+3. **Emergency access:** use temporary, expiring elevation granted by designated custodians with a reason, mandatory audit, notification, and post-incident review. Shared passwords, permanent bypass accounts, and silent elevation are prohibited.
+4. **Retention:** obtain an approved schedule by record category. Retention settings remain unset and automated deletion stays disabled until records and privacy owners approve durations, holds, archival, and disposal evidence.
+5. **SSO:** local authentication remains supported for development. A future identity-provider adapter must map a stable external identity to an existing OSDS account without deriving role or scope from untrusted identity claims.
+
 ## Release gate and security tests
 
 The partial transcripts mention vulnerability/penetration testing clearance before public deployment but vary between “DICT” and “ICT” as the authority. Confirm actual approver, procedure, scope, and evidence with IT/security; do not present the transcript as a regulation. Test cross-region and cross-organization access, guessed identifiers, forged Livewire calls, expired/revoked share links, upload spoofing/malware, broken/changed external links, duplicate issuance, concurrent number assignment, backup restoration, and approximately 3,000-school planning load after real usage figures are obtained. Do not expose real applicant data in test environments.

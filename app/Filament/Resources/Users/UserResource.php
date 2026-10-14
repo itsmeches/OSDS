@@ -2,12 +2,15 @@
 
 namespace App\Filament\Resources\Users;
 
+use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Filament\Resources\Users\Pages\EditUser;
 use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Filament\Resources\Users\Schemas\UserForm;
 use App\Filament\Resources\Users\Tables\UsersTable;
 use App\Models\User;
+use App\Services\Authorization\ScopeAuthorizer;
 use BackedEnum;
+use Carbon\CarbonImmutable;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -41,6 +44,7 @@ class UserResource extends Resource
     {
         return [
             'index' => ListUsers::route('/'),
+            'create' => CreateUser::route('/create'),
             'edit' => EditUser::route('/{record}/edit'),
         ];
     }
@@ -48,9 +52,18 @@ class UserResource extends Resource
     public static function getEloquentQuery(): Builder
     {
         $user = auth()->user();
-        $regionIds = $user?->regionAssignments()->whereNull('revoked_at')->pluck('region_id') ?? collect();
+        if ($user !== null && app(ScopeAuthorizer::class)->hasNationwideAccess($user)) {
+            return parent::getEloquentQuery();
+        }
+        $now = CarbonImmutable::now();
+        $regionIds = $user?->regionAssignments()->whereNull('revoked_at')
+            ->where('starts_at', '<=', $now)
+            ->where(fn (Builder $query) => $query->whereNull('ends_at')->orWhere('ends_at', '>', $now))
+            ->pluck('region_id') ?? collect();
 
         return parent::getEloquentQuery()->where(fn (Builder $query) => $query->whereKey($user?->id)
-            ->orWhereHas('regionAssignments', fn (Builder $assignments) => $assignments->whereIn('region_id', $regionIds)->whereNull('revoked_at')));
+            ->orWhereHas('regionAssignments', fn (Builder $assignments) => $assignments->whereIn('region_id', $regionIds)
+                ->whereNull('revoked_at')->where('starts_at', '<=', $now)
+                ->where(fn (Builder $dates) => $dates->whereNull('ends_at')->orWhere('ends_at', '>', $now))));
     }
 }

@@ -42,12 +42,13 @@ class User extends Authenticatable implements FilamentUser
                 return;
             }
 
-            $user->deactivated_at = $user->status === 'inactive' ? ($user->deactivated_at ?? now()) : null;
-            $user->deactivated_by = $user->status === 'inactive' ? ($user->deactivated_by ?? auth()->id()) : null;
+            $disabled = in_array($user->status, ['suspended', 'inactive'], true);
+            $user->deactivated_at = $disabled ? ($user->deactivated_at ?? now()) : null;
+            $user->deactivated_by = $disabled ? ($user->deactivated_by ?? auth()->id()) : null;
         });
         static::updated(function (User $user): void {
-            if ($user->status === 'inactive' && $user->wasChanged('status')) {
-                DB::table('sessions')->where('user_id', $user->id)->delete();
+            if ($user->status !== 'active' && $user->wasChanged('status')) {
+                $user->invalidateSessions();
             }
         });
     }
@@ -60,7 +61,23 @@ class User extends Authenticatable implements FilamentUser
     public function representedInstitutions(): BelongsToMany
     {
         return $this->belongsToMany(Institution::class, 'institution_representatives')
-            ->withPivot(['starts_at', 'ends_at', 'revoked_at'])->withTimestamps();
+            ->withPivot(['starts_at', 'ends_at', 'revoked_at', 'verified_at', 'verified_by'])->withTimestamps();
+    }
+
+    public function nationwideAccessGrants(): HasMany
+    {
+        return $this->hasMany(NationwideAccessGrant::class);
+    }
+
+    public function statusEvents(): HasMany
+    {
+        return $this->hasMany(AccountStatusEvent::class);
+    }
+
+    public function invalidateSessions(): void
+    {
+        DB::table('sessions')->where('user_id', $this->id)->delete();
+        $this->forceFill(['remember_token' => null])->saveQuietly();
     }
 
     public function isActive(): bool

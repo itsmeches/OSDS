@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Services\Authorization\ScopeAuthorizer;
+use App\Services\Identity\AccountGovernance;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,14 +15,25 @@ class UserRegionAssignment extends Model
     protected static function booted(): void
     {
         static::creating(function (UserRegionAssignment $assignment): void {
-            if (auth()->check() && ! app(ScopeAuthorizer::class)->canAccessRegion(auth()->user(), $assignment->region_id)) {
-                throw new AuthorizationException('The selected region is outside your authorization scope.');
+            if (auth()->check()) {
+                $actor = auth()->user();
+                $target = User::query()->findOrFail($assignment->user_id);
+                if (! app(ScopeAuthorizer::class)->canAccessRegion($actor, $assignment->region_id)
+                    || $actor->is($target)
+                    || ! app(AccountGovernance::class)->canManageTargetRole($actor, $target)) {
+                    throw new AuthorizationException('The selected assignment is outside your delegation authority.');
+                }
             }
             $assignment->granted_by ??= auth()->id();
         });
         static::updating(function (UserRegionAssignment $assignment): void {
             if ($assignment->isDirty('revoked_at') && $assignment->revoked_at !== null) {
                 $assignment->revoked_by ??= auth()->id();
+            }
+        });
+        static::updated(function (UserRegionAssignment $assignment): void {
+            if ($assignment->wasChanged('revoked_at') && $assignment->revoked_at !== null) {
+                $assignment->user->invalidateSessions();
             }
         });
     }
