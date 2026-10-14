@@ -7,7 +7,7 @@
 - The existing Phase 2 implementation was preserved. No baseline migration was edited; one forward migration extends it.
 - Before refinement, the original 13 PostgreSQL tests passed with 49 assertions.
 - Previously reviewed Windows development helpers were isolated in baseline commit `654c21b`.
-- `main` was synchronized with `origin/main` before that local commit. The GitHub CLI was unavailable and the GitHub Actions page could not be read without access, so remote CI remains **unverified**.
+- `main` was synchronized with `origin/main` before that local commit. GitHub run `38509736083` for refinement commit `3ebe3a2` was observed through the Actions API. It failed before any step or runner started; GitHub's failure annotation says the account is locked due to a billing issue. This is an external repository-account blocker, and this report does not claim CI success.
 
 ## Delivered refinement
 
@@ -74,7 +74,7 @@ The final result table must reflect the verification commands run after the last
 | Laravel Pint | Passed after formatting |
 | Frontend production build | Passed with Vite 8.3.4 |
 | IDE/static problem scan | Tool unavailable; PHP execution, tests, and formatter provide the local evidence |
-| GitHub Actions | Unverified: no observable authenticated run available |
+| GitHub Actions | Blocked before execution: run `38509736083` created no runner or steps; GitHub reported an account billing lock |
 
 ## Formal CHED decisions and production blockers
 
@@ -85,7 +85,7 @@ The final result table must reflect the verification commands run after the last
 5. Implement and approve privileged MFA, recovery, emergency access, and any SSO integration.
 6. Approve audit reviewers, records classification, retention, legal hold, archival, and disposal.
 7. Decide how athletic associations map to organization and account types.
-8. Observe a successful GitHub CI run for the committed refinement.
+8. Resolve the GitHub account billing lock and rerun CI successfully. The current failure contains no application test result because no runner started.
 
 ## Scope stop
 
