@@ -1,6 +1,6 @@
 # OSDS Management Platform: preliminary requirements and architecture
 
-**Status:** Review draft, updated 13 October 2026. This document interprets preliminary meeting notes, two supplied images, linked artifacts, and two overlapping, partial machine-generated meeting transcripts. The [technical specification](./OSDS_TECHNICAL_SPECIFICATION.md) refines this report around the preferred Laravel stack and inventories five candidate Office templates. Neither document is an approved CHED policy or authorization for production implementation.
+**Status:** Review draft, updated 14 October 2026. This document interprets preliminary meeting notes, two supplied images, linked artifacts, and the complete timestamped machine transcript supplied on 14 October 2026. Earlier partial excerpts remain provenance but are superseded by the complete transcript for chronology. The [technical specification](./OSDS_TECHNICAL_SPECIFICATION.md) refines this report around the preferred Laravel stack and inventories five candidate Office templates. Neither document is an approved CHED policy or authorization for policy-dependent production implementation.
 
 ## 1. Scope and evidence
 
@@ -13,6 +13,7 @@ The proposed platform covers Certificate of Recognition (COR) and Authority to C
 | Initial meeting notes | Requested capabilities and preliminary five-step COR/ACSA path | No signed-off requirements or process authority supplied |
 | [First meeting transcript](<C:/Users/LocalUser.LAPTOP-MGEP8F46/.codex/attachments/2c93d49a-d3cd-44c3-9076-273efdd5bcdb/Pasted text.txt>) | Participants discussed the applicants, existing Google Forms/Sheets/Script prototype, CHEDRO validation, certificate preparation, nationwide recognition lookup, evidence handling, access, hosting, and requirements sign-off. RA 11180 reporting was described as urgent alongside COR/ACSA. | Machine transcription contains uncertain names/acronyms and ends mid-sentence; it records discussion, not an approved decision or full meeting. |
 | [Second meeting transcript](<C:/Users/LocalUser.LAPTOP-MGEP8F46/.codex/attachments/10b1739a-2697-43a1-83cf-abee52dd4868/Pasted text.txt>) | Repeats the first transcript's requirements/hosting discussion, then describes the existing RA 11180 collection system, regional exports, template-upload errors, migration question, interim process, capacity planning, and iterative development. | Has timestamps but overlaps the first excerpt and ends mid-discussion around 24:44; transcription varies on names, acronyms, and security authority. Do not count repeated statements as separate decisions. |
+| [Complete timestamped meeting transcript](<C:/Users/LocalUser.LAPTOP-MGEP8F46/.codex/attachments/12984036-6a0a-4146-9a14-9e2dcf1e57c1/Pasted text.txt>) | Provides the complete approximately 55-minute chronology. It confirms the prototype, centralized lookup proposal, evidence-custody disagreement, signed-URA request, candidate hosting/VAPT gate, interim intake, RA 11180 legacy-system limitations, and the verbal reprioritization of sports ahead of Lakbay/SAS work. | Machine transcription still contains uncertain names, acronyms, and legal references. Meeting statements are discovery evidence, not approved minutes, policy, funded-scope authority, or records-disposition approval. |
 | Supplied COR/ACSA process image | Five displayed steps and durations: online application (1 day); CHEDRO receipt, initial screening and checklist validation (5 days); central registry entry and certificate preparation for Regional Director signature (1 day); email schedule notice (1 day); collection of signed undertaking and certificate issuance (1 day). Displayed sum: nine days. | The image does not establish working versus calendar days, pauses, formal approval rules, or whether both modules always have identical rules. |
 | Supplied “Proposed Data Collection Enhancements for RA 11180” image | A proposal for HEI submission, regional validation/correction, Central Office consolidation, centralized data, automated anomaly detection, dashboard, and simpler interface | It explicitly says initial features for technical validation and prioritization; it is not a committed MVP or approved RA 11180 workflow. |
 | [COR/ACSA application Google Form](https://forms.gle/Q8ofLDEPQ7MC5ZtX9) and [automated certificate Google Form](https://forms.gle/ujHKGiPWty2kXcYG9) | Links were supplied as current-process artifacts | Questions, required fields, branching, permissions, and response destinations could not be inspected. |
@@ -38,7 +39,7 @@ For each template, obtain the document owner's approved version and decide wheth
 
 ### First 30 minutes of meeting: findings to validate
 
-The transcript is imperfect, so the entries below are **attributed meeting statements**, not final CHED rules.
+The complete machine transcript is imperfect, so the entries below are **attributed meeting statements**, not final CHED rules.
 
 | Topic | What the discussion indicates | Decision still needed |
 | --- | --- | --- |
@@ -51,13 +52,13 @@ The transcript is imperfect, so the entries below are **attributed meeting state
 | Status and oversight | School, CHEDRO, and Central Office should see relevant application/document status; a speaker raised cases stalled in a region or forwarded to another office. | Approve routing, ownership, handoff, escalation, and who sees what detail. |
 | Accounts | School enrollment through an identified focal person was discussed; athletic directors/sports coordinators and association secretariats were mentioned as examples. | Confirm identity proof, representation, who provisions accounts, and whether associations use SCHOOL accounts or a separate organization subtype. |
 | RA 11180 | Sports reportorial data was called urgent in the meeting, alongside student-athlete protection and COR/ACSA. | Decide whether RA 11180 is part of the first release, a parallel workstream, or a later module. |
-| Governance and deployment | A participant requested a signed user requirements analysis before development, asked where the system would be hosted, and described DICT security testing/clearance for an external-facing deployment. DigitalOcean was mentioned as a possible environment. | Confirm required sign-off, approved host, actual DICT review requirement, security owner, and deployment gate. Do not treat the meeting statement as a verified regulation. |
+| Governance and deployment | A participant requested a director-signed user requirements analysis, asked where the system would be hosted, and described ICT VAPT clearance before external deployment. OPRKM DigitalOcean was mentioned as a possible environment, while DICT was also mentioned in describing security assurance. | Confirm required sign-off, approved host, which office performs testing and grants clearance, security owner, and deployment gate. Do not treat the meeting statement as a verified regulation. |
 
 The legal reference was transcribed uncertainly as “RA 11184 ... sorry, 80.” CHED's published [RA 11180 implementing rules](https://legacy.ched.gov.ph/rules-and-regulations-to-implement-the-provisions-of-republic-act-no-11180-athletic-programs-report-act/) identify RA 11180 as the Athletic Programs Report Act. The separate “MO 13” reference in the transcript is not sufficiently clear to assign an order number, year, or applicability.
 
 ### Second excerpt: additional findings to validate
 
-The second excerpt overlaps the first for roughly its opening five minutes. Its later statements add the following; none is a signed-off requirement.
+The complete transcript confirms and contextualizes the earlier excerpts. The following statements remain discussion evidence rather than signed-off requirements.
 
 | Topic | What the discussion indicates | Decision still needed |
 | --- | --- | --- |
@@ -66,14 +67,14 @@ The second excerpt overlaps the first for roughly its opening five minutes. Its 
 | Legacy data | Speakers debated importing existing Google Forms/RA 11180 data versus starting new because extraction and quality were difficult. No final migration decision was recorded. | Decide historical data retention, migration scope, source of truth, cleansing, reconciliation, and access to prior reports. |
 | Interim operation | A speaker suggested Google Form or manual submission while the new system is developed. A January deadline and August–December 2026 development window were mentioned. | Confirm the actual reporting deadline, transitory policy, owner of interim records, and whether/when they enter the new platform. |
 | Capacity and support | A participant cited roughly 3,000 schools as a planning scale and simultaneous logins as a concern; others raised next-year maintenance and loss of knowledge about the existing system. | Obtain real school/user counts and concurrency expectations; assign operational owner, documentation, and support after handover. |
-| Development method and launch | Participants favored iterative design/coding/testing/documentation, while repeatedly saying an external-facing system needs a security assessment before deployment. The two transcripts transcribe the authority differently (“DICT” versus “ICT”). | Confirm delivery milestones, actual approving authority, VAPT scope/evidence, hosting owner, and launch gate. Do not assume a particular agency clearance from this transcript. |
+| Development method and launch | Participants favored iterative design/coding/testing/documentation. The complete transcript twice describes ICT VAPT clearance as necessary before public deployment and also mentions DICT in describing security assurance. | Confirm delivery milestones, who performs testing, who grants clearance, VAPT scope/evidence, hosting owner, and launch gate. Do not assume a particular agency clearance from this transcript. |
 
 **Classification used below:**
 
 - **Confirmed in notes (unverified):** Explicitly requested in the notes. This confirms the planning intent, not an approved business rule.
 - **Observed in supplied image:** Visible process detail in the user-provided graphic, still requiring process-owner confirmation.
 - **Observed in supplied template:** Visible field or instruction in a supplied blank Office file, without proof of current approval or module applicability.
-- **Discussed in partial transcript:** A participant described or requested it during the recorded discussion; not a signed-off requirement.
+- **Discussed in complete transcript:** A participant described or requested it during the recorded discussion; not a signed-off requirement.
 - **Proposed in supplied image:** A feature explicitly presented for technical validation and prioritization, not a committed requirement.
 - **Supervisor-confirmed, provisional:** A clarification the user confirmed with their supervisor, pending final stakeholder approval.
 - **Design inference:** A proposed capability needed to make the recorded requirements workable. It needs validation during discovery.
@@ -83,7 +84,7 @@ The second excerpt overlaps the first for roughly its opening five minutes. Its 
 
 | Area | Classification | Current interpretation or decision needed |
 | --- | --- | --- |
-| Initial modules | Confirmed in notes (unverified) | COR and ACSA were the initial focus in the notes; the partial meeting transcript also calls RA 11180 reporting urgent. Approve release sequencing before fixing MVP scope. |
+| Initial modules | Confirmed in notes (unverified) | COR and ACSA were the initial focus in the notes; the complete meeting transcript also calls RA 11180 reporting urgent and later distinguishes its existing system from the first registration work. Approve release sequencing before fixing MVP scope. |
 | Accounts and access | Confirmed in notes (unverified) | Secure login, role-based access, region-aware users and applications. Exact roles and rights require approval. |
 | Account types | Supervisor-confirmed, provisional | Five account types in the stated hierarchy: Super User, Admin, OSDS, CHEDRO, SCHOOL. Whether hierarchy means account creation authority, visibility, permission inheritance, or all three remains open. |
 | Submission | Confirmed in notes (unverified) | Applicants submit online applications and supporting requirements. Identity and institutional authority need definition. |
@@ -98,12 +99,14 @@ The second excerpt overlaps the first for roughly its opening five minutes. Its 
 | Nine-day duration | Clarification required | The supplied graphic displays 1 + 5 + 1 + 1 + 1 = 9 days. Start/stop events, working-day rules, pauses, and module applicability remain unconfirmed. Do not implement an SLA yet. |
 | Regional Director signature preparation | Observed in supplied image | The graphic says CHEDRO generates the COR/ACSA certificate for the Regional Director’s signature. Confirm actual signatory, delegation, review, and signature/issuance controls. |
 | RA 11180 reporting capability | Proposed in supplied image | HEI submission, CHEDRO validation, Central Office consolidation, anomaly detection, and dashboards are proposed capabilities of a separate module; release priority is unresolved. |
-| RA 11180 release priority | Discussed in partial transcript | A participant called sports reporting urgent. Decide whether it joins the first release, runs in parallel, or remains later; the earlier future-module assumption is no longer safe. |
-| Applicant organization types | Discussed in partial transcript | Both schools and athletic associations were discussed, with possible national/regional differences. Confirm exact eligibility and account mapping. |
-| Nationwide recognition lookup | Discussed in partial transcript | HEIs should be able to check recognized associations across regions; limit lookup to approved registry fields and statuses. |
-| Evidence custody | Discussed in partial transcript | A speaker preferred individual file links; others discussed uploads and some physical originals. Storage mode and verification controls require a decision. |
-| Legacy RA 11180 system | Discussed in partial transcript | An existing OPRKM collection system was described with regional exports and limited central consolidation/status. Inventory it before choosing rebuild or migration. |
-| Capacity and launch | Discussed in partial transcript | Approximately 3,000 schools, simultaneous use, a January deadline, and prelaunch security testing were mentioned. Validate volumes, dates, and authority before commitments. |
+| RA 11180 release priority | Discussed in complete transcript | A participant called sports reporting urgent. Decide whether it joins the first release, runs in parallel, or remains later; the earlier future-module assumption is no longer safe. |
+| Applicant organization types | Discussed in complete transcript | Both schools and athletic associations were discussed, with possible national/regional differences. Confirm exact eligibility and account mapping. |
+| Nationwide recognition lookup | Discussed in complete transcript | HEIs should be able to check recognized associations across regions; limit lookup to approved registry fields and statuses. |
+| Evidence custody | Discussed in complete transcript | A speaker preferred individual file links; others discussed uploads and some physical originals. Storage mode and verification controls require a decision. |
+| Legacy RA 11180 system | Discussed in complete transcript | An existing OPRKM collection system was described with regional exports and limited central consolidation/status. Inventory it before choosing rebuild or migration. |
+| Capacity and launch | Discussed in complete transcript | Approximately 3,000 schools, simultaneous use, a January deadline, and prelaunch security testing were mentioned. Validate volumes, dates, and authority before commitments. |
+| COR–ACSA relationship | Discussed in complete transcript; clarification required | The 4:10–5:37 discussion describes recognition followed by a separate authority-to-conduct application. Confirm whether this is universal, applicant-specific, conditional, or merely an example before enforcing a prerequisite. |
+| Engagement scope priority | Discussed in complete transcript; clarification required | Sports was verbally requested ahead of originally discussed Lakbay/SAS outputs, while the underlying memo attachments were not readable in the meeting. Obtain written authority for priority and remaining deliverables. |
 | Five Office templates | Observed in supplied template | They suggest association, member HEI, personnel, insurance, athlete, and activity data, but do not establish required fields or COR/ACSA applicability. |
 | Shared workflow engine | Design inference | A small configurable state/transition service may help, but module-specific business logic must remain possible. |
 | Notifications | Design inference | Notifications are needed for applicant updates and scheduling, but channels, wording, and official delivery rules need approval. |
@@ -125,7 +128,7 @@ The second excerpt overlaps the first for roughly its opening five minutes. Its 
 13. **RA 11180 scope:** Confirm the program owner, reporting basis, academic-year cycle, RSC meaning and duties, HEI access rules, regional validation criteria, Central Office powers, duplicate definition, and whether historical reports need migration. Keep this discovery separate from COR/ACSA acceptance.
 14. **Five-tier access:** Define each account type's creation and approval authority, module and region scope, actions, export rights, support access, and whether users may hold multiple types. Confirm whether the displayed order conveys reporting structure, provisioning authority, or any permission inheritance.
 15. **Template applicability and capture:** For each of the five candidate files, confirm module use, approved version, owner, signature/notarial requirements, and whether the platform accepts an uploaded file, structured data, or both. Resolve the incomplete 2026 memorandum reference and coaches contact-number mismatch with the owner.
-16. **Meeting follow-up:** Reconcile the partial transcript with the full recording and approved minutes. Confirm first-release priority of RA 11180, applicant types, national/regional association jurisdiction, cross-region recognition lookup, file-link versus upload custody, physical originals, status handoffs, and security/deployment sign-off.
+16. **Meeting follow-up:** Reconcile the complete machine transcript with approved minutes. Confirm first-release priority of RA 11180, applicant types, possible COR-to-ACSA dependency, national/regional association jurisdiction, cross-region recognition lookup, file-link versus upload custody, physical originals, status handoffs, project reprioritization authority, and security/deployment sign-off.
 17. **Existing RA 11180 system and transition:** Obtain access to the current OPRKM system and eight-sheet questionnaire, assess export/data quality and maintenance ownership, and decide migrate, archive-and-reference, or start new. Confirm the interim manual/Google Form route and January deadline before promising cutover.
 
 ## 2. Roles and access model
@@ -185,7 +188,7 @@ flowchart LR
 
 **Search and reports:** Begin with indexed PostgreSQL search and database views or governed queries. Add a dedicated search or analytics store only when measured load or reporting needs require it. Reporting must respect the same regional and record-level permissions as case screens.
 
-**RA 11180 module boundary and priority:** Model academic-year report cycles and HEI submissions separately from certificate applications. Reuse identity, institution, region, document, audit, and reporting foundations; give the module its own questionnaire, validation, correction, and consolidation rules. The partial meeting transcript calls this reporting urgent, so its release priority must be decided rather than assumed later. “Automated validation” in the proposal image should begin as explainable flags for incomplete, inconsistent, or possible duplicate entries, with CHEDRO review and correction. It must not silently reject, merge, or approve submissions. Whether an RSC is a platform user or merely a page audience remains open.
+**RA 11180 module boundary and priority:** Model academic-year report cycles and HEI submissions separately from certificate applications. Reuse identity, institution, region, document, audit, and reporting foundations; give the module its own questionnaire, validation, correction, and consolidation rules. The complete meeting transcript calls this reporting urgent and separately describes its existing OPRKM system, so its release priority must be decided rather than assumed later. “Automated validation” in the proposal image should begin as explainable flags for incomplete, inconsistent, or possible duplicate entries, with CHEDRO review and correction. It must not silently reject, merge, or approve submissions. Whether an RSC is a platform user or merely a page audience remains open.
 
 ### Technology recommendations and tradeoffs
 

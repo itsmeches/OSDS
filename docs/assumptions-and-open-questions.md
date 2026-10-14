@@ -45,6 +45,8 @@ Permission-bundle changes and the creator-verifier toggle are configuration chan
 | High | Nine-day clock: calendar/working days, pauses, and module applicability | Process owner | Prevents false SLA notices/reports. |
 | High | Hosting resources, support owner, backup retention/recovery targets, school counts and peak concurrency | IT/operations | Determines capacity and maintenance. |
 | High | Questionnaire link audience, anonymous use, expiry/reuse, and response ownership | OSDS/privacy owner | Limits unauthorized submissions and leakage. |
+| Blocker | Written project priority and authority for sports work versus the originally discussed Lakbay/SAS outputs | OSDS Director, funding/HR owner, and receiving office | Prevents delivery against a verbally changed scope that may not satisfy the funded engagement. |
+| High | Whether the possible COR-before-ACSA sequence stated in the meeting is universal, conditional, or merely an example | COR/ACSA policy owner | Prevents an unapproved prerequisite from blocking valid ACSA applications. |
 
 ### Identity decisions still requiring formal approval
 
@@ -58,4 +60,4 @@ Permission-bundle changes and the creator-verifier toggle are configuration chan
 
 ## Known source-quality concerns
 
-Two pasted meeting transcripts overlap and end mid-discussion; names and acronyms are machine-transcribed. Their statements are not formal approvals. The first excerpt's RA number is uncertain in speech, although CHED's [published RA 11180 IRR](https://legacy.ched.gov.ph/rules-and-regulations-to-implement-the-provisions-of-republic-act-no-11180-athletic-programs-report-act/) confirms the Athletic Programs Report Act. The reference to “MO 13” is not sufficient to identify an applicable order. The undertaking template lacks a 2026 memorandum number; the coaches sheet lacks the contact-number column requested by its own instruction. Google links and the OPRKM system have not been directly inventoried.
+A complete timestamped machine transcript was provided on 14 October 2026 and supersedes the two partial excerpts for meeting chronology. Speaker names, acronyms, law/order numbers, and conversational statements still require verification against approved minutes and source documents. The transcript repeatedly says “RA 1180” in speech while the supplied portals and CHED's [published RA 11180 IRR](https://legacy.ched.gov.ph/rules-and-regulations-to-implement-the-provisions-of-republic-act-no-11180-athletic-programs-report-act/) identify RA 11180. It refers to ICT clearance and also mentions DICT in the VAPT discussion, so the approving authority remains a written-decision item. The reference to “MO 13” is not sufficient to identify an applicable order. The undertaking template lacks a 2026 memorandum number; the coaches sheet lacks the contact-number column requested by its own instruction. Google artifacts and the live OPRKM system have not been directly inventoried.
