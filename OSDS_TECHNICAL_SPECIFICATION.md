@@ -24,6 +24,16 @@ The five downloaded templates were inspected as blank Office files. Their conten
 
 **Artifact decision:** For each file, obtain the approving owner, approved version/date, module applicability, whether the completed file is uploaded, entered as structured data, or both, and whether signatures/notarization must remain on paper. Preserve originals and approved revisions; never silently convert a signed document into editable form data.
 
+### Current Google Form exports (observed snapshots)
+
+The three DOCX exports supplied on 14 October 2026 are inventoried in [docs/current-form-artifact-inventory.md](./docs/current-form-artifact-inventory.md). They show one applicant form branching to **Certificate of Registration** or **ACSA**, plus a standalone **CHEDRO Issuance** form. The applicant branches combine typed fields, PDF/spreadsheet uploads, and individual Google Drive file links. This supports the planned versioned questionnaire and per-requirement evidence model, but does not approve any question, requirement, file limit, or custody mode.
+
+The form renderer should therefore support short/long text, email, single/multiple choice, declarations, file upload requirements, and validated external-file URL fields. Repeating structured rows remain a separate decision because the current exports request some lists as spreadsheets or Drive files. Requirement configuration needs an explicit capture mode (`hosted_upload`, `external_file_link`, `structured_data`, or an approved combination), allowed types, count, and size; the platform must not reproduce the observed 1 GB spreadsheet allowance without capacity and security approval.
+
+The standalone issuance form should be treated as evidence of the current prototype boundary, not the target data model. A future issuance action must operate on an authorized application/registry record and preserve its source case, approval/delegation, certificate number, template version, signatory evidence, issue time, and delivery evidence transactionally. It must not depend on retyping organization and region into an unrelated form.
+
+Before Phase 3 configuration, owners must resolve Certificate of Recognition versus Certificate of Registration versus the `COE.docx` filename; verify the cited CMO No. 13, s. 2026 and approved wording; reconcile the 10 MB reminder with the 1 GB coaches-sheet control; decide custody for background clearances and other sensitive records; and supply missing ACSA event and issuance-linkage rules.
+
 ## 2. Stack assessment and implementation baseline
 
 | Technology | Fit and use | Limit / alternative |

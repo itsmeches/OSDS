@@ -57,6 +57,12 @@ The following statements are now traceable to the complete transcript. They rema
 
 The five downloaded Office files are inventoried in the [technical specification](../OSDS_TECHNICAL_SPECIFICATION.md). They suggest an undertaking, insurance coverage, personnel, member HEIs, and activity calendar. None is assigned to COR or ACSA. The undertaking's 2026 memorandum reference lacks a number; the coaches sheet's instruction requests a contact number that the header lacks. Document owners must resolve both before online validation or generation is based on them.
 
+## Current Google Form exports
+
+Three DOCX exports supplied on 14 October 2026 provide a more complete snapshot of the applicant form's Registration and ACSA branches and the separate CHEDRO issuance form. Their observed fields, requirements, capture modes, and discrepancies are recorded in the [current form artifact inventory](./current-form-artifact-inventory.md).
+
+They confirm that the prototype uses a hybrid of PDF/spreadsheet uploads and individual Google Drive file links. They also expose unresolved design and policy issues: Certificate of Registration versus COR/COE terminology; validation of CMO No. 13, s. 2026; a 10 MB reminder versus a 1 GB coaches spreadsheet control; sensitive background-clearance records; missing visible event details in ACSA; and a standalone issuance form without a visible application/reference identifier. These observations improve Phase 3 test fixtures but do not establish approved questions or evidence rules.
+
 ## Process clarification package
 
 Obtain signed URA and approved forms/templates for each module; separate COR/ACSA flowcharts; an action-by-role and jurisdiction matrix; registry and certificate rules; approved evidence custody; RA 11180 release and migration decision; hosting/security gate; retention and recovery rules. Reconcile the complete machine transcript with approved minutes before treating any statement as final.
