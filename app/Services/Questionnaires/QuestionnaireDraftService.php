@@ -2,13 +2,16 @@
 
 namespace App\Services\Questionnaires;
 
+use App\Models\FormDefinition;
 use App\Models\FormVersion;
+use App\Models\OsdsModule;
 use App\Models\RequirementSetVersion;
 use App\Models\User;
 use App\Services\Auditing\AuditRecorder;
 use App\Support\FoundationPermission;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class QuestionnaireDraftService
 {
@@ -33,6 +36,31 @@ class QuestionnaireDraftService
             $this->audit->record('questionnaire.form_cloned', 'success', $actor, $version, metadata: ['source_version_id' => $source->id]);
 
             return $version;
+        });
+    }
+
+    public function createPair(User $actor, OsdsModule $module, string $title): array
+    {
+        $this->authorize($actor);
+
+        return DB::transaction(function () use ($actor, $module, $title): array {
+            $base = Str::slug($title, '_') ?: 'questionnaire';
+            $key = $base;
+            $suffix = 2;
+            while (FormDefinition::query()->where('module_id', $module->id)->where('key', $key)->exists()) {
+                $key = $base.'_'.$suffix++;
+            }
+            $definition = FormDefinition::query()->create(['module_id' => $module->id, 'key' => $key, 'name' => trim($title), 'owner_id' => $actor->id]);
+            $form = FormVersion::query()->create(['form_definition_id' => $definition->id, 'version_number' => 1, 'state' => 'draft', 'created_by' => $actor->id]);
+            $form->sections()->create(['key' => 'main_section', 'title' => 'Main section', 'description' => null, 'sort_order' => 1]);
+            $requirements = RequirementSetVersion::query()->create([
+                'module_id' => $module->id,
+                'version_number' => ((int) RequirementSetVersion::query()->where('module_id', $module->id)->max('version_number')) + 1,
+                'state' => 'draft', 'created_by' => $actor->id,
+            ]);
+            $this->audit->record('questionnaire.draft_pair_created', 'success', $actor, $form, metadata: ['module_id' => $module->id, 'requirement_set_version_id' => $requirements->id]);
+
+            return [$form, $requirements];
         });
     }
 

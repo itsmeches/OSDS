@@ -20,10 +20,7 @@
                 @if ($section->description)<p class="mt-1 text-slate-600">{{ $section->description }}</p>@endif
                 <div class="mt-5 space-y-5">
                     @foreach ($section->questions as $question)
-                        <div><div class="font-medium">{{ $question->label }} @if($question->is_required)<span class="text-red-600">*</span>@endif</div>
-                            @if($question->help_text)<div class="text-sm text-slate-500">{{ $question->help_text }}</div>@endif
-                            <div class="mt-2 rounded border border-dashed border-slate-300 bg-slate-50 p-3 text-sm text-slate-500">{{ str($question->type)->replace('_', ' ')->title() }} preview</div>
-                        </div>
+                        <x-questionnaires.field :question="$question" :disabled="true" />
                     @endforeach
                 </div>
             </section>

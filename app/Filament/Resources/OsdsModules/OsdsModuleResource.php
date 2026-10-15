@@ -13,6 +13,8 @@ use Filament\Tables\Table;
 
 class OsdsModuleResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = OsdsModule::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedSquares2x2;

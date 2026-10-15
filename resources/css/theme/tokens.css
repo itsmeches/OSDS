@@ -1,0 +1,70 @@
+:root {
+    color-scheme: light;
+    --osds-color-navy-950: #143556;
+    --osds-color-navy-900: #1d456e;
+    --osds-color-blue-700: #245f9d;
+    --osds-color-blue-600: #3174b9;
+    --osds-color-surface: #ffffff;
+    --osds-color-surface-subtle: #f8fafc;
+    --osds-color-canvas: #f3f6fa;
+    --osds-color-border: #d7e0ea;
+    --osds-color-text: #24364a;
+    --osds-color-muted: #607086;
+    --osds-color-input: #ffffff;
+    --osds-color-border-strong: #94a3b8;
+    --osds-color-selected: #e8f1fb;
+    --osds-color-success: #166534;
+    --osds-color-success-surface: #f0fdf4;
+    --osds-color-warning: #854d0e;
+    --osds-color-warning-surface: #fef3c7;
+    --osds-color-danger: #991b1b;
+    --osds-color-danger-surface: #fef2f2;
+    --osds-color-disabled: #64748b;
+    --osds-color-disabled-surface: #e2e8f0;
+    --osds-radius-sm: 0.375rem;
+    --osds-radius-md: 0.625rem;
+    --osds-radius-lg: 0.875rem;
+    --osds-focus: #3174b9;
+}
+
+:root.dark {
+    color-scheme: dark;
+    --osds-color-navy-950: #e7eef7;
+    --osds-color-navy-900: #1d456e;
+    --osds-color-blue-700: #78b7f2;
+    --osds-color-blue-600: #5ba0e3;
+    --osds-color-surface: #111827;
+    --osds-color-surface-subtle: #182235;
+    --osds-color-canvas: #0b1220;
+    --osds-color-border: #344258;
+    --osds-color-text: #e7eef7;
+    --osds-color-muted: #adbbcc;
+    --osds-color-input: #0f172a;
+    --osds-color-border-strong: #64748b;
+    --osds-color-selected: #17365a;
+    --osds-color-success: #bbf7d0;
+    --osds-color-success-surface: #143322;
+    --osds-color-warning: #fde68a;
+    --osds-color-warning-surface: #451a03;
+    --osds-color-danger: #fecaca;
+    --osds-color-danger-surface: #450a0a;
+    --osds-color-disabled: #94a3b8;
+    --osds-color-disabled-surface: #1e293b;
+    --osds-focus: #78b7f2;
+}
+
+:focus-visible {
+    outline: 2px solid var(--osds-focus);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

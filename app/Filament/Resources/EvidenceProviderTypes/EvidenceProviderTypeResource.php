@@ -13,6 +13,8 @@ use Filament\Tables\Table;
 
 class EvidenceProviderTypeResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = EvidenceProviderType::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedLink;

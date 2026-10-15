@@ -1,5 +1,18 @@
 @import 'tailwindcss';
 
+.questionnaire-field { display: grid; gap: .5rem; min-inline-size: 0; }
+.questionnaire-field-label { font-weight: 650; color: var(--osds-color-text); }
+.questionnaire-help { margin: 0; color: var(--osds-color-muted); font-size: .875rem; }
+.questionnaire-field input[type='text'], .questionnaire-field input[type='email'], .questionnaire-field input[type='tel'], .questionnaire-field input[type='date'], .questionnaire-field input[type='number'], .questionnaire-field textarea { inline-size: 100%; border: 1px solid var(--osds-color-border-strong); border-radius: .6rem; background: var(--osds-color-input); padding: .7rem .8rem; color: var(--osds-color-text); }
+.questionnaire-field input:focus, .questionnaire-field textarea:focus { outline: 2px solid var(--osds-focus); outline-offset: 2px; }
+.questionnaire-choice-list { display: grid; gap: .6rem; }
+.questionnaire-choice-list label, .questionnaire-declaration { display: flex; align-items: flex-start; gap: .6rem; }
+.questionnaire-choice-inline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.questionnaire-required { color: var(--osds-color-danger); }
+.questionnaire-requirement { border: 1px solid var(--osds-color-border-strong); border-radius: .75rem; padding: 1rem; }
+.questionnaire-requirement p { margin: .35rem 0; color: var(--osds-color-muted); }
+@import './theme/tokens.css';
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
@@ -7,3 +20,10 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+body {
+    background: var(--osds-color-canvas);
+    color: var(--osds-color-text);
+}
+.applicant-shell{min-height:100vh;display:grid;grid-template-columns:17rem 1fr}.applicant-sidebar{background:var(--osds-color-navy-900);color:#fff;padding:1.5rem;display:flex;flex-direction:column;gap:2rem}.applicant-brand{font-weight:800}.applicant-brand small{display:block;font-weight:500;opacity:.75}.applicant-sidebar nav{display:grid;gap:.5rem}.applicant-sidebar a,.applicant-sidebar button{padding:.75rem;border-radius:.625rem;color:#fff;text-align:left}.applicant-sidebar a:hover{background:#ffffff1f}.applicant-sidebar form{margin-top:auto}.applicant-main{padding:2rem;min-width:0}.sandbox-banner,.notice{padding:.75rem 1rem;border-radius:.625rem;background:var(--osds-color-warning-surface);color:var(--osds-color-warning);margin-bottom:1.25rem}.page-heading{display:flex;justify-content:space-between;gap:1rem;align-items:start;margin-bottom:1.5rem}.page-heading h1{font-size:2rem;font-weight:750}.eyebrow{color:var(--osds-color-blue-700);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}.portal-card,.auth-card{background:var(--osds-color-surface);border:1px solid var(--osds-color-border);border-radius:var(--osds-radius-lg);padding:1.25rem}.auth-card{max-width:28rem;margin:10vh auto}.card-list{display:grid;gap:1rem}.portal-card{display:flex;justify-content:space-between;gap:1rem}.portal-card h2{font-size:1.1rem;font-weight:700}.status{display:inline-block;background:var(--osds-color-surface-subtle);border-radius:999px;padding:.25rem .6rem}.button,.primary,.secondary{display:inline-block;border-radius:.625rem;padding:.65rem 1rem;font-weight:700}.primary{background:var(--osds-color-blue-600);color:#fff}.secondary{border:1px solid var(--osds-color-border)}.form-stack{display:grid;gap:1rem}.form-stack label{display:grid;gap:.4rem;font-weight:650}.form-stack input,.form-stack select,.form-stack textarea{border:1px solid var(--osds-color-border);border-radius:.5rem;background:var(--osds-color-surface);padding:.65rem;color:var(--osds-color-text)}.error{color:#b91c1c}.draft-workspace{display:grid;grid-template-columns:15rem 1fr;gap:1.5rem}.progress-rail{display:grid;gap:.5rem;align-self:start}.progress-rail button{display:flex;gap:.6rem;align-items:center;padding:.7rem;border-radius:.625rem;text-align:left}.progress-rail button span{display:grid;place-items:center;width:1.75rem;height:1.75rem;border-radius:999px;background:var(--osds-color-surface)}.progress-rail button.active{background:color-mix(in srgb,var(--osds-color-blue-600) 15%,transparent)}.questionnaire-card{display:block}.editor-actions{display:flex;justify-content:space-between;margin-top:1.5rem}.save-state{font-weight:700;color:var(--osds-color-blue-700)}
+@media(max-width:800px){.applicant-shell{grid-template-columns:1fr}.applicant-sidebar{position:static}.applicant-sidebar nav{grid-template-columns:repeat(2,1fr)}.applicant-main{padding:1rem}.draft-workspace{grid-template-columns:1fr}.progress-rail{grid-template-columns:repeat(2,1fr)}.page-heading{display:block}.page-heading .button{margin-top:1rem}}

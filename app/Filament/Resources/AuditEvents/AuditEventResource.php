@@ -17,7 +17,11 @@ class AuditEventResource extends Resource
 {
     protected static ?string $model = AuditEvent::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShieldCheck;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Security and oversight';
+
+    protected static ?string $navigationLabel = 'Audit history';
 
     public static function form(Schema $schema): Schema
     {

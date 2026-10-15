@@ -2,12 +2,14 @@
 
 namespace App\Filament\Forms;
 
+use App\Models\DocumentaryRequirement;
 use App\Models\FormQuestion;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Utilities\Get;
+use Illuminate\Database\Eloquent\Model;
 
 class ConditionRuleField
 {
@@ -21,7 +23,31 @@ class ConditionRuleField
             ->schema([
                 Select::make('mode')->options(['all' => 'All conditions must match', 'any' => 'Any condition may match'])->required()->default('all'),
                 Repeater::make('conditions')->minItems(1)->schema([
-                    TextInput::make('question')->label('Earlier question key')->required()->datalist(fn () => FormQuestion::query()->orderBy('key')->distinct()->pluck('key')->all()),
+                    TextInput::make('question')
+                        ->label('Earlier question key')
+                        ->helperText('Choose a stable key from an earlier question. Save newly added questions before using them in a condition.')
+                        ->required()
+                        ->datalist(function (?Model $record): array {
+                            if ($record instanceof FormQuestion) {
+                                return FormQuestion::query()
+                                    ->where('form_version_id', $record->form_version_id)
+                                    ->where('sort_order', '<', $record->sort_order)
+                                    ->orderBy('sort_order')
+                                    ->pluck('key')
+                                    ->all();
+                            }
+
+                            if ($record instanceof DocumentaryRequirement) {
+                                return FormQuestion::query()
+                                    ->whereHas('version.definition', fn ($query) => $query->where('module_id', $record->version->module_id))
+                                    ->orderBy('key')
+                                    ->distinct()
+                                    ->pluck('key')
+                                    ->all();
+                            }
+
+                            return [];
+                        }),
                     Select::make('operator')->required()->live()->options([
                         'equals' => 'Equals', 'not_equals' => 'Does not equal', 'in' => 'Is one of', 'not_in' => 'Is not one of',
                         'is_empty' => 'Is empty', 'is_not_empty' => 'Is not empty',

@@ -12,42 +12,62 @@ class ConfigurationValidator
 
     public function validate(FormVersion $form, RequirementSetVersion $requirements): void
     {
+        $findings = $this->findings($form, $requirements);
+        if ($findings !== []) {
+            throw ValidationException::withMessages(collect($findings)->mapWithKeys(fn (array $finding, int $index) => ["configuration.$index" => $finding['message']])->all());
+        }
+    }
+
+    public function findings(FormVersion $form, RequirementSetVersion $requirements): array
+    {
         $form->loadMissing('definition', 'sections.questions.options');
         $requirements->loadMissing('requirements.providers');
+        $findings = [];
+        $add = function (string $message, string $anchor = 'builder-editor') use (&$findings): void {
+            $findings[] = ['message' => $message, 'anchor' => $anchor];
+        };
         if ($form->definition->module_id !== $requirements->module_id) {
-            $this->invalid('The form and requirement set must belong to the same module.');
+            $add('The form and document requirements must belong to the same program.');
         }
         if ($form->sections->isEmpty()) {
-            $this->invalid('At least one section is required.');
+            $add('Add at least one section.', 'build-form');
         }
 
         $available = [];
         foreach ($form->sections->sortBy('sort_order') as $section) {
             if ($section->questions->isEmpty()) {
-                $this->invalid("Section {$section->key} must contain a question.");
+                $add("Add at least one question to {$section->title}.", 'build-form');
             }
             foreach ($section->questions->sortBy('sort_order') as $question) {
                 if ($question->form_version_id !== $form->id) {
-                    $this->invalid('A question belongs to a different form version.');
+                    $add('A question belongs to a different questionnaire version.', 'question-'.$question->key);
                 }
-                $this->conditions->validate($question->condition_rules, $available);
+                if (blank($question->label)) {
+                    $add('This question needs a title.', 'question-'.$question->key);
+                }
+                try {
+                    $this->conditions->validate($question->condition_rules, $available);
+                } catch (ValidationException $e) {
+                    $add($question->label.': '.collect($e->errors())->flatten()->first(), 'question-'.$question->key);
+                }
                 $options = $question->options->pluck('key')->all();
-                if (in_array($question->type, ['single_choice', 'multiple_choice'], true) && $options === []) {
-                    $this->invalid("Question {$question->key} requires choices.");
+                if (in_array($question->type, ['single_choice', 'multiple_choice'], true) && count($options) < 2) {
+                    $add($question->label.': add at least two answer choices.', 'question-'.$question->key);
                 }
                 $available[$question->key] = ['type' => $question->type, 'options' => $options];
             }
         }
         foreach ($requirements->requirements as $requirement) {
-            $this->conditions->validate($requirement->condition_rules, $available);
+            try {
+                $this->conditions->validate($requirement->condition_rules, $available);
+            } catch (ValidationException $e) {
+                $add($requirement->label.': '.collect($e->errors())->flatten()->first(), 'required-documents');
+            }
             if ($requirement->providers->where('is_enabled', true)->isEmpty()) {
-                $this->invalid("Requirement {$requirement->key} requires an enabled evidence provider.");
+                $add($requirement->label.': select at least one accepted link type.', 'required-documents');
             }
         }
-    }
 
-    private function invalid(string $message): never
-    {
-        throw ValidationException::withMessages(['configuration' => $message]);
+        return $findings;
     }
 }

@@ -18,6 +18,8 @@ use Filament\Tables\Table;
 
 class FormDefinitionResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = FormDefinition::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;

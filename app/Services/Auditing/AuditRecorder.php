@@ -34,8 +34,15 @@ class AuditRecorder
 
     private function sanitize(array $metadata): array
     {
-        $blocked = ['password', 'password_confirmation', 'token', 'secret', 'authorization', 'cookie'];
+        $blocked = ['password', 'password_confirmation', 'token', 'secret', 'authorization', 'cookie', 'url', 'locator', 'file_id', 'ciphertext', 'fingerprint', 'encryption_key'];
 
-        return collect($metadata)->reject(fn ($value, $key) => in_array(strtolower((string) $key), $blocked, true))->all();
+        return collect($metadata)
+            ->reject(function ($value, $key) use ($blocked): bool {
+                $key = strtolower((string) $key);
+
+                return collect($blocked)->contains(fn (string $term): bool => str_contains($key, $term));
+            })
+            ->map(fn ($value) => is_array($value) ? $this->sanitize($value) : $value)
+            ->all();
     }
 }

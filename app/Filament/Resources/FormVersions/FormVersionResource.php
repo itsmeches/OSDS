@@ -10,6 +10,7 @@ use App\Models\FormVersion;
 use App\Models\RequirementSetVersion;
 use App\Services\Questionnaires\QuestionnaireDraftService;
 use App\Services\Questionnaires\QuestionnairePublicationService;
+use App\Support\QuestionnairePresentation;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Actions\EditAction;
@@ -28,25 +29,31 @@ use Filament\Tables\Table;
 
 class FormVersionResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = FormVersion::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedListBullet;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Questionnaire configuration';
 
+    protected static ?string $modelLabel = 'questionnaire draft';
+
+    protected static ?string $pluralModelLabel = 'questionnaire drafts';
+
     public static function form(Schema $schema): Schema
     {
         return $schema->components([
-            Select::make('form_definition_id')->relationship('definition', 'name')->required()->disabledOn('edit'),
-            TextInput::make('version_number')->numeric()->required()->minValue(1)->disabledOn('edit'),
-            TextInput::make('state')->disabled()->dehydrated(false),
+            Select::make('form_definition_id')->label('Questionnaire')->relationship('definition', 'name')->required()->disabledOn('edit'),
+            TextInput::make('version_number')->label('Version')->numeric()->required()->minValue(1)->disabledOn('edit'),
+            TextInput::make('state')->label('Status')->formatStateUsing(fn (?string $state): string => QuestionnairePresentation::statusLabel($state))->disabled()->dehydrated(false),
             Hidden::make('created_by')->default(fn () => auth()->id()),
             Repeater::make('sections')->relationship()->orderColumn('sort_order')->reorderable()->collapsible()->itemLabel(fn (array $state) => $state['title'] ?? 'Section')->schema([
-                TextInput::make('key')->required()->alphaDash(), TextInput::make('title')->required(), Textarea::make('description'),
+                TextInput::make('key')->label('Stable section key')->helperText('Used internally to preserve this section across versions.')->required()->alphaDash(), TextInput::make('title')->required(), Textarea::make('description'),
                 Repeater::make('questions')->relationship()->orderColumn('sort_order')->reorderable()->collapsible()->itemLabel(fn (array $state) => $state['label'] ?? 'Question')->schema([
-                    TextInput::make('key')->required()->alphaDash(), Select::make('type')->required()->options(array_combine(['short_text', 'long_text', 'telephone', 'email', 'date', 'integer', 'decimal', 'single_choice', 'multiple_choice', 'yes_no', 'declaration'], ['Short text', 'Long text', 'Telephone', 'Email', 'Date', 'Integer', 'Decimal', 'Single choice', 'Multiple choice', 'Yes/No', 'Declaration'])),
+                    TextInput::make('key')->label('Stable question key')->helperText('Use a short unique name such as organization_name.')->required()->alphaDash(), Select::make('type')->label('Response type')->required()->options(array_combine(['short_text', 'long_text', 'telephone', 'email', 'date', 'integer', 'decimal', 'single_choice', 'multiple_choice', 'yes_no', 'declaration'], ['Short text', 'Long text', 'Telephone', 'Email', 'Date', 'Whole number', 'Decimal number', 'Choose one', 'Choose multiple', 'Yes or no', 'Declaration'])),
                     TextInput::make('label')->required(), Textarea::make('help_text'), Toggle::make('is_required'),
-                    Textarea::make('validation_rules')->label('Validation JSON')->formatStateUsing(fn ($state) => is_array($state) ? json_encode($state, JSON_PRETTY_PRINT) : $state)->dehydrateStateUsing(fn ($state) => blank($state) ? [] : json_decode($state, true, flags: JSON_THROW_ON_ERROR))->rule('json'),
+                    Textarea::make('validation_rules')->label('Advanced response validation')->helperText('Optional technical settings in JSON. Leave blank unless a supported validation rule is required.')->formatStateUsing(fn ($state) => is_array($state) && $state !== [] ? json_encode($state, JSON_PRETTY_PRINT) : null)->dehydrateStateUsing(fn ($state) => blank($state) ? [] : json_decode($state, true, flags: JSON_THROW_ON_ERROR))->rule('json'),
                     ConditionRuleField::make(),
                     Repeater::make('options')->relationship()->orderColumn('sort_order')->reorderable()->schema([TextInput::make('key')->required()->alphaDash(), TextInput::make('label')->required()])->columns(2),
                 ])->columns(2),

@@ -31,6 +31,19 @@ Target-specific creation permissions are configured in `config/account-governanc
 - Delegation: `roles.assign`, `region_scopes.assign`, `region_scopes.revoke`, `institution_representatives.assign`, `institution_representatives.revoke`, `nationwide_scopes.assign`, `nationwide_scopes.revoke`.
 - Audit: `audit.view`, `audit.view.national`.
 - Questionnaire configuration: `questionnaires.view`, `questionnaires.draft.manage`, `questionnaires.review.submit`, `questionnaires.review`, `questionnaires.publish.sandbox`, `questionnaires.retire`, `questionnaires.preview.sandbox`, `questionnaires.publication.view`.
+- Applicant sandbox: `applicant.sandbox.publish`, `applicant.portal.access`, `applications.draft.create`, `applications.draft.view`, `applications.draft.update`.
+
+## Phase 3B applicant sandbox
+
+| Action | Super User | Admin | OSDS | CHEDRO | SCHOOL |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| Publish approved configuration to applicant sandbox | Deny | Allow | Deny | Deny | Deny |
+| Grant synthetic organization/module eligibility | Deny | Allow | Deny | Deny | Deny |
+| Enter applicant portal | Deny | Deny | Deny | Deny | Allow with all sandbox safeguards |
+| Create/view/update own synthetic draft | Deny | Deny | Deny | Deny | Allow with verified representation and eligibility |
+| View another applicant's answers | Deny | Deny | Deny | Deny | Deny |
+
+These permission assignments do not establish real COR/ACSA eligibility. Production and anonymous publication channels do not exist. Applicant access additionally requires the isolated environment and database, synthetic identity and organization, active verified representation, explicit effective eligibility, manifest effectivity, and ownership checks.
 
 ## Questionnaire configuration
 

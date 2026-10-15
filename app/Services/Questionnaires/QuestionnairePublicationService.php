@@ -9,6 +9,7 @@ use App\Models\PublicationManifest;
 use App\Models\PublicationManifestRetirement;
 use App\Models\RequirementSetVersion;
 use App\Models\User;
+use App\Services\Applicants\ApplicantSandboxGuard;
 use App\Services\Auditing\AuditRecorder;
 use App\Support\FoundationPermission;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -118,6 +119,33 @@ class QuestionnairePublicationService
             $form->update(['state' => 'published']);
             $requirements->update(['state' => 'published']);
             $this->audit->record('questionnaire.sandbox_published', 'success', $actor, $manifest, metadata: ['module_id' => $request->module_id, 'combined_hash' => $request->combined_hash, 'channel' => 'review_sandbox']);
+
+            return $manifest;
+        });
+    }
+
+    public function publishApplicantSandbox(User $actor, ConfigurationReviewApproval $approval, mixed $effectiveFrom = null, mixed $effectiveUntil = null): PublicationManifest
+    {
+        $this->authorize($actor, FoundationPermission::PublishApplicantSandbox);
+        if (! app(ApplicantSandboxGuard::class)->allowed()) {
+            throw new AuthorizationException('Applicant sandbox publication requires an isolated non-production database.');
+        }
+
+        return DB::transaction(function () use ($actor, $approval, $effectiveFrom, $effectiveUntil) {
+            $approval = ConfigurationReviewApproval::query()->lockForUpdate()->findOrFail($approval->id);
+            $request = ConfigurationReviewRequest::query()->lockForUpdate()->findOrFail($approval->configuration_review_request_id);
+            $form = FormVersion::query()->lockForUpdate()->findOrFail($request->form_version_id);
+            $requirements = RequirementSetVersion::query()->lockForUpdate()->findOrFail($request->requirement_set_version_id);
+            $this->assertCurrentHashes($request, $form, $requirements);
+            if ($approval->outcome !== 'approved' || $request->state !== 'approved' || $approval->approved_hash !== $request->combined_hash) {
+                $this->invalid('The approval no longer matches this configuration.');
+            }
+            DB::select('SELECT pg_advisory_xact_lock(?)', [$request->module_id]);
+            if (PublicationManifest::query()->where('module_id', $request->module_id)->where('channel', 'applicant_sandbox')->whereDoesntHave('retirement')->exists()) {
+                $this->invalid('Retire the active applicant sandbox publication first.');
+            }
+            $manifest = PublicationManifest::query()->create(['module_id' => $request->module_id, 'form_version_id' => $form->id, 'requirement_set_version_id' => $requirements->id, 'configuration_review_approval_id' => $approval->id, 'channel' => 'applicant_sandbox', 'effective_from' => $effectiveFrom ?? now(), 'effective_until' => $effectiveUntil, 'form_hash' => $request->form_hash, 'requirement_hash' => $request->requirement_hash, 'combined_hash' => $request->combined_hash, 'published_by' => $actor->id, 'published_at' => now()]);
+            $this->audit->record('questionnaire.applicant_sandbox_published', 'success', $actor, $manifest, metadata: ['module_id' => $request->module_id, 'combined_hash' => $request->combined_hash, 'channel' => 'applicant_sandbox']);
 
             return $manifest;
         });

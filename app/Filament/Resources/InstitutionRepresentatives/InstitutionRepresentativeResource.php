@@ -19,7 +19,13 @@ class InstitutionRepresentativeResource extends Resource
 {
     protected static ?string $model = InstitutionRepresentative::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedIdentification;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+
+    protected static ?string $navigationLabel = 'Institution representatives';
+
+    protected static ?int $navigationSort = 40;
 
     public static function form(Schema $schema): Schema
     {

@@ -8,6 +8,7 @@ use App\Filament\Resources\RequirementSetVersions\Pages\EditRequirementSetVersio
 use App\Filament\Resources\RequirementSetVersions\Pages\ListRequirementSetVersions;
 use App\Models\RequirementSetVersion;
 use App\Services\Questionnaires\QuestionnaireDraftService;
+use App\Support\QuestionnairePresentation;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Actions\EditAction;
@@ -27,22 +28,28 @@ use Filament\Tables\Table;
 
 class RequirementSetVersionResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = RequirementSetVersion::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentCheck;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Questionnaire configuration';
 
+    protected static ?string $modelLabel = 'document requirements draft';
+
+    protected static ?string $pluralModelLabel = 'document requirements drafts';
+
     public static function form(Schema $schema): Schema
     {
         return $schema->components([
-            Select::make('module_id')->relationship('module', 'name')->required()->disabledOn('edit'),
-            TextInput::make('version_number')->numeric()->required()->minValue(1)->disabledOn('edit'),
-            TextInput::make('state')->disabled()->dehydrated(false), Hidden::make('created_by')->default(fn () => auth()->id()),
+            Select::make('module_id')->label('Program')->relationship('module', 'name')->required()->disabledOn('edit'),
+            TextInput::make('version_number')->label('Version')->numeric()->required()->minValue(1)->disabledOn('edit'),
+            TextInput::make('state')->label('Status')->formatStateUsing(fn (?string $state): string => QuestionnairePresentation::statusLabel($state))->disabled()->dehydrated(false), Hidden::make('created_by')->default(fn () => auth()->id()),
             Repeater::make('requirements')->relationship()->orderColumn('sort_order')->reorderable()->collapsible()->itemLabel(fn (array $state) => $state['label'] ?? 'Requirement')->schema([
-                TextInput::make('key')->required()->alphaDash(), TextInput::make('label')->required(), Textarea::make('instructions'), Toggle::make('is_required')->default(true),
-                TextInput::make('minimum_evidence')->numeric()->required()->minValue(0)->default(1), TextInput::make('maximum_evidence')->numeric()->required()->minValue(1)->default(1)->gte('minimum_evidence'),
-                CheckboxList::make('providers')->relationship('providers', 'name')->required()->columns(2),
+                TextInput::make('key')->label('Stable requirement key')->helperText('Used internally to preserve this requirement across versions.')->required()->alphaDash(), TextInput::make('label')->label('Requirement name')->required(), Textarea::make('instructions')->helperText('Explain what document is expected without adding unapproved policy.'), Toggle::make('is_required')->label('Required')->default(true),
+                TextInput::make('minimum_evidence')->label('Minimum number of links')->numeric()->required()->minValue(0)->default(1), TextInput::make('maximum_evidence')->label('Maximum number of links')->numeric()->required()->minValue(1)->default(1)->gte('minimum_evidence'),
+                CheckboxList::make('providers')->label('Accepted link types')->relationship('providers', 'name')->required()->columns(2),
                 ConditionRuleField::make(),
             ])->columns(2)->columnSpanFull(),
         ]);

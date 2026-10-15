@@ -19,7 +19,13 @@ class UserRegionAssignmentResource extends Resource
 {
     protected static ?string $model = UserRegionAssignment::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMapPin;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+
+    protected static ?string $navigationLabel = 'Regional assignments';
+
+    protected static ?int $navigationSort = 50;
 
     public static function form(Schema $schema): Schema
     {

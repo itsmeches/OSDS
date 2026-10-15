@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
 
-#[Fillable(['name', 'email', 'password', 'status', 'deactivated_at', 'deactivated_by'])]
+#[Fillable(['name', 'email', 'password', 'status', 'is_synthetic', 'deactivated_at', 'deactivated_by'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable implements FilamentUser
 {
@@ -96,6 +96,7 @@ class User extends Authenticatable implements FilamentUser
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'deactivated_at' => 'immutable_datetime',
+            'is_synthetic' => 'boolean',
         ];
     }
 }

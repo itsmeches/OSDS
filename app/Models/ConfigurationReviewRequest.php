@@ -40,4 +40,9 @@ class ConfigurationReviewRequest extends Model
     {
         return $this->hasMany(ConfigurationReviewApproval::class);
     }
+
+    public function submittedBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'submitted_by');
+    }
 }

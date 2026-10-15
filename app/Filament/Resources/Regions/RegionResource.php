@@ -19,7 +19,11 @@ class RegionResource extends Resource
 {
     protected static ?string $model = Region::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMap;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+
+    protected static ?int $navigationSort = 20;
 
     public static function form(Schema $schema): Schema
     {

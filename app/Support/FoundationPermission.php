@@ -37,4 +37,17 @@ enum FoundationPermission: string
     case RetireQuestionnaires = 'questionnaires.retire';
     case PreviewQuestionnaireSandbox = 'questionnaires.preview.sandbox';
     case ViewQuestionnairePublications = 'questionnaires.publication.view';
+    case PublishApplicantSandbox = 'applicant.sandbox.publish';
+    case AccessApplicantPortal = 'applicant.portal.access';
+    case CreateApplicationDrafts = 'applications.draft.create';
+    case ViewApplicationDrafts = 'applications.draft.view';
+    case UpdateApplicationDrafts = 'applications.draft.update';
+    case ManageEvidenceReferences = 'evidence.references.manage';
+    case OpenOwnEvidenceReferences = 'evidence.references.open.own';
+    case CreateEvidenceReviewCopy = 'evidence.review.copy.create';
+    case ManageEvidenceReviewerAssignments = 'evidence.reviewer.assignments.manage';
+    case ViewEvidenceReviews = 'evidence.reviews.view';
+    case OpenEvidenceReviews = 'evidence.reviews.open';
+    case CreateEvidenceReviewFindings = 'evidence.review.findings.create';
+    case ViewEvidenceReviewHistory = 'evidence.review.history.view';
 }
