@@ -1,0 +1,26 @@
+[
+  {
+    "file": "reproduce-applicant-answer-race.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-applicant-answer-matrix.mjs",
+    "passed": true
+  },
+  {
+    "file": "reproduce-builder-selection-integrity.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-builder-selection-matrix.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-builder-journey.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-chedro-journey.mjs",
+    "passed": true
+  }
+]

@@ -1,0 +1,181 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "first": {
+      "pid": 29224,
+      "transactionDepth": 1
+    },
+    "second": {
+      "pid": 29556
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "created",
+        "id": 441
+      },
+      {
+        "mode": "B",
+        "outcome": "duplicate-rejected"
+      }
+    ],
+    "saved": {
+      "actor": 482,
+      "email": "gint006-nnv48bwv@example.invalid",
+      "target": 483,
+      "targetName": "Synthetic delegated account nnv48bwv",
+      "region": 167,
+      "regionName": "Synthetic region B nnv48bwv",
+      "otherRegion": 168,
+      "otherRegionName": "Synthetic region C nnv48bwv",
+      "scope": 438,
+      "assignments": [
+        {
+          "id": 441,
+          "region_id": 167,
+          "granted_by": 482,
+          "audits": 1
+        }
+      ]
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "first": {
+      "pid": 19052
+    },
+    "second": {
+      "pid": 28864
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 484,
+      "email": "gint006-3mqmjze8@example.invalid",
+      "target": 485,
+      "targetName": "Synthetic delegated account 3mqmjze8",
+      "region": 170,
+      "regionName": "Synthetic region B 3mqmjze8",
+      "otherRegion": 171,
+      "otherRegionName": "Synthetic region C 3mqmjze8",
+      "scope": 444,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "first": {
+      "pid": 4648
+    },
+    "second": {
+      "pid": 1444
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 486,
+      "email": "gint006-fwpfmgfi@example.invalid",
+      "target": 487,
+      "targetName": "Synthetic delegated account fwpfmgfi",
+      "region": 173,
+      "regionName": "Synthetic region B fwpfmgfi",
+      "otherRegion": 174,
+      "otherRegionName": "Synthetic region C fwpfmgfi",
+      "scope": 448,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "first": {
+      "pid": 28824
+    },
+    "second": {
+      "pid": 11048
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 488,
+      "email": "gint006-oev1ktgw@example.invalid",
+      "target": 489,
+      "targetName": "Synthetic delegated account oev1ktgw",
+      "region": 176,
+      "regionName": "Synthetic region B oev1ktgw",
+      "otherRegion": 177,
+      "otherRegionName": "Synthetic region C oev1ktgw",
+      "scope": 452,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "target-role",
+    "passed": true,
+    "first": {
+      "pid": 14832
+    },
+    "second": {
+      "pid": 30772
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "target-role",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 490,
+      "email": "gint006-0dc3dtpz@example.invalid",
+      "target": 491,
+      "targetName": "Synthetic delegated account 0dc3dtpz",
+      "region": 179,
+      "regionName": "Synthetic region B 0dc3dtpz",
+      "otherRegion": 180,
+      "otherRegionName": "Synthetic region C 0dc3dtpz",
+      "scope": 456,
+      "assignments": []
+    }
+  }
+]

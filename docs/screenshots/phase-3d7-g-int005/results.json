@@ -1,0 +1,481 @@
+{
+  "checks": [
+    "Required field validation prevents creation",
+    "Actual Create audit fault rolls back both writes and retains entries",
+    "Double click on actual Create produces one grant and one matching audit",
+    "Committed lost response stays uncertain; saved list inspection confirms grants without replay",
+    "Permission loss after mount denies creation",
+    "Expired session retains local form and does not replay creation"
+  ],
+  "screens": [
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-uncertain",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 1319.1,
+      "dom_ms": 2272.6
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 1676.6,
+      "dom_ms": 2906.4
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments",
+      "status": 200,
+      "ttfb_ms": 1901.7,
+      "dom_ms": 3403.3
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 1806.9,
+      "dom_ms": 3308.1
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 1433.5,
+      "dom_ms": 2724.1
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "$commit"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 302,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "beforeunload",
+      "message": ""
+    }
+  ],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8025",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "confidentialityLeaks": 0
+}

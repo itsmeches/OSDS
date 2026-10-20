@@ -1,0 +1,57 @@
+{
+  "checks": [],
+  "screens": [],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-application-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 1053.4,
+      "dom_ms": 1881.5
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('The reason field is required.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('The reason field is required.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('The reason field is required.', { exact: true })\n",
+  "confidentialityLeaks": 0
+}

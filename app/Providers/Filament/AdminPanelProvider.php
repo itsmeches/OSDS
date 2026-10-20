@@ -8,14 +8,18 @@ use App\Filament\Resources\AuditEvents\Pages\ListAuditEvents;
 use App\Filament\Resources\ConfigurationReviewRequests\Pages\ListConfigurationReviewRequests;
 use App\Filament\Resources\ConfigurationReviewRequests\Pages\ViewConfigurationReviewRequest;
 use App\Filament\Resources\EvidenceProviderTypes\Pages\ListEvidenceProviderTypes;
+use App\Filament\Resources\InstitutionRepresentatives\Pages\CreateInstitutionRepresentative;
 use App\Filament\Resources\InstitutionRepresentatives\Pages\EditInstitutionRepresentative;
 use App\Filament\Resources\InstitutionRepresentatives\Pages\ListInstitutionRepresentatives;
 use App\Filament\Resources\Institutions\Pages\ListInstitutions;
 use App\Filament\Resources\OsdsModules\Pages\ListOsdsModules;
 use App\Filament\Resources\PublicationManifests\Pages\ListPublicationManifests;
 use App\Filament\Resources\Regions\Pages\ListRegions;
+use App\Filament\Resources\SyntheticApplicationReviewerAssignments\Pages\CreateSyntheticApplicationReviewerAssignment;
 use App\Filament\Resources\SyntheticApplicationReviewerAssignments\Pages\ListSyntheticApplicationReviewerAssignments;
+use App\Filament\Resources\SyntheticEvidenceReviewerAssignments\Pages\CreateSyntheticEvidenceReviewerAssignment;
 use App\Filament\Resources\SyntheticEvidenceReviewerAssignments\Pages\ListSyntheticEvidenceReviewerAssignments;
+use App\Filament\Resources\UserRegionAssignments\Pages\CreateUserRegionAssignment;
 use App\Filament\Resources\UserRegionAssignments\Pages\EditUserRegionAssignment;
 use App\Filament\Resources\UserRegionAssignments\Pages\ListUserRegionAssignments;
 use App\Filament\Resources\Users\Pages\CreateUser;
@@ -74,6 +78,10 @@ class AdminPanelProvider extends PanelProvider
                 ListEvidenceProviderTypes::class,
             ])
             ->renderHook(PanelsRenderHook::PAGE_START, fn () => view('filament.partials.staff-action-recovery'), scopes: [
+                CreateInstitutionRepresentative::class,
+                CreateUserRegionAssignment::class,
+                CreateSyntheticEvidenceReviewerAssignment::class,
+                CreateSyntheticApplicationReviewerAssignment::class,
                 ViewConfigurationReviewRequest::class,
                 ListSyntheticEvidenceReviewerAssignments::class,
                 ListSyntheticApplicationReviewerAssignments::class,

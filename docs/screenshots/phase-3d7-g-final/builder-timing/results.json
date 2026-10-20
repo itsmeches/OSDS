@@ -1,0 +1,17 @@
+[
+  {
+    "hold_ms": 0,
+    "passed": true,
+    "total_ms": 47606
+  },
+  {
+    "hold_ms": 250,
+    "passed": true,
+    "total_ms": 51552
+  },
+  {
+    "hold_ms": 1000,
+    "passed": true,
+    "total_ms": 51252
+  }
+]

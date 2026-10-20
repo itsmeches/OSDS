@@ -1,0 +1,7 @@
+{
+  "trials": [],
+  "failures": [
+    "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"209\"\nReceived: \"undefined\""
+  ],
+  "scope": "Same-page modal transitions; no Confirm or mutation is performed"
+}

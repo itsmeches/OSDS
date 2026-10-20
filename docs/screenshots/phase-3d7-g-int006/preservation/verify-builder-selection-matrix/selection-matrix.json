@@ -1,0 +1,145 @@
+{
+  "cases": [
+    {
+      "name": "Question 2 title isolation across six questions",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Question 1 title isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Repeated switching and immediate edits across three questions",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Keyboard-only item selection and title editing",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Description type required flag and protected tree isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Simple condition edit survives selection and stage changes without altering other trees",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Choice labels isolated between two focused choice editors",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Option insertion deletion and shifted binding identity",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Reordered question remounts its changed positional binding",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Insertion deletion and selection preserve unaffected stable identities",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Document title instructions counts required state reorder and section-field isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Selection requested while a model response is held waits safely then edits only the selected item",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Older committed response delivered after a newer tab save; stale retry rejected with local input retained",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "Duplicated question and section description retain independent bindings",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": []
+}

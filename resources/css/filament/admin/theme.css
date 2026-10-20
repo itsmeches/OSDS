@@ -458,3 +458,10 @@ body.fi-body {
 
 /* Read-only staff tables retain native horizontal scrolling with visible focus. */
 .fi-ta-content-ctn[tabindex='0']:focus-visible { outline: 3px solid var(--osds-focus); outline-offset: -3px; }
+
+/* Keep the creation selector's clear action usable beside its combobox. */
+.application-reviewer-selector .fi-select-input-value-remove-btn,
+.evidence-reviewer-selector .fi-select-input-value-remove-btn {
+    min-inline-size: 24px;
+    min-block-size: 24px;
+}

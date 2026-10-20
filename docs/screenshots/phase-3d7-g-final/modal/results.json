@@ -1,0 +1,348 @@
+{
+  "checks": [],
+  "screens": [
+    {
+      "role": "Admin",
+      "name": "after-rapid-transitions",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "after-rapid-transitions",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "after-rapid-transitions",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "after-rapid-transitions",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments",
+      "status": 200,
+      "ttfb_ms": 1279,
+      "dom_ms": 1992.4
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "$commit"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "revoke"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "unmountAction"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [
+    {
+      "name": "after-rapid-transitions",
+      "theme": "light",
+      "horizontalScroll": true
+    },
+    {
+      "name": "after-rapid-transitions",
+      "theme": "dark",
+      "horizontalScroll": true
+    }
+  ],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ]
+}

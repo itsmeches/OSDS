@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "independentConnections": [
+    {
+      "pid": 23952,
+      "inTransaction": true
+    },
+    {
+      "pid": 10812,
+      "inTransaction": true
+    }
+  ],
+  "uncommittedRowsVisible": 0,
+  "outcomes": [
+    {
+      "side": "A",
+      "committed": true,
+      "id": 201
+    },
+    {
+      "side": "B",
+      "committed": true,
+      "id": 200
+    }
+  ],
+  "assignmentCount": 2,
+  "auditCount": 2,
+  "semantics": "Existing separate creates allowed; no idempotency guarantee or new exclusion policy"
+}

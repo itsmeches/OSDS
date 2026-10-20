@@ -42,7 +42,7 @@ class SyntheticApplicationReviewerAssignmentResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return $schema->components([
-            Select::make('reviewer_id')->relationship('reviewer', 'name', modifyQueryUsing: fn ($query) => $query->where('is_synthetic', true))->required()->searchable(),
+            Select::make('reviewer_id')->relationship('reviewer', 'name', modifyQueryUsing: fn ($query) => $query->where('is_synthetic', true))->required()->searchable()->extraAttributes(['class' => 'application-reviewer-selector']),
             Select::make('region_id')->relationship('region', 'name')->required(),
             Select::make('module_id')->relationship('module', 'name')->required(),
             DateTimePicker::make('starts_at')->default(now())->required(), DateTimePicker::make('ends_at')->after('starts_at'),

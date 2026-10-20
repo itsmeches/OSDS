@@ -1,0 +1,1351 @@
+{
+    "database": "osds_ui_browser_test",
+    "timezone": "UTC",
+    "method": "Domain-created synthetic workload; actual guarded queue\/filter builders, page size 10, one warmup then 7 samples per scenario; SQL text\/bindings are never exported",
+    "stages": [
+        {
+            "size": 12,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 3.3,
+                    "elapsed_ms": 7.603,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.95,
+                    "elapsed_ms": 6.972,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.64,
+                    "elapsed_ms": 6.279,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.57,
+                    "elapsed_ms": 8.077,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.79,
+                    "elapsed_ms": 6.649,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.57,
+                    "elapsed_ms": 8.08,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.87,
+                    "elapsed_ms": 6.794,
+                    "returned": 10,
+                    "total": 12
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 2.73,
+                    "elapsed_ms": 6.045,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.37,
+                    "elapsed_ms": 7.25,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.92,
+                    "elapsed_ms": 6.399,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.44,
+                    "elapsed_ms": 7.21,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.71,
+                    "elapsed_ms": 6.09,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.44,
+                    "elapsed_ms": 5.519,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.34,
+                    "elapsed_ms": 6.889,
+                    "returned": 2,
+                    "total": 12
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 3.31,
+                    "elapsed_ms": 5.381,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 2.81,
+                    "elapsed_ms": 4.994,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 2.62,
+                    "elapsed_ms": 4.599,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 2.91,
+                    "elapsed_ms": 4.989,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 2.94,
+                    "elapsed_ms": 5.186,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 2.79,
+                    "elapsed_ms": 4.875,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 5.49,
+                    "elapsed_ms": 8.185,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 1.08,
+                    "elapsed_ms": 2.725,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.09,
+                    "elapsed_ms": 2.705,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.12,
+                    "elapsed_ms": 2.787,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.87,
+                    "elapsed_ms": 2.309,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.81,
+                    "elapsed_ms": 2.231,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.79,
+                    "elapsed_ms": 2.153,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.92,
+                    "elapsed_ms": 2.368,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 3.71,
+                    "elapsed_ms": 7.916,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.29,
+                    "elapsed_ms": 7.427,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.22,
+                    "elapsed_ms": 7.083,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.15,
+                    "elapsed_ms": 6.959,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.39,
+                    "elapsed_ms": 7.406,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.06,
+                    "elapsed_ms": 6.759,
+                    "returned": 10,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.31,
+                    "elapsed_ms": 7.185,
+                    "returned": 10,
+                    "total": 12
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 4.14,
+                    "elapsed_ms": 8.554,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3,
+                    "elapsed_ms": 6.302,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.22,
+                    "elapsed_ms": 6.532,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.06,
+                    "elapsed_ms": 7.8,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.19,
+                    "elapsed_ms": 8.337,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 2.98,
+                    "elapsed_ms": 6.364,
+                    "returned": 2,
+                    "total": 12
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.23,
+                    "elapsed_ms": 6.679,
+                    "returned": 2,
+                    "total": 12
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 3.26,
+                    "elapsed_ms": 5.819,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.52,
+                    "elapsed_ms": 6.264,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.04,
+                    "elapsed_ms": 5.49,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.25,
+                    "elapsed_ms": 5.779,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.29,
+                    "elapsed_ms": 5.977,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.18,
+                    "elapsed_ms": 5.77,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 3.29,
+                    "elapsed_ms": 6.061,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 12,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 0.92,
+                    "elapsed_ms": 2.471,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.33,
+                    "elapsed_ms": 3.015,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.18,
+                    "elapsed_ms": 2.865,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.98,
+                    "elapsed_ms": 2.603,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.99,
+                    "elapsed_ms": 2.654,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.01,
+                    "elapsed_ms": 2.645,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.3,
+                    "elapsed_ms": 3.209,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 3.32,
+                    "elapsed_ms": 7.682,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.04,
+                    "elapsed_ms": 7.023,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.63,
+                    "elapsed_ms": 8.096,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.08,
+                    "elapsed_ms": 7.167,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.27,
+                    "elapsed_ms": 7.626,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.12,
+                    "elapsed_ms": 7.272,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.63,
+                    "elapsed_ms": 8.436,
+                    "returned": 10,
+                    "total": 36
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 3.7,
+                    "elapsed_ms": 8.489,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.22,
+                    "elapsed_ms": 7.258,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.91,
+                    "elapsed_ms": 6.935,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.69,
+                    "elapsed_ms": 6.403,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.97,
+                    "elapsed_ms": 6.933,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 2.9,
+                    "elapsed_ms": 6.826,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.73,
+                    "elapsed_ms": 8.175,
+                    "returned": 10,
+                    "total": 36
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 6.59,
+                    "elapsed_ms": 9.976,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.83,
+                    "elapsed_ms": 9.481,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.34,
+                    "elapsed_ms": 9.209,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.25,
+                    "elapsed_ms": 9.233,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 5.95,
+                    "elapsed_ms": 8.453,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.49,
+                    "elapsed_ms": 9.318,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 7.12,
+                    "elapsed_ms": 9.925,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 0.7,
+                    "elapsed_ms": 1.966,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.88,
+                    "elapsed_ms": 2.227,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.24,
+                    "elapsed_ms": 2.614,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.88,
+                    "elapsed_ms": 2.295,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.82,
+                    "elapsed_ms": 2.141,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.8,
+                    "elapsed_ms": 2.193,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.84,
+                    "elapsed_ms": 2.191,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 3.08,
+                    "elapsed_ms": 6.895,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.12,
+                    "elapsed_ms": 8.674,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.13,
+                    "elapsed_ms": 8.493,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.82,
+                    "elapsed_ms": 8.913,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 6.32,
+                    "elapsed_ms": 11.733,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.5,
+                    "elapsed_ms": 9.222,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.85,
+                    "elapsed_ms": 8.42,
+                    "returned": 10,
+                    "total": 36
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 4.44,
+                    "elapsed_ms": 8.691,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.96,
+                    "elapsed_ms": 8.421,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 2.93,
+                    "elapsed_ms": 6.353,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.36,
+                    "elapsed_ms": 9.96,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 3.89,
+                    "elapsed_ms": 8.009,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.28,
+                    "elapsed_ms": 10.176,
+                    "returned": 10,
+                    "total": 36
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.85,
+                    "elapsed_ms": 12.892,
+                    "returned": 10,
+                    "total": 36
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 6.42,
+                    "elapsed_ms": 9.67,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 8.39,
+                    "elapsed_ms": 12.389,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.78,
+                    "elapsed_ms": 9.366,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 8.43,
+                    "elapsed_ms": 11.827,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 6.19,
+                    "elapsed_ms": 9.348,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 8.77,
+                    "elapsed_ms": 11.771,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 8.1,
+                    "elapsed_ms": 11.469,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 36,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 1.87,
+                    "elapsed_ms": 4.239,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.7,
+                    "elapsed_ms": 3.525,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 2.3,
+                    "elapsed_ms": 4.779,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.5,
+                    "elapsed_ms": 3.88,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.25,
+                    "elapsed_ms": 3.511,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.56,
+                    "elapsed_ms": 3.433,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.18,
+                    "elapsed_ms": 2.58,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 5.24,
+                    "elapsed_ms": 10.7,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 4.69,
+                    "elapsed_ms": 10.991,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 4.23,
+                    "elapsed_ms": 8.198,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.99,
+                    "elapsed_ms": 9.775,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.54,
+                    "elapsed_ms": 9.257,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.95,
+                    "elapsed_ms": 8.117,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.99,
+                    "elapsed_ms": 8.62,
+                    "returned": 10,
+                    "total": 60
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 12,
+                    "sql_ms": 3.41,
+                    "elapsed_ms": 7.531,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.45,
+                    "elapsed_ms": 8.074,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.92,
+                    "elapsed_ms": 8.388,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.26,
+                    "elapsed_ms": 7.528,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 4.1,
+                    "elapsed_ms": 8.407,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 3.22,
+                    "elapsed_ms": 7.473,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 12,
+                    "sql_ms": 4.93,
+                    "elapsed_ms": 10.303,
+                    "returned": 10,
+                    "total": 60
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 9.61,
+                    "elapsed_ms": 12.433,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.04,
+                    "elapsed_ms": 13.038,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.64,
+                    "elapsed_ms": 18.989,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.13,
+                    "elapsed_ms": 12.947,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 11.11,
+                    "elapsed_ms": 14.502,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 11.03,
+                    "elapsed_ms": 14.516,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.4,
+                    "elapsed_ms": 13.655,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticApplicationIntake",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 1.48,
+                    "elapsed_ms": 3.512,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.9,
+                    "elapsed_ms": 3.871,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 2.01,
+                    "elapsed_ms": 4.082,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 2.18,
+                    "elapsed_ms": 4.986,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.05,
+                    "elapsed_ms": 2.782,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 2.32,
+                    "elapsed_ms": 4.648,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 2.79,
+                    "elapsed_ms": 5.438,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-one",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 4.82,
+                    "elapsed_ms": 9.974,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 2.8,
+                    "elapsed_ms": 6.341,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 6.33,
+                    "elapsed_ms": 10.935,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.91,
+                    "elapsed_ms": 11.848,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.65,
+                    "elapsed_ms": 11.207,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.59,
+                    "elapsed_ms": 10.878,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.53,
+                    "elapsed_ms": 10.82,
+                    "returned": 10,
+                    "total": 60
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "page-two",
+            "samples": [
+                {
+                    "queries": 10,
+                    "sql_ms": 7.54,
+                    "elapsed_ms": 14.116,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.69,
+                    "elapsed_ms": 10.673,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.22,
+                    "elapsed_ms": 9.844,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 4.1,
+                    "elapsed_ms": 8.215,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.47,
+                    "elapsed_ms": 9.559,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.98,
+                    "elapsed_ms": 11.022,
+                    "returned": 10,
+                    "total": 60
+                },
+                {
+                    "queries": 10,
+                    "sql_ms": 5.87,
+                    "elapsed_ms": 11.609,
+                    "returned": 10,
+                    "total": 60
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "empty-search",
+            "samples": [
+                {
+                    "queries": 6,
+                    "sql_ms": 13.15,
+                    "elapsed_ms": 16.415,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.87,
+                    "elapsed_ms": 14.842,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.22,
+                    "elapsed_ms": 13.752,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 11.01,
+                    "elapsed_ms": 13.568,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 9.94,
+                    "elapsed_ms": 13.384,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 11.33,
+                    "elapsed_ms": 15.078,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 6,
+                    "sql_ms": 10.36,
+                    "elapsed_ms": 13.821,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        },
+        {
+            "size": 60,
+            "queue": "SyntheticEvidenceReviews",
+            "scenario": "missing-permission",
+            "samples": [
+                {
+                    "queries": 3,
+                    "sql_ms": 1.18,
+                    "elapsed_ms": 2.627,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.01,
+                    "elapsed_ms": 2.256,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 1.05,
+                    "elapsed_ms": 2.73,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.88,
+                    "elapsed_ms": 2.882,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 0.81,
+                    "elapsed_ms": 2.734,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 8.78,
+                    "elapsed_ms": 11.685,
+                    "returned": 0,
+                    "total": 0
+                },
+                {
+                    "queries": 3,
+                    "sql_ms": 10.44,
+                    "elapsed_ms": 13.333,
+                    "returned": 0,
+                    "total": 0
+                }
+            ]
+        }
+    ]
+}

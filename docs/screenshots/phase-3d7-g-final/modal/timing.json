@@ -1,0 +1,83 @@
+{
+  "trials": [
+    {
+      "index": 0,
+      "mode": "rapid-same-page",
+      "record": "215",
+      "elapsed_ms": 1425
+    },
+    {
+      "index": 1,
+      "mode": "rapid-same-page",
+      "record": "216",
+      "elapsed_ms": 1925
+    },
+    {
+      "index": 2,
+      "mode": "rapid-same-page",
+      "record": "215",
+      "elapsed_ms": 1481
+    },
+    {
+      "index": 3,
+      "mode": "rapid-same-page",
+      "record": "216",
+      "elapsed_ms": 1956
+    },
+    {
+      "index": 4,
+      "mode": "rapid-same-page",
+      "record": "215",
+      "elapsed_ms": 1627
+    },
+    {
+      "index": 5,
+      "mode": "rapid-same-page",
+      "record": "216",
+      "elapsed_ms": 1510
+    },
+    {
+      "index": 6,
+      "mode": "rapid-same-page",
+      "record": "215",
+      "elapsed_ms": 1446
+    },
+    {
+      "index": 7,
+      "mode": "rapid-same-page",
+      "record": "216",
+      "elapsed_ms": 1410
+    },
+    {
+      "index": 8,
+      "mode": "held-cancel",
+      "visibleWhileHeld": 0,
+      "record": "215",
+      "elapsed_ms": 2967
+    },
+    {
+      "index": 9,
+      "mode": "held-cancel",
+      "visibleWhileHeld": 0,
+      "record": "216",
+      "elapsed_ms": 2285
+    },
+    {
+      "index": 10,
+      "mode": "held-cancel",
+      "visibleWhileHeld": 0,
+      "record": "215",
+      "elapsed_ms": 2465
+    },
+    {
+      "index": 11,
+      "mode": "held-cancel",
+      "visibleWhileHeld": 0,
+      "record": "216",
+      "elapsed_ms": 2307
+    }
+  ],
+  "failures": [],
+  "scope": "Same-page modal transitions; no Confirm or mutation is performed",
+  "persistenceUnchanged": true
+}

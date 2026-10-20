@@ -1,0 +1,31 @@
+[
+  {
+    "file": "reproduce-applicant-answer-race.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-applicant-answer-matrix.mjs",
+    "passed": true
+  },
+  {
+    "file": "reproduce-builder-selection-integrity.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-builder-selection-matrix.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-builder-journey.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-chedro-journey.mjs",
+    "passed": true
+  },
+  {
+    "file": "verify-staff-journey.mjs",
+    "passed": false,
+    "message": "Error: Command failed: C:\\Users\\LOCALU~1.LAP\\AppData\\Local\\Temp\\osds-phase1-tools\\node\\node-v24.20.0-win-x64\\node.exe scripts/.gint006-preservation-current.mjs"
+  }
+]

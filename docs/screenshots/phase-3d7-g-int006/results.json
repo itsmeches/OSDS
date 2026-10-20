@@ -1,0 +1,777 @@
+{
+  "checks": [
+    "Real required-field validation prevents a regional grant",
+    "Actual Create rolls back grant and inserted audit, retaining local fields",
+    "Double click yields one regional grant and one mandatory audit",
+    "Separate duplicate Create preserves existing unrevoked-grant database constraint",
+    "Committed response loss stays uncertain; saved-list inspection confirms state without replay",
+    "Permission loss after mount denies creation",
+    "Cookie loss retains open form without replay"
+  ],
+  "screens": [
+    {
+      "role": "Admin",
+      "name": "regional-creation-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-uncertain",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "regional-creation-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 722.6,
+      "dom_ms": 1311.1
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 826.1,
+      "dom_ms": 1535.7
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 904.4,
+      "dom_ms": 1740.4
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments",
+      "status": 200,
+      "ttfb_ms": 910.2,
+      "dom_ms": 1517.3
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 770.2,
+      "dom_ms": 1589
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 692.3,
+      "dom_ms": 1202.8
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 302,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "beforeunload",
+      "message": ""
+    },
+    {
+      "type": "beforeunload",
+      "message": ""
+    }
+  ],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8026",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "knownAccessibilityFindings": [
+    {
+      "name": "regional-creation-rollback",
+      "theme": "light",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-rollback",
+      "theme": "light",
+      "width": 375,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-rollback",
+      "theme": "dark",
+      "width": 375,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-uncertain",
+      "theme": "light",
+      "width": 375,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional-creation-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "violations": [
+        {
+          "id": "target-size",
+          "targets": [
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(1) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ],
+            [
+              ".fi-grid-col[data-has-alpine-state=\"true\"]:nth-child(2) > .fi-sc-component > .fi-fo-select-wrp.fi-fo-field[data-field-wrapper=\"\"] > .fi-fo-field-content-col > .fi-fo-select.fi-input-wrp > .fi-input-wrp-content-ctn > .fi-select-input[x-load=\"\"] > div[x-ref=\"select\"] > .fi-select-input-ctn.fi-select-input-ctn-clearable > .fi-select-input-value-remove-btn[aria-label=\"Clear selection\"][type=\"button\"]"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "confidentialityLeaks": 0
+}

@@ -1,0 +1,49 @@
+{
+  "checks": [],
+  "screens": [],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-application-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 813,
+      "dom_ms": 1383.5
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "TimeoutError: locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('searchbox').last()\u001b[22m\n",
+  "confidentialityLeaks": 0
+}

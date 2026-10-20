@@ -1,0 +1,78 @@
+{
+  "checks": [],
+  "screens": [],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 906.6,
+      "dom_ms": 1681.6
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 500,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Error fetching search results: {status: 500, body: <!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n      …       </div>\n        </div>\n    </body>\n</html>\n, json: null, errors: null}"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'Synthetic creation reviewer 1if0g5zt', exact: true })\u001b[22m\n",
+  "confidentialityLeaks": 0
+}

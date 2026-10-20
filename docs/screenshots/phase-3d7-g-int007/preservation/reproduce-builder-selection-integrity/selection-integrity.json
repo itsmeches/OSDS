@@ -1,0 +1,1553 @@
+{
+  "before": {
+    "form": 355,
+    "requirements": 355,
+    "builder": "/admin/form-builder/355/355",
+    "questionRules": {
+      "source": null,
+      "dependent": {
+        "any": [
+          {
+            "value": "Alpha",
+            "operator": "equals",
+            "question": "source"
+          },
+          {
+            "all": [
+              {
+                "value": "Beta",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "value": "Blocked",
+                "operator": "not_equals",
+                "question": "source"
+              }
+            ]
+          }
+        ]
+      },
+      "simple": {
+        "value": "Alpha",
+        "operator": "equals",
+        "question": "source"
+      }
+    },
+    "questionLabels": {
+      "source": "Organization category",
+      "dependent": "Conditional information",
+      "simple": "Simple information"
+    },
+    "documentRules": {
+      "support": {
+        "any": [
+          {
+            "value": "Alpha",
+            "operator": "equals",
+            "question": "source"
+          },
+          {
+            "all": [
+              {
+                "value": "Beta",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "value": "Blocked",
+                "operator": "not_equals",
+                "question": "source"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "locks": [
+      1,
+      1
+    ],
+    "states": [
+      "draft",
+      "draft"
+    ],
+    "reviewCount": 0,
+    "applicantCounts": [
+      329,
+      1323,
+      272
+    ],
+    "sections": [
+      {
+        "key": "main",
+        "title": "Applicant details",
+        "description": "",
+        "questions": [
+          {
+            "key": "source",
+            "label": "Organization category",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": null,
+            "validation_rules": [],
+            "options": []
+          },
+          {
+            "key": "dependent",
+            "label": "Conditional information",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": {
+              "any": [
+                {
+                  "value": "Alpha",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "all": [
+                    {
+                      "value": "Beta",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "value": "Blocked",
+                      "operator": "not_equals",
+                      "question": "source"
+                    }
+                  ]
+                }
+              ]
+            },
+            "validation_rules": [],
+            "options": []
+          },
+          {
+            "key": "simple",
+            "label": "Simple information",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            "validation_rules": [],
+            "options": []
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "key": "support",
+        "label": "Conditional supporting document",
+        "instructions": "Synthetic test only",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 1,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "steps": [
+    {
+      "name": "Initial source selected",
+      "selected": "source",
+      "labels": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Conditional information"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ],
+      "inputValue": "Organization category",
+      "binding": "sections.0.questions.0.label"
+    },
+    {
+      "name": "Dependent selected and displayed",
+      "selected": "dependent",
+      "labels": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Conditional information"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ],
+      "inputValue": "Conditional information",
+      "binding": "sections.0.questions.1.label"
+    },
+    {
+      "name": "Typed into selected dependent editor",
+      "selected": "dependent",
+      "labels": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Intended dependent title"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ],
+      "inputValue": "Intended dependent title",
+      "binding": "sections.0.questions.1.label"
+    },
+    {
+      "name": "Reloaded confirmed save",
+      "selected": "source",
+      "labels": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Intended dependent title"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ],
+      "inputValue": "Organization category",
+      "binding": "sections.0.questions.0.label"
+    }
+  ],
+  "requests": [
+    [
+      {
+        "updates": {},
+        "calls": [
+          {
+            "method": "selectQuestion",
+            "params": [
+              "dependent"
+            ],
+            "metadata": {}
+          }
+        ],
+        "locks": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      {
+        "updates": {
+          "sections.0.questions.1.label": "Intended dependent title"
+        },
+        "calls": [
+          {
+            "method": "save",
+            "params": [],
+            "metadata": {}
+          }
+        ],
+        "locks": [
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      {
+        "updates": {},
+        "calls": [
+          {
+            "method": "$commit",
+            "params": [],
+            "metadata": {
+              "type": "model.live"
+            }
+          }
+        ],
+        "locks": [
+          2,
+          2
+        ]
+      }
+    ]
+  ],
+  "responses": [
+    [
+      {
+        "data": {
+          "formVersion": [
+            null,
+            {
+              "class": "App\\Models\\FormVersion",
+              "key": 355,
+              "s": "mdl"
+            }
+          ],
+          "requirementVersion": [
+            null,
+            {
+              "class": "App\\Models\\RequirementSetVersion",
+              "key": 355,
+              "s": "mdl"
+            }
+          ],
+          "sections": [
+            [
+              [
+                {
+                  "key": "main",
+                  "title": "Applicant details",
+                  "description": "",
+                  "questions": [
+                    [
+                      [
+                        {
+                          "key": "source",
+                          "label": "Organization category",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": null,
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "",
+                          "condition_operator": "equals",
+                          "condition_value": ""
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ],
+                      [
+                        {
+                          "key": "dependent",
+                          "label": "Conditional information",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": [
+                            {
+                              "any": [
+                                [
+                                  [
+                                    {
+                                      "value": "Alpha",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "all": [
+                                        [
+                                          [
+                                            {
+                                              "value": "Beta",
+                                              "operator": "equals",
+                                              "question": "source"
+                                            },
+                                            {
+                                              "s": "arr"
+                                            }
+                                          ],
+                                          [
+                                            {
+                                              "value": "Blocked",
+                                              "operator": "not_equals",
+                                              "question": "source"
+                                            },
+                                            {
+                                              "s": "arr"
+                                            }
+                                          ]
+                                        ],
+                                        {
+                                          "s": "arr"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "",
+                          "condition_operator": "equals",
+                          "condition_value": ""
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ],
+                      [
+                        {
+                          "key": "simple",
+                          "label": "Simple information",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "source",
+                          "condition_operator": "equals",
+                          "condition_value": "Alpha"
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    ],
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "documentRequirements": [
+            [
+              [
+                {
+                  "key": "support",
+                  "label": "Conditional supporting document",
+                  "instructions": "Synthetic test only",
+                  "is_required": false,
+                  "minimum_evidence": 0,
+                  "maximum_evidence": 1,
+                  "provider_ids": [
+                    [
+                      2
+                    ],
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "condition_rules": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "condition_source": "",
+                  "condition_operator": "equals",
+                  "condition_value": ""
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "conditionBaseline": [
+            {
+              "question": [
+                {
+                  "source": null,
+                  "dependent": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "simple": [
+                    {
+                      "value": "Alpha",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ],
+              "requirement": [
+                {
+                  "support": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            },
+            {
+              "s": "arr"
+            }
+          ],
+          "clearedConditions": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "previewAnswers": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "findings": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "saveErrors": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "formLock": 1,
+          "requirementLock": 1,
+          "saveState": "Saved",
+          "mode": "edit_preview",
+          "stage": "build",
+          "selectedQuestionKey": "dependent",
+          "selectedRequirementKey": "support",
+          "previewOpen": false,
+          "previewTesting": false,
+          "previewFullWidth": false,
+          "formTitle": "Synthetic condition preservation",
+          "ready": false,
+          "mountedActions": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "defaultAction": null,
+          "defaultActionArguments": null,
+          "defaultActionContext": null,
+          "defaultTableAction": null,
+          "defaultTableActionRecord": null,
+          "defaultTableActionArguments": null,
+          "componentFileAttachments": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "areSchemaStateUpdateHooksDisabledForTesting": false,
+          "discoveredSchemaNames": [
+            [
+              "headerWidgets",
+              "footerWidgets"
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "loadedDeferredSchemas": [
+            [],
+            {
+              "s": "arr"
+            }
+          ]
+        },
+        "returns": [
+          null
+        ]
+      }
+    ],
+    [
+      {
+        "data": {
+          "formVersion": [
+            null,
+            {
+              "class": "App\\Models\\FormVersion",
+              "key": 355,
+              "s": "mdl"
+            }
+          ],
+          "requirementVersion": [
+            null,
+            {
+              "class": "App\\Models\\RequirementSetVersion",
+              "key": 355,
+              "s": "mdl"
+            }
+          ],
+          "sections": [
+            [
+              [
+                {
+                  "key": "main",
+                  "title": "Applicant details",
+                  "description": "",
+                  "questions": [
+                    [
+                      [
+                        {
+                          "key": "source",
+                          "label": "Organization category",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": null,
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "",
+                          "condition_operator": "equals",
+                          "condition_value": ""
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ],
+                      [
+                        {
+                          "key": "dependent",
+                          "label": "Intended dependent title",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": [
+                            {
+                              "any": [
+                                [
+                                  [
+                                    {
+                                      "value": "Alpha",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "all": [
+                                        [
+                                          [
+                                            {
+                                              "value": "Beta",
+                                              "operator": "equals",
+                                              "question": "source"
+                                            },
+                                            {
+                                              "s": "arr"
+                                            }
+                                          ],
+                                          [
+                                            {
+                                              "value": "Blocked",
+                                              "operator": "not_equals",
+                                              "question": "source"
+                                            },
+                                            {
+                                              "s": "arr"
+                                            }
+                                          ]
+                                        ],
+                                        {
+                                          "s": "arr"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "",
+                          "condition_operator": "equals",
+                          "condition_value": ""
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ],
+                      [
+                        {
+                          "key": "simple",
+                          "label": "Simple information",
+                          "help_text": "",
+                          "type": "short_text",
+                          "is_required": false,
+                          "validation_rules": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_rules": [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "options": [
+                            [],
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          "condition_source": "source",
+                          "condition_operator": "equals",
+                          "condition_value": "Alpha"
+                        },
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    ],
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "documentRequirements": [
+            [
+              [
+                {
+                  "key": "support",
+                  "label": "Conditional supporting document",
+                  "instructions": "Synthetic test only",
+                  "is_required": false,
+                  "minimum_evidence": 0,
+                  "maximum_evidence": 1,
+                  "provider_ids": [
+                    [
+                      2
+                    ],
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "condition_rules": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "condition_source": "",
+                  "condition_operator": "equals",
+                  "condition_value": ""
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "conditionBaseline": [
+            {
+              "question": [
+                {
+                  "source": null,
+                  "dependent": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ],
+                  "simple": [
+                    {
+                      "value": "Alpha",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ],
+              "requirement": [
+                {
+                  "support": [
+                    {
+                      "any": [
+                        [
+                          [
+                            {
+                              "value": "Alpha",
+                              "operator": "equals",
+                              "question": "source"
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ],
+                          [
+                            {
+                              "all": [
+                                [
+                                  [
+                                    {
+                                      "value": "Beta",
+                                      "operator": "equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "value": "Blocked",
+                                      "operator": "not_equals",
+                                      "question": "source"
+                                    },
+                                    {
+                                      "s": "arr"
+                                    }
+                                  ]
+                                ],
+                                {
+                                  "s": "arr"
+                                }
+                              ]
+                            },
+                            {
+                              "s": "arr"
+                            }
+                          ]
+                        ],
+                        {
+                          "s": "arr"
+                        }
+                      ]
+                    },
+                    {
+                      "s": "arr"
+                    }
+                  ]
+                },
+                {
+                  "s": "arr"
+                }
+              ]
+            },
+            {
+              "s": "arr"
+            }
+          ],
+          "clearedConditions": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "previewAnswers": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "findings": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "saveErrors": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "formLock": 2,
+          "requirementLock": 2,
+          "saveState": "Saved",
+          "mode": "edit_preview",
+          "stage": "build",
+          "selectedQuestionKey": "dependent",
+          "selectedRequirementKey": "support",
+          "previewOpen": false,
+          "previewTesting": false,
+          "previewFullWidth": false,
+          "formTitle": "Synthetic condition preservation",
+          "ready": false,
+          "mountedActions": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "defaultAction": null,
+          "defaultActionArguments": null,
+          "defaultActionContext": null,
+          "defaultTableAction": null,
+          "defaultTableActionRecord": null,
+          "defaultTableActionArguments": null,
+          "componentFileAttachments": [
+            [],
+            {
+              "s": "arr"
+            }
+          ],
+          "areSchemaStateUpdateHooksDisabledForTesting": false,
+          "discoveredSchemaNames": [
+            [
+              "headerWidgets",
+              "footerWidgets"
+            ],
+            {
+              "s": "arr"
+            }
+          ],
+          "loadedDeferredSchemas": [
+            [],
+            {
+              "s": "arr"
+            }
+          ]
+        },
+        "returns": [
+          null
+        ]
+      }
+    ]
+  ],
+  "nativeEvents": [
+    {
+      "registeredPath": "sections.0.questions.1.label",
+      "currentPath": "sections.0.questions.1.label",
+      "type": "input",
+      "before": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Conditional information"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ],
+      "value": "Intended dependent title",
+      "after": [
+        {
+          "key": "source",
+          "label": "Organization category"
+        },
+        {
+          "key": "dependent",
+          "label": "Intended dependent title"
+        },
+        {
+          "key": "simple",
+          "label": "Simple information"
+        }
+      ]
+    }
+  ],
+  "after": {
+    "form": 355,
+    "requirements": 355,
+    "builder": "/admin/form-builder/355/355",
+    "questionRules": {
+      "source": null,
+      "dependent": {
+        "any": [
+          {
+            "value": "Alpha",
+            "operator": "equals",
+            "question": "source"
+          },
+          {
+            "all": [
+              {
+                "value": "Beta",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "value": "Blocked",
+                "operator": "not_equals",
+                "question": "source"
+              }
+            ]
+          }
+        ]
+      },
+      "simple": {
+        "value": "Alpha",
+        "operator": "equals",
+        "question": "source"
+      }
+    },
+    "questionLabels": {
+      "source": "Organization category",
+      "dependent": "Intended dependent title",
+      "simple": "Simple information"
+    },
+    "documentRules": {
+      "support": {
+        "any": [
+          {
+            "value": "Alpha",
+            "operator": "equals",
+            "question": "source"
+          },
+          {
+            "all": [
+              {
+                "value": "Beta",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "value": "Blocked",
+                "operator": "not_equals",
+                "question": "source"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "locks": [
+      2,
+      2
+    ],
+    "states": [
+      "draft",
+      "draft"
+    ],
+    "reviewCount": 0,
+    "applicantCounts": [
+      329,
+      1323,
+      272
+    ],
+    "sections": [
+      {
+        "key": "main",
+        "title": "Applicant details",
+        "description": "",
+        "questions": [
+          {
+            "key": "source",
+            "label": "Organization category",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": null,
+            "validation_rules": [],
+            "options": []
+          },
+          {
+            "key": "dependent",
+            "label": "Intended dependent title",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": {
+              "any": [
+                {
+                  "value": "Alpha",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "all": [
+                    {
+                      "value": "Beta",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "value": "Blocked",
+                      "operator": "not_equals",
+                      "question": "source"
+                    }
+                  ]
+                }
+              ]
+            },
+            "validation_rules": [],
+            "options": []
+          },
+          {
+            "key": "simple",
+            "label": "Simple information",
+            "type": "short_text",
+            "is_required": false,
+            "help_text": "",
+            "condition_rules": {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            "validation_rules": [],
+            "options": []
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "key": "support",
+        "label": "Conditional supporting document",
+        "instructions": "Synthetic test only",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 1,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "result": "passed"
+}

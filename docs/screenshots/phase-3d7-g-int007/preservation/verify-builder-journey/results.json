@@ -1,0 +1,56 @@
+{
+  "checks": [
+    "Complex question and document no-op save/reload preserve exact persisted trees",
+    "Unrelated title edit and all authoring stages preserve complex rules",
+    "Staff preview preserves nested alternative/conjunction behavior for questions and documents",
+    "Intentional simple edit and explicit clearing persist without rewriting other trees",
+    "Forged complex-rule projection is blocked without false save success",
+    "Published exact manifest applicant question/document applicability matches staff preview",
+    "Published configuration remains read-only"
+  ],
+  "screens": [
+    {
+      "name": "protected-condition",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "protected-condition",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "protected-condition",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "protected-condition",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "protected-condition",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "protected-condition",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

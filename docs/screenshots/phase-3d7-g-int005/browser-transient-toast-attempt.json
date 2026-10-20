@@ -1,0 +1,263 @@
+{
+  "checks": [
+    "Required field validation prevents creation",
+    "Actual Create audit fault rolls back both writes and retains entries",
+    "Double click on actual Create produces one grant and one matching audit"
+  ],
+  "screens": [
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "creation-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 941.9,
+      "dom_ms": 1698.7
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/synthetic-evidence-reviewer-assignments/create",
+      "status": 200,
+      "ttfb_ms": 2249.7,
+      "dom_ms": 4096.7
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8025",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  -   1\n+ Received  + 107\n\n- Array []\n+ Array [\n+   Object {\n+     \"description\": \"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\",\n+     \"help\": \"Elements must meet minimum color contrast ratio thresholds\",\n+     \"helpUrl\": \"https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright\",\n+     \"id\": \"color-contrast\",\n+     \"impact\": \"serious\",\n+     \"nodes\": Array [\n+       Object {\n+         \"all\": Array [],\n+         \"any\": Array [\n+           Object {\n+             \"data\": Object {\n+               \"bgColor\": \"#ffffff\",\n+               \"contrastRatio\": 2.09,\n+               \"expectedContrastRatio\": \"4.5:1\",\n+               \"fgColor\": \"#b3b3b4\",\n+               \"fontSize\": \"10.5pt (14px)\",\n+               \"fontWeight\": \"normal\",\n+               \"messageKey\": null,\n+             },\n+             \"id\": \"color-contrast\",\n+             \"impact\": \"serious\",\n+             \"message\": \"Element has insufficient color contrast of 2.09 (foreground color: #b3b3b4, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+             \"relatedNodes\": Array [\n+               Object {\n+                 \"html\": \"<div x-data=\\\"notificationComponen...\\\" x-transition:enter-s...=\\\"fi-transition-enter-...\\\" x-transition:enter-e...=\\\"fi-transition-enter-...\\\" x-transition:leave-s...=\\\"fi-transition-leave-...\\\" x-transition:leave-e...=\\\"fi-transition-leave-...\\\" x-on:mouseenter=\\\"pauseDuration('hover...\\\" role=\\\"alert\\\" ...>\",\n+                 \"target\": Array [\n+                   \".fi-no-notification\",\n+                 ],\n+               },\n+               Object {\n+                 \"h",
+  "confidentialityLeaks": 0
+}

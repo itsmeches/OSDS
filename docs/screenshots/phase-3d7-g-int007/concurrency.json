@@ -1,0 +1,222 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "first": {
+      "pid": 10768,
+      "transactionDepth": 1
+    },
+    "second": {
+      "pid": 9784
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "created",
+        "id": 338
+      },
+      {
+        "mode": "B",
+        "outcome": "duplicate-rejected"
+      }
+    ],
+    "saved": {
+      "actor": 492,
+      "email": "gint007-mhn3zetr@example.invalid",
+      "target": 493,
+      "targetName": "Synthetic SCHOOL representative mhn3zetr",
+      "institution": 360,
+      "institutionName": "Synthetic institution A mhn3zetr",
+      "otherInstitution": 361,
+      "otherInstitutionName": "Synthetic institution B mhn3zetr",
+      "scope": 460,
+      "outsideRegion": 182,
+      "assignments": [
+        {
+          "id": 338,
+          "institution_id": 360,
+          "granted_by": 492,
+          "verified": false,
+          "audits": 1
+        }
+      ]
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "first": {
+      "pid": 19484
+    },
+    "second": {
+      "pid": 33572
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 494,
+      "email": "gint007-uwrxmywy@example.invalid",
+      "target": 495,
+      "targetName": "Synthetic SCHOOL representative uwrxmywy",
+      "institution": 362,
+      "institutionName": "Synthetic institution A uwrxmywy",
+      "otherInstitution": 363,
+      "otherInstitutionName": "Synthetic institution B uwrxmywy",
+      "scope": 462,
+      "outsideRegion": 184,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "first": {
+      "pid": 23112
+    },
+    "second": {
+      "pid": 20156
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 496,
+      "email": "gint007-7bmobrph@example.invalid",
+      "target": 497,
+      "targetName": "Synthetic SCHOOL representative 7bmobrph",
+      "institution": 364,
+      "institutionName": "Synthetic institution A 7bmobrph",
+      "otherInstitution": 365,
+      "otherInstitutionName": "Synthetic institution B 7bmobrph",
+      "scope": 464,
+      "outsideRegion": 186,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "first": {
+      "pid": 17696
+    },
+    "second": {
+      "pid": 27948
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 498,
+      "email": "gint007-tekqcxgg@example.invalid",
+      "target": 499,
+      "targetName": "Synthetic SCHOOL representative tekqcxgg",
+      "institution": 366,
+      "institutionName": "Synthetic institution A tekqcxgg",
+      "otherInstitution": 367,
+      "otherInstitutionName": "Synthetic institution B tekqcxgg",
+      "scope": 466,
+      "outsideRegion": 188,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "target-role",
+    "passed": true,
+    "first": {
+      "pid": 14628
+    },
+    "second": {
+      "pid": 23904
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "target-role",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 500,
+      "email": "gint007-g3qarc10@example.invalid",
+      "target": 501,
+      "targetName": "Synthetic SCHOOL representative g3qarc10",
+      "institution": 368,
+      "institutionName": "Synthetic institution A g3qarc10",
+      "otherInstitution": 369,
+      "otherInstitutionName": "Synthetic institution B g3qarc10",
+      "scope": 468,
+      "outsideRegion": 190,
+      "assignments": []
+    }
+  },
+  {
+    "mode": "institution",
+    "passed": true,
+    "first": {
+      "pid": 23052
+    },
+    "second": {
+      "pid": 24508
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedGrantsVisible": 0,
+    "outcomes": [
+      {
+        "mode": "institution",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "saved": {
+      "actor": 502,
+      "email": "gint007-t5nwlkd1@example.invalid",
+      "target": 503,
+      "targetName": "Synthetic SCHOOL representative t5nwlkd1",
+      "institution": 370,
+      "institutionName": "Synthetic institution A t5nwlkd1",
+      "otherInstitution": 371,
+      "otherInstitutionName": "Synthetic institution B t5nwlkd1",
+      "scope": 470,
+      "outsideRegion": 192,
+      "assignments": []
+    }
+  }
+]

@@ -1,0 +1,615 @@
+{
+  "interactions": [
+    {
+      "name": "Organization selection narrows questionnaires; no implicit initial selection",
+      "result": "passed"
+    },
+    {
+      "name": "Actual required-answer and document completeness validation",
+      "result": "passed"
+    },
+    {
+      "name": "Conditional visibility and unsaved values survive steps and hide/show",
+      "result": "passed"
+    },
+    {
+      "name": "Real unsaved-navigation warning can cancel leaving without losing input",
+      "result": "passed"
+    },
+    {
+      "name": "Save and resume after real persistence",
+      "result": "passed"
+    },
+    {
+      "name": "Two real tabs: stale save rejected; local input remains available to copy",
+      "result": "passed"
+    },
+    {
+      "name": "Actual aborted network request preserves input and explicit retry succeeds",
+      "result": "passed"
+    },
+    {
+      "name": "Injected HTTP 503 preserves input and suppresses false success until retry",
+      "result": "passed"
+    },
+    {
+      "name": "Committed save with lost response replays without a second version increment",
+      "result": "passed"
+    },
+    {
+      "name": "Invalid evidence retains input; valid Google share URL persists and clears input",
+      "result": "passed"
+    },
+    {
+      "name": "Actual document replacement and removal append history and allow a new link",
+      "result": "passed"
+    },
+    {
+      "name": "Uncertain submission response and explicit duplicate retry create one submitted copy",
+      "result": "passed"
+    },
+    {
+      "name": "Actual session-cookie loss: no false save; RAM-only copy recovery is available",
+      "result": "passed"
+    },
+    {
+      "name": "Correction editing and resubmission preserve the original immutable answer",
+      "result": "passed"
+    },
+    {
+      "name": "Expired and revoked representation deny the real tracking URL",
+      "result": "passed"
+    },
+    {
+      "name": "Mobile menu opens by keyboard, closes with Escape and returns focus",
+      "result": "passed"
+    },
+    {
+      "name": "System theme follows real browser media preference changes",
+      "result": "passed"
+    },
+    {
+      "name": "Retired manifest with an open working draft preserves answers and blocks editing",
+      "result": "passed"
+    }
+  ],
+  "screens": [
+    {
+      "name": "my-applications",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "my-applications",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "my-applications",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "my-applications",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "my-applications",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "my-applications",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 129,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 129,
+      "violations": []
+    },
+    {
+      "name": "start-application",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "questionnaire",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "conflict",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "document-links",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "review-and-send",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 177,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 124,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 177,
+      "violations": []
+    },
+    {
+      "name": "application-tracking",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 124,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-request",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "correction-editor",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "corrections-sent",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "account",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "navigationHeight": 1000,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    },
+    {
+      "name": "retired-draft",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "navigationHeight": 76,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

@@ -1,5 +1,88 @@
 # Phase 3D.7 issue register
 
+## G-INT-007 authorized remediation result — targeted development verification passed
+
+**20 October 2026. Fixed under targeted authorization; pause for review.** Generic institutional-representation Create now delegates to an operation-owned PostgreSQL transaction spanning the unchanged model insertion and sole Core observer audit. Current actor, target-role delegation, non-self and canonical institution scope are checked after relevant locks. Existing selectors, unverified initial state, attribution and duplicate constraints remain unchanged.
+
+Original real-action pair **2 tests / 39 assertions passed**; expanded matrix **22 / 216**; full current tree **252 / 2,831**. Six real concurrency scenarios and target browser **seven interactions / eight screens** passed, including committed-response loss without replay. Applicant, builder, CHEDRO and staff preservation passed. Pint, production build and diff checks passed. The two existing 16px selector clear targets remain an explicit accessibility finding; no zero-axe or full WCAG claim.
+
+[Full remediation, failures/corrections, browser/concurrency evidence and limitations](phase-3d7-g-int-007-remediation.md). The discovery below is historical and superseded for current defect status. No historical repair or manual-data modification. **Batch G remains incomplete; remaining inventory/recovery/accessibility closure requires review. No Batch H, Phase 4, commit/push or deployment.**
+
+## G-INT-007 - Institutional representation Create survives mandatory audit failure
+
+**Critical integrity defect; confirmed in authorized A12 diagnostics. Batch G stopped / NO-GO for Batch H.** Actual Filament normal Create first passed **1 / 20**, with correct existing CHEDRO-to-SCHOOL authority, unchanged scoped selectors and exactly one matching audit. Separate fault regression **1 / 13 / 1 failure** proves the real Create reaches the once-required mandatory audit sink, throws, leaves audit count unchanged and nevertheless persists an unverified representation. Earlier Admin-to-SCHOOL 403 attempts remain historical fixture errors, not the evidence for this finding.
+
+No runtime remediation, permission/policy change or historical repair. [Full discovery, exact boundaries and proposed narrow transaction scope](phase-3d7-g-int-007-discovery.md). G-INT-001 through G-INT-006 preserved; current tree has a retained failing regression and no new full-suite pass.
+
+## Batch G source-inventory reconciliation - no new confirmed critical finding
+
+**20 October 2026. Read-only source review; documentation changes only.** [Finite A01-A33 authority/audit inventory](phase-3d7-batch-g-authority-inventory.md) records real handlers, authorization, transaction/audit mechanisms, prior evidence and proposed verification. Generic institutional-representation creation remains a source-level transaction risk. Its earlier Admin-to-SCHOOL fixture lacks the seeded `accounts.create.school` delegation permission and received 403 before the intended audit fault; it does **not** establish an unaudited persisted grant or a confirmed G-INT-007. No new tests were executed or outcomes changed.
+
+G-INT-001 through G-INT-006 remain accepted. The matrix/manual guide now distinguish their historical stop instructions from current accepted results; dedicated builder recovery and other closure gaps remain open. The two 16px regional selector targets remain a known medium accessibility issue; no style change was made. C/R inventory rows are not certified safe. Stop for review before separately approved verification; Batch H/Phase 4/deployment remain excluded.
+
+## G-INT-006 targeted remediation checkpoint
+
+**Targeted development acceptance: PASS for integrity/security.** The accepted regional/delegation creation contract is preserved by a new operation service transaction and actual Create-page integration. Original rollback regression passes (1 / 13); final expanded matrix **21 / 226**, five final PostgreSQL lock-wait scenarios, and complete PostgreSQL **230 tests / 2,615 assertions** passed. Seven actual-browser functional checks and eight theme/viewport checks passed, **with a known medium accessibility finding**: both selector clear buttons have 16px targets (`target-size`, two nodes per sampled state). No styling/policy expansion; finding retained, all other checked axe rules remain enforced. Applicant/builder/CHEDRO preservation passed; staff preservation passed separately (15 interactions / 94 screens) after retaining/correcting a one-shot notification-dismissal harness obstruction. Pint/build/diff passed. See [remediation](phase-3d7-g-int-006-remediation.md). The following critical discovery record is historical; Batch G remains incomplete and paused for review.
+
+## G-INT-006 - Regional authority creation audit atomicity
+
+**Historical critical discovery; now fixed under targeted authorization above.** Actual Filament regional-assignment Create previously persisted a new grant when its registered mandatory observer audit threw. Original retained PostgreSQL reproduction: **1 test / 7 assertions / 1 failure**. No historical investigation or repair. See [discovery and assessment checkpoint](phase-3d7-g-int-006-discovery.md). G-INT-001 through G-INT-005 acceptance remains preserved.
+
+## G-INT-005 targeted development acceptance - PASS (20 October 2026)
+
+Phase 3C creation atomicity and actual UI reachability are now verified. Before runtime changes, its own resource/model/policy/plan paths established the implemented sandbox creation contract: active staff-panel access plus explicit `evidence.reviewer.assignments.manage`, sandbox and synthetic-reviewer guards, without a creation-specific manager-region predicate. That existing contract is preserved independently; neither G-INT-002's revocation-only regional rule nor Phase 3D policy is imported.
+
+`EvidenceReviewerCreationService` owns one transaction spanning grant insertion and the sole unchanged mandatory observer audit, with fresh actor authorization, existing field validation and protected attribution. The actual Create page uses safe persistent feedback and the existing recovery hook. The real browser reviewer search reproduced HTTP 500; a filled-form Livewire probe independently reproduced `where() on null` (**1 test / 2 assertions / 1 error**). Naming the callback's injected argument `$query` fixes that workflow blocker while retaining the synthetic filter. Actual final search, selection, validation and Create are tested without bypassing the form.
+
+- Retained handler/mount probes plus expanded actual Livewire workflow: **17 tests / 157 assertions passed**. The original rollback assertion and once-required audit sink remain; current handler/feedback acknowledgement reflects the authoritative override.
+- Complete current-tree PostgreSQL: **209 tests / 2,389 assertions passed**, preserving G-INT-001–004, SEC-001–008 and existing integrity/UTC/immutability regressions.
+- Real concurrent creation: two overlapping independent PostgreSQL transactions; zero uncommitted rows visible externally; **two grants / two audits**, preserving existing separate-create semantics. No duplicate-grant exclusion/idempotency policy or automatic retry was added.
+- Actual Create browser: **6 interactions / 8 light/dark desktop/mobile screens passed**, zero recorded axe violations, overflow, uncaught page errors or checked response leaks. Includes partial-audit rollback, delivered success/double click, committed-response loss, saved-list inspection, permission loss and session recovery.
+- Preservation: applicant original plus **11 cases**; builder original plus **14 selection cases** and **7 condition/preview/publication checks**; CHEDRO **12 interactions / 30 screens**, all passed. Earlier evidence remains unchanged. Full Pint, production Vite build and diff checks pass, with existing CRLF advisories.
+
+[Full remediation, exact files, screenshots, concurrency evidence, failed attempts and limitations](phase-3d7-g-int-005-remediation.md). The first concurrency worker used a copied wrong service namespace; corrected only in its harness. A prior capture caught notification fade contrast at 2.09:1 and remains retained; the final passing run needed zero stability resamples. No timed-animation/full WCAG or human/native-zoom/screen-reader acceptance is claimed.
+
+G-INT-001–004 operation services, model observers, AuditRecorder, permissions and schema remain unchanged. No manual-testing database inspection/reset/reseed/mutation, historical repair, index/staging operation, commit, push or deployment. No new independent critical defect was confirmed in this bounded task.
+
+**Batch G remains incomplete / NOT READY overall. Pause for user review before resuming broader inventory; Batch H, Phase 4 and production remain excluded.** Discovery/stop records below are historical and superseded by this targeted result.
+
+
+## Resumed assessment - G-INT-005 critical backend stop (20 October 2026)
+
+G-INT-004 is accepted as targeted development verification complete. The resumed bounded source audit and isolated persistence probe now confirm **G-INT-005**: Phase 3C's actual inherited creation handler saves an assignment that survives mandatory audit failure. No runtime fix was applied. G-INT-001–004 and SEC protections remain unchanged.
+
+Retained probes: **2 tests / 11 assertions; 1 passed, 1 failed**, only `osds_test`. The actual initial Livewire mount succeeds without mutation; the historical null-query error was not reproduced at that stage. A separate reflection call exercises the real protected inherited handler/model/observer, not a full validated Create action: its once-required audit fault leaves assignment count 0 → 1 with unchanged audit count. Full UI search/selection/Create reachability is unverified. Do not describe this as a proven end-to-end UI exploit or claim the earlier callback is fixed.
+
+[Discovery, exact test boundary, partial inventory, proposed separate remediation and remaining checks](phase-3d7-g-int-005-discovery.md). Controlled modal/builder timing, workload measurements and remaining recovery/serialization verification stopped before execution. Source transaction scans are not new functional/performance acceptance. The prior 192 / 2,232 suite pass predates this retained failure; no new full-suite/browser/Pint/build acceptance is claimed.
+
+**Batch G NOT READY; stop for separate targeted authorization. Batch H and Phase 4 remain excluded.** No manual-testing database inspection/mutation, historical repair, runtime change, staged-index operation, commit, push or deployment. Earlier checkpoint text below remains historical.
+
+
+## G-INT-004 targeted development acceptance - PASS (20 October 2026)
+
+Authorized targeted creation remediation is complete. `ApplicationReviewerCreationService` now owns one transaction spanning the actual Phase 3D assignment insertion and its sole unchanged mandatory observer audit. The actual Filament Create page uses fresh actor/active/panel/explicit-permission/sandbox authorization, field validation and protected attribution, safe persistent error feedback and the existing session/network recovery hook. Global Phase 3D management semantics remain unchanged; no Phase 3C region rule, new permission, schema change, blanket transaction, automatic retry or historical repair.
+
+- Original actual Create regression: before **1 test / 8 assertions / 1 failure**; after **1 / 14 passed**. Its persistence rollback assertion and once-required audit sink remain intact.
+- Final expanded PostgreSQL matrix: **15 tests / 145 assertions passed**; full current-tree suite: **192 tests / 2,232 assertions passed**, retaining SEC-001–008 and G/C/E integrity regressions.
+- Real concurrent creation: two overlapping independent PostgreSQL transactions; no uncommitted rows visible externally; **two grants / two audits**, preserving existing separate-create semantics. No idempotency/exclusion policy is invented.
+- Actual Create browser: **6 interactions / 8 light/dark desktop/mobile screens passed**, zero recorded axe violations, overflow, uncaught page errors or checked response leaks. Includes partial-audit rollback, double click, committed response loss, saved-list inspection, permission loss and session recovery. A scoped 24px clear-control correction resolves the observed selector target-size issue.
+- Preservation: applicant original plus **11 cases**; builder original plus **14 selection cases**, **7 condition/preview/publication checks**; CHEDRO **12 interactions / 30 screens**, all passed with prior evidence preserved. Existing G-INT-001/002/003 services, models/observers and authorization contracts remain unchanged.
+- Full Pint, production Vite build and diff checks passed, with existing CRLF advisories. No manual-testing database inspection/reset/reseed/mutation, staged-index operation, commit, push or deployment.
+
+Root cause, exact files, initial failed attempts/corrections, screenshots, concurrency evidence and limits: [G-INT-004 remediation](phase-3d7-g-int-004-remediation.md). Native zoom, screen readers, human acceptance and broader G timing/performance work remain open. Held-response preservation passed; earlier timing observations are not newly diagnosed or fixed. No new independent critical defect was confirmed.
+
+**Batch G remains incomplete / NOT READY overall. Pause for user review before resuming broader G.** H, Phase 4, production and historical repair remain excluded. The discovery/stop text below is retained historical evidence, superseded by this targeted result.
+
+
+## Resumed Batch G - G-INT-004 critical stop (20 October 2026)
+
+G-INT-003 is accepted as targeted development verification complete. The resumed creation-path audit now confirms **G-INT-004: the actual Phase 3D Filament Create action leaves a reviewer assignment persisted when its mandatory grant audit fails**. Retained PostgreSQL/Livewire regression: `ReviewerAssignmentCreationAtomicityTest::test_application_assignment_creation_rolls_back_when_mandatory_audit_fails` — **1 test / 8 assertions / 1 failure**. Audit count stays unchanged; assignment count rises from zero to one. Only the audit sink is faulted; real form validation and persistence execute.
+
+**Batch G: NOT READY; stopped before runtime remediation or further inventory.** G-INT-001/002/003 and their distinct authorization contracts are unchanged. No manual-testing database or historical record was inspected/modified. The prior 177-test pass predates this new failing regression; no current-tree full-suite, browser, timing, performance or final build acceptance is claimed. Rapid modal and held-response builder investigations remain pending, not classified as harness-only defects.
+
+Reproduction, root cause, affected paths, persistence impact, proposed separate remediation and completed/partial/untested checklist: [G-INT-004 discovery](phase-3d7-g-int-004-discovery.md). Separate targeted authorization is required under the user's critical-integrity stop condition. H, Phase 4, production and deployment remain excluded. Earlier checkpoints below are historical.
+
+
 ## G-INT-003 targeted acceptance - PASS for development
 
 The user authorized targeted G-INT-003 remediation only. Before implementation the audit reported the existing Phase 3D manager contract as **global by explicit `applications.reviewer.assignments.manage` permission for active staff**, with existing panel admission and sandbox boundaries; no manager-region/module predicate was found or inherited from Phase 3C. `ApplicationReviewerAssignmentService` now reloads the actor, locks the exact row, rereads current identity after lock wait, authorizes the unchanged global permission, validates the one-revocation lifecycle/reason and executes update plus the sole existing observer audit in one PostgreSQL transaction. The real table action uses safe support-reference/persistent dialog feedback and existing session/network recovery.

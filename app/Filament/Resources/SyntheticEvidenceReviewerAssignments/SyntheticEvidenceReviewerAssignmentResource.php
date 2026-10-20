@@ -41,7 +41,7 @@ class SyntheticEvidenceReviewerAssignmentResource extends Resource
 
     public static function form(Schema $s): Schema
     {
-        return $s->components([Select::make('reviewer_id')->relationship('reviewer', 'name', modifyQueryUsing: fn ($q) => $q->where('is_synthetic', true))->required()->searchable(), Select::make('region_id')->relationship('region', 'name')->required(), Select::make('module_id')->relationship('module', 'name')->required(), DateTimePicker::make('starts_at')->default(now())->required(), DateTimePicker::make('ends_at')->after('starts_at'), Textarea::make('reason')->required()->maxLength(500)]);
+        return $s->components([Select::make('reviewer_id')->relationship('reviewer', 'name', modifyQueryUsing: fn ($query) => $query->where('is_synthetic', true))->required()->searchable()->extraAttributes(['class' => 'evidence-reviewer-selector']), Select::make('region_id')->relationship('region', 'name')->required(), Select::make('module_id')->relationship('module', 'name')->required(), DateTimePicker::make('starts_at')->default(now())->required(), DateTimePicker::make('ends_at')->after('starts_at'), Textarea::make('reason')->required()->maxLength(500)]);
     }
 
     public static function table(Table $t): Table
