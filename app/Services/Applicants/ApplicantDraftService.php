@@ -3,8 +3,10 @@
 namespace App\Services\Applicants;
 
 use App\Models\ApplicantSandboxEligibilityGrant;
+use App\Models\Application;
 use App\Models\ApplicationDraft;
 use App\Models\ApplicationDraftAnswer;
+use App\Models\ApplicationWorkingRevision;
 use App\Models\Institution;
 use App\Models\InstitutionRepresentative;
 use App\Models\PublicationManifest;
@@ -33,7 +35,13 @@ class ApplicantDraftService
             if (! $eligible) {
                 throw new AuthorizationException;
             }
-            $draft = ApplicationDraft::query()->create(['module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id, 'institution_id' => $institution->id, 'created_by' => $user->id, 'status' => 'draft', 'lock_version' => 1]);
+            if (Application::query()->where(['institution_id' => $institution->id, 'module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id])->whereIn('state', ['draft', 'submitted', 'under_screening', 'correction_requested', 'resubmitted'])->exists()) {
+                $this->invalid('An active test application already exists for this organization and questionnaire.');
+            }
+            $application = Application::query()->create(['module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id, 'institution_id' => $institution->id, 'applicant_id' => $user->id, 'state' => 'draft', 'lock_version' => 1]);
+            $draft = ApplicationDraft::query()->create(['application_id' => $application->id, 'module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id, 'institution_id' => $institution->id, 'created_by' => $user->id, 'status' => 'draft', 'lock_version' => 1]);
+            $working = ApplicationWorkingRevision::query()->create(['application_id' => $application->id, 'application_draft_id' => $draft->id, 'revision_number' => 1, 'purpose' => 'initial', 'state' => 'open', 'created_by' => $user->id, 'created_at' => now()]);
+            $application->update(['current_working_revision_id' => $working->id]);
             $this->event($draft, $user, 'created', 1);
             $this->audit->record('application_draft.created', 'success', $user, $draft, $institution->primary_region_id, $institution->id, ['manifest_id' => $manifest->id]);
 
@@ -48,6 +56,9 @@ class ApplicantDraftService
             $this->base($user, $draft->institution, 'applications.draft.update');
             if ($draft->created_by !== $user->id) {
                 throw new AuthorizationException;
+            }
+            if (! ApplicationWorkingRevision::query()->where(['application_draft_id' => $draft->id, 'state' => 'open'])->exists()) {
+                $this->invalid('This submitted working revision is read-only.');
             }
             if ($draft->manifest->retirement || $draft->manifest->effective_until?->isPast()) {
                 $this->invalid('This questionnaire version is read-only because its publication ended.');

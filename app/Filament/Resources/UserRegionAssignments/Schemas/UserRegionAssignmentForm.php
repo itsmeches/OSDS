@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\UserRegionAssignments\Schemas;
 
+use App\Services\Authorization\StaffListScope;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class UserRegionAssignmentForm
 {
@@ -16,16 +18,20 @@ class UserRegionAssignmentForm
                 Select::make('user_id')->relationship(
                     'user',
                     'name',
-                    modifyQueryUsing: fn (Builder $query) => $query->whereHas('regionAssignments', fn (Builder $assignments) => $assignments->whereIn('region_id', auth()->user()->regionAssignments()->whereNull('revoked_at')->pluck('region_id'))),
-                )->searchable()->preload()->required(),
+                    modifyQueryUsing: fn (Builder $query) => app(StaffListScope::class)->users($query, auth()->user(), 'region_scopes.assign'),
+                )->getOptionLabelUsing(fn (Select $component, string $operation, ?Model $record): ?string => $operation === 'edit' && $record
+                    ? $record->user()->value('name') : $component->getSelectedRecord()?->name)
+                    ->searchable()->preload()->required()->disabledOn('edit'),
                 Select::make('region_id')->relationship(
                     'region',
                     'name',
-                    modifyQueryUsing: fn (Builder $query) => $query->whereHas('userAssignments', fn (Builder $assignments) => $assignments->where('user_id', auth()->id())->whereNull('revoked_at')),
-                )->searchable()->preload()->required(),
-                DateTimePicker::make('starts_at')->required()->default(now()),
-                DateTimePicker::make('ends_at')->after('starts_at'),
-                DateTimePicker::make('revoked_at')->disabled(),
+                    modifyQueryUsing: fn (Builder $query) => app(StaffListScope::class)->regions($query, auth()->user(), 'region_scopes.assign'),
+                )->searchable()->preload()->required()->disabledOn('edit'),
+                DateTimePicker::make('starts_at')->label('Access starts')->required()->default(now())->helperText('Dates are shown in UTC. Editing dates does not transfer this assignment.')
+                    ->disabled(fn (string $operation, ?Model $record): bool => $operation === 'edit' && ! auth()->user()?->can('update', $record)),
+                DateTimePicker::make('ends_at')->label('Access ends')->after('starts_at')->helperText('Optional. Leave blank for no scheduled end.')
+                    ->disabled(fn (string $operation, ?Model $record): bool => $operation === 'edit' && ! auth()->user()?->can('update', $record)),
+                DateTimePicker::make('revoked_at')->label('Revoked on')->disabled(),
             ]);
     }
 }

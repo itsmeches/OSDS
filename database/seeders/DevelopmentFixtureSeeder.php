@@ -7,6 +7,7 @@ use App\Models\Institution;
 use App\Models\InstitutionRepresentative;
 use App\Models\OsdsModule;
 use App\Models\Region;
+use App\Models\SyntheticApplicationReviewerAssignment;
 use App\Models\SyntheticEvidenceReviewerAssignment;
 use App\Models\User;
 use App\Models\UserRegionAssignment;
@@ -20,8 +21,8 @@ class DevelopmentFixtureSeeder extends Seeder
 {
     public function run(): void
     {
-        if (! app()->environment(['local', 'testing'])) {
-            throw new RuntimeException('Synthetic fixtures may only be created in local or testing environments.');
+        if (! app()->environment(['local', 'testing', 'sandbox'])) {
+            throw new RuntimeException('Synthetic fixtures may only be created in local, testing, or sandbox environments.');
         }
 
         $password = env('OSDS_FIXTURE_PASSWORD');
@@ -71,6 +72,14 @@ class DevelopmentFixtureSeeder extends Seeder
                     ['reviewer_id' => $chedro->id, 'region_id' => $north->id, 'module_id' => $module->id, 'revoked_at' => null],
                     ['granted_by' => $admin->id, 'starts_at' => now()->startOfDay(), 'reason' => 'Synthetic Phase 3C evidence-review testing only.'],
                 );
+                SyntheticApplicationReviewerAssignment::query()->firstOrCreate(
+                    ['reviewer_id' => $chedro->id, 'region_id' => $north->id, 'module_id' => $module->id, 'revoked_at' => null],
+                    ['granted_by' => $admin->id, 'starts_at' => now()->startOfDay(), 'reason' => 'Synthetic Phase 3D application-intake testing only.'],
+                );
+            }
+
+            if (app()->environment(['sandbox', 'testing'])) {
+                $this->call(SyntheticManualTestingSeeder::class);
             }
         }
     }

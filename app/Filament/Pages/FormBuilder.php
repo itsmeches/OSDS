@@ -12,8 +12,13 @@ use App\Services\Questionnaires\QuestionnairePublicationService;
 use App\Support\FoundationPermission;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
+use Livewire\Attributes\Locked;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
+use Throwable;
 
 class FormBuilder extends Page
 {
@@ -33,6 +38,12 @@ class FormBuilder extends Page
 
     public array $documentRequirements = [];
 
+    #[Locked]
+    public array $conditionBaseline = [];
+
+    #[Locked]
+    public array $clearedConditions = [];
+
     public array $previewAnswers = [];
 
     public array $findings = [];
@@ -40,8 +51,10 @@ class FormBuilder extends Page
     /** @var array<int, array{field: string, message: string, anchor: string}> */
     public array $saveErrors = [];
 
+    #[Locked]
     public int $formLock;
 
+    #[Locked]
     public int $requirementLock;
 
     public string $saveState = 'Saved';
@@ -74,6 +87,7 @@ class FormBuilder extends Page
         $this->requirementLock = $this->requirementVersion->lock_version;
         $this->formTitle = $this->formVersion->definition->name;
         $this->loadWorkingState();
+        $this->rememberConditions();
         $this->selectedQuestionKey = $this->sections[0]['questions'][0]['key'] ?? null;
         $this->selectedRequirementKey = $this->documentRequirements[0]['key'] ?? null;
     }
@@ -101,6 +115,16 @@ class FormBuilder extends Page
     public function addSection(): void
     {
         $this->sections[] = ['key' => $this->uniqueKey('section'), 'title' => 'New section', 'description' => '', 'questions' => []];
+        $this->markDirty();
+    }
+
+    public function moveSection(int $section, int $direction): void
+    {
+        $target = $section + $direction;
+        if (! in_array($direction, [-1, 1], true) || ! isset($this->sections[$section], $this->sections[$target])) {
+            return;
+        }
+        [$this->sections[$section], $this->sections[$target]] = [$this->sections[$target], $this->sections[$section]];
         $this->markDirty();
     }
 
@@ -281,6 +305,7 @@ class FormBuilder extends Page
             $this->saveState = 'Saved';
             $this->ready = false;
             $this->reloadModels();
+            $this->rememberConditions();
             Notification::make()->title('Draft saved')->success()->send();
         } catch (ValidationException $e) {
             $this->saveState = $e->errors()['conflict'] ?? false ? 'Conflict' : 'Save failed';
@@ -303,6 +328,15 @@ class FormBuilder extends Page
                     ->persistent()
                     ->send();
             }
+        } catch (Throwable $error) {
+            if ($error instanceof AuthorizationException || $error instanceof HttpExceptionInterface) {
+                throw $error;
+            }
+            $reference = (string) Str::uuid();
+            Log::error('Questionnaire save not confirmed', ['reference' => $reference, 'exception_type' => $error::class]);
+            $this->saveState = 'Not confirmed';
+            $this->ready = false;
+            $this->addError('builder', 'We could not confirm the save. Keep this tab open and inspect the saved version before trying again. Support reference: '.$reference);
         }
     }
 
@@ -368,12 +402,12 @@ class FormBuilder extends Page
 
     public function visible(array $question): bool
     {
-        return app(ConditionalLogic::class)->evaluate($this->compiledCondition($question), $this->previewAnswers);
+        return app(ConditionalLogic::class)->evaluate($this->compiledCondition($question, 'question'), $this->previewAnswers);
     }
 
     public function visibleRequirement(array $requirement): bool
     {
-        return app(ConditionalLogic::class)->evaluate($this->compiledCondition($requirement), $this->previewAnswers);
+        return app(ConditionalLogic::class)->evaluate($this->compiledCondition($requirement, 'requirement'), $this->previewAnswers);
     }
 
     public function sourceOptions(string $key): array
@@ -438,25 +472,45 @@ class FormBuilder extends Page
 
     private function conditionFields(?array $rules): array
     {
-        $leaf = $rules['all'][0] ?? $rules['any'][0] ?? null;
+        $leaf = $this->simpleConditionLeaf($rules);
 
         return ['condition_source' => $leaf['question'] ?? '', 'condition_operator' => $leaf['operator'] ?? 'equals', 'condition_value' => $leaf['value'] ?? ''];
     }
 
     private function compileConditions(): void
     {
+        $available = [];
         foreach ($this->sections as &$section) {
             foreach ($section['questions'] as &$question) {
-                $question['condition_rules'] = $this->compiledCondition($question);
+                $question['condition_rules'] = $this->compiledCondition($question, 'question', true);
+                app(ConditionalLogic::class)->validate($question['condition_rules'], $available);
+                $available[$question['key']] = ['type' => $question['type'], 'options' => array_column($question['options'] ?? [], 'key')];
             }
         }
         foreach ($this->documentRequirements as &$requirement) {
-            $requirement['condition_rules'] = $this->compiledCondition($requirement);
+            $requirement['condition_rules'] = $this->compiledCondition($requirement, 'requirement', true);
+            app(ConditionalLogic::class)->validate($requirement['condition_rules'], $available);
         }
     }
 
-    private function compiledCondition(array $item): ?array
+    private function compiledCondition(array $item, string $domain, bool $strict = false): ?array
     {
+        $original = $this->originalCondition($item, $domain);
+        $fields = $this->conditionFields($original);
+        $changed = false;
+        foreach ($fields as $key => $value) {
+            $changed = $changed || ($item[$key] ?? $value) !== $value;
+        }
+        if (! $changed) {
+            return $original;
+        }
+        if ($this->conditionIsProtected($item, $domain) || ($original && blank($item['condition_source'] ?? null))) {
+            if ($strict) {
+                throw ValidationException::withMessages(['conditions' => 'The condition was not changed. Use Remove condition to clear it intentionally. Multiple or nested rules are read-only in this editor.']);
+            }
+
+            return $original;
+        }
         if (blank($item['condition_source'] ?? null)) {
             return null;
         }
@@ -465,7 +519,62 @@ class FormBuilder extends Page
             $leaf['value'] = $item['condition_value'] ?? '';
         }
 
-        return ['all' => [$leaf]];
+        return isset($original['question']) ? $leaf : ['all' => [$leaf]];
+    }
+
+    private function rememberConditions(): void
+    {
+        $this->conditionBaseline = ['question' => [], 'requirement' => []];
+        foreach ($this->formVersion->sections as $section) {
+            foreach ($section->questions as $question) {
+                $this->conditionBaseline['question'][$question->key] = $question->condition_rules;
+            }
+        }
+        foreach ($this->requirementVersion->requirements as $requirement) {
+            $this->conditionBaseline['requirement'][$requirement->key] = $requirement->condition_rules;
+        }
+        $this->clearedConditions = [];
+    }
+
+    private function simpleConditionLeaf(?array $rules): ?array
+    {
+        $leaf = isset($rules['question']) ? $rules : (count($rules['all'] ?? []) === 1 ? $rules['all'][0] : null);
+
+        if ($leaf && in_array($leaf['operator'] ?? '', ['equals', 'not_equals'], true) && (! array_key_exists('value', $leaf) || ! is_string($leaf['value']))) {
+            return null;
+        }
+
+        return $leaf && isset($leaf['question']) && in_array($leaf['operator'] ?? '', ['equals', 'not_equals', 'is_empty', 'is_not_empty'], true) ? $leaf : null;
+    }
+
+    private function originalCondition(array $item, string $domain): ?array
+    {
+        return isset($this->clearedConditions[$domain][$item['key']]) ? null : ($this->conditionBaseline[$domain][$item['key']] ?? null);
+    }
+
+    public function conditionIsProtected(array $item, string $domain): bool
+    {
+        $rules = $this->originalCondition($item, $domain);
+
+        return ! empty($rules) && $this->simpleConditionLeaf($rules) === null;
+    }
+
+    public function clearCondition(string $domain, string $key): void
+    {
+        abort_unless(static::canAccess(), 403);
+        if ($domain === 'question') {
+            $selection = $this->questionSelection($key);
+            abort_unless($selection, 404);
+            $item = &$this->sections[$selection['section']]['questions'][$selection['question']];
+        } else {
+            abort_unless($domain === 'requirement', 404);
+            $index = array_search($key, array_column($this->documentRequirements, 'key'), true);
+            abort_if($index === false, 404);
+            $item = &$this->documentRequirements[$index];
+        }
+        $this->clearedConditions[$domain][$key] = true;
+        $item = array_merge($item, $this->conditionFields(null), ['condition_rules' => null]);
+        $this->markDirty();
     }
 
     private function reloadModels(): void

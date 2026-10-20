@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "name": "Duplicated question and section description retain independent bindings",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": []
+}

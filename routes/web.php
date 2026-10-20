@@ -24,8 +24,10 @@ Route::middleware(['auth', EnsureAccountIsActive::class])->prefix('applicant')->
     Route::get('/start', [ApplicantPortalController::class, 'start'])->name('start');
     Route::post('/drafts', [ApplicantPortalController::class, 'createDraft'])->name('drafts.create');
     Route::get('/drafts/{draft:public_id}', DraftEditor::class)->name('drafts.edit');
+    Route::get('/applications/{application:public_id}', [ApplicantPortalController::class, 'show'])->name('applications.show');
     Route::get('/evidence/{reference:public_id}/open', [EvidenceLinkController::class, 'own'])->name('evidence.open');
     Route::get('/account', [ApplicantPortalController::class, 'account'])->name('account');
 });
 
-Route::middleware(['auth', EnsureAccountIsActive::class])->get('/admin/test-reviews/{case:public_id}/evidence/{revision:public_id}/open', [EvidenceLinkController::class, 'review'])->name('evidence.review.open');
+Route::middleware(['auth', EnsureAccountIsActive::class])->get('/admin/test-reviews/{case:public_id}/evidence/{revision:public_id}/open', [EvidenceLinkController::class, 'review'])->withoutScopedBindings()->name('evidence.review.open');
+Route::middleware(['auth', EnsureAccountIsActive::class])->get('/admin/application-intake/{application:public_id}/evidence/{revision:public_id}/open', [EvidenceLinkController::class, 'application'])->withoutScopedBindings()->name('application.evidence.open');

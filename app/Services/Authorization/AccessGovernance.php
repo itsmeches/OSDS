@@ -11,11 +11,60 @@ use App\Models\UserRegionAssignment;
 use App\Services\Auditing\AuditRecorder;
 use App\Services\Identity\AccountGovernance;
 use App\Support\FoundationPermission;
+use Carbon\CarbonImmutable;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 class AccessGovernance
 {
+    public function assignmentVersion(UserRegionAssignment|InstitutionRepresentative $grant): string
+    {
+        return hash('sha256', json_encode($grant->getRawOriginal(), JSON_THROW_ON_ERROR));
+    }
+
+    /** Amend dates only. Transfers/revocations retain their separate existing services. */
+    public function amendAssignment(User $actor, UserRegionAssignment|InstitutionRepresentative $grant, array $attributes, string $expectedVersion): UserRegionAssignment|InstitutionRepresentative
+    {
+        return DB::transaction(function () use ($actor, $grant, $attributes, $expectedVersion) {
+            // Existing governance operations lock the target account/grant. Lock
+            // authority rows as well, so concurrent revocation cannot race Save.
+            User::query()->whereIn('id', [$actor->id, $grant->user_id])->orderBy('id')->lockForUpdate()->get();
+            $actor = User::query()->findOrFail($actor->id);
+            $actor->regionAssignments()->lockForUpdate()->get();
+            $actor->nationwideAccessGrants()->lockForUpdate()->get();
+            InstitutionRepresentative::query()->where('user_id', $actor->id)->lockForUpdate()->get();
+            $locked = $grant->newQuery()->lockForUpdate()->findOrFail($grant->id);
+            $regional = $locked instanceof UserRegionAssignment;
+            $this->assertDelegation($actor, $locked->user()->firstOrFail(), $regional ? FoundationPermission::AssignRegionScope : FoundationPermission::AssignInstitutionRepresentatives);
+            $this->denyUnless($regional
+                ? $this->scopes->canAccessRegion($actor, $locked->region_id)
+                : $this->scopes->canAccessInstitution($actor, $locked->institution));
+            $this->denyUnless($locked->revoked_at === null && ($locked->ends_at === null || $locked->ends_at->isFuture()));
+            if (! hash_equals($this->assignmentVersion($locked), $expectedVersion)) {
+                throw ValidationException::withMessages(['data.starts_at' => 'This assignment changed since you opened it. Reopen it before saving.']);
+            }
+            // No rebinding, verification, revocation or attribution changes through
+            // a date edit, including fields discarded by the form schema.
+            foreach ($attributes as $field => $value) {
+                if (! in_array($field, ['starts_at', 'ends_at'], true)) {
+                    $this->denyUnless(array_key_exists($field, $locked->getAttributes()) && $value == $locked->getRawOriginal($field));
+                }
+            }
+            $dates = Validator::make($attributes, [
+                'starts_at' => ['required', 'date'],
+                'ends_at' => ['nullable', 'date', 'after:starts_at'],
+            ])->validate();
+            foreach ($dates as $field => $value) {
+                $dates[$field] = filled($value) ? CarbonImmutable::parse($value)->utc() : null;
+            }
+            $locked->fill($dates)->save();
+
+            return $locked->refresh();
+        }, 3);
+    }
+
     public function __construct(
         private readonly ScopeAuthorizer $scopes,
         private readonly AccountGovernance $accounts,

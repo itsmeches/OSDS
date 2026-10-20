@@ -19,6 +19,14 @@ Both light and dark token sets are supported. The default follows the user's ope
 
 Replace these tokens centrally when CHED supplies approved brand colors or typography. Do not duplicate brand colors in individual views.
 
+### Shared theme foundation (Phase 3D.7 Batch B)
+
+Use `--osds-color-action` with `--osds-color-on-action` for primary buttons; use `--osds-color-link` for links. A link color must not be reused as a button background with an assumed white label. Input borders, placeholders, disabled controls, and feedback each have semantic token pairs.
+
+Both stylesheet entry points import `resources/css/theme/components.css` after their layout rules. Add reusable control and feedback styles there; retain Filament's modal, dropdown, table, and loading mechanics. Shared questionnaire controls use question legends as accessible names and configured instructions as descriptions.
+
+See [Batch B verification](phase-3d7-batch-b-report.md) for rendered measurements, screenshots, isolated browser tooling, and verification limits. These results do not constitute a full accessibility certification.
+
 ## Page and navigation conventions
 
 - Use a plain-language title and a one-sentence description.

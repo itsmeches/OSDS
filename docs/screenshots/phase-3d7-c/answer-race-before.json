@@ -1,0 +1,31 @@
+{
+  "expected": "yes",
+  "trace": [
+    {
+      "phase": "first-yes",
+      "answer": "yes",
+      "selected": "yes"
+    },
+    {
+      "phase": "no",
+      "answer": "no",
+      "selected": "no"
+    },
+    {
+      "phase": "second-yes-requested",
+      "answer": "no",
+      "selected": "no"
+    },
+    {
+      "phase": "returned-to-step",
+      "answer": "no",
+      "selected": null
+    },
+    {
+      "phase": "persisted-and-reloaded",
+      "answer": "no",
+      "selected": "no"
+    }
+  ],
+  "failed": true
+}

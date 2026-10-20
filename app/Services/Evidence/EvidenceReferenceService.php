@@ -4,6 +4,7 @@ namespace App\Services\Evidence;
 
 use App\Models\ApplicantSandboxEligibilityGrant;
 use App\Models\ApplicationDraft;
+use App\Models\ApplicationWorkingRevision;
 use App\Models\DocumentaryRequirement;
 use App\Models\EvidenceProviderType;
 use App\Models\EvidenceReference;
@@ -42,6 +43,9 @@ class EvidenceReferenceService
         return DB::transaction(function () use ($user, $draft, $requirement, $reference, $operation, $url, $expected, $key) {
             $draft = ApplicationDraft::query()->with(['institution', 'manifest.retirement', 'manifest.formVersion.sections.questions', 'manifest.requirementSetVersion.requirements.providers', 'answers'])->lockForUpdate()->findOrFail($draft->id);
             $this->authorizeOwner($user, $draft);
+            if (! ApplicationWorkingRevision::query()->where(['application_draft_id' => $draft->id, 'state' => 'open'])->exists()) {
+                $this->invalid('This submitted working revision is read-only.');
+            }
             if ($draft->manifest->retirement || $draft->manifest->effective_until?->isPast()) {
                 $this->invalid('This questionnaire version is read-only.');
             }

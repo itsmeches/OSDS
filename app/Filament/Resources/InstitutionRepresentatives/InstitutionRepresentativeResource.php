@@ -8,6 +8,7 @@ use App\Filament\Resources\InstitutionRepresentatives\Pages\ListInstitutionRepre
 use App\Filament\Resources\InstitutionRepresentatives\Schemas\InstitutionRepresentativeForm;
 use App\Filament\Resources\InstitutionRepresentatives\Tables\InstitutionRepresentativesTable;
 use App\Models\InstitutionRepresentative;
+use App\Services\Authorization\StaffListScope;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -55,8 +56,6 @@ class InstitutionRepresentativeResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $regionIds = auth()->user()?->regionAssignments()->whereNull('revoked_at')->pluck('region_id') ?? collect();
-
-        return parent::getEloquentQuery()->whereHas('institution', fn (Builder $query) => $query->whereIn('primary_region_id', $regionIds));
+        return app(StaffListScope::class)->representatives(parent::getEloquentQuery(), auth()->user());
     }
 }

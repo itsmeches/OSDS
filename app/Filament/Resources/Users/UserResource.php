@@ -8,9 +8,8 @@ use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Filament\Resources\Users\Schemas\UserForm;
 use App\Filament\Resources\Users\Tables\UsersTable;
 use App\Models\User;
-use App\Services\Authorization\ScopeAuthorizer;
+use App\Services\Authorization\StaffListScope;
 use BackedEnum;
-use Carbon\CarbonImmutable;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -55,19 +54,6 @@ class UserResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $user = auth()->user();
-        if ($user !== null && app(ScopeAuthorizer::class)->hasNationwideAccess($user)) {
-            return parent::getEloquentQuery();
-        }
-        $now = CarbonImmutable::now();
-        $regionIds = $user?->regionAssignments()->whereNull('revoked_at')
-            ->where('starts_at', '<=', $now)
-            ->where(fn (Builder $query) => $query->whereNull('ends_at')->orWhere('ends_at', '>', $now))
-            ->pluck('region_id') ?? collect();
-
-        return parent::getEloquentQuery()->where(fn (Builder $query) => $query->whereKey($user?->id)
-            ->orWhereHas('regionAssignments', fn (Builder $assignments) => $assignments->whereIn('region_id', $regionIds)
-                ->whereNull('revoked_at')->where('starts_at', '<=', $now)
-                ->where(fn (Builder $dates) => $dates->whereNull('ends_at')->orWhere('ends_at', '>', $now))));
+        return app(StaffListScope::class)->users(parent::getEloquentQuery(), auth()->user());
     }
 }

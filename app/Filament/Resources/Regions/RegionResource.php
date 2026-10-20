@@ -8,6 +8,7 @@ use App\Filament\Resources\Regions\Pages\ListRegions;
 use App\Filament\Resources\Regions\Schemas\RegionForm;
 use App\Filament\Resources\Regions\Tables\RegionsTable;
 use App\Models\Region;
+use App\Services\Authorization\StaffListScope;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -53,8 +54,6 @@ class RegionResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $userId = auth()->id();
-
-        return parent::getEloquentQuery()->whereHas('userAssignments', fn (Builder $query) => $query->where('user_id', $userId)->whereNull('revoked_at'));
+        return app(StaffListScope::class)->regions(parent::getEloquentQuery(), auth()->user());
     }
 }

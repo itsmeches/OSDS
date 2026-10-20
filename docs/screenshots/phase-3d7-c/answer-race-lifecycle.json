@@ -1,0 +1,1557 @@
+[
+  {
+    "t": 3293,
+    "phase": "native-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 3294,
+    "phase": "after-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 3294,
+    "phase": "native-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 3294,
+    "phase": "after-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 3294,
+    "phase": "native-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 3294,
+    "phase": "after-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 3307,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "snapshotAnswer": null,
+    "update": "yes",
+    "rootUpdate": null
+  },
+  {
+    "t": 4524,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 4524,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "updates": "yes",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.141",
+      "answers.142"
+    ],
+    "oldKeys": [],
+    "clientKeys": [
+      "141",
+      "142"
+    ],
+    "incomingKeys": [
+      "141",
+      "142"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 4525,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 4525,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 4525,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 4531,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 4537,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": null
+  },
+  {
+    "t": 4725,
+    "phase": "native-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 4725,
+    "phase": "after-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 4726,
+    "phase": "native-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 4726,
+    "phase": "after-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 4726,
+    "phase": "native-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 4726,
+    "phase": "after-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 6081,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6081,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no",
+    "updates": null,
+    "rootUpdate": null,
+    "updateKeys": [],
+    "oldKeys": [
+      "141",
+      "142"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incomingKeys": [
+      "141",
+      "142"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 6081,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6081,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6081,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6083,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6090,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no",
+    "actions": [
+      "$commit"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": "no"
+  },
+  {
+    "t": 7536,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7537,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no",
+    "updates": null,
+    "rootUpdate": "no",
+    "updateKeys": [
+      "answers"
+    ],
+    "oldKeys": [
+      "141",
+      "142"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incoming": "no"
+  },
+  {
+    "t": 7537,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7537,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7537,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7540,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7628,
+    "phase": "native-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 7628,
+    "phase": "after-click",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 7628,
+    "phase": "native-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 7628,
+    "phase": "after-input",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 7628,
+    "phase": "native-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 7628,
+    "phase": "after-change",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 7641,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "snapshotAnswer": "no",
+    "update": "yes",
+    "rootUpdate": null
+  },
+  {
+    "t": 9098,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 9098,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "updates": "yes",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.142"
+    ],
+    "oldKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 9098,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 9098,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 9098,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 9101,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 9561,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "goToStep"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": null
+  },
+  {
+    "t": 11065,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 11065,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "updates": null,
+    "rootUpdate": null,
+    "updateKeys": [],
+    "oldKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 11065,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 11065,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 11065,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 1,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 2,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 11067,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "t": 11496,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null,
+    "actions": [
+      "goToStep"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": "yes"
+  },
+  {
+    "t": 12163,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "t": 12163,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null,
+    "updates": null,
+    "rootUpdate": "yes",
+    "updateKeys": [
+      "answers"
+    ],
+    "oldKeys": [
+      "141",
+      "142",
+      "143"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 12164,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "t": 12164,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "t": 12164,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [],
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "t": 12167,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12174,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": null
+  },
+  {
+    "t": 12936,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12936,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "updates": null,
+    "rootUpdate": null,
+    "updateKeys": [],
+    "oldKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 12936,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12936,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12936,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12938,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 12944,
+    "phase": "dispatch",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "save"
+    ],
+    "snapshotAnswer": "yes",
+    "update": null,
+    "rootUpdate": null
+  },
+  {
+    "t": 13938,
+    "phase": "response",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 13939,
+    "phase": "before-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes",
+    "updates": null,
+    "rootUpdate": null,
+    "updateKeys": [],
+    "oldKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "clientKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incomingKeys": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 13939,
+    "phase": "after-snapshot-merge",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 13939,
+    "phase": "synced",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 13939,
+    "phase": "before-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 13940,
+    "phase": "after-morph",
+    "componentId": "wtW73fZS2YgXD6k2rw2w",
+    "nodes": [
+      {
+        "id": 3,
+        "value": "yes",
+        "key": "applicant-question-142"
+      },
+      {
+        "id": 4,
+        "value": "no",
+        "key": "applicant-question-142"
+      }
+    ],
+    "answer": "yes",
+    "selected": "yes"
+  }
+]

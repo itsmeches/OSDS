@@ -1,0 +1,320 @@
+{
+  "cases": [
+    {
+      "name": "Question 2 title isolation across six questions",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Question 1 title isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Repeated switching and immediate edits across three questions",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Keyboard-only item selection and title editing",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Description type required flag and protected tree isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Simple condition edit survives selection and stage changes without altering other trees",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Choice labels isolated between two focused choice editors",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Option insertion deletion and shifted binding identity",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Reordered question remounts its changed positional binding",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Insertion deletion and selection preserve unaffected stable identities",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Document title instructions counts required state reorder and section-field isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Selection requested while a model response is held waits safely then edits only the selected item",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": [],
+  "clientAtFailure": {
+    "sections": [
+      {
+        "key": "main",
+        "title": "Applicant details",
+        "description": "",
+        "questions": [
+          {
+            "key": "source",
+            "label": "First committed with held response",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "dependent",
+            "label": "Conditional information",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "any": [
+                {
+                  "value": "Alpha",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "all": [
+                    {
+                      "value": "Beta",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "value": "Blocked",
+                      "operator": "not_equals",
+                      "question": "source"
+                    }
+                  ]
+                }
+              ]
+            },
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "simple",
+            "label": "Simple information",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            "options": [],
+            "condition_source": "source",
+            "condition_operator": "equals",
+            "condition_value": "Alpha"
+          },
+          {
+            "key": "choice_a",
+            "label": "First choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "choice_b",
+            "label": "Second choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      },
+      {
+        "key": "other",
+        "title": "Other section",
+        "description": "",
+        "questions": [
+          {
+            "key": "other_question",
+            "label": "Other question",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "key": "support",
+        "label": "Conditional supporting document",
+        "instructions": "Synthetic test only",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 1,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      },
+      {
+        "key": "second_document",
+        "label": "Second document",
+        "instructions": "Second instruction",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 2,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": null,
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      }
+    ]
+  },
+  "failure": "Error: expect(locator).toHaveValue(expected) failed\n\nLocator:  getByLabel('Question title', { exact: true })\nExpected: \"Conditional information\"\nReceived: \"First committed with held response\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveValue\" getByLabel('Question title', { exact: true }) with timeout 5000ms\n  - waiting for getByLabel('Question title', { exact: true })\n    13 × locator resolved to <input wire:model.live.debounce.400ms=\"sections.0.questions.0.label\"/>\n       - unexpected value \"First committed with held response\"\n"
+}

@@ -22,10 +22,20 @@ class ApplicantAuthController
         $data = $request->validate(['email' => 'required|email', 'password' => 'required|string']);
         if (! Auth::attempt($data, $request->boolean('remember'))) {
             return back()->withErrors(['email' => 'The credentials did not match an active applicant account.'])->onlyInput('email');
-        } $request->session()->regenerate();
-        if (! auth()->user()->isActive() || ! auth()->user()->is_synthetic || ! auth()->user()->can('applicant.portal.access')) {
+        }
+        $request->session()->regenerate();
+        $user = auth()->user();
+        if (! $user->isActive()) {
             Auth::logout();
-            abort(403);
+
+            return back()->withErrors(['email' => $user->status === 'pending_verification'
+                ? 'This SCHOOL account is awaiting verification by another authorized CHEDRO reviewer.'
+                : 'This applicant account is not active.'])->onlyInput('email');
+        }
+        if (! $user->is_synthetic || ! $user->can('applicant.portal.access')) {
+            Auth::logout();
+
+            return back()->withErrors(['email' => 'This account is not enabled for the synthetic applicant sandbox.'])->onlyInput('email');
         }
 
         return redirect()->route('applicant.home');

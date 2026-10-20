@@ -1,0 +1,507 @@
+{
+  "cases": [
+    {
+      "name": "Yes → No → Yes with rendered conditional transitions",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "No → Yes → No",
+      "expected": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Yes → No → Yes without deliberate pauses",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Rapid input immediately before Save",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Rapid input followed by section navigation",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Conditional child hide and reshow retains its current text",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Multiple question and checkbox changes",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "yes",
+        "level": "secondary",
+        "programs": [
+          "primary",
+          "secondary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "yes",
+        "level": "secondary",
+        "programs": [
+          "primary",
+          "secondary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "yes",
+        "level": "secondary",
+        "programs": [
+          "primary",
+          "secondary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "yes",
+        "level": "secondary",
+        "programs": [
+          "primary",
+          "secondary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "yes",
+        "level": "secondary",
+        "programs": [
+          "primary",
+          "secondary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "Keyboard radio group input",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "In-flight reply delay preserves rapid input and serializes later requests",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true,
+      "dispatchOrder": [
+        1,
+        2
+      ],
+      "responseReleaseOrder": [
+        1,
+        2
+      ],
+      "sameComponentOvertakingPrevented": true
+    },
+    {
+      "name": "Input changed while Save is in flight is not falsely marked saved",
+      "expected": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "no",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true
+    },
+    {
+      "name": "New tab cannot overwrite a newer saved answer",
+      "expected": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "visible": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "client": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "persisted": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "reloaded": {
+        "has_activity": "yes",
+        "has_team": "no",
+        "level": "primary",
+        "programs": [
+          "primary"
+        ]
+      },
+      "applicabilityVerified": true,
+      "responseReleaseOrder": [
+        "stale-tab-conflict",
+        "saved-tab-confirmation"
+      ]
+    }
+  ],
+  "failures": []
+}

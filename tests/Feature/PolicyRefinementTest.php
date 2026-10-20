@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Filament\Resources\UserRegionAssignments\Pages\EditUserRegionAssignment;
+use App\Filament\Resources\Users\Pages\EditUser;
 use App\Models\AccountStatusEvent;
 use App\Models\AuditEvent;
 use App\Models\Institution;
@@ -20,6 +22,9 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
+use Livewire\Livewire;
 use Tests\TestCase;
 
 class PolicyRefinementTest extends TestCase
@@ -102,6 +107,9 @@ class PolicyRefinementTest extends TestCase
         $this->actingAs($creator);
         $school = app(AccountGovernance::class)->create($creator, AccountRole::School, $this->attributes('pending-school'), institutionId: $institution->id);
         $representation = InstitutionRepresentative::query()->where('user_id', $school->id)->firstOrFail();
+        app(AccountGovernance::class)->enableSyntheticApplicant($creator, $school, $representation);
+        $this->assertTrue($school->refresh()->is_synthetic);
+        $this->assertDatabaseHas('audit_events', ['action' => 'account.synthetic_sandbox_enabled', 'resource_id' => (string) $school->id]);
 
         try {
             app(AccountGovernance::class)->verifySchool($creator, $school, $representation);
@@ -202,8 +210,8 @@ class PolicyRefinementTest extends TestCase
         try {
             app(AccountGovernance::class)->create($super, AccountRole::Admin, $attributes, $region->id);
             $this->fail('A competing duplicate account creation was accepted.');
-        } catch (QueryException) {
-            $this->assertTrue(true);
+        } catch (ValidationException $exception) {
+            $this->assertSame('An account with this email address already exists.', $exception->errors()['email'][0]);
         }
 
         $this->assertSame(1, User::query()->where('email', $attributes['email'])->count());
@@ -233,6 +241,46 @@ class PolicyRefinementTest extends TestCase
 
         $school = $this->userWithRole(AccountRole::School);
         $this->actingAs($school)->get('/admin/users/create')->assertForbidden();
+    }
+
+    public function test_delegated_admin_cannot_reset_a_super_user_password_through_the_user_editor(): void
+    {
+        $region = Region::query()->create(['code' => 'SEC007', 'name' => 'Isolated credential boundary']);
+        $admin = $this->userWithRole(AccountRole::Admin);
+        $super = $this->userWithRole(AccountRole::SuperUser);
+        $this->bootstrapRegion($admin, $region);
+        $this->bootstrapRegion($super, $region);
+        $this->assertTrue($admin->can('users.manage'));
+        $this->assertFalse(app(AccountGovernance::class)->canManageTargetRole($admin, $super));
+
+        Livewire::actingAs($admin)
+            ->test(EditUser::class, ['record' => $super->id])
+            ->fillForm(['name' => $super->name, 'email' => $super->email])
+            // Send credentials with Save in one real update, as the browser does;
+            // password state is intentionally removed from every response.
+            ->update(calls: [['method' => 'save', 'params' => [], 'path' => '']], updates: ['data.password' => 'Disposable-credential-probe-2026!'])
+            ->assertForbidden();
+
+        $this->assertFalse(Hash::check('Disposable-credential-probe-2026!', $super->fresh()->password), 'A delegated Admin without target-account authority must not replace a Super User credential.');
+    }
+
+    public function test_staff_cannot_extend_own_region_authority_through_generic_assignment_editor(): void
+    {
+        $region = Region::query()->create(['code' => 'SEC008', 'name' => 'Isolated self-grant boundary']);
+        $admin = $this->userWithRole(AccountRole::Admin);
+        $grant = $this->bootstrapRegion($admin, $region);
+        $grant->update(['ends_at' => now()->addHour()]);
+        $originalEnd = $grant->fresh()->ends_at->getTimestamp();
+        $this->assertTrue($admin->can('region_scopes.assign'));
+        $this->assertFalse(app(AccountGovernance::class)->canManageTargetRole($admin, $admin));
+
+        Livewire::actingAs($admin)
+            ->test(EditUserRegionAssignment::class, ['record' => $grant->id])
+            ->fillForm(['ends_at' => now()->addYear()->format('Y-m-d H:i:s')])
+            ->call('save')
+            ->assertForbidden();
+
+        $this->assertSame($originalEnd, $grant->fresh()->ends_at->getTimestamp(), 'Staff must not extend their own effective regional authority through a generic edit.');
     }
 
     private function userWithRole(AccountRole $role): User

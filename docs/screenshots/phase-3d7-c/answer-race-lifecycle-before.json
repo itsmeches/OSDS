@@ -1,0 +1,540 @@
+[
+  {
+    "t": 1907,
+    "phase": "native-click",
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 1907,
+    "phase": "after-click",
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 1907,
+    "phase": "native-input",
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 1907,
+    "phase": "after-input",
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 1907,
+    "phase": "native-change",
+    "answer": null,
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 1907,
+    "phase": "after-change",
+    "answer": null,
+    "selected": "yes"
+  },
+  {
+    "t": 1923,
+    "phase": "dispatch",
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "update": "yes",
+    "rootUpdate": null
+  },
+  {
+    "t": 2373,
+    "phase": "dispatch",
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "update": "yes",
+    "rootUpdate": null
+  },
+  {
+    "t": 2725,
+    "phase": "response",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 2725,
+    "phase": "before-snapshot-merge",
+    "answer": "yes",
+    "selected": "yes",
+    "updates": "yes",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.73",
+      "answers.74"
+    ],
+    "oldKeys": [],
+    "clientKeys": [
+      "73",
+      "74"
+    ],
+    "incomingKeys": [
+      "73",
+      "74"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 2726,
+    "phase": "after-snapshot-merge",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 2726,
+    "phase": "synced",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 2726,
+    "phase": "before-morph",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 2731,
+    "phase": "after-morph",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 2875,
+    "phase": "native-click",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 2875,
+    "phase": "after-click",
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 2875,
+    "phase": "native-input",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 2875,
+    "phase": "after-input",
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 2876,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no",
+    "trusted": true
+  },
+  {
+    "t": 2876,
+    "phase": "after-change",
+    "answer": "yes",
+    "selected": "no"
+  },
+  {
+    "t": 2887,
+    "phase": "dispatch",
+    "answer": "no",
+    "selected": "no",
+    "actions": [
+      "$commit"
+    ],
+    "update": null,
+    "rootUpdate": "no"
+  },
+  {
+    "t": 3308,
+    "phase": "dispatch",
+    "answer": "no",
+    "selected": "no",
+    "actions": [
+      "$commit"
+    ],
+    "update": null,
+    "rootUpdate": "no"
+  },
+  {
+    "t": 3618,
+    "phase": "response",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 3618,
+    "phase": "before-snapshot-merge",
+    "answer": "no",
+    "selected": "no",
+    "updates": "yes",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.73",
+      "answers.74"
+    ],
+    "oldKeys": [
+      "73",
+      "74"
+    ],
+    "clientKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incomingKeys": [
+      "73",
+      "74"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 3618,
+    "phase": "after-snapshot-merge",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 3618,
+    "phase": "synced",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 3618,
+    "phase": "before-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 3624,
+    "phase": "after-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4431,
+    "phase": "response",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4431,
+    "phase": "before-snapshot-merge",
+    "answer": "no",
+    "selected": "no",
+    "updates": null,
+    "rootUpdate": "no",
+    "updateKeys": [
+      "answers"
+    ],
+    "oldKeys": [
+      "73",
+      "74"
+    ],
+    "clientKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incomingKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incoming": "no"
+  },
+  {
+    "t": 4432,
+    "phase": "after-snapshot-merge",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4432,
+    "phase": "synced",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4432,
+    "phase": "before-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4435,
+    "phase": "after-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 4775,
+    "phase": "native-click",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 4775,
+    "phase": "after-click",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 4776,
+    "phase": "native-input",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 4776,
+    "phase": "after-input",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 4776,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes",
+    "trusted": true
+  },
+  {
+    "t": 4776,
+    "phase": "after-change",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 4789,
+    "phase": "dispatch",
+    "answer": "yes",
+    "selected": "yes",
+    "actions": [
+      "$commit"
+    ],
+    "update": "yes",
+    "rootUpdate": null
+  },
+  {
+    "t": 5213,
+    "phase": "response",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "t": 5214,
+    "phase": "before-snapshot-merge",
+    "answer": "yes",
+    "selected": "yes",
+    "updates": null,
+    "rootUpdate": "yes",
+    "updateKeys": [
+      "answers"
+    ],
+    "oldKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "clientKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incomingKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incoming": "no"
+  },
+  {
+    "t": 5214,
+    "phase": "after-snapshot-merge",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 5214,
+    "phase": "synced",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 5214,
+    "phase": "before-morph",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 5216,
+    "phase": "after-morph",
+    "answer": "no",
+    "selected": "yes"
+  },
+  {
+    "t": 6046,
+    "phase": "response",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6046,
+    "phase": "before-snapshot-merge",
+    "answer": "no",
+    "selected": "no",
+    "updates": "yes",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.74"
+    ],
+    "oldKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "clientKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incomingKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incoming": "yes"
+  },
+  {
+    "t": 6046,
+    "phase": "after-snapshot-merge",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6047,
+    "phase": "synced",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6047,
+    "phase": "before-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6049,
+    "phase": "after-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 6174,
+    "phase": "dispatch",
+    "answer": "no",
+    "selected": "no",
+    "actions": [
+      "goToStep"
+    ],
+    "update": "no",
+    "rootUpdate": null
+  },
+  {
+    "t": 7062,
+    "phase": "response",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7063,
+    "phase": "before-snapshot-merge",
+    "answer": "no",
+    "selected": "no",
+    "updates": "no",
+    "rootUpdate": null,
+    "updateKeys": [
+      "answers.74"
+    ],
+    "oldKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "clientKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incomingKeys": [
+      "73",
+      "74",
+      "75"
+    ],
+    "incoming": "no"
+  },
+  {
+    "t": 7063,
+    "phase": "after-snapshot-merge",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7063,
+    "phase": "synced",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7063,
+    "phase": "before-morph",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "t": 7066,
+    "phase": "after-morph",
+    "answer": "no",
+    "selected": null
+  },
+  {
+    "t": 7125,
+    "phase": "dispatch",
+    "answer": "no",
+    "selected": null,
+    "actions": [
+      "goToStep"
+    ],
+    "update": null,
+    "rootUpdate": "no"
+  }
+]

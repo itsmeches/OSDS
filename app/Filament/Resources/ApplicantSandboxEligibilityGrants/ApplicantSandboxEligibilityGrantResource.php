@@ -5,6 +5,9 @@ namespace App\Filament\Resources\ApplicantSandboxEligibilityGrants;
 use App\Filament\Resources\ApplicantSandboxEligibilityGrants\Pages\CreateApplicantSandboxEligibilityGrant;
 use App\Filament\Resources\ApplicantSandboxEligibilityGrants\Pages\ListApplicantSandboxEligibilityGrants;
 use App\Models\ApplicantSandboxEligibilityGrant;
+use App\Models\Institution;
+use App\Models\OsdsModule;
+use App\Support\GrantPresentation;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -36,12 +39,29 @@ class ApplicantSandboxEligibilityGrantResource extends Resource
 
     public static function form(Schema $schema): Schema
     {
-        return $schema->components([Select::make('institution_id')->relationship('institution', 'name', modifyQueryUsing: fn ($q) => $q->where('is_synthetic', true))->required(), Select::make('module_id')->relationship('module', 'name')->required(), DateTimePicker::make('starts_at')->default(now())->required(), DateTimePicker::make('ends_at')->after('starts_at'), Textarea::make('reason')->required()->maxLength(500)]);
+        return $schema->components([
+            Select::make('institution_id')
+                ->label('Synthetic organization')
+                ->options(fn () => Institution::query()->where('is_synthetic', true)->orderBy('name')->pluck('name', 'id'))
+                ->helperText('Only synthetic organizations in the isolated applicant sandbox are eligible.')
+                ->searchable()
+                ->preload()
+                ->required(),
+            Select::make('module_id')
+                ->label('Questionnaire service')
+                ->options(fn () => OsdsModule::query()->where('is_active', true)->orderBy('name')->pluck('name', 'id'))
+                ->searchable()
+                ->preload()
+                ->required(),
+            DateTimePicker::make('starts_at')->label('Effective from')->default(now())->required(),
+            DateTimePicker::make('ends_at')->label('Effective until')->helperText('Optional. Leave blank when no test end date is needed.')->after('starts_at'),
+            Textarea::make('reason')->helperText('Explain why this organization may test this questionnaire service.')->required()->maxLength(500),
+        ]);
     }
 
     public static function table(Table $table): Table
     {
-        return $table->columns([TextColumn::make('institution.name')->label('Organization')->searchable(), TextColumn::make('module.name'), TextColumn::make('starts_at')->dateTime('M j, Y g:i A'), TextColumn::make('ends_at')->dateTime('M j, Y g:i A')->placeholder('No end date'), TextColumn::make('revoked_at')->dateTime()->placeholder('Active')]);
+        return $table->columns([TextColumn::make('institution.name')->label('Organization')->searchable(), TextColumn::make('module.name')->label('Service')->searchable(), TextColumn::make('starts_at')->dateTime('M j, Y g:i A'), TextColumn::make('ends_at')->dateTime('M j, Y g:i A')->placeholder('No end date'), TextColumn::make('effective_state')->label('Access status')->badge()->getStateUsing(fn ($record): string => GrantPresentation::state($record))->color(fn (string $state): string => GrantPresentation::color($state)), TextColumn::make('revoked_at')->dateTime()->placeholder('Not revoked')]);
     }
 
     public static function getPages(): array

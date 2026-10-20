@@ -1,0 +1,37 @@
+{
+  "checks": [
+    "Actual own-grant Save is forbidden and leaves date/audit unchanged",
+    "Target-account authority is enforced despite authorized metadata visibility",
+    "Authorized delegated date edit persists in PostgreSQL",
+    "Second real tab cannot overwrite a newer assignment; inline recovery is shown",
+    "Older committed response delivered after newer tab save cannot authorize a stale overwrite",
+    "Scope revoked after mount prevents Save"
+  ],
+  "screens": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

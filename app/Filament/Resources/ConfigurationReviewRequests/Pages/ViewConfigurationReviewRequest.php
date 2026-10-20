@@ -7,6 +7,7 @@ use App\Filament\Resources\PublicationManifests\PublicationManifestResource;
 use App\Models\ConfigurationReviewRequest;
 use App\Models\PublicationManifest;
 use App\Services\Questionnaires\QuestionnairePublicationService;
+use App\Support\StaffActionFeedback;
 use Filament\Actions\Action;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Textarea;
@@ -14,7 +15,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ViewRecord;
 use Filament\Support\Icons\Heroicon;
-use Throwable;
 
 class ViewConfigurationReviewRequest extends ViewRecord
 {
@@ -44,7 +44,7 @@ class ViewConfigurationReviewRequest extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            Action::make('approve')
+            Action::make('approve')->extraAttributes(['wire:cloak' => true])
                 ->label('Approve')
                 ->icon(Heroicon::OutlinedCheckCircle)
                 ->color('success')
@@ -56,13 +56,15 @@ class ViewConfigurationReviewRequest extends ViewRecord
                 ->modalHeading('Approve this exact configuration?')
                 ->modalDescription('Approval records the displayed questionnaire version, document-requirements version, and configuration hash. Publishing remains a separate action.')
                 ->modalSubmitActionLabel('Approve configuration')
-                ->requiresConfirmation()
+                ->modalContent(view('filament.partials.staff-action-recovery-notice'))->requiresConfirmation()
                 ->action(function (array $data): void {
-                    app(QuestionnairePublicationService::class)->review(auth()->user(), $this->getRecord(), true, $data['reference'], $data['comment'] ?? null);
-                    Notification::make()->title('Exact configuration approved')->body('What happens next? Publish it to the staff-only review sandbox when ready.')->success()->send();
+                    if (! StaffActionFeedback::run(fn () => app(QuestionnairePublicationService::class)->review(auth()->user()->fresh(), $this->getRecord(), true, $data['reference'], $data['comment'] ?? null))) {
+                        return;
+                    }
+                    Notification::make()->title('Exact configuration approved')->body('Choose the staff preview or synthetic applicant audience when ready. Approval alone does not make it available to applicants.')->success()->send();
                     $this->redirect(ConfigurationReviewRequestResource::getUrl('view', ['record' => $this->getRecord()]));
                 }),
-            Action::make('reject')
+            Action::make('reject')->extraAttributes(['wire:cloak' => true])
                 ->label('Request changes')
                 ->icon(Heroicon::OutlinedArrowUturnLeft)
                 ->color('danger')
@@ -74,14 +76,16 @@ class ViewConfigurationReviewRequest extends ViewRecord
                 ->modalHeading('Return this configuration for changes?')
                 ->modalDescription('The exact review remains in history. Its questionnaire and document requirements will return to editable draft state.')
                 ->modalSubmitActionLabel('Request changes')
-                ->requiresConfirmation()
+                ->modalContent(view('filament.partials.staff-action-recovery-notice'))->requiresConfirmation()
                 ->action(function (array $data): void {
-                    app(QuestionnairePublicationService::class)->review(auth()->user(), $this->getRecord(), false, $data['reference'], $data['comment']);
+                    if (! StaffActionFeedback::run(fn () => app(QuestionnairePublicationService::class)->review(auth()->user()->fresh(), $this->getRecord(), false, $data['reference'], $data['comment']))) {
+                        return;
+                    }
                     Notification::make()->title('Configuration returned for changes')->warning()->send();
                     $this->redirect(ConfigurationReviewRequestResource::getUrl());
                 }),
-            Action::make('publish')
-                ->label('Publish to review sandbox')
+            Action::make('publish')->extraAttributes(['wire:cloak' => true])
+                ->label('Publish staff preview')
                 ->icon(Heroicon::OutlinedRocketLaunch)
                 ->visible(fn (): bool => $this->getRecord()->state === 'approved'
                     && auth()->user()?->can('questionnaires.publish.sandbox')
@@ -92,33 +96,34 @@ class ViewConfigurationReviewRequest extends ViewRecord
                 ])
                 ->modalHeading('Publish to the staff review sandbox?')
                 ->modalDescription('This creates an immutable staff-only preview. It does not create a live applicant form and saves no applicant responses.')
-                ->modalSubmitActionLabel('Publish to review sandbox')
+                ->modalContent(view('filament.partials.staff-action-recovery-notice'))->modalSubmitActionLabel('Publish to review sandbox')
                 ->action(function (array $data): void {
-                    try {
+                    if (StaffActionFeedback::run(function () use ($data): void {
                         $approval = $this->getRecord()->approvals()->where('outcome', 'approved')->latest('id')->firstOrFail();
-                        app(QuestionnairePublicationService::class)->publishSandbox(auth()->user(), $approval, $data['effective_from'], $data['effective_until'] ?? null);
-                        Notification::make()->title('Published to the review sandbox')->body('Open Published questionnaires to preview it or review publication history.')->success()->send();
-                        $this->redirect(PublicationManifestResource::getUrl());
-                    } catch (Throwable $exception) {
-                        report($exception);
-                        Notification::make()->title('Publication failed')->body($exception->getMessage())->danger()->persistent()->send();
+                        app(QuestionnairePublicationService::class)->publishSandbox(auth()->user()->fresh(), $approval, $data['effective_from'], $data['effective_until'] ?? null);
+                    })) {
+                        Notification::make()->title('Published to the staff preview')->body('The staff-only preview is saved. Applicant access requires its separate publication and eligibility.')->success()->send();
+                        $this->returnToSavedPublication();
                     }
                 }),
-            Action::make('publishApplicantSandbox')
+            Action::make('publishApplicantSandbox')->extraAttributes(['wire:cloak' => true])
                 ->label('Publish to applicant sandbox')
                 ->icon(Heroicon::OutlinedUserGroup)
-                ->visible(fn (): bool => $this->getRecord()->state === 'approved' && auth()->user()?->can('applicant.sandbox.publish'))
-                ->schema([DateTimePicker::make('effective_from')->default(now())->required(), DateTimePicker::make('effective_until')->after('effective_from')])
+                ->visible(fn (): bool => $this->getRecord()->state === 'approved' && auth()->user()?->can('applicant.sandbox.publish') && ! $this->hasPublication('applicant_sandbox', activeOnly: true))
+                ->schema([
+                    DateTimePicker::make('effective_from')->label('Available from')->default(now())->required(),
+                    DateTimePicker::make('effective_until')->label('Available until')->helperText('Optional. Applicant access ends at this time.')->after('effective_from'),
+                ])
                 ->modalHeading('Publish to the isolated applicant sandbox?')
-                ->modalDescription('This is a separate synthetic SCHOOL audience. The staff review publication is not exposed.')
+                ->modalDescription('This is a separate synthetic SCHOOL audience. The staff review publication is not exposed.')->modalContent(view('filament.partials.staff-action-recovery-notice'))
+                ->modalSubmitActionLabel('Publish to applicant sandbox')
                 ->action(function (array $data): void {
-                    try {
+                    if (StaffActionFeedback::run(function () use ($data): void {
                         $approval = $this->getRecord()->approvals()->where('outcome', 'approved')->latest('id')->firstOrFail();
-                        app(QuestionnairePublicationService::class)->publishApplicantSandbox(auth()->user(), $approval, $data['effective_from'], $data['effective_until'] ?? null);
-                        Notification::make()->title('Published to applicant sandbox')->success()->send();
-                    } catch (Throwable $exception) {
-                        report($exception);
-                        Notification::make()->title('Applicant sandbox publication failed')->body($exception->getMessage())->danger()->persistent()->send();
+                        app(QuestionnairePublicationService::class)->publishApplicantSandbox(auth()->user()->fresh(), $approval, $data['effective_from'], $data['effective_until'] ?? null);
+                    })) {
+                        Notification::make()->title('Published to applicant sandbox')->body('Eligible synthetic organizations can now select it when its availability period starts.')->success()->send();
+                        $this->returnToSavedPublication();
                     }
                 }),
         ];
@@ -129,16 +134,32 @@ class ViewConfigurationReviewRequest extends ViewRecord
         /** @var ConfigurationReviewRequest $record */
         $record = $this->getRecord();
 
-        return ['review' => $record];
+        return [
+            'review' => $record,
+            'conditionSections' => $record->formVersion->sections->map(fn ($section): array => [
+                'questions' => $section->questions->map(fn ($question): array => [
+                    'key' => $question->key, 'label' => $question->label,
+                    'options' => $question->options->map(fn ($option): array => ['key' => $option->key, 'label' => $option->label])->all(),
+                ])->all(),
+            ])->all(),
+        ];
     }
 
-    private function hasPublication(string $channel): bool
+    private function hasPublication(string $channel, bool $activeOnly = false): bool
     {
         $approvalIds = $this->getRecord()->approvals()->where('outcome', 'approved')->pluck('id');
 
         return PublicationManifest::query()
             ->whereIn('configuration_review_approval_id', $approvalIds)
             ->where('channel', $channel)
+            ->when($activeOnly, fn ($query) => $query->whereDoesntHave('retirement'))
             ->exists();
+    }
+
+    private function returnToSavedPublication(): void
+    {
+        $this->redirect(auth()->user()->fresh()->can('questionnaires.publication.view')
+            ? PublicationManifestResource::getUrl()
+            : ConfigurationReviewRequestResource::getUrl('view', ['record' => $this->getRecord()]));
     }
 }

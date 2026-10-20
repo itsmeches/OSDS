@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\User;
 use App\Services\Authorization\ScopeAuthorizer;
+use App\Services\Identity\AccountGovernance;
 use Carbon\CarbonImmutable;
 
 class UserPolicy
@@ -26,6 +27,13 @@ class UserPolicy
     public function update(User $user, User $target): bool
     {
         return $user->isActive() && $user->can('users.manage') && $this->sharesScope($user, $target);
+    }
+
+    public function updateCredentials(User $user, User $target): bool
+    {
+        return $this->update($user, $target)
+            && ! $user->is($target)
+            && app(AccountGovernance::class)->canManageTargetRole($user, $target);
     }
 
     public function delete(User $user, User $target): bool

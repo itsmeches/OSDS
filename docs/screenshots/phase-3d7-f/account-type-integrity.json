@@ -1,0 +1,226 @@
+{
+  "cases": [
+    {
+      "mode": "rapid",
+      "lastIntent": "SCHOOL",
+      "visible": "SCHOOL",
+      "client": "SCHOOL",
+      "persisted": {
+        "roles": [
+          "SCHOOL"
+        ],
+        "status": "pending_verification"
+      }
+    },
+    {
+      "mode": "held-first-reply",
+      "lastIntent": "SCHOOL",
+      "visible": "SCHOOL",
+      "client": "SCHOOL",
+      "persisted": {
+        "roles": [
+          "SCHOOL"
+        ],
+        "status": "pending_verification"
+      }
+    },
+    {
+      "mode": "rapid-repeat",
+      "lastIntent": "SCHOOL",
+      "visible": "SCHOOL",
+      "client": "SCHOOL",
+      "persisted": {
+        "roles": [
+          "SCHOOL"
+        ],
+        "status": "pending_verification"
+      }
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "keys": [
+        "data.email",
+        "data.password"
+      ],
+      "role": null,
+      "methods": [
+        "authenticate"
+      ]
+    },
+    {
+      "keys": [],
+      "role": null,
+      "methods": [
+        "__lazyLoad"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.institution_id"
+      ],
+      "role": "OSDS",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.region_id"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.region_id"
+      ],
+      "role": null,
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.region_id"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "create"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.institution_id"
+      ],
+      "role": "OSDS",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.region_id"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.region_id"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "create"
+      ]
+    },
+    {
+      "keys": [],
+      "role": null,
+      "methods": [
+        "__dispatch"
+      ]
+    },
+    {
+      "keys": [],
+      "role": null,
+      "methods": [
+        "__dispatch"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.institution_id"
+      ],
+      "role": "OSDS",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.region_id"
+      ],
+      "role": null,
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data.account_role",
+        "data.region_id"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "$commit"
+      ]
+    },
+    {
+      "keys": [
+        "data"
+      ],
+      "role": "SCHOOL",
+      "methods": [
+        "create"
+      ]
+    }
+  ]
+}

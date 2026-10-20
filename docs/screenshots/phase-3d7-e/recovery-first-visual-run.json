@@ -1,0 +1,1500 @@
+{
+  "checks": [
+    "Immediate local dirty feedback and real canceled navigation preserve input",
+    "Required-field errors retain input; correction and duplicate-click save persist one version",
+    "Aborted save keeps RAM input, blocks editing, offers saved-state inspection and never retries",
+    "Response lost after commit shows uncertainty and prevents a second save",
+    "Actual HTTP 503 preserves local input without success feedback",
+    "Real cookie loss is caught without redirecting away or losing RAM work",
+    "Permission revocation denies direct/helper HTTP responses and blocks the open workspace",
+    "Admin role does not implicitly authorize OSDS authoring",
+    "Ambiguous overview does not imply a draft pair or show misleading counts",
+    "Native Create questionnaire creates an exact pair under the existing approved service",
+    "Native section ordering, choice validation, exact labels, required state and document configuration persist",
+    "Fresh mobile outline is compact and can be expanded with the keyboard",
+    "Configuration check and shared full preview create no applicant data",
+    "Sending freezes one exact pair for Admin review; duplicate clicks do not create another request"
+  ],
+  "screens": [
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.06,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 13.31,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "document-editor",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "question-editor",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "review-stage",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "review-stage",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "review-stage",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "review-stage",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".fi-sidebar-item-btn[href$=\"admin\"][x-data=\"{ tooltip: false }\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[x-data=\"{ label: null }\"] > .fi-sidebar-group-items > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(2) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[x-data=\"{ label: null }\"] > .fi-sidebar-group-items > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(3) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[data-group-label=\"Security and oversight\"] > .fi-sidebar-group-btn.fi-transition-enter.fi-transition-enter-end > .fi-sidebar-group-label"
+            ],
+            [
+              "#fi-sidebar-group-items-security-and-oversight-733776fc > .fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[data-group-label=\"User and access management\"] > .fi-sidebar-group-btn.fi-transition-enter.fi-transition-enter-end > .fi-sidebar-group-label"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(1) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(2) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(3) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              ".fi-sidebar-item.fi-sidebar-item-has-url:nth-child(4) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "review-stage",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "review-stage",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "send-stage",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".fi-sidebar-item-btn[href$=\"admin\"][x-data=\"{ tooltip: false }\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[x-data=\"{ label: null }\"] > .fi-sidebar-group-items > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(2) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[x-data=\"{ label: null }\"] > .fi-sidebar-group-items > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(3) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[data-group-label=\"Security and oversight\"] > .fi-sidebar-group-btn.fi-transition-enter.fi-transition-enter-end > .fi-sidebar-group-label"
+            ],
+            [
+              "#fi-sidebar-group-items-security-and-oversight-733776fc > .fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "li[data-group-label=\"User and access management\"] > .fi-sidebar-group-btn.fi-transition-enter.fi-transition-enter-end > .fi-sidebar-group-label"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(1) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(2) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "#fi-sidebar-group-items-user-and-access-management-65b9e3f5 > .fi-sidebar-item.fi-sidebar-item-has-url:nth-child(3) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              ".fi-sidebar-item.fi-sidebar-item-has-url:nth-child(4) > .fi-sidebar-item-btn[x-data=\"{ tooltip: false }\"][x-tooltip\\.html=\"tooltip\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "send-stage",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "send-stage",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 19.9,
+          "color": "oklch(0.141 0.005 285.823)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "send-stage",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "send-stage",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "send-stage",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 15.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "keyboard": {
+    "tag": "BUTTON",
+    "outline": "solid"
+  }
+}

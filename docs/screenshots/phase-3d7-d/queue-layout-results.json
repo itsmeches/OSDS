@@ -1,0 +1,645 @@
+{
+  "interactions": [
+    "intake-queue: scoped counts, search, service filter, empty result, pagination reset and keyboard",
+    "evidence-queue: scoped counts, search, service filter, empty result, pagination reset and keyboard"
+  ],
+  "screens": [
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    }
+  ],
+  "errors": []
+}

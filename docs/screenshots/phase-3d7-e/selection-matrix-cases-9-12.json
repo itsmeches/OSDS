@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "name": "Reordered question remounts its changed positional binding",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Insertion deletion and selection preserve unaffected stable identities",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Document title instructions counts required state reorder and section-field isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Selection requested while a model response is held waits safely then edits only the selected item",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": []
+}

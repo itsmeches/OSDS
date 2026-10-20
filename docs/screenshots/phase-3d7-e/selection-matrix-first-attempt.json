@@ -1,0 +1,220 @@
+{
+  "cases": [
+    {
+      "name": "Question 2 title isolation across six questions",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Question 1 title isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": [],
+  "clientAtFailure": {
+    "sections": [
+      {
+        "key": "main",
+        "title": "Applicant details",
+        "description": "",
+        "questions": [
+          {
+            "key": "source",
+            "label": "First v2",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "dependent",
+            "label": "Second v1",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "any": [
+                {
+                  "value": "Alpha",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "all": [
+                    {
+                      "value": "Beta",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "value": "Blocked",
+                      "operator": "not_equals",
+                      "question": "source"
+                    }
+                  ]
+                }
+              ]
+            },
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "simple",
+            "label": "Simple information",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            "options": [],
+            "condition_source": "source",
+            "condition_operator": "equals",
+            "condition_value": "Alpha"
+          },
+          {
+            "key": "choice_a",
+            "label": "First choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "choice_b",
+            "label": "Second choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      },
+      {
+        "key": "other",
+        "title": "Other section",
+        "description": "",
+        "questions": [
+          {
+            "key": "other_question",
+            "label": "Other question",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "key": "support",
+        "label": "Conditional supporting document",
+        "instructions": "Synthetic test only",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 1,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      },
+      {
+        "key": "second_document",
+        "label": "Second document",
+        "instructions": "Second instruction",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 2,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": null,
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      }
+    ]
+  },
+  "failure": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('#question-dependent')\nExpected: \"true\"\nReceived: \"false\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" locator('#question-dependent') with timeout 5000ms\n  - waiting for locator('#question-dependent')\n    7 × locator resolved to <button type=\"button\" aria-pressed=\"false\" id=\"question-dependent\" class=\"builder-outline-item\" wire:click=\"selectQuestion('dependent')\">…</button>\n      - unexpected value \"false\"\n    3 × locator resolved to <button type=\"button\" data-loading=\"true\" aria-pressed=\"false\" id=\"question-dependent\" class=\"builder-outline-item\" wire:click=\"selectQuestion('dependent')\">…</button>\n      - unexpected value \"false\"\n    4 × locator resolved to <button type=\"button\" aria-pressed=\"false\" id=\"question-dependent\" class=\"builder-outline-item\" wire:click=\"selectQuestion('dependent')\">…</button>\n      - unexpected value \"false\"\n"
+}

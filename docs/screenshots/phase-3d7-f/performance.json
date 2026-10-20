@@ -1,0 +1,47 @@
+{
+  "database": "osds_ui_browser_test",
+  "publication": {
+    "previous_access_pattern": {
+      "rows": 10,
+      "queries": 32,
+      "query_ms": 9.159999999999998,
+      "elapsed_ms": 14.202
+    },
+    "current_access_pattern": {
+      "rows": 10,
+      "queries": 3,
+      "query_ms": 1.07,
+      "elapsed_ms": 2.339
+    }
+  },
+  "selectors": {
+    "overlap": {
+      "allowed_count": 1,
+      "same_options": true,
+      "previous_access_pattern": {
+        "queries": 151,
+        "query_ms": 42.35000000000004,
+        "elapsed_ms": 69.125
+      },
+      "current_access_pattern": {
+        "queries": 3,
+        "query_ms": 0.8599999999999999,
+        "elapsed_ms": 1.555
+      }
+    },
+    "super": {
+      "allowed_count": 75,
+      "same_options": true,
+      "previous_access_pattern": {
+        "queries": 76,
+        "query_ms": 16.729999999999997,
+        "elapsed_ms": 31.905
+      },
+      "current_access_pattern": {
+        "queries": 3,
+        "query_ms": 0.93,
+        "elapsed_ms": 4.681
+      }
+    }
+  }
+}

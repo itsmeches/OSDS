@@ -5,12 +5,16 @@ namespace App\Filament\Resources\SyntheticEvidenceReviewerAssignments;
 use App\Filament\Resources\SyntheticEvidenceReviewerAssignments\Pages\CreateSyntheticEvidenceReviewerAssignment;
 use App\Filament\Resources\SyntheticEvidenceReviewerAssignments\Pages\ListSyntheticEvidenceReviewerAssignments;
 use App\Models\SyntheticEvidenceReviewerAssignment;
+use App\Services\Evidence\EvidenceReviewerAssignmentService;
+use App\Support\GrantPresentation;
+use App\Support\StaffActionFeedback;
 use Filament\Actions\Action;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
+use Filament\Support\Exceptions\Halt;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -42,7 +46,15 @@ class SyntheticEvidenceReviewerAssignmentResource extends Resource
 
     public static function table(Table $t): Table
     {
-        return $t->columns([TextColumn::make('reviewer.name')->label('Reviewer'), TextColumn::make('region.name'), TextColumn::make('module.name'), TextColumn::make('starts_at')->dateTime('M j, Y g:i A'), TextColumn::make('ends_at')->dateTime()->placeholder('No end date'), TextColumn::make('revoked_at')->dateTime()->placeholder('Active')])->recordActions([Action::make('revoke')->requiresConfirmation()->schema([Textarea::make('revocation_reason')->required()->maxLength(500)])->visible(fn ($record) => ! $record->revoked_at)->action(fn ($record, array $data) => $record->update(['revoked_at' => now(), 'revoked_by' => auth()->id(), 'revocation_reason' => $data['revocation_reason']]))]);
+        return $t->columns([TextColumn::make('reviewer.name')->label('Reviewer')->searchable(), TextColumn::make('region.name')->label('Region')->searchable(), TextColumn::make('module.name')->label('Service')->searchable(), TextColumn::make('starts_at')->dateTime('M j, Y g:i A'), TextColumn::make('ends_at')->dateTime()->placeholder('No end date'), TextColumn::make('effective_state')->label('Access status')->badge()->getStateUsing(fn ($record): string => GrantPresentation::state($record))->color(fn (string $state): string => GrantPresentation::color($state)), TextColumn::make('revoked_at')->dateTime()->placeholder('Not revoked')])->recordActions([Action::make('revoke')->requiresConfirmation()->modalDescription(fn ($livewire) => $livewire->getErrorBag()->first('reviewerRevocation') ?: 'Revoke this reviewer assignment? This removes its review authority and preserves its history.')->schema([Textarea::make('revocation_reason')->required()->maxLength(500)])->visible(fn ($record) => ! $record->revoked_at)->action(function ($record, array $data, $livewire): void {
+            $livewire->resetErrorBag('reviewerRevocation');
+            try {
+                StaffActionFeedback::run(fn () => app(EvidenceReviewerAssignmentService::class)->revoke(auth()->user(), $record, $data['revocation_reason']));
+            } catch (Halt $exception) {
+                $livewire->addError('reviewerRevocation', 'The revocation could not be confirmed. Check the saved assignment before trying again.');
+                throw $exception;
+            }
+        })]);
     }
 
     public static function getPages(): array

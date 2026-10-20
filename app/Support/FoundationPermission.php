@@ -50,4 +50,15 @@ enum FoundationPermission: string
     case OpenEvidenceReviews = 'evidence.reviews.open';
     case CreateEvidenceReviewFindings = 'evidence.review.findings.create';
     case ViewEvidenceReviewHistory = 'evidence.review.history.view';
+    case SubmitApplications = 'applications.submit';
+    case TrackOwnApplications = 'applications.track.own';
+    case ViewOwnCorrections = 'applications.corrections.view.own';
+    case ResubmitApplications = 'applications.resubmit';
+    case ViewApplicationIntake = 'applications.intake.view';
+    case ViewApplicationIntakeAnswers = 'applications.intake.answers.view';
+    case OpenApplicationIntakeEvidence = 'applications.intake.evidence.open';
+    case StartApplicationScreening = 'applications.screening.start';
+    case RequestApplicationCorrections = 'applications.corrections.request';
+    case ViewApplicationScreeningHistory = 'applications.screening.history.view';
+    case ManageApplicationReviewerAssignments = 'applications.reviewer.assignments.manage';
 }

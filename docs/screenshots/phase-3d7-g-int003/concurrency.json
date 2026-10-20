@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "duplicate",
+    "before": {
+      "revoked": false,
+      "actor": null,
+      "reason": null,
+      "audits": 0
+    },
+    "after": {
+      "revoked": true,
+      "actor": 392,
+      "reason": "Concurrent synthetic A",
+      "audits": 1
+    },
+    "workers": [
+      "committed",
+      "already-revoked"
+    ],
+    "postgresqlLockWaitVerified": true,
+    "passed": true
+  },
+  {
+    "mode": "inactive",
+    "before": {
+      "revoked": false,
+      "actor": null,
+      "reason": null,
+      "audits": 0
+    },
+    "after": {
+      "revoked": true,
+      "actor": 394,
+      "reason": "Concurrent synthetic A",
+      "audits": 1
+    },
+    "workers": [
+      "committed",
+      "denied"
+    ],
+    "postgresqlLockWaitVerified": true,
+    "passed": true
+  }
+]

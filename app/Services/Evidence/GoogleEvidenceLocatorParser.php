@@ -23,16 +23,16 @@ class GoogleEvidenceLocatorParser
         parse_str($parts['query'] ?? '', $query);
 
         if ($host === 'drive.google.com') {
-            if (preg_match('#^/file/d/([A-Za-z0-9_-]{10,200})(?:/|$)#', $path, $matches) === 1 && $query === []) {
+            if (preg_match('#^/file/d/([A-Za-z0-9_-]{10,200})(?:/|$)#', $path, $matches) === 1 && $this->validShareQuery($query)) {
                 return new ParsedEvidenceLocator('google_drive_file', $matches[1]);
             }
-            if ($path === '/open' && array_keys($query) === ['id'] && is_string($query['id']) && $this->validId($query['id'])) {
+            if ($path === '/open' && isset($query['id']) && is_string($query['id']) && $this->validId($query['id']) && $this->validShareQuery(array_diff_key($query, ['id' => true]))) {
                 return new ParsedEvidenceLocator('google_drive_file', $query['id']);
             }
             $this->invalid();
         }
 
-        if ($host !== 'docs.google.com' || $query !== []) {
+        if ($host !== 'docs.google.com' || ! $this->validShareQuery($query)) {
             $this->invalid();
         }
 
@@ -48,6 +48,17 @@ class GoogleEvidenceLocatorParser
     private function validId(string $id): bool
     {
         return preg_match('/^[A-Za-z0-9_-]{10,200}$/', $id) === 1;
+    }
+
+    private function validShareQuery(array $query): bool
+    {
+        if ($query === []) {
+            return true;
+        }
+
+        return array_keys($query) === ['usp']
+            && is_string($query['usp'])
+            && in_array($query['usp'], ['drive_link', 'sharing'], true);
     }
 
     private function invalid(): never

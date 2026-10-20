@@ -50,4 +50,9 @@ class ApplicationDraft extends Model
     {
         return $this->hasMany(EvidenceReference::class);
     }
+
+    public function application(): BelongsTo
+    {
+        return $this->belongsTo(Application::class);
+    }
 }

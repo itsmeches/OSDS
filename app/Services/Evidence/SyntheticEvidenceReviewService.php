@@ -73,16 +73,20 @@ class SyntheticEvidenceReviewService
 
     public function finding(User $user, SyntheticEvidenceReviewRequirement $requirement, ?EvidenceReferenceRevision $revision, string $type, string $outcome, ?string $comment = null, ?SyntheticEvidenceReviewFinding $supersedes = null): SyntheticEvidenceReviewFinding
     {
-        $case = SyntheticEvidenceReviewCase::query()->findOrFail($requirement->case_id);
-        $this->authorizeReviewer($user, $case, 'evidence.review.findings.create');
-        if ($revision && ! SyntheticEvidenceReviewItem::query()->where(['case_requirement_id' => $requirement->id, 'evidence_reference_revision_id' => $revision->id])->exists()) {
-            throw new AuthorizationException;
-        }
-        validator(compact('type', 'outcome', 'comment'), ['type' => 'required|in:accessibility,completeness,document_match', 'outcome' => 'required|in:meets_test_check,needs_attention,unable_to_access,not_reviewed', 'comment' => 'nullable|string|max:2000'])->validate();
+        return DB::transaction(function () use ($user, $requirement, $revision, $type, $outcome, $comment, $supersedes): SyntheticEvidenceReviewFinding {
+            $user = $user->fresh();
+            $requirement = SyntheticEvidenceReviewRequirement::query()->findOrFail($requirement->id);
+            $case = SyntheticEvidenceReviewCase::query()->findOrFail($requirement->case_id);
+            $this->authorizeReviewer($user, $case, 'evidence.review.findings.create');
+            if ($revision && ! SyntheticEvidenceReviewItem::query()->where(['case_requirement_id' => $requirement->id, 'evidence_reference_revision_id' => $revision->id])->exists()) {
+                throw new AuthorizationException;
+            }
+            validator(compact('type', 'outcome', 'comment'), ['type' => 'required|in:accessibility,completeness,document_match', 'outcome' => 'required|in:meets_test_check,needs_attention,unable_to_access,not_reviewed', 'comment' => 'nullable|string|max:2000'])->validate();
 
-        $finding = SyntheticEvidenceReviewFinding::query()->create(['case_requirement_id' => $requirement->id, 'evidence_reference_revision_id' => $revision?->id, 'reviewer_id' => $user->id, 'finding_type' => $type, 'outcome' => $outcome, 'comment' => $comment, 'supersedes_finding_id' => $supersedes?->id, 'correlation_id' => (string) Str::uuid(), 'reviewed_at' => now()]);
-        $this->audit->record('evidence.test_finding_created', 'success', $user, $finding, $case->region_id, $case->institution_id, ['case_id' => $case->id, 'requirement_id' => $requirement->documentary_requirement_id, 'finding_type' => $type, 'outcome' => $outcome]);
+            $finding = SyntheticEvidenceReviewFinding::query()->create(['case_requirement_id' => $requirement->id, 'evidence_reference_revision_id' => $revision?->id, 'reviewer_id' => $user->id, 'finding_type' => $type, 'outcome' => $outcome, 'comment' => $comment, 'supersedes_finding_id' => $supersedes?->id, 'correlation_id' => (string) Str::uuid(), 'reviewed_at' => now()]);
+            $this->audit->record('evidence.test_finding_created', 'success', $user, $finding, $case->region_id, $case->institution_id, ['case_id' => $case->id, 'requirement_id' => $requirement->documentary_requirement_id, 'finding_type' => $type, 'outcome' => $outcome]);
 
-        return $finding;
+            return $finding;
+        });
     }
 }

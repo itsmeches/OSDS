@@ -1,0 +1,224 @@
+[
+  {
+    "theme": "light",
+    "normal": {
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(36, 95, 157)",
+      "ratio": 6.57,
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "inputBorder": {
+      "foreground": "rgb(49, 116, 185)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 4.85,
+      "outlineColor": "rgb(49, 116, 185)",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid"
+    },
+    "hover": {
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(27, 74, 124)",
+      "ratio": 9.06,
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "keyboardReachedSignIn": true,
+    "focus": {
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(27, 74, 124)",
+      "ratio": 9.06,
+      "outlineColor": "rgb(49, 116, 185)",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid"
+    },
+    "disabled": {
+      "foreground": "rgb(71, 85, 105)",
+      "background": "rgb(226, 232, 240)",
+      "ratio": 6.15,
+      "outlineColor": "rgb(71, 85, 105)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "errorVisible": true,
+    "error": {
+      "foreground": "rgb(153, 27, 27)",
+      "background": "rgb(254, 242, 242)",
+      "ratio": 7.6,
+      "outlineColor": "rgb(153, 27, 27)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none",
+      "color": "rgb(153, 27, 27)"
+    },
+    "systemDark": true,
+    "systemLight": true,
+    "placeholder": {
+      "foreground": "rgb(82, 101, 125)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 5.97,
+      "outlineColor": "rgb(36, 54, 74)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "placeholderTextVisible": true,
+    "loadingDisabled": {
+      "foreground": "rgb(71, 85, 105)",
+      "background": "rgb(226, 232, 240)",
+      "ratio": 6.15,
+      "outlineColor": "rgb(71, 85, 105)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "reflow": [
+      {
+        "width": 720,
+        "documentWidth": 720,
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "documentWidth": 360,
+        "overflow": false
+      }
+    ],
+    "reducedMotion": {
+      "preference": true,
+      "duration": "1e-05s"
+    }
+  },
+  {
+    "theme": "dark",
+    "normal": {
+      "foreground": "rgb(16, 36, 58)",
+      "background": "rgb(147, 197, 253)",
+      "ratio": 8.72,
+      "outlineColor": "rgb(16, 36, 58)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "inputBorder": {
+      "foreground": "rgb(120, 183, 242)",
+      "background": "rgb(15, 23, 42)",
+      "ratio": 8.38,
+      "outlineColor": "rgb(120, 183, 242)",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid"
+    },
+    "hover": {
+      "foreground": "rgb(16, 36, 58)",
+      "background": "rgb(191, 219, 254)",
+      "ratio": 11.07,
+      "outlineColor": "rgb(16, 36, 58)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "keyboardReachedSignIn": true,
+    "focus": {
+      "foreground": "rgb(16, 36, 58)",
+      "background": "rgb(191, 219, 254)",
+      "ratio": 11.07,
+      "outlineColor": "rgb(120, 183, 242)",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid"
+    },
+    "disabled": {
+      "foreground": "rgb(198, 210, 227)",
+      "background": "rgb(38, 52, 74)",
+      "ratio": 8.21,
+      "outlineColor": "rgb(198, 210, 227)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "errorVisible": true,
+    "error": {
+      "foreground": "rgb(254, 202, 202)",
+      "background": "rgb(69, 10, 10)",
+      "ratio": 11.16,
+      "outlineColor": "rgb(254, 202, 202)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none",
+      "color": "rgb(254, 202, 202)"
+    },
+    "systemDark": true,
+    "systemLight": true,
+    "placeholder": {
+      "foreground": "rgb(173, 187, 204)",
+      "background": "rgb(15, 23, 42)",
+      "ratio": 9.14,
+      "outlineColor": "rgb(231, 238, 247)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "placeholderTextVisible": true,
+    "loadingDisabled": {
+      "foreground": "rgb(198, 210, 227)",
+      "background": "rgb(38, 52, 74)",
+      "ratio": 8.21,
+      "outlineColor": "rgb(198, 210, 227)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "reflow": [
+      {
+        "width": 720,
+        "documentWidth": 720,
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "documentWidth": 360,
+        "overflow": false
+      }
+    ],
+    "reducedMotion": {
+      "preference": true,
+      "duration": "1e-05s"
+    }
+  },
+  {
+    "name": "public-home",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "public-home",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "staff-login-error",
+    "theme": "light",
+    "error": {
+      "foreground": "rgb(153, 27, 27)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 8.31,
+      "outlineColor": "rgb(153, 27, 27)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "invalidInputVisible": true,
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "staff-login-error",
+    "theme": "dark",
+    "error": {
+      "foreground": "rgb(254, 202, 202)",
+      "background": "rgb(17, 24, 39)",
+      "ratio": 12.26,
+      "outlineColor": "rgb(254, 202, 202)",
+      "outlineWidth": "3px",
+      "outlineStyle": "none"
+    },
+    "invalidInputVisible": true,
+    "overflow": false,
+    "violations": []
+  }
+]

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Institutions\Schemas;
 
+use App\Services\Authorization\StaffListScope;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
@@ -18,7 +19,7 @@ class InstitutionForm
                 Select::make('primary_region_id')->relationship(
                     'primaryRegion',
                     'name',
-                    modifyQueryUsing: fn (Builder $query) => $query->whereHas('userAssignments', fn (Builder $assignments) => $assignments->where('user_id', auth()->id())->whereNull('revoked_at')),
+                    modifyQueryUsing: fn (Builder $query) => app(StaffListScope::class)->regions($query, auth()->user(), 'institutions.manage'),
                 )->searchable()->preload(),
                 Select::make('status')->options(['active' => 'Active', 'inactive' => 'Inactive'])->required(),
             ]);

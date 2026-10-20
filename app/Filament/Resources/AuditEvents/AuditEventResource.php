@@ -6,6 +6,7 @@ use App\Filament\Resources\AuditEvents\Pages\ListAuditEvents;
 use App\Filament\Resources\AuditEvents\Schemas\AuditEventForm;
 use App\Filament\Resources\AuditEvents\Tables\AuditEventsTable;
 use App\Models\AuditEvent;
+use App\Services\Authorization\StaffListScope;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -49,9 +50,6 @@ class AuditEventResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $regionIds = auth()->user()?->regionAssignments()->whereNull('revoked_at')->pluck('region_id') ?? collect();
-
-        return parent::getEloquentQuery()->where(fn (Builder $query) => $query->whereIn('region_id', $regionIds)
-            ->orWhere(fn (Builder $unscoped) => $unscoped->whereNull('region_id')->whereNull('institution_id')->where('actor_id', auth()->id())));
+        return app(StaffListScope::class)->auditEvents(parent::getEloquentQuery(), auth()->user());
     }
 }

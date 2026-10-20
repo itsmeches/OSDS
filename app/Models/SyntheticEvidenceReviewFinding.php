@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
 use LogicException;
 
@@ -22,5 +23,10 @@ class SyntheticEvidenceReviewFinding extends Model
         static::creating(fn (self $m) => $m->public_id ??= (string) Str::uuid());
         static::updating(fn () => throw new LogicException('Findings are append-only.'));
         static::deleting(fn () => throw new LogicException('Findings are append-only.'));
+    }
+
+    public function reviewer(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'reviewer_id');
     }
 }

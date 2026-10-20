@@ -8,6 +8,7 @@ use App\Filament\Resources\UserRegionAssignments\Pages\ListUserRegionAssignments
 use App\Filament\Resources\UserRegionAssignments\Schemas\UserRegionAssignmentForm;
 use App\Filament\Resources\UserRegionAssignments\Tables\UserRegionAssignmentsTable;
 use App\Models\UserRegionAssignment;
+use App\Services\Authorization\StaffListScope;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -24,6 +25,10 @@ class UserRegionAssignmentResource extends Resource
     protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
 
     protected static ?string $navigationLabel = 'Regional assignments';
+
+    protected static ?string $modelLabel = 'regional assignment';
+
+    protected static ?string $pluralModelLabel = 'regional assignments';
 
     protected static ?int $navigationSort = 50;
 
@@ -55,8 +60,6 @@ class UserRegionAssignmentResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $regionIds = auth()->user()?->regionAssignments()->whereNull('revoked_at')->pluck('region_id') ?? collect();
-
-        return parent::getEloquentQuery()->whereIn('region_id', $regionIds);
+        return app(StaffListScope::class)->regionAssignments(parent::getEloquentQuery(), auth()->user());
     }
 }

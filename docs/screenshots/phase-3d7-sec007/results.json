@@ -1,0 +1,256 @@
+{
+  "checks": [
+    "Forbidden Super User credential forgery is denied with no account/audit mutation",
+    "Authorized delegated email/password save persists once and reload omits password",
+    "Validation failure retains safe fields but clears credential input and response",
+    "revoke-permission after editor mount blocks credential persistence",
+    "revoke-scope after editor mount blocks credential persistence"
+  ],
+  "screens": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "methods": [
+        "authenticate"
+      ],
+      "updateKeys": [
+        "data.email",
+        "data.password"
+      ],
+      "hasCredential": false,
+      "formFlags": [
+        {
+          "rolePresent": false,
+          "keys": []
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "methods": [
+        "save"
+      ],
+      "updateKeys": [
+        "data"
+      ],
+      "hasCredential": true,
+      "formFlags": [
+        {
+          "synthetic": true,
+          "status": "active",
+          "rolePresent": false,
+          "keys": [
+            "name",
+            "email",
+            "status",
+            "is_synthetic",
+            "account_role",
+            "region_id",
+            "institution_id",
+            "password"
+          ]
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "authenticate"
+      ],
+      "updateKeys": [
+        "data.email",
+        "data.password"
+      ],
+      "hasCredential": false,
+      "formFlags": [
+        {
+          "rolePresent": false,
+          "keys": []
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "save"
+      ],
+      "updateKeys": [
+        "data"
+      ],
+      "hasCredential": true,
+      "formFlags": [
+        {
+          "synthetic": true,
+          "status": "active",
+          "rolePresent": false,
+          "keys": [
+            "name",
+            "email",
+            "status",
+            "is_synthetic",
+            "account_role",
+            "region_id",
+            "institution_id",
+            "password"
+          ]
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "__dispatch"
+      ],
+      "updateKeys": [],
+      "hasCredential": false,
+      "formFlags": [
+        {
+          "rolePresent": false,
+          "keys": []
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "save"
+      ],
+      "updateKeys": [
+        "data"
+      ],
+      "hasCredential": true,
+      "formFlags": [
+        {
+          "synthetic": true,
+          "status": "active",
+          "rolePresent": false,
+          "keys": [
+            "name",
+            "email",
+            "status",
+            "is_synthetic",
+            "account_role",
+            "region_id",
+            "institution_id",
+            "password"
+          ]
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "authenticate"
+      ],
+      "updateKeys": [
+        "data.email",
+        "data.password"
+      ],
+      "hasCredential": false,
+      "formFlags": [
+        {
+          "rolePresent": false,
+          "keys": []
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "methods": [
+        "save"
+      ],
+      "updateKeys": [
+        "data"
+      ],
+      "hasCredential": true,
+      "formFlags": [
+        {
+          "synthetic": true,
+          "status": "active",
+          "rolePresent": false,
+          "keys": [
+            "name",
+            "email",
+            "status",
+            "is_synthetic",
+            "account_role",
+            "region_id",
+            "institution_id",
+            "password"
+          ]
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "methods": [
+        "authenticate"
+      ],
+      "updateKeys": [
+        "data.email",
+        "data.password"
+      ],
+      "hasCredential": false,
+      "formFlags": [
+        {
+          "rolePresent": false,
+          "keys": []
+        }
+      ]
+    },
+    {
+      "status": 404,
+      "methods": [
+        "save"
+      ],
+      "updateKeys": [
+        "data"
+      ],
+      "hasCredential": true,
+      "formFlags": [
+        {
+          "synthetic": true,
+          "status": "active",
+          "rolePresent": false,
+          "keys": [
+            "name",
+            "email",
+            "status",
+            "is_synthetic",
+            "account_role",
+            "region_id",
+            "institution_id",
+            "password"
+          ]
+        }
+      ]
+    }
+  ],
+  "credentialResponseLeaks": 0
+}

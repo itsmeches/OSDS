@@ -38,7 +38,11 @@ The panel login route is available to active users with the explicit `platform.a
 
 ### Synthetic development fixtures
 
-Fixtures use fictional names and are never loaded automatically. Set a temporary `OSDS_FIXTURE_PASSWORD` of at least 12 characters, then run `php artisan db:seed --class=DevelopmentFixtureSeeder`. This creates five local `@example.invalid` accounts, two synthetic regions, three fictional institutions, and example scope grants. The seeder refuses to run outside `local` or `testing`. Do not use this command or its password for production provisioning.
+Fixtures use fictional names and are never loaded automatically. Set a temporary `OSDS_FIXTURE_PASSWORD` of at least 12 characters, then run `php artisan db:seed --class=DevelopmentFixtureSeeder`. This creates five local `@example.invalid` accounts, synthetic regions and organizations, and example scope grants. The seeder refuses to run outside `local`, `testing`, or the isolated `sandbox` environment. Applicant publications are created only in guarded sandbox/testing databases and use the normal review and publication services. Do not use this command or its password for production provisioning.
+
+The applicant portal additionally requires an isolated database whose name contains `sandbox` or `test`. On Windows, run `./scripts/Start-ApplicantSandbox.ps1`. It creates or reuses `osds_sandbox`, applies migrations, loads synthetic fixtures, and starts the isolated portal at `http://127.0.0.1:8001/applicant/login` by default. Use `-Port 8000` only after stopping any development server already using port 8000.
+
+Before manual Phase 3D testing, read the [fixture guide](docs/manual-testing-fixture-guide.md), [manual checklist](docs/manual-testing-checklist.md), and [end-to-end scenario](docs/manual-testing-e2e-scenario.md). Current verification and limitations are recorded in the [manual testing readiness report](docs/manual-testing-readiness-report.md).
 
 ## Development structure
 

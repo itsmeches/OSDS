@@ -1,0 +1,240 @@
+{
+  "cases": [
+    {
+      "name": "Description type required flag and protected tree isolation",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Simple condition edit survives selection and stage changes without altering other trees",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Choice labels isolated between two focused choice editors",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "Option insertion deletion and shifted binding identity",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": [],
+  "clientAtFailure": {
+    "sections": [
+      {
+        "key": "main",
+        "title": "Applicant details",
+        "description": "",
+        "questions": [
+          {
+            "key": "source",
+            "label": "Organization category",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "dependent",
+            "label": "Conditional information",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "any": [
+                {
+                  "value": "Alpha",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "all": [
+                    {
+                      "value": "Beta",
+                      "operator": "equals",
+                      "question": "source"
+                    },
+                    {
+                      "value": "Blocked",
+                      "operator": "not_equals",
+                      "question": "source"
+                    }
+                  ]
+                }
+              ]
+            },
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "simple",
+            "label": "Moved stable question",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            "options": [],
+            "condition_source": "source",
+            "condition_operator": "equals",
+            "condition_value": "Alpha"
+          },
+          {
+            "key": "choice_a",
+            "label": "First choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          },
+          {
+            "key": "choice_b",
+            "label": "Second choice question",
+            "help_text": "",
+            "type": "single_choice",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [
+              {
+                "key": "one",
+                "label": "One"
+              },
+              {
+                "key": "two",
+                "label": "Two"
+              }
+            ],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      },
+      {
+        "key": "other",
+        "title": "Other section",
+        "description": "",
+        "questions": [
+          {
+            "key": "other_question",
+            "label": "Other question",
+            "help_text": "",
+            "type": "short_text",
+            "is_required": false,
+            "validation_rules": [],
+            "condition_rules": null,
+            "options": [],
+            "condition_source": "",
+            "condition_operator": "equals",
+            "condition_value": ""
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "key": "support",
+        "label": "Conditional supporting document",
+        "instructions": "Synthetic test only",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 1,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      },
+      {
+        "key": "second_document",
+        "label": "Second document",
+        "instructions": "Second instruction",
+        "is_required": false,
+        "minimum_evidence": 0,
+        "maximum_evidence": 2,
+        "provider_ids": [
+          2
+        ],
+        "condition_rules": null,
+        "condition_source": "",
+        "condition_operator": "equals",
+        "condition_value": ""
+      }
+    ]
+  },
+  "failure": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 14\n+ Received  + 14\n\n@@ -62,24 +62,10 @@\n            \"type\": \"short_text\",\n            \"validation_rules\": Array [],\n          },\n          Object {\n            \"condition_rules\": Object {\n-             \"operator\": \"equals\",\n-             \"question\": \"source\",\n-             \"value\": \"Alpha\",\n-           },\n-           \"help_text\": \"\",\n-           \"is_required\": false,\n-           \"key\": \"simple\",\n-           \"label\": \"Moved stable question\",\n-           \"options\": Array [],\n-           \"type\": \"short_text\",\n-           \"validation_rules\": Array [],\n-         },\n-         Object {\n-           \"condition_rules\": Object {\n              \"any\": Array [\n                Object {\n                  \"operator\": \"equals\",\n                  \"question\": \"source\",\n                  \"value\": \"Alpha\",\n@@ -102,10 +88,24 @@\n            },\n            \"help_text\": \"\",\n            \"is_required\": false,\n            \"key\": \"dependent\",\n            \"label\": \"Conditional information\",\n+           \"options\": Array [],\n+           \"type\": \"short_text\",\n+           \"validation_rules\": Array [],\n+         },\n+         Object {\n+           \"condition_rules\": Object {\n+             \"operator\": \"equals\",\n+             \"question\": \"source\",\n+             \"value\": \"Alpha\",\n+           },\n+           \"help_text\": \"\",\n+           \"is_required\": false,\n+           \"key\": \"simple\",\n+           \"label\": \"Moved stable question\",\n            \"options\": Array [],\n            \"type\": \"short_text\",\n            \"validation_rules\": Array [],\n          },\n          Object {"
+}

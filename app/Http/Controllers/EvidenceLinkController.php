@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use App\Models\EvidenceReference;
 use App\Models\EvidenceReferenceRevision;
 use App\Models\SyntheticEvidenceReviewCase;
+use App\Services\Applications\ApplicationLifecycleService;
 use App\Services\Evidence\EvidenceLocatorCipher;
 use App\Services\Evidence\EvidenceReferenceService;
 use App\Services\Evidence\SyntheticEvidenceReviewService;
@@ -26,6 +28,14 @@ class EvidenceLinkController extends Controller
     {
         $service->authorizeReviewer(auth()->user(), $case, 'evidence.reviews.open');
         abort_unless($case->requirements()->whereHas('items', fn ($q) => $q->where('evidence_reference_revision_id', $revision->id))->exists(), 404);
+
+        return $this->redirect($revision, $cipher);
+    }
+
+    public function application(Application $application, EvidenceReferenceRevision $revision, ApplicationLifecycleService $service, EvidenceLocatorCipher $cipher): RedirectResponse
+    {
+        $service->authorizeReviewer(auth()->user(), $application, 'applications.intake.evidence.open');
+        abort_unless($application->currentSubmission?->requirements()->whereHas('items', fn ($query) => $query->where('evidence_reference_revision_id', $revision->id))->exists(), 404);
 
         return $this->redirect($revision, $cipher);
     }

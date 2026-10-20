@@ -1,0 +1,93 @@
+{
+  "checks": [
+    "Read-only staff preview keeps technical references in a keyboard-accessible disclosure"
+  ],
+  "screens": [
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    }
+  ],
+  "routes": [
+    {
+      "role": "Admin",
+      "path": "/admin/publication-manifests",
+      "status": 200,
+      "ttfb_ms": 1219.5,
+      "dom_ms": 3076.9
+    },
+    {
+      "role": "Admin",
+      "path": "/review-sandbox/questionnaires/2b402b89-912d-4980-83b5-3c222ca816f7",
+      "status": 200,
+      "ttfb_ms": 1530.4,
+      "dom_ms": 1678.7
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ]
+}

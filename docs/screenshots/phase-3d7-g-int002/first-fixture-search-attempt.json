@@ -1,0 +1,49 @@
+{
+  "checks": [],
+  "screens": [],
+  "routes": [
+    {
+      "role": "CHEDRO",
+      "path": "/admin/synthetic-evidence-reviewer-assignments?tableSearch=Synthetic%20revocation%20reviewer%20ulcz4rtw",
+      "status": 200,
+      "ttfb_ms": 1616.3,
+      "dom_ms": 3315.3
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('tr[wire\\\\:key$=\".table.records.63\"]').getByRole('button', { name: 'Revoke', exact: true })\u001b[22m\n",
+  "confidentialityLeaks": 0
+}

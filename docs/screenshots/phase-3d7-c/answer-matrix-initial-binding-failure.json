@@ -1,0 +1,14 @@
+{
+  "cases": [],
+  "failures": [
+    {
+      "name": "Error",
+      "message": "expect(locator).toContainText(expected) failed\n\nLocator: locator('.server-save-state')\nTimeout: 5000ms\n- Expected substring  - 1\n+ Received string     + 4\n\n- Saved\n+\n+             •\n+             Save failed\n+         \n\nCall log:\n  - Expect \"toContainText\" locator('.server-save-state') with timeout 5000ms\n  - waiting for locator('.server-save-state')\n    14 × locator resolved to <div aria-live=\"polite\" class=\"save-state server-save-state save-state-error\">…</div>\n       - unexpected value \"\n            •\n            Save failed\n        \"\n",
+      "validation": [
+        "\n        Action not confirmed\n        Retry same actionShow unsaved answers to copySign in in a new tab\n    ",
+        "Draft not saved. Select valid options."
+      ],
+      "checkboxValueType": "boolean"
+    }
+  ]
+}

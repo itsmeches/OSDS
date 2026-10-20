@@ -1,0 +1,26 @@
+# Batch C — SCHOOL manual retesting
+
+Use synthetic accounts/data only. These steps are a checklist, **not a claim that a human performed them**. Keep the manual-testing database intact. Use two tabs for conflict tests; never reset/reseed to obtain a clean screen.
+
+**C-INT-001 remediation passed automated verification:** Yes → No → Yes now remains Yes through saving and reload; the reverse sequence remains No. Human manual acceptance is still pending. Use the steps below to review the corrected experience; stop if a last intended value changes unexpectedly.
+
+1. Sign in at `/applicant/login`. Confirm My applications explains what needs attention. Check Light, Dark and System.
+2. At mobile width, confirm the compact header leaves room for the page. Open Menu using keyboard/Enter, press Escape, and confirm focus returns to Menu. Use Skip to main content.
+3. Open Start application. Select a currently represented organization. Confirm only its authorized questionnaires appear. Switch organizations; confirm an unavailable prior choice is cleared. If none are available, read the guidance instead of repeatedly creating drafts.
+4. Create a draft. Confirm nothing has been sent. Identify the current step and next action. At mobile width use All steps to return to an earlier step.
+5. Check the final step before answering. Expect missing question/document guidance. Return to the relevant steps.
+6. Fill a question and switch steps without saving; return and confirm the value remains. Trigger a conditional question, enter a value, hide it, then show it again; confirm the value remains.
+   - Rapidly select Yes → No → Yes, then save immediately and reload. Confirm Yes remains selected and its conditional child is applicable. Repeat No → Yes → No; confirm No remains selected and the child is excluded from completeness. Repeat with keyboard arrow keys, step navigation and more than one question. Check a required multiple-choice group: an empty draft may save, but progress must still report the missing selection; selected option keys must resume correctly.
+7. Try leaving with unsaved changes. Cancel the browser warning and confirm the value remains. Save draft; confirm Saved appears only after the server response. Reload and confirm saved values resume.
+8. On Documents, inspect accepted providers and link counts. Paste a folder/malformed link: expect a helpful error and preserved input. Paste an individual accepted Google file link and choose Add link. Confirm success, cleared input and updated count. Open the reference only if appropriate; a syntactically accepted link is not proof of access or authenticity.
+9. Replace a link, then remove it after reading the confirmation. Add a link again. Confirm saved history is preserved and completeness reflects the current references.
+10. Review saved answers. Correct any remaining issues, save and check again. Send the test application once after reading the confirmation. Confirm tracking explains that CHEDRO has the test copy and that no official application decision/issuance occurred.
+11. In two tabs of a disposable editable draft, save in tab A, then try saving different input in tab B. Expect a conflict, preserved tab-B input, copy guidance and explicit Reload saved copy. Reload only after keeping needed changes.
+12. With disposable browser fixtures, interrupt a save or return HTTP 503. Expect Action not confirmed, retained input, blocked further editing and Retry same action. Do not send a new application to recover. A retry after a committed-but-lost response must not add another version/submission.
+13. For an expired-session probe in disposable fixtures, retain the editor tab and invalidate its session. Attempt Save. Expect a session message; reveal answers to copy, sign in separately and reopen the authorized saved draft. Never assume the unconfirmed change was persisted.
+14. Have an authorized CHEDRO reviewer request a correction using the existing screening flow. Return to tracking: read the exact instructions, choose Make corrections and confirm instructions remain visible in the editor. Save changes, review and Send corrected test application. Expect Corrections sent; the previous submitted copy must remain unchanged.
+15. With disposable fixtures only, expire/revoke representation: draft/tracking access must be denied and no other organization's applications exposed. Restore through authorized governance if needed. Do not change production/manual grants merely to run this checklist.
+16. Retire an appropriate disposable publication: an existing open draft must remain viewable, with saved answers preserved and editing/sending blocked. Do not retire a manual-testing publication without understanding the effect on all its drafts.
+17. Repeat representative pages at desktop, tablet and mobile widths, both themes, and with keyboard navigation. Check focus, readable errors, long labels, document controls and no page-wide horizontal scrolling. Record actual browser zoom/screen-reader results separately if tested.
+
+Record account/role (no passwords), page, theme, viewport, expected/actual result, assistance needed and a safe screenshot. Do not put evidence URLs, Google identifiers, keys or real applicant answers in tickets or screenshots. Report problems before proceeding to Batch D.

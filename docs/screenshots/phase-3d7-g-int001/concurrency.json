@@ -1,0 +1,17 @@
+{
+  "before": {
+    "findings": 2,
+    "audits": 2,
+    "copy_digest": "8d0836a254d86b97f2634d3489efe86d234c666d739d9d0754a59d7a3f478d5b",
+    "timezone": "UTC"
+  },
+  "after": {
+    "findings": 4,
+    "audits": 4,
+    "copy_digest": "8d0836a254d86b97f2634d3489efe86d234c666d739d9d0754a59d7a3f478d5b",
+    "timezone": "UTC"
+  },
+  "workers": 2,
+  "overlapBarrier": true,
+  "passed": true
+}

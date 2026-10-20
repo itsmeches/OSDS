@@ -1,0 +1,385 @@
+{
+  "checks": [
+    "Actual audit insert followed by injected failure rolls back both writes and retains safe remarks",
+    "Delivered successful response confirms one finding and matching audit",
+    "Lost committed response keeps paired writes, blocks replay, and native keyboard history inspection prevents blind retry",
+    "System mode follows preference through native keyboard theme controls"
+  ],
+  "screens": [
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "audit-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 7.6,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.82,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "CHEDRO",
+      "name": "committed-response-lost",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".intake-error",
+          "ratio": 11.16,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".intake-info",
+          "ratio": 10.5,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "CHEDRO",
+      "path": "/admin/synthetic-evidence-reviews?case=59555aae-d88b-43b4-b88a-e7eb9543f286",
+      "status": 200,
+      "ttfb_ms": 1542.7,
+      "dom_ms": 2963.5
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "saveFinding"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "saveFinding"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "saveFinding"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8021",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "confidentialityLeaks": 0
+}

@@ -1,0 +1,4742 @@
+[
+  {
+    "name": "applicant-login",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-layout",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(71, 85, 105)",
+        "background": "rgb(226, 232, 240)",
+        "ratio": 6.15,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(232, 241, 251)",
+        "ratio": 10.82,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "osds-eyebrow",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-create-modal",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Create questionnaire",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Submit",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Cancel",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-modal-footer-actions",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    },
+    "modalKeyboardDismissed": true
+  },
+  {
+    "name": "chedro-intake",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send correction requestSending…",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "intake-workspace",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "chedro-evidence-review",
+    "theme": "light",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-card",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(71, 85, 105)",
+        "background": "rgb(226, 232, 240)",
+        "ratio": 6.15,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "active",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(232, 241, 251)",
+        "ratio": 10.82,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "light",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": false,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-layout",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(71, 85, 105)",
+        "background": "rgb(226, 232, 240)",
+        "ratio": 6.15,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(232, 241, 251)",
+        "ratio": 10.82,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-stages",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "light",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": false,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(71, 85, 105)",
+        "background": "rgb(226, 232, 240)",
+        "ratio": 6.15,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(232, 241, 251)",
+        "ratio": 10.82,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-header",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-create-modal",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Create questionnaire",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Submit",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Cancel",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-sc-text",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    },
+    "modalKeyboardDismissed": true
+  },
+  {
+    "name": "chedro-intake",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send correction requestSending…",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "intake-meta",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "chedro-evidence-review",
+    "theme": "light",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "portal-card",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(71, 85, 105)",
+        "background": "rgb(226, 232, 240)",
+        "ratio": 6.15,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "active",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(36, 54, 74)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgb(232, 241, 251)",
+        "ratio": 10.82,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(82, 101, 125)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 5.97,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "oklch(0.141 0.005 285.823)",
+        "background": "rgb(255, 255, 255)",
+        "ratio": 19.9,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-context",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "light",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": false,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(36, 95, 157)",
+        "ratio": 6.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(36, 54, 74)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 12.34,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(49, 116, 185)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-layout",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(198, 210, 227)",
+        "background": "rgb(38, 52, 74)",
+        "ratio": 8.21,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(23, 54, 90)",
+        "ratio": 10.5,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "osds-eyebrow",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-create-modal",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Create questionnaire",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Submit",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Cancel",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-modal-footer-actions",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    },
+    "modalKeyboardDismissed": true
+  },
+  {
+    "name": "chedro-intake",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send correction requestSending…",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "intake-workspace",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "chedro-evidence-review",
+    "theme": "dark",
+    "width": 1440,
+    "overflow": false,
+    "viewport": 1440,
+    "documentWidth": 1440,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-card",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(198, 210, 227)",
+        "background": "rgb(38, 52, 74)",
+        "ratio": 8.21,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "active",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(23, 54, 90)",
+        "ratio": 10.5,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "dark",
+    "width": 1024,
+    "overflow": false,
+    "viewport": 1024,
+    "documentWidth": 1024,
+    "dark": true,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "auth-layout",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(198, 210, 227)",
+        "background": "rgb(38, 52, 74)",
+        "ratio": 8.21,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(23, 54, 90)",
+        "ratio": 10.5,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-stages",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "dark",
+    "width": 768,
+    "overflow": false,
+    "viewport": 768,
+    "documentWidth": 768,
+    "dark": true,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(198, 210, 227)",
+        "background": "rgb(38, 52, 74)",
+        "ratio": 8.21,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(23, 54, 90)",
+        "ratio": 10.5,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-header",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-create-modal",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Create questionnaire",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "View questionnaires →",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Submit",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Cancel",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-sc-text",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    },
+    "modalKeyboardDismissed": true
+  },
+  {
+    "name": "chedro-intake",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "TEXTAREA",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send correction requestSending…",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "intake-meta",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "chedro-evidence-review",
+    "theme": "dark",
+    "width": 375,
+    "overflow": false,
+    "viewport": 375,
+    "documentWidth": 375,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save finding",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "portal-card",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-login",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(15, 23, 42)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-home",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Start application",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-editor",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(198, 210, 227)",
+        "background": "rgb(38, 52, 74)",
+        "ratio": 8.21,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "applicant-sidebar",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "applicant-documents",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Sign out",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 11.45,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add link",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Send documents for test review",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Back",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Check progress",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Next step",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "active",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "BUTTON",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-login",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.28,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Sign in",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "fi-grid  fi-sc  fi-sc-has-gap",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "INPUT",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(231, 238, 247)"
+    }
+  },
+  {
+    "name": "form-builder",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "Preview",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      },
+      {
+        "text": "Save draft",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "1Build questionnaire",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgb(23, 54, 90)",
+        "ratio": 10.5,
+        "fontSize": "16px"
+      },
+      {
+        "text": "2Required documents",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "3Review and test",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "4Send for approval",
+        "foreground": "rgb(173, 187, 204)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 9.09,
+        "fontSize": "16px"
+      },
+      {
+        "text": "Add section",
+        "foreground": "rgb(255, 255, 255)",
+        "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "ratio": 15.57,
+        "fontSize": "14px"
+      }
+    ],
+    "centerElement": "builder-context",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  },
+  {
+    "name": "staff-users",
+    "theme": "dark",
+    "width": 320,
+    "overflow": false,
+    "viewport": 320,
+    "documentWidth": 320,
+    "dark": true,
+    "controls": [
+      {
+        "text": "New user",
+        "foreground": "rgb(16, 36, 58)",
+        "background": "rgb(147, 197, 253)",
+        "ratio": 8.72,
+        "fontSize": "14px"
+      },
+      {
+        "text": "INPUT",
+        "foreground": "rgb(231, 238, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "ratio": 15.18,
+        "fontSize": "16px"
+      }
+    ],
+    "centerElement": "fi-ta-text fi-ta-text-item fi-size-sm",
+    "axe": [],
+    "keyboardFocus": {
+      "element": "A",
+      "outlineWidth": "3px",
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(120, 183, 242)"
+    }
+  }
+]

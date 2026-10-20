@@ -7,14 +7,20 @@ use App\Models\Institution;
 use App\Models\InstitutionRepresentative;
 use App\Models\User;
 use App\Models\UserRegionAssignment;
+use App\Services\Applicants\ApplicantSandboxGuard;
 use App\Services\Auditing\AuditRecorder;
 use App\Services\Authorization\ScopeAuthorizer;
 use App\Support\AccountRole;
 use App\Support\AccountStatus;
 use App\Support\FoundationPermission;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 use InvalidArgumentException;
 
 class AccountGovernance
@@ -22,13 +28,19 @@ class AccountGovernance
     public function __construct(
         private readonly AuditRecorder $audit,
         private readonly ScopeAuthorizer $scopes,
+        private readonly ApplicantSandboxGuard $applicantSandbox,
     ) {}
 
     public function create(User $actor, AccountRole $role, array $attributes, ?int $regionId = null, ?int $institutionId = null): User
     {
+        $email = mb_strtolower(trim((string) ($attributes['email'] ?? '')));
+        $attributes['email'] = $email;
         $permission = config("account-governance.creation_permissions.{$role->value}");
         $this->denyUnless(is_string($permission) && $actor->isActive() && $actor->can($permission));
-        $this->denyUnless(strcasecmp((string) ($attributes['email'] ?? ''), $actor->email) !== 0);
+        $this->denyUnless(strcasecmp($email, $actor->email) !== 0);
+        if (User::query()->whereRaw('LOWER(email) = ?', [$email])->exists()) {
+            throw ValidationException::withMessages(['email' => 'An account with this email address already exists.']);
+        }
 
         if ($role === AccountRole::School) {
             $institution = Institution::query()->findOrFail($institutionId);
@@ -36,37 +48,76 @@ class AccountGovernance
         } else {
             $this->denyUnless($regionId !== null && $this->scopes->canAccessRegion($actor, $regionId));
         }
+        $synthetic = $role === AccountRole::School && filter_var($attributes['is_synthetic'] ?? false, FILTER_VALIDATE_BOOL);
+        if ($synthetic) {
+            $this->denyUnless($this->applicantSandbox->allowed());
+        }
 
-        return DB::transaction(function () use ($actor, $role, $attributes, $regionId, $institutionId): User {
-            $user = User::query()->create([
-                'name' => $attributes['name'],
-                'email' => $attributes['email'],
-                'password' => $attributes['password'],
-                'status' => $role === AccountRole::School ? AccountStatus::PendingVerification->value : AccountStatus::Active->value,
-            ]);
-            $user->assignRole($role->value);
+        try {
+            return DB::transaction(function () use ($actor, $role, $attributes, $regionId, $institutionId, $synthetic): User {
+                $user = User::query()->create([
+                    'name' => $attributes['name'],
+                    'email' => $attributes['email'],
+                    'password' => $attributes['password'],
+                    'is_synthetic' => $synthetic,
+                    'status' => $role === AccountRole::School ? AccountStatus::PendingVerification->value : AccountStatus::Active->value,
+                ]);
+                $user->assignRole($role->value);
 
-            if ($role === AccountRole::School) {
-                InstitutionRepresentative::query()->create([
-                    'user_id' => $user->id,
-                    'institution_id' => $institutionId,
-                    'granted_by' => $actor->id,
-                    'starts_at' => now(),
-                ]);
-            } else {
-                UserRegionAssignment::query()->create([
-                    'user_id' => $user->id,
-                    'region_id' => $regionId,
-                    'granted_by' => $actor->id,
-                    'starts_at' => now(),
-                ]);
+                if ($role === AccountRole::School) {
+                    InstitutionRepresentative::query()->create([
+                        'user_id' => $user->id,
+                        'institution_id' => $institutionId,
+                        'granted_by' => $actor->id,
+                        'starts_at' => now(),
+                    ]);
+                } else {
+                    UserRegionAssignment::query()->create([
+                        'user_id' => $user->id,
+                        'region_id' => $regionId,
+                        'granted_by' => $actor->id,
+                        'starts_at' => now(),
+                    ]);
+                }
+
+                $this->audit->record('account.created', 'success', $actor, $user, $regionId, $institutionId, ['role' => $role->value]);
+                $this->audit->record('role.assigned', 'success', $actor, $user, $regionId, $institutionId, ['role' => $role->value]);
+
+                return $user->refresh();
+            }, 3);
+        } catch (UniqueConstraintViolationException $exception) {
+            if (str_contains($exception->getMessage(), 'users_email_unique')) {
+                throw ValidationException::withMessages(['email' => 'An account with this email address already exists.']);
             }
 
-            $this->audit->record('account.created', 'success', $actor, $user, $regionId, $institutionId, ['role' => $role->value]);
-            $this->audit->record('role.assigned', 'success', $actor, $user, $regionId, $institutionId, ['role' => $role->value]);
+            throw $exception;
+        }
+    }
 
-            return $user->refresh();
-        }, 3);
+    public function updateProfile(User $actor, User $target, array $attributes): User
+    {
+        return DB::transaction(function () use ($actor, $target, $attributes): User {
+            $actor = User::query()->findOrFail($actor->id);
+            $target = User::query()->lockForUpdate()->findOrFail($target->id);
+            Gate::forUser($actor)->authorize('update', $target);
+            $this->denyUnless(array_diff(array_keys($attributes), ['name', 'email', 'password']) === []);
+            $email = $attributes['email'] ?? $target->email;
+            $password = $attributes['password'] ?? null;
+            if ($email !== $target->email || filled($password)) {
+                Gate::forUser($actor)->authorize('updateCredentials', $target);
+            }
+            $data = Validator::make($attributes, [
+                'name' => ['sometimes', 'required', 'string', 'max:255'],
+                'email' => ['sometimes', 'required', 'email', 'max:255', Rule::unique('users', 'email')->ignore($target->id)],
+                'password' => ['sometimes', 'nullable', 'string'],
+            ])->validate();
+            if (! filled($data['password'] ?? null)) {
+                unset($data['password']);
+            }
+            $target->fill($data)->save();
+
+            return $target;
+        });
     }
 
     public function assignPrimaryRole(User $actor, User $target, AccountRole $role): void
@@ -87,12 +138,7 @@ class AccountGovernance
 
     public function verifySchool(User $actor, User $school, InstitutionRepresentative $representation): void
     {
-        $this->denyUnless($actor->can(FoundationPermission::VerifySchoolAccounts->value));
-        $this->denyUnless(! $actor->is($school) && $school->hasRole(AccountRole::School->value));
-        $this->denyUnless($representation->user_id === $school->id && $this->scopes->canAccessInstitution($actor, $representation->institution));
-        if (! config('account-governance.allow_school_creator_to_verify')) {
-            $this->denyUnless($representation->granted_by !== $actor->id);
-        }
+        $this->denyUnless($this->canVerifySchool($actor, $school, $representation));
 
         DB::transaction(function () use ($actor, $school, $representation): void {
             $locked = User::query()->lockForUpdate()->findOrFail($school->id);
@@ -103,6 +149,39 @@ class AccountGovernance
             $this->statusEvent($locked, AccountStatus::PendingVerification, AccountStatus::Active, $actor, 'Institutional representative verified.', $correlationId);
             $this->audit->record('account.verified', 'success', $actor, $locked, $representation->institution->primary_region_id, $representation->institution_id, correlationId: $correlationId);
             $this->audit->record('account.activated', 'success', $actor, $locked, $representation->institution->primary_region_id, $representation->institution_id, correlationId: $correlationId);
+        }, 3);
+    }
+
+    public function canVerifySchool(User $actor, User $school, InstitutionRepresentative $representation): bool
+    {
+        return $actor->can(FoundationPermission::VerifySchoolAccounts->value)
+            && ! $actor->is($school)
+            && $school->status === AccountStatus::PendingVerification->value
+            && $school->hasRole(AccountRole::School->value)
+            && $representation->user_id === $school->id
+            && $this->scopes->canAccessInstitution($actor, $representation->institution)
+            && (config('account-governance.allow_school_creator_to_verify') || $representation->granted_by !== $actor->id);
+    }
+
+    public function canEnableSyntheticApplicant(User $actor, User $school, InstitutionRepresentative $representation): bool
+    {
+        return $this->applicantSandbox->allowed()
+            && $actor->can(FoundationPermission::CreateSchoolAccounts->value)
+            && $school->hasRole(AccountRole::School->value)
+            && ! $school->is_synthetic
+            && $school->status === AccountStatus::PendingVerification->value
+            && $representation->user_id === $school->id
+            && $this->scopes->canAccessInstitution($actor, $representation->institution);
+    }
+
+    public function enableSyntheticApplicant(User $actor, User $school, InstitutionRepresentative $representation): void
+    {
+        $this->denyUnless($this->canEnableSyntheticApplicant($actor, $school, $representation));
+        DB::transaction(function () use ($actor, $school, $representation): void {
+            $locked = User::query()->lockForUpdate()->findOrFail($school->id);
+            $this->denyUnless(! $locked->is_synthetic && $locked->status === AccountStatus::PendingVerification->value);
+            $locked->forceFill(['is_synthetic' => true])->save();
+            $this->audit->record('account.synthetic_sandbox_enabled', 'success', $actor, $locked, $representation->institution->primary_region_id, $representation->institution_id);
         }, 3);
     }
 

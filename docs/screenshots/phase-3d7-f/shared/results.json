@@ -1,0 +1,442 @@
+{
+  "checks": [
+    "Public home and staff sign-in render in both themes and widths",
+    "Approval list and supported read-only staff preview remain distinct from applicant access",
+    "Authorized read-only catalogues retain accessible tables without create actions"
+  ],
+  "screens": [
+    {
+      "role": "Guest",
+      "name": "public-home",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Guest",
+      "name": "public-home",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Guest",
+      "name": "public-home",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Guest",
+      "name": "public-home",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Guest",
+      "name": "staff-sign-in",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 19.9,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Guest",
+      "name": "staff-sign-in",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 19.9,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Guest",
+      "name": "staff-sign-in",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 17.74,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Guest",
+      "name": "staff-sign-in",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 17.74,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "approvals-list",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "approvals-list",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 19.9,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "approvals-list",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "approvals-list",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 15.55,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "Admin",
+      "name": "staff-preview",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "module-catalogue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "module-catalogue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "module-catalogue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "module-catalogue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "provider-catalogue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "provider-catalogue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "provider-catalogue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    },
+    {
+      "role": "OSDS",
+      "name": "provider-catalogue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": []
+    }
+  ],
+  "routes": [
+    {
+      "role": "Guest",
+      "path": "/",
+      "status": 200,
+      "ttfb_ms": 1540,
+      "dom_ms": 1707.1
+    },
+    {
+      "role": "Guest",
+      "path": "/admin/login",
+      "status": 200,
+      "ttfb_ms": 1522,
+      "dom_ms": 4055.3
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/configuration-review-requests",
+      "status": 200,
+      "ttfb_ms": 1809.5,
+      "dom_ms": 3155.1
+    },
+    {
+      "role": "Admin",
+      "path": "/admin/publication-manifests",
+      "status": 200,
+      "ttfb_ms": 2071.6,
+      "dom_ms": 4478.9
+    },
+    {
+      "role": "Admin",
+      "path": "/review-sandbox/questionnaires/fa278ed1-f67e-4572-b5b3-8061c6bfbd37",
+      "status": 200,
+      "ttfb_ms": 1668.9,
+      "dom_ms": 1841.7
+    },
+    {
+      "role": "OSDS",
+      "path": "/admin/osds-modules",
+      "status": 200,
+      "ttfb_ms": 2258.4,
+      "dom_ms": 4775.2
+    },
+    {
+      "role": "OSDS",
+      "path": "/admin/evidence-provider-types",
+      "status": 200,
+      "ttfb_ms": 2627.1,
+      "dom_ms": 7281.4
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [
+    {
+      "name": "approvals-list",
+      "theme": "light",
+      "horizontalScroll": true
+    },
+    {
+      "name": "approvals-list",
+      "theme": "dark",
+      "horizontalScroll": true
+    },
+    {
+      "name": "module-catalogue",
+      "theme": "light",
+      "horizontalScroll": true
+    },
+    {
+      "name": "module-catalogue",
+      "theme": "dark",
+      "horizontalScroll": true
+    },
+    {
+      "name": "provider-catalogue",
+      "theme": "light",
+      "horizontalScroll": true
+    },
+    {
+      "name": "provider-catalogue",
+      "theme": "dark",
+      "horizontalScroll": true
+    }
+  ],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ]
+}

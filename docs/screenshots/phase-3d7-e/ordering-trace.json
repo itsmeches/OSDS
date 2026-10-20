@@ -1,0 +1,41 @@
+{
+  "failure": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('#question-dependent')\nExpected: \"true\"\nReceived: \"false\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" locator('#question-dependent') with timeout 5000ms\n  - waiting for locator('#question-dependent')\n    14 × locator resolved to <button type=\"button\" aria-pressed=\"false\" id=\"question-dependent\" class=\"builder-outline-item\" wire:click=\"selectQuestion('dependent')\">…</button>\n       - unexpected value \"false\"\n",
+  "trace": [
+    {
+      "phase": "dispatch",
+      "actions": [
+        "$commit"
+      ],
+      "updates": {
+        "sections.0.questions.0.label": "First pending"
+      },
+      "selected": "source",
+      "labels": [
+        [
+          "source",
+          "First pending"
+        ],
+        [
+          "dependent",
+          "Conditional information"
+        ],
+        [
+          "simple",
+          "Simple information"
+        ],
+        [
+          "choice_a",
+          "First choice question"
+        ],
+        [
+          "choice_b",
+          "Second choice question"
+        ],
+        [
+          "other_question",
+          "Other question"
+        ]
+      ]
+    }
+  ]
+}

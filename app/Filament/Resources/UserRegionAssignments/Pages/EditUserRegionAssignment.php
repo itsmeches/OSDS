@@ -3,17 +3,11 @@
 namespace App\Filament\Resources\UserRegionAssignments\Pages;
 
 use App\Filament\Resources\UserRegionAssignments\UserRegionAssignmentResource;
-use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditUserRegionAssignment extends EditRecord
 {
-    protected static string $resource = UserRegionAssignmentResource::class;
+    use Concerns\EditsDelegatedAssignment;
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            DeleteAction::make(),
-        ];
-    }
+    protected static string $resource = UserRegionAssignmentResource::class;
 }

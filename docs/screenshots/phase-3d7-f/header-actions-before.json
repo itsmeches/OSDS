@@ -1,0 +1,77 @@
+{
+  "checks": [
+    "Admin inspects the exact pending pair and full conditional tree",
+    "Required review reference and duplicate-click approval preserve one exact decision"
+  ],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "mountAction",
+          "target": "approve"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callMountedAction"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callMountedAction"
+        }
+      ]
+    }
+  ],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: locator('.fi-modal-window:visible').getByLabel(/Available from/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" locator('.fi-modal-window:visible').getByLabel(/Available from/) with timeout 5000ms\n  - waiting for locator('.fi-modal-window:visible').getByLabel(/Available from/)\n",
+  "probe": {
+    "mounted": [],
+    "buttons": [
+      {
+        "label": "Publish staff preview",
+        "wire": "mountAction('publish', {}, JSON.parse('{\\u0022recordKey\\u0022:\\u002269\\u0022}'))",
+        "type": "button",
+        "marker": 163,
+        "cleanupKeys": [
+          "wire:loading.attr",
+          "wire:loading.class",
+          "x-on:click",
+          "wire:click"
+        ],
+        "root": "vXKUv4qTBQ7kimrpzVrf"
+      },
+      {
+        "label": "Publish to applicant sandbox",
+        "wire": "mountAction('publishApplicantSandbox', {}, JSON.parse('{\\u0022recordKey\\u0022:\\u002269\\u0022}'))",
+        "type": "button",
+        "marker": 169,
+        "cleanupKeys": [
+          "wire:loading.attr",
+          "wire:loading.class",
+          "x-on:click",
+          "wire:click"
+        ],
+        "root": "vXKUv4qTBQ7kimrpzVrf"
+      }
+    ]
+  },
+  "nativeRetry": {
+    "requests": 0,
+    "windows": 0
+  }
+}

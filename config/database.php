@@ -86,6 +86,9 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
+            // PHP serializes datetime bindings in UTC without an offset. Pin every
+            // application session (including reconnects and workers) to that contract.
+            'timezone' => 'UTC',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),

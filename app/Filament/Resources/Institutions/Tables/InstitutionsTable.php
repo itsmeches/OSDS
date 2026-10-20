@@ -13,8 +13,8 @@ class InstitutionsTable
         return $table
             ->columns([
                 TextColumn::make('name')->searchable()->sortable(),
-                TextColumn::make('official_id')->searchable(),
-                TextColumn::make('primaryRegion.name')->label('Region')->sortable(),
+                TextColumn::make('official_id')->searchable()->placeholder('Not provided'),
+                TextColumn::make('primaryRegion.name')->label('Region')->sortable()->placeholder('Not assigned'),
                 TextColumn::make('status')->badge(),
             ])
             ->filters([

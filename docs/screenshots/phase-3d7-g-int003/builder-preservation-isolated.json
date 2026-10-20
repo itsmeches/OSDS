@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "name": "Older committed response delivered after a newer tab save; stale retry rejected with local input retained",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "Duplicated question and section description retain independent bindings",
+      "client": true,
+      "postgresql": true,
+      "reloaded": true,
+      "locks": [
+        2,
+        2
+      ]
+    }
+  ],
+  "errors": []
+}

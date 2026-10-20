@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "System follows actual light/dark media preference changes",
+    "Keyboard-focus target has a rendered outline or focus ring"
+  ],
+  "errors": [],
+  "focus": {
+    "focused": true,
+    "outlineStyle": "solid",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(108, 120, 133)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.91799 0.000171368 -0.00044107 / 0.182571) 0px 0px 0px 1.17429px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  }
+}

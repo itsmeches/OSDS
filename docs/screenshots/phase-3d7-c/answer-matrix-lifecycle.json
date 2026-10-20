@@ -1,0 +1,2027 @@
+[
+  {
+    "case": "setup",
+    "t": 3027,
+    "phase": "native-change",
+    "answer": null,
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "setup",
+    "t": 3042,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "setup",
+    "t": 4322,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "incoming": "no"
+  },
+  {
+    "case": "setup",
+    "t": 4323,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "setup",
+    "t": 4336,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "actions": [
+      "$commit",
+      "goToStep"
+    ]
+  },
+  {
+    "case": "setup",
+    "t": 5511,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "incoming": "no"
+  },
+  {
+    "case": "setup",
+    "t": 5511,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "setup",
+    "t": 5573,
+    "phase": "send",
+    "answer": "no",
+    "selected": null,
+    "update": null,
+    "rootUpdate": "no",
+    "actions": [
+      "goToStep"
+    ]
+  },
+  {
+    "case": "setup",
+    "t": 6754,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": null,
+    "update": null,
+    "rootUpdate": "no",
+    "incoming": "no"
+  },
+  {
+    "case": "setup",
+    "t": 6754,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": null
+  },
+  {
+    "case": "setup",
+    "t": 6770,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "setup",
+    "t": 7988,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "setup",
+    "t": 7988,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "setup",
+    "t": 7999,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "setup",
+    "t": 9303,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "setup",
+    "t": 9304,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 1295,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 2234,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 2235,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 2265,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 2278,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 3150,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 3150,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 3700,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 3713,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 4474,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": "no",
+    "incoming": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 4474,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 4483,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 4549,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 5304,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 5304,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 5313,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 6467,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 6468,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 6984,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 8022,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Yes → No → Yes with rendered conditional transitions",
+    "t": 8023,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 1119,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 1132,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2078,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2079,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2089,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2945,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2945,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 2987,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 3000,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 3020,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 4209,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 4210,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 4219,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "save"
+    ]
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 5796,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "No → Yes → No",
+    "t": 5797,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 1362,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3114,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3115,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3149,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3162,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3183,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 3216,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 4680,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 4680,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 4691,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "save"
+    ]
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 6349,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Yes → No → Yes without deliberate pauses",
+    "t": 6349,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 1323,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 1333,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 2368,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 2368,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 2378,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3256,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3257,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3289,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3301,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3323,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 3355,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 4492,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 4492,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 4503,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "save"
+    ]
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 5708,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input immediately before Save",
+    "t": 5708,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 2093,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 2102,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 3492,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 3493,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 3502,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4386,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4386,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4422,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4436,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4455,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 4489,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 5246,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 5246,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 5255,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "goToStep"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 6029,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 6029,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 6088,
+    "phase": "send",
+    "answer": "yes",
+    "selected": null,
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "goToStep"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 6988,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": null,
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 6988,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": null
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 7040,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 8376,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Rapid input followed by section navigation",
+    "t": 8376,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 1558,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 1569,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 3021,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 3022,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 3032,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 4374,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 4375,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 4410,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 4422,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 5558,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 5558,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 5827,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 5840,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 6569,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 6570,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 6579,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 6693,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 7362,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 7362,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 7371,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 8174,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 8174,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 8627,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 9452,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Conditional child hide and reshow retains its current text",
+    "t": 9452,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 1529,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 1541,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 2706,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 2706,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 2718,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 3909,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 3910,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 3945,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 3958,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4112,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4229,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4380,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4530,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4679,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 4830,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 5754,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 5754,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 5772,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "save"
+    ]
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 6905,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Multiple question and checkbox changes",
+    "t": 6905,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 988,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 1000,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 1904,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 1904,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 1918,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit",
+      "save"
+    ]
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2938,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2938,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2959,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2963,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2966,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 2969,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 3992,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 3993,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 4005,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 4777,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Keyboard radio group input",
+    "t": 4778,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 1445,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 1457,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 2282,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 2282,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 2293,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3032,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3033,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3060,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3074,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3111,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3144,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3941,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3942,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 3954,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 4912,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 4913,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 5928,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 6781,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "In-flight reply delay preserves rapid input and serializes later requests",
+    "t": 6782,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 796,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 809,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 1476,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 1476,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 1486,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 2199,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 2200,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 2229,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 2244,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 3030,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 3030,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 3040,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 4099,
+    "phase": "native-change",
+    "answer": "yes",
+    "selected": "no",
+    "value": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 4112,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 4112,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 4124,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 5158,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": "no",
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 5159,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 6030,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 6988,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "Input changed while Save is in flight is not falsely marked saved",
+    "t": 6989,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 1017,
+    "phase": "send",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 1970,
+    "phase": "merge-before",
+    "answer": "no",
+    "selected": "no",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "no"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 1970,
+    "phase": "merge-after",
+    "answer": "no",
+    "selected": "no"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 2922,
+    "phase": "native-change",
+    "answer": "no",
+    "selected": "yes",
+    "value": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 2935,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "actions": [
+      "$commit"
+    ]
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 3595,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": "yes",
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 3596,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 3609,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 6379,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 6380,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 6456,
+    "phase": "send",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "actions": [
+      "save"
+    ]
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 7377,
+    "phase": "merge-before",
+    "answer": "yes",
+    "selected": "yes",
+    "update": null,
+    "rootUpdate": null,
+    "incoming": "yes"
+  },
+  {
+    "case": "New tab cannot overwrite a newer saved answer",
+    "t": 7378,
+    "phase": "merge-after",
+    "answer": "yes",
+    "selected": "yes"
+  }
+]

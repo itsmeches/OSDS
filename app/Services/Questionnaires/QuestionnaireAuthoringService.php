@@ -37,7 +37,7 @@ class QuestionnaireAuthoringService
             }
 
             if (isset($state['title']) && ! $form->definition->versions()->whereIn('state', ['published', 'retired'])->exists()) {
-                $form->definition->update(['name' => trim($state['title'])]);
+                $form->definition->update(['name' => $state['title']]);
             }
 
             $form->questions()->with('options')->get()->each(fn ($question) => $question->options()->delete());
@@ -45,18 +45,18 @@ class QuestionnaireAuthoringService
             $form->sections()->delete();
             foreach (array_values($state['sections']) as $sectionIndex => $sectionData) {
                 $section = $form->sections()->create([
-                    'key' => $sectionData['key'], 'title' => trim($sectionData['title']),
+                    'key' => $sectionData['key'], 'title' => $sectionData['title'],
                     'description' => $sectionData['description'] ?: null, 'sort_order' => $sectionIndex + 1,
                 ]);
                 foreach (array_values($sectionData['questions']) as $questionIndex => $questionData) {
                     $question = $section->questions()->create([
                         'form_version_id' => $form->id, 'key' => $questionData['key'], 'type' => $questionData['type'],
-                        'label' => trim($questionData['label']), 'help_text' => $questionData['help_text'] ?: null,
+                        'label' => $questionData['label'], 'help_text' => $questionData['help_text'] ?: null,
                         'is_required' => (bool) $questionData['is_required'], 'sort_order' => $questionIndex + 1,
                         'validation_rules' => $questionData['validation_rules'] ?? [], 'condition_rules' => $questionData['condition_rules'] ?? null,
                     ]);
                     foreach (array_values($questionData['options'] ?? []) as $optionIndex => $optionData) {
-                        $question->options()->create(['key' => $optionData['key'], 'label' => trim($optionData['label']), 'sort_order' => $optionIndex + 1]);
+                        $question->options()->create(['key' => $optionData['key'], 'label' => $optionData['label'], 'sort_order' => $optionIndex + 1]);
                     }
                 }
             }
@@ -64,7 +64,7 @@ class QuestionnaireAuthoringService
             $requirements->requirements()->delete();
             foreach (array_values($state['requirements']) as $requirementIndex => $requirementData) {
                 $requirement = $requirements->requirements()->create([
-                    'key' => $requirementData['key'], 'label' => trim($requirementData['label']),
+                    'key' => $requirementData['key'], 'label' => $requirementData['label'],
                     'instructions' => $requirementData['instructions'] ?: null,
                     'is_required' => (bool) $requirementData['is_required'],
                     'minimum_evidence' => (int) $requirementData['minimum_evidence'],
