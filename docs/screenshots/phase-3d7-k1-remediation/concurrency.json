@@ -1,0 +1,611 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "first": {
+      "pid": 29816,
+      "transactionDepth": 1
+    },
+    "second": {
+      "pid": 26084
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "updated"
+      },
+      {
+        "mode": "B",
+        "outcome": "updated"
+      }
+    ],
+    "before": {
+      "actor": 556,
+      "email": "k1edit-tc3xriqt@example.invalid",
+      "institution": 421,
+      "originalName": "K1 original tc3xriqt",
+      "region": 242,
+      "destination": 243,
+      "destinationName": "K1 destination tc3xriqt",
+      "outside": 244,
+      "scope": 537,
+      "destinationScope": 538,
+      "saved": {
+        "id": 421,
+        "name": "K1 original tc3xriqt",
+        "official_id": null,
+        "primary_region_id": 242,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 556,
+      "email": "k1edit-tc3xriqt@example.invalid",
+      "institution": 421,
+      "originalName": "K1 original tc3xriqt",
+      "region": 242,
+      "destination": 243,
+      "destinationName": "K1 destination tc3xriqt",
+      "outside": 244,
+      "scope": 537,
+      "destinationScope": 538,
+      "saved": {
+        "id": 421,
+        "name": "K1 original tc3xriqt",
+        "official_id": null,
+        "primary_region_id": 242,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 556,
+      "email": "k1edit-tc3xriqt@example.invalid",
+      "institution": 421,
+      "originalName": "K1 original tc3xriqt",
+      "region": 242,
+      "destination": 243,
+      "destinationName": "K1 destination tc3xriqt",
+      "outside": 244,
+      "scope": 537,
+      "destinationScope": 538,
+      "saved": {
+        "id": 421,
+        "name": "K1 worker B",
+        "official_id": null,
+        "primary_region_id": 243,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [
+        {
+          "id": 4612,
+          "actor_id": 556,
+          "region_id": 243,
+          "institution_id": 421,
+          "metadata": {
+            "changed_fields": [
+              "name",
+              "primary_region_id",
+              "updated_at"
+            ]
+          }
+        },
+        {
+          "id": 4613,
+          "actor_id": 556,
+          "region_id": 243,
+          "institution_id": 421,
+          "metadata": {
+            "changed_fields": [
+              "name",
+              "updated_at"
+            ]
+          }
+        }
+      ],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "first": {
+      "pid": 24148
+    },
+    "second": {
+      "pid": 15708
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 557,
+      "email": "k1edit-dfta8bmt@example.invalid",
+      "institution": 422,
+      "originalName": "K1 original dfta8bmt",
+      "region": 245,
+      "destination": 246,
+      "destinationName": "K1 destination dfta8bmt",
+      "outside": 247,
+      "scope": 539,
+      "destinationScope": 540,
+      "saved": {
+        "id": 422,
+        "name": "K1 original dfta8bmt",
+        "official_id": null,
+        "primary_region_id": 245,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 557,
+      "email": "k1edit-dfta8bmt@example.invalid",
+      "institution": 422,
+      "originalName": "K1 original dfta8bmt",
+      "region": 245,
+      "destination": 246,
+      "destinationName": "K1 destination dfta8bmt",
+      "outside": 247,
+      "scope": 539,
+      "destinationScope": 540,
+      "saved": {
+        "id": 422,
+        "name": "K1 original dfta8bmt",
+        "official_id": null,
+        "primary_region_id": 245,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 557,
+      "email": "k1edit-dfta8bmt@example.invalid",
+      "institution": 422,
+      "originalName": "K1 original dfta8bmt",
+      "region": 245,
+      "destination": 246,
+      "destinationName": "K1 destination dfta8bmt",
+      "outside": 247,
+      "scope": 539,
+      "destinationScope": 540,
+      "saved": {
+        "id": 422,
+        "name": "K1 original dfta8bmt",
+        "official_id": null,
+        "primary_region_id": 245,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  },
+  {
+    "mode": "destination",
+    "passed": true,
+    "first": {
+      "pid": 25616
+    },
+    "second": {
+      "pid": 16624
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "destination",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "destination-rejected"
+      }
+    ],
+    "before": {
+      "actor": 558,
+      "email": "k1edit-aglwyfsl@example.invalid",
+      "institution": 423,
+      "originalName": "K1 original aglwyfsl",
+      "region": 248,
+      "destination": 249,
+      "destinationName": "K1 destination aglwyfsl",
+      "outside": 250,
+      "scope": 541,
+      "destinationScope": 542,
+      "saved": {
+        "id": 423,
+        "name": "K1 original aglwyfsl",
+        "official_id": null,
+        "primary_region_id": 248,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 558,
+      "email": "k1edit-aglwyfsl@example.invalid",
+      "institution": 423,
+      "originalName": "K1 original aglwyfsl",
+      "region": 248,
+      "destination": 249,
+      "destinationName": "K1 destination aglwyfsl",
+      "outside": 250,
+      "scope": 541,
+      "destinationScope": 542,
+      "saved": {
+        "id": 423,
+        "name": "K1 original aglwyfsl",
+        "official_id": null,
+        "primary_region_id": 248,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 558,
+      "email": "k1edit-aglwyfsl@example.invalid",
+      "institution": 423,
+      "originalName": "K1 original aglwyfsl",
+      "region": 248,
+      "destination": 249,
+      "destinationName": "K1 destination aglwyfsl",
+      "outside": 250,
+      "scope": 541,
+      "destinationScope": 542,
+      "saved": {
+        "id": 423,
+        "name": "K1 original aglwyfsl",
+        "official_id": null,
+        "primary_region_id": 248,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "first": {
+      "pid": 14096
+    },
+    "second": {
+      "pid": 30640
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 559,
+      "email": "k1edit-tji2b2sf@example.invalid",
+      "institution": 424,
+      "originalName": "K1 original tji2b2sf",
+      "region": 251,
+      "destination": 252,
+      "destinationName": "K1 destination tji2b2sf",
+      "outside": 253,
+      "scope": 543,
+      "destinationScope": 544,
+      "saved": {
+        "id": 424,
+        "name": "K1 original tji2b2sf",
+        "official_id": null,
+        "primary_region_id": 251,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 559,
+      "email": "k1edit-tji2b2sf@example.invalid",
+      "institution": 424,
+      "originalName": "K1 original tji2b2sf",
+      "region": 251,
+      "destination": 252,
+      "destinationName": "K1 destination tji2b2sf",
+      "outside": 253,
+      "scope": 543,
+      "destinationScope": 544,
+      "saved": {
+        "id": 424,
+        "name": "K1 original tji2b2sf",
+        "official_id": null,
+        "primary_region_id": 251,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 559,
+      "email": "k1edit-tji2b2sf@example.invalid",
+      "institution": 424,
+      "originalName": "K1 original tji2b2sf",
+      "region": 251,
+      "destination": 252,
+      "destinationName": "K1 destination tji2b2sf",
+      "outside": 253,
+      "scope": 543,
+      "destinationScope": 544,
+      "saved": {
+        "id": 424,
+        "name": "K1 original tji2b2sf",
+        "official_id": null,
+        "primary_region_id": 251,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "first": {
+      "pid": 26168
+    },
+    "second": {
+      "pid": 2024
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 560,
+      "email": "k1edit-tcrvaexu@example.invalid",
+      "institution": 425,
+      "originalName": "K1 original tcrvaexu",
+      "region": 254,
+      "destination": 255,
+      "destinationName": "K1 destination tcrvaexu",
+      "outside": 256,
+      "scope": 545,
+      "destinationScope": 546,
+      "saved": {
+        "id": 425,
+        "name": "K1 original tcrvaexu",
+        "official_id": null,
+        "primary_region_id": 254,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 560,
+      "email": "k1edit-tcrvaexu@example.invalid",
+      "institution": 425,
+      "originalName": "K1 original tcrvaexu",
+      "region": 254,
+      "destination": 255,
+      "destinationName": "K1 destination tcrvaexu",
+      "outside": 256,
+      "scope": 545,
+      "destinationScope": 546,
+      "saved": {
+        "id": 425,
+        "name": "K1 original tcrvaexu",
+        "official_id": null,
+        "primary_region_id": 254,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 560,
+      "email": "k1edit-tcrvaexu@example.invalid",
+      "institution": 425,
+      "originalName": "K1 original tcrvaexu",
+      "region": 254,
+      "destination": 255,
+      "destinationName": "K1 destination tcrvaexu",
+      "outside": 256,
+      "scope": 545,
+      "destinationScope": 546,
+      "saved": {
+        "id": 425,
+        "name": "K1 original tcrvaexu",
+        "official_id": null,
+        "primary_region_id": 254,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  },
+  {
+    "mode": "institution",
+    "passed": true,
+    "first": {
+      "pid": 12644
+    },
+    "second": {
+      "pid": 12628
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "institution",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 561,
+      "email": "k1edit-xigctzeu@example.invalid",
+      "institution": 426,
+      "originalName": "K1 original xigctzeu",
+      "region": 257,
+      "destination": 258,
+      "destinationName": "K1 destination xigctzeu",
+      "outside": 259,
+      "scope": 547,
+      "destinationScope": 548,
+      "saved": {
+        "id": 426,
+        "name": "K1 original xigctzeu",
+        "official_id": null,
+        "primary_region_id": 257,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "during": {
+      "actor": 561,
+      "email": "k1edit-xigctzeu@example.invalid",
+      "institution": 426,
+      "originalName": "K1 original xigctzeu",
+      "region": 257,
+      "destination": 258,
+      "destinationName": "K1 destination xigctzeu",
+      "outside": 259,
+      "scope": 547,
+      "destinationScope": 548,
+      "saved": {
+        "id": 426,
+        "name": "K1 original xigctzeu",
+        "official_id": null,
+        "primary_region_id": 257,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    },
+    "after": {
+      "actor": 561,
+      "email": "k1edit-xigctzeu@example.invalid",
+      "institution": 426,
+      "originalName": "K1 original xigctzeu",
+      "region": 257,
+      "destination": 258,
+      "destinationName": "K1 destination xigctzeu",
+      "outside": 259,
+      "scope": 547,
+      "destinationScope": 548,
+      "saved": {
+        "id": 426,
+        "name": "K1 original xigctzeu",
+        "official_id": null,
+        "primary_region_id": 259,
+        "status": "active",
+        "organization_type": "hei",
+        "is_synthetic": true
+      },
+      "audits": [],
+      "submissionCount": 0,
+      "submissionHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "routingRegions": []
+    }
+  }
+]

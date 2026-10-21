@@ -461,7 +461,14 @@ body.fi-body {
 
 /* Keep the creation selector's clear action usable beside its combobox. */
 .application-reviewer-selector .fi-select-input-value-remove-btn,
-.evidence-reviewer-selector .fi-select-input-value-remove-btn {
+.evidence-reviewer-selector .fi-select-input-value-remove-btn,
+.authority-assignment-selector .fi-select-input-value-remove-btn {
     min-inline-size: 24px;
     min-block-size: 24px;
+}
+
+/* The masked clear glyph clips its own outline; show focus on its selector. */
+.authority-assignment-selector:has(.fi-select-input-value-remove-btn:focus-visible) .fi-select-input-btn {
+    outline: 3px solid var(--osds-focus);
+    outline-offset: 2px;
 }

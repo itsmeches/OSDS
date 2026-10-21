@@ -1,0 +1,478 @@
+{
+  "checks": [
+    "Required validation preserves other entries and prevents mutation",
+    "Actual Edit audit insertion failure rolls back all fields and retains local input",
+    "Delivered double click saves once with preserved UUID, activity and null audit bindings",
+    "Duplicate code validates without partial changes",
+    "Committed response loss stays uncertain; saved-record inspection confirms outcome without replay",
+    "Out-of-scope direct Edit URL denies existing actor",
+    "Precommit interruption retains local work without mutation or replay",
+    "Permission loss after mount denies actual browser Edit",
+    "Cookie loss retains local work and explains recovery without replay"
+  ],
+  "screens": [
+    {
+      "role": "Staff editor",
+      "name": "edit-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-uncertain",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff editor",
+      "name": "edit-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/301/edit",
+      "status": 200,
+      "ttfb_ms": 574.2,
+      "dom_ms": 1056.1
+    },
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/301/edit",
+      "status": 200,
+      "ttfb_ms": 666.8,
+      "dom_ms": 1190.4
+    },
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/302/edit",
+      "status": 404,
+      "ttfb_ms": 815.7,
+      "dom_ms": 842.5
+    },
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/303/edit",
+      "status": 200,
+      "ttfb_ms": 936.4,
+      "dom_ms": 1578.8
+    },
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/305/edit",
+      "status": 200,
+      "ttfb_ms": 589.8,
+      "dom_ms": 1557.8
+    },
+    {
+      "role": "Staff editor",
+      "path": "/admin/regions/307/edit",
+      "status": 200,
+      "ttfb_ms": 1442.4,
+      "dom_ms": 2487.2
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "save"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "save"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "save"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "calls": [
+        {
+          "method": "save"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 302,
+      "calls": [
+        {
+          "method": "save"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "beforeunload",
+      "message": ""
+    },
+    {
+      "type": "beforeunload",
+      "message": ""
+    }
+  ],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8030",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8030",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "confidentialityLeaks": 0
+}

@@ -1,0 +1,229 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "first": {
+      "pid": 10008,
+      "transactionDepth": 1
+    },
+    "second": {
+      "pid": 34368
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "created"
+      },
+      {
+        "mode": "B",
+        "outcome": "duplicate-rejected"
+      }
+    ],
+    "before": {
+      "actor": 591,
+      "email": "k3create-ecggsbpc@example.invalid",
+      "region": 283,
+      "regionName": "K3 disposable region ecggsbpc",
+      "scope": 584,
+      "name": "K3 disposable ecggsbpc",
+      "official": "K3-ecggsbpc",
+      "institutions": []
+    },
+    "during": {
+      "actor": 591,
+      "email": "k3create-ecggsbpc@example.invalid",
+      "region": 283,
+      "regionName": "K3 disposable region ecggsbpc",
+      "scope": 584,
+      "name": "K3 disposable ecggsbpc",
+      "official": "K3-ecggsbpc",
+      "institutions": []
+    },
+    "after": {
+      "actor": 591,
+      "email": "k3create-ecggsbpc@example.invalid",
+      "region": 283,
+      "regionName": "K3 disposable region ecggsbpc",
+      "scope": 584,
+      "name": "K3 disposable ecggsbpc",
+      "official": "K3-ecggsbpc",
+      "institutions": [
+        {
+          "id": 499,
+          "name": "K3 disposable ecggsbpc",
+          "official_id": "K3-ecggsbpc",
+          "primary_region_id": 283,
+          "status": "active",
+          "organization_type": "hei",
+          "is_synthetic": false,
+          "audits": [
+            {
+              "actor_id": 591,
+              "region_id": 283,
+              "institution_id": 499,
+              "outcome": "success"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "first": {
+      "pid": 3032
+    },
+    "second": {
+      "pid": 23856
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "region-rejected"
+      }
+    ],
+    "before": {
+      "actor": 592,
+      "email": "k3create-iraznvd2@example.invalid",
+      "region": 284,
+      "regionName": "K3 disposable region iraznvd2",
+      "scope": 585,
+      "name": "K3 disposable iraznvd2",
+      "official": "K3-iraznvd2",
+      "institutions": []
+    },
+    "during": {
+      "actor": 592,
+      "email": "k3create-iraznvd2@example.invalid",
+      "region": 284,
+      "regionName": "K3 disposable region iraznvd2",
+      "scope": 585,
+      "name": "K3 disposable iraznvd2",
+      "official": "K3-iraznvd2",
+      "institutions": []
+    },
+    "after": {
+      "actor": 592,
+      "email": "k3create-iraznvd2@example.invalid",
+      "region": 284,
+      "regionName": "K3 disposable region iraznvd2",
+      "scope": 585,
+      "name": "K3 disposable iraznvd2",
+      "official": "K3-iraznvd2",
+      "institutions": []
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "first": {
+      "pid": 30392
+    },
+    "second": {
+      "pid": 15424
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 593,
+      "email": "k3create-p16jx91r@example.invalid",
+      "region": 285,
+      "regionName": "K3 disposable region p16jx91r",
+      "scope": 586,
+      "name": "K3 disposable p16jx91r",
+      "official": "K3-p16jx91r",
+      "institutions": []
+    },
+    "during": {
+      "actor": 593,
+      "email": "k3create-p16jx91r@example.invalid",
+      "region": 285,
+      "regionName": "K3 disposable region p16jx91r",
+      "scope": 586,
+      "name": "K3 disposable p16jx91r",
+      "official": "K3-p16jx91r",
+      "institutions": []
+    },
+    "after": {
+      "actor": 593,
+      "email": "k3create-p16jx91r@example.invalid",
+      "region": 285,
+      "regionName": "K3 disposable region p16jx91r",
+      "scope": 586,
+      "name": "K3 disposable p16jx91r",
+      "official": "K3-p16jx91r",
+      "institutions": []
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "first": {
+      "pid": 23748
+    },
+    "second": {
+      "pid": 31444
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 594,
+      "email": "k3create-iyvozyl6@example.invalid",
+      "region": 286,
+      "regionName": "K3 disposable region iyvozyl6",
+      "scope": 587,
+      "name": "K3 disposable iyvozyl6",
+      "official": "K3-iyvozyl6",
+      "institutions": []
+    },
+    "during": {
+      "actor": 594,
+      "email": "k3create-iyvozyl6@example.invalid",
+      "region": 286,
+      "regionName": "K3 disposable region iyvozyl6",
+      "scope": 587,
+      "name": "K3 disposable iyvozyl6",
+      "official": "K3-iyvozyl6",
+      "institutions": []
+    },
+    "after": {
+      "actor": 594,
+      "email": "k3create-iyvozyl6@example.invalid",
+      "region": 286,
+      "regionName": "K3 disposable region iyvozyl6",
+      "scope": 587,
+      "name": "K3 disposable iyvozyl6",
+      "official": "K3-iyvozyl6",
+      "institutions": []
+    }
+  }
+]

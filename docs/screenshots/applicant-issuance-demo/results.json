@@ -1,0 +1,83 @@
+{
+  "checks": [
+    "OSDS edits and publishes form and additional question",
+    "Applicant receives published labels and fields",
+    "Both layouts merge answers and office personnel",
+    "Printed output contains certificate and additional-answer appendix"
+  ],
+  "screens": [
+    {
+      "name": "osds-form-editor",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "osds-form-editor",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "osds-form-editor",
+      "theme": "dark",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "osds-form-editor",
+      "theme": "dark",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "applicant-form",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "applicant-form",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "applicant-form",
+      "theme": "dark",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "applicant-form",
+      "theme": "dark",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "cor",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "cor",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "acsa",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "acsa",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    }
+  ],
+  "pageErrors": []
+}

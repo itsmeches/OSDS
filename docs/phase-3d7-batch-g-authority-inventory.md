@@ -1,5 +1,53 @@
 # Batch G - Finite authority and mandatory-audit inventory
 
+## A28 / K5 targeted remediation verified — 21 October 2026
+
+**A28 is verified within its targeted matrix**, superseding the unresolved Create/audit defect below. RegionCreationService owns actual Create and unchanged sole Core audit, with fresh active identity/permission/membership checks and no regional-grant prerequisite. Focused **18 / 204**, four concurrency scenarios, final browser **8 / 8**, preservation and full PostgreSQL **345 / 3,779** passed; Pint/build/diff passed. [Exact coverage and recorded popup-timeout limitation](phase-3d7-k5-region-create-remediation.md). No promotion of other rows or universal safety claim. No new inventory; Batch G incomplete, pause for review.
+
+## A28 / K5 confirmed critical defect — 21 October 2026
+
+A28 now has an actual-action **confirmed creation/audit atomicity failure**, superseding source-risk-only status. Authorized and denied/input/default controls passed first; exact audit-fault regression **1 / 6 / one failure** leaves Region count **0→1**, audit **1→1**. [Evidence, global explicit-permission creation contract and limits](phase-3d7-k5-region-create-verification.md). No K4 scope rule imported or runtime fix. Batch G stopped; other verified operation classifications remain unchanged. Separate remediation authorization required.
+
+## A29 / K4 targeted remediation verified — 21 October 2026
+
+**A29 is verified within the targeted matrix**, superseding its unresolved update/audit defect below. RegionUpdateService owns the actual Edit transaction and unchanged Core audit, with fresh existing authority and exact-row locks. Focused **20 / 210**, four concurrency scenarios, browser **9 / 8**, preservation and full PostgreSQL **327 / 3,575** passed; Pint/build/diff passed. [Exact coverage](phase-3d7-k4-region-update-remediation.md). No universal safety claim, new activity/audit rule or promotion of other rows. K5 remains unexecuted; Batch G incomplete, pause for review.
+
+## A29 / K4 confirmed critical defect — 21 October 2026
+
+A29 now has an actual-action **confirmed update/audit atomicity failure**, superseding its source-risk-only classification. Normal **1 / 17**, corrected denial **4 / 19**, input **1 / 40** passed before fault **1 / 6 / one failure**: all three editable Region fields persist while audit count stays **3→3**. [Evidence and contract](phase-3d7-k4-region-update-verification.md). No runtime remediation or new activity/governance interpretation. Batch G stopped; K5 unexecuted, other accepted evidence unchanged. Separate targeted authorization required.
+
+## A26 / K3 targeted remediation verified — 21 October 2026
+
+**A26 is verified within the targeted matrix**, superseding its unresolved Create/audit defect below. InstitutionCreationService owns the actual Create transaction and existing Core observer audit, with fresh existing authority/region validation; no new policy/event/schema. Focused **16 / 211**, four concurrency scenarios, browser **8 / 8**, preservation and full PostgreSQL **307 / 3,365** passed. [Exact coverage and limits](phase-3d7-k3-institution-create-remediation.md). No universal safety claim or change to other rows' verification classifications. K4/K5 remain unexecuted; Batch G incomplete, pause for review.
+
+## A26 / K3 diagnostic — critical stop, 21 October 2026
+
+A26 is now a **confirmed critical Create/audit atomicity defect**, superseding its source-risk-only classification below. Actual authorized control **1 / 15**, denial/input controls **2 / 60** passed; mandatory-audit fault **1 / 6 / one failure** leaves an institution with no matching audit. [Evidence and contract](phase-3d7-k3-institution-create-verification.md). No runtime fix; stop for separate remediation approval. Other classifications are not promoted by this result; K4–K5 remain unexecuted.
+
+## A22 / K2 targeted diagnostic — 21 October 2026
+
+Actual eligibility Create/denial boundary now has **17 / 134** passing PostgreSQL/Livewire assertions. **A22 is verified only for that diagnostic matrix; audit fault is CONTRACT-N/A**, because no specific mandatory grant event/writer was established. The audit-coverage governance question is explicitly open rather than labelled a defect or silently accepted. [Full contract/evidence/limits](phase-3d7-k2-eligibility-create-verification.md).
+
+A22's previous R/contract-first lead is now operationally verified with that audit-policy qualification. Unexecuted R operations remain A26/A28/A29 (K3–K5). No other row is newly verified, no full-suite/browser rerun claimed, and no broader risk disposition approved. Existing remediations/accessibility/recovery evidence preserved. Pause for review before K3; no runtime changes or Batch H/Phase 4.
+
+## A27 / K1 remediation evidence — 21 October 2026
+
+**A27 now V within the targeted matrix**, with user review pending: dedicated Institution Edit transaction, unchanged Core audit and existing editor authority; focused **22 / 189**, six concurrency scenarios, target browser **7 / 8**, preservation and full PostgreSQL **274 / 3,020** passed. [Remediation and limits](phase-3d7-k1-institution-update-remediation.md). The discovery below remains historical. No universal model destination policy inferred.
+
+Evidence classes roll forward to **7 V / 18 C / 4 R / 4 N**. Remaining R rows are A22/A26/A28/A29; no K2–K5 checks were executed. C-row risk acceptance/deferral is still a proposal, not approval. The Institution Edit target-size follow-up and human acceptance remain open. No Batch G completion, Batch H, Phase 4 or production approval.
+
+## A27 / K1 executed diagnostic — critical stop, 21 October 2026
+
+A27's earlier source-level concern is now **confirmed operation/audit failure**: actual authorized Edit **1 / 14** passed; denied **1 / 6** and manipulated-form **1 / 13** controls passed; actual mandatory-audit fault **1 / 8 / 1 failure** leaves changed primary region/status/identity fields without an audit. [Full diagnostic and evidence](phase-3d7-k1-institution-update-verification.md). No runtime fix or model-wide destination policy inferred. Other untested rows are unchanged. Batch G stopped for separate authorization; K2–K5 not executed.
+
+## Current risk-based disposition proposal — 21 October 2026
+
+See the [updated 33-row disposition, five finite proposed checks, residual risks and closure criteria](phase-3d7-batch-g-inventory-disposition.md). Documentation/source reconciliation only; no tests or application/database operations. Current evidence classes are **6 V / 18 C / 5 R / 4 N**: A12 is verified by accepted G-INT-007, while other untested rows are not silently promoted.
+
+Recommended for review: accept existing bounded evidence for 15 rows (including nine explicitly limited C rows), defer nine service-only C gaps, perform five narrowly scoped checks for A27/A22/A26/A29/A28, and retain four N/A dispositions. These recommendations are not risk acceptance or execution authorization. Source-level R concerns remain unconfirmed; no new independent critical defect is established here.
+
+The selector target-size issue and dedicated builder recovery gap are now closed by their separate reports. Historical 16px/incomplete-recovery statements below are superseded for current status; their recorded outcomes remain unchanged. Latest full-suite checkpoint remains G-INT-007 **252 / 2,831**, not a newly run suite. Human acceptance and final Batch G decision remain open. **HOLD for user review; no additional verification, Batch H or Phase 4.**
+
 ## A12 targeted remediation follow-up — verified within recorded coverage
 
 **20 October 2026.** A12 now uses `CreateInstitutionRepresentative::handleRecordCreation` -> `RepresentationCreationService::create`, with one operation transaction and unchanged Core `InstitutionRepresentative.created` audit. Fresh current authority, existing scope/delegation, exact target/institution and relevant locking are covered by the accepted-scope verification. Mark **A12 V for that matrix**, not universal safety: original pair 2 / 39; focused 22 / 216; six real concurrency scenarios; actual browser 7 / 8; complete current tree 252 / 2,831. [Report and limitations](phase-3d7-g-int-007-remediation.md).

@@ -1,5 +1,59 @@
 # Phase 3D.7 - Batch G reliability checkpoint
 
+## K5 targeted remediation complete — 21 October 2026
+
+**Targeted integrity/security, recovery and regression PASS; pause for review.** Region Create now uses one operation transaction/fresh existing authority with unchanged model/Core audit. Focused **18 / 204**, four independent PostgreSQL scenarios, final browser **8 / 8**, seven preservation journeys and complete current-tree PostgreSQL **345 / 3,779** passed; Pint/build/diff passed. [Full report, first popup timeout and limits](phase-3d7-k5-region-create-remediation.md). No new current-region Create rule or independent critical defect confirmed.
+
+Earlier diagnostic stop is historical; first popup timeout remains undiagnosed, with final complete run passing after explicit popup readiness synchronization. Broader residual-risk disposition, separate Institution selector finding and human acceptance remain open. No Batch G completion, new inventory, Batch H/Phase 4, production, commit/push/deployment authorization.
+
+## K5 Region Create diagnostic — critical stop, 21 October 2026
+
+**Batch G NOT READY; NO-GO for Batch H.** Actual authorized Region Create leaves a catalogue row when mandatory Core audit throws; no runtime remediation. Final bounded outcomes **9 tests / 99 assertions; eight passed, one failed**, over six serialized invocations. [Before/after counts, contract, harness chronology and proposed separate scope](phase-3d7-k5-region-create-verification.md). No new Region creation scope rule inferred. Preserve K1–K4/G-INT-001–007 and prior evidence; no further acceptance gates after confirmation. Separate targeted authorization required; no Batch H/Phase 4/deployment.
+
+## K4 targeted remediation complete — 21 October 2026
+
+**Targeted integrity/security, recovery and regression PASS; pause for review.** Region Edit now uses a narrow operation transaction, unchanged Core observer and fresh existing authority checks. Focused **20 / 210**, four independent PostgreSQL scenarios, actual browser **9 / 8** with zero sampled axe findings, seven preservation journeys and complete current-tree PostgreSQL **327 / 3,575** passed. Pint/build/diff passed. [Report and limitations](phase-3d7-k4-region-update-remediation.md). Original diagnostic failure remains historical; no separate critical defect confirmed in this bounded correction.
+
+Batch G is incomplete. K5, broader risk disposition, separate Institution selector finding and human testing remain; no Batch H/Phase 4 or production readiness claim. No commit/push/deployment. Pause after K4.
+
+## K4 Region Update diagnostic — critical stop, 21 October 2026
+
+**Batch G NOT READY; NO-GO for Batch H.** A29 actual Edit persists code/name/activity when its mandatory Core audit throws. Authorized success and corrected denial/input controls passed first; retained fault regression fails. Final bounded invocations total **7 tests / 82 assertions; six passed, one failed**. [Exact persistence, contract, initial harness reconciliation and proposed separate authorization](phase-3d7-k4-region-update-verification.md). No runtime fix, K5 or further acceptance gates after confirmation. K1–K3/G-INT-001–007 preserved; earlier complete-suite result remains historical.
+
+## K3 targeted remediation completed — 21 October 2026
+
+**Targeted integrity/security verification PASS; pause for review.** Actual Institution Create now owns the insert/sole-Core-audit transaction and fresh existing authority checks. Focused **16 / 211**, four concurrency scenarios, target browser **8 / 8**, seven preservation journeys and complete current-tree PostgreSQL **307 / 3,365** passed; Pint/build/diff passed. [Full report](phase-3d7-k3-institution-create-remediation.md). The critical diagnostic stop below is superseded for K3, with original outcomes retained.
+
+Existing selector target-size finding remains noncritical and separate. No all-accessibility, human acceptance, production or Batch G completion claim. K4/K5 and broader closure/risk dispositions remain open; do not begin Batch H or Phase 4. No commit/push/deployment.
+
+## K3 Institution Create diagnostic — 21 October 2026
+
+**Batch G stopped / NOT READY; NO-GO for Batch H.** K3 confirmed an independent critical Create/audit atomicity failure after successful authorized controls. Four serialized invocations: **4 tests / 81 assertions; three passed, one failed**. Institution survives failed mandatory audit; no runtime remediation. [Contract, exact persistence and separate proposed scope](phase-3d7-k3-institution-create-verification.md). Prior full-suite checkpoints are historical; no final current-tree acceptance is claimed. Pause for separate targeted authorization; K4–K5, Phase 4 and deployment excluded.
+
+## K2 eligibility Create diagnostic — 21 October 2026
+
+**Operational matrix PASS, audit-failure CONTRACT-N/A.** Actual registered Filament/Livewire and HTTP tests passed **17 / 134**, covering successful attributed organization/module eligibility, denied actors/environments/options, invalid/forged input and existing duplicate rejection without partial creation. No dedicated mandatory grant-audit event was established; no audit fault/event was invented. [Full evidence and governance residual](phase-3d7-k2-eligibility-create-verification.md).
+
+An initial route-probe audit-count failure was traced to the fixture's legitimate logout User.updated event; final assertions separate it from eligibility/route behavior. No runtime fixes, critical defect, new full-suite/browser claim or K3 execution. K1/G-INT and prior recovery/accessibility evidence preserved; pause for review. Batch G, human acceptance and audit-policy disposition remain incomplete. No Batch H/Phase 4/deployment.
+
+## K1 targeted remediation completion — 21 October 2026
+
+**Targeted integrity/security PASS; broader Batch G incomplete.** The Institution Edit persistence boundary now commits/rolls back its sole existing Core audit atomically and rechecks existing authority/editor constraints under locks. Focused **22 tests / 189 assertions**, six PostgreSQL concurrency scenarios, actual browser **7 interactions / 8 captures**, preservation (applicant 11 cases; builder 14 selection + seven condition checks; CHEDRO 12 / 30; staff 15 / 94) and complete current-tree PostgreSQL **274 / 3,020** passed. Pint/build/diff passed.
+
+[Exact changes, initial failures/harness corrections, snapshots and limits](phase-3d7-k1-institution-update-remediation.md). Target captures record one noncritical selector target-size finding each; no zero-axe/full accessibility claim. Historical critical-stop record below is retained and superseded for K1. No K2–K5, new governance, manual-data/history repair, commit/push, deployment, Batch H or Phase 4. Pause for review.
+
+## K1 Institution Edit diagnostic — 21 October 2026 critical stop
+
+**FAIL / NOT READY.** Four serial PostgreSQL/actual Livewire probes: **4 tests / 41 assertions, 3 passed and 1 failed**. Authorized actual Edit and exact audit pairing, denied controls and manipulated input boundaries passed. Mandatory Core audit failure leaves name/official ID/primary region/status persisted; no matching audit. [Exact contract, reproduction, values and proposed separate scope](phase-3d7-k1-institution-update-verification.md).
+
+The retained regression is a current-tree failure. No runtime remediation, full-suite/browser/build gates or K2 execution after discovery. Previous targeted security/integrity, selector and dedicated builder recovery evidence is preserved. Stop for separate remediation authorization; no Batch H/Phase 4/deployment.
+
+## Dedicated builder recovery assessment — 21 October 2026
+
+**Scoped result: PASS, eight recovery checks / 24 screen checks.** The previously interrupted dedicated recovery branch completed on disposable fixtures. It verifies navigation/validation, aborted Save, committed-response loss, 503, actual cookie loss, permission loss and unauthorized direct entry; conditions/documents remain unchanged except the intended saved title. HTTP/session failure retains the selected document's local instructions. No runtime remediation or critical finding. Axe/overflow/uncaught page errors: zero; expected resource/503/403 console messages are retained.
+
+[Full PASS/FAIL/NOT VERIFIED matrix and evidence](phase-3d7-builder-recovery-verification.md). The broader authoring/send branch and accepted applicant/selection/condition/CHEDRO/staff/timing/workload evidence are preserved, not repeated. Dedicated recovery is now verified; human acceptance and remaining finite inventory/Batch G closure are unchanged. No new full-suite acceptance or Batch G completion claimed. Pause for review; no Batch H, Phase 4, commit/push or deployment.
+
 ## Current targeted checkpoint — G-INT-007 remediated
 
 **20 October 2026. G-INT-007 targeted development verification passed; pause for review.** Full current-tree PostgreSQL **252 tests / 2,831 assertions**, focused real-action matrix **22 / 216**, six concurrency scenarios and target browser **seven interactions / eight screens** passed. Original rollback reproduction is fixed. Existing authorization, observer audit, selectors and duplicate semantics are preserved.

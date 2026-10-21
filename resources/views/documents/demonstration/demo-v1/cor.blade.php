@@ -1,0 +1,1 @@
+@include('documents.demonstration.demo-v1.layout', ['title' => 'CERTIFICATE OF REGISTRATION', 'terminology' => 'Source title retained; Recognition / Registration terminology awaits OSDS confirmation.'])

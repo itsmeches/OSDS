@@ -1,0 +1,29 @@
+{
+  "scope": "Fixed fictional layout rendering; not authenticated workflow or official issuance",
+  "captures": [
+    {
+      "kind": "cor",
+      "width": 1440,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "kind": "cor",
+      "width": 375,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "kind": "acsa",
+      "width": 1440,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "kind": "acsa",
+      "width": 375,
+      "overflow": false,
+      "axeViolations": 0
+    }
+  ]
+}

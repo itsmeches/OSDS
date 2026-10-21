@@ -1,0 +1,376 @@
+{
+  "checks": [
+    "Required validation retains other local entries without creation",
+    "Actual Create post-audit failure rolls back both writes and retains form input",
+    "Delivered double click creates one Region with one attributed existing audit",
+    "Duplicate code validates without another Region or audit"
+  ],
+  "screens": [
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Staff creator",
+      "path": "/admin/regions/create",
+      "status": 200,
+      "ttfb_ms": 830.2,
+      "dom_ms": 1620.9
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/regions/create",
+      "status": 200,
+      "ttfb_ms": 831.2,
+      "dom_ms": 1507.3
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/regions/create",
+      "status": 200,
+      "ttfb_ms": 988.1,
+      "dom_ms": 1700.8
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "beforeunload",
+      "message": ""
+    }
+  ],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8031",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('cell', { name: 'Disposable K5 j9qnejp3-uncertain', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('cell', { name: 'Disposable K5 j9qnejp3-uncertain', exact: true }) with timeout 5000ms\n  - waiting for getByRole('cell', { name: 'Disposable K5 j9qnejp3-uncertain', exact: true })\n",
+  "confidentialityLeaks": 0
+}

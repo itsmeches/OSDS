@@ -1,0 +1,32 @@
+import {readFileSync,writeFileSync,unlinkSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+let prefix=readFileSync('scripts/verify-evidence-reviewer-creation.mjs','utf8').split('const controlCreate=')[0]
+ .replaceAll('phase-3d7-g-int005','phase-3d7-k5-remediation').replaceAll('8025','8031')
+ .replace("email.startsWith('gint005-')", "email.startsWith('k5create-')").replace("?'Admin':email===fixture.super.email", "?'Staff creator':email===fixture.super.email")
+ .replaceAll(".withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa'])", ".options({rules:{'target-size':{enabled:true}}})");
+const body=String.raw`
+const controlCreate=action=>JSON.parse(execFileSync('php',['scripts/Prepare-RegionCreation.php',action],{encoding:'utf8'}));
+let data,leaks=0;
+const create=()=>page.getByRole('button',{name:'Create',exact:true});
+const name=()=>page.getByRole('textbox',{name:/^Name/});
+const code=()=>page.getByRole('textbox',{name:/^Code/});
+async function open(){await visit('/admin/regions/create');await stable();}
+async function fill(suffix=''){await name().fill(data.name+suffix);await code().fill(data.code+suffix);const active=page.getByRole('switch');if(await active.getAttribute('aria-checked')==='true')await active.click();}
+try{
+ data=controlCreate('prepare-browser');fixture={super:{email:'unused'}};await login(data.email);await open();
+ page.on('response',async r=>{if(r.request().method()==='POST'&&r.url().includes('livewire')){const t=await r.text().catch(()=>'');if(/ISOLATED_K5_CREATE_AUDIT_FAILURE|SQLSTATE|password_reset_token|locator_ciphertext/.test(t))leaks++;}});
+ await fill();await name().fill('');await create().click();expect(await name().evaluate(e=>e.validity.valueMissing)).toBe(true);expect(controlCreate('inspect').regions).toHaveLength(0);await expect(code()).toHaveValue(data.code);pass('Required validation retains other local entries without creation');
+ await name().fill(data.name);await context.setExtraHTTPHeaders({'X-Isolated-Atomicity-Fault':'after-audit'});await create().click();await expect(page.getByText('The region creation could not be confirmed. Keep your entries and inspect saved regions before trying again.',{exact:true})).toBeVisible();await expect(name()).toHaveValue(data.name);expect(controlCreate('inspect').regions).toHaveLength(0);await capture('create-rollback');await context.setExtraHTTPHeaders({});pass('Actual Create post-audit failure rolls back both writes and retains form input');
+ await page.setViewportSize({width:1440,height:1000});await create().dblclick();await page.waitForURL(u=>!u.pathname.endsWith('/create'));let rows=controlCreate('inspect').regions;expect(rows).toHaveLength(1);expect(rows[0].is_active).toBe(false);expect(rows[0].audits).toHaveLength(1);expect(rows[0].audits[0].actor_id).toBe(data.actor);expect(rows[0].audits[0].region_id).toBeNull();expect(rows[0].audits[0].institution_id).toBeNull();expect(rows[0].audits[0].metadata.changed_fields).toEqual([]);pass('Delivered double click creates one Region with one attributed existing audit');
+ await open();await fill();await create().click();await expect(page.getByText(/already been taken/)).toBeVisible();expect(controlCreate('inspect').regions).toHaveLength(1);pass('Duplicate code validates without another Region or audit');
+ await open();await fill('-uncertain');let dropped=0;await page.route('**/livewire*/update',async r=>{if(r.request().postDataJSON()?.components?.some(c=>c.calls?.some(a=>a.method==='create'))){dropped++;await r.fetch();await r.abort('failed');}else await r.continue();});await create().click();await expect(page.getByText('Action not confirmed',{exact:true})).toBeVisible();await expect(name()).toHaveValue(data.name+'-uncertain');expect(dropped).toBe(1);rows=controlCreate('inspect').regions;expect(rows).toHaveLength(2);expect(rows.every(r=>r.audits.length===1)).toBe(true);expect(rows[0].public_id).not.toBe(rows[1].public_id);await capture('create-uncertain');await page.unrouteAll({behavior:'wait'});
+ const popupPromise=page.waitForEvent('popup');await page.getByRole('link',{name:'Open saved record in a new tab',exact:true}).click();const popup=await popupPromise;await stable(popup);await popup.waitForFunction(()=>window.Livewire?.all().length>0);await popup.getByRole('searchbox').fill(data.code);await expect(popup.getByRole('cell',{name:data.name+'-uncertain',exact:true})).toBeVisible();await popup.close();pass('Committed response loss remains uncertain; authorized saved-list inspection confirms without replay');
+ data=controlCreate('prepare-browser');await login(data.email);await open();await fill();let aborted=0;await page.route('**/livewire*/update',r=>{if(r.request().postDataJSON()?.components?.some(c=>c.calls?.some(a=>a.method==='create'))){aborted++;return r.abort();}return r.continue();});await create().click();await expect(page.getByText('Action not confirmed',{exact:true})).toBeVisible();await expect(name()).toHaveValue(data.name);expect(aborted).toBe(1);expect(controlCreate('inspect').regions).toHaveLength(0);await page.unrouteAll({behavior:'wait'});pass('Precommit interruption preserves local input without mutation or replay');
+ data=controlCreate('prepare-browser');await login(data.email);await open();await fill();controlCreate('revoke-permission');await create().click();await expect(page.getByText('Action not confirmed',{exact:true})).toBeVisible();expect(controlCreate('inspect').regions).toHaveLength(0);pass('Mounted permission loss denies actual browser Create');
+ data=controlCreate('prepare-browser');await login(data.email);await open();await fill();await context.clearCookies();await create().click();await expect(page.getByText('Action not confirmed',{exact:true})).toBeVisible();await expect(name()).toHaveValue(data.name);expect(controlCreate('inspect').regions).toHaveLength(0);pass('Session loss retains input and explains recovery without replay');
+ expect(leaks).toBe(0);expect(result.errors).toEqual([]);
+}catch(e){result.failure=String(e).slice(0,1800);if(page)writeFileSync('storage/app/private/k5-browser-page.txt',await page.locator('body').innerText().catch(()=>''));console.error(result.failure);process.exitCode=1;}
+finally{result.confidentialityLeaks=leaks;writeFileSync(dir+'/results.json',JSON.stringify(result,null,2));await browser.close();}
+`;
+const temp='scripts/.k5-create-browser-current.mjs';
+try{writeFileSync(temp,prefix+body);execFileSync(process.execPath,[temp],{stdio:'inherit'});}finally{unlinkSync(temp);}

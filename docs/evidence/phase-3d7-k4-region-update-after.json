@@ -1,0 +1,237 @@
+{
+    "authorized": {
+        "before": {
+            "id": 263,
+            "public_id": "2acef55b-4640-48e5-827d-46234363bfa2",
+            "code": "K4-A",
+            "name": "Disposable K4 before",
+            "is_active": true
+        },
+        "after": {
+            "id": 263,
+            "public_id": "2acef55b-4640-48e5-827d-46234363bfa2",
+            "code": "K4-EDITED",
+            "name": "Disposable K4 edited",
+            "is_active": false
+        },
+        "audit_before": 3,
+        "audit_after": 4,
+        "audit": {
+            "action": "App\\Models\\Region.updated",
+            "resource_type": "App\\Models\\Region",
+            "resource_id": "263",
+            "actor_id": 543,
+            "region_id": null,
+            "institution_id": null,
+            "outcome": "success",
+            "metadata": {
+                "changed_fields": [
+                    "code",
+                    "name",
+                    "is_active"
+                ]
+            }
+        }
+    },
+    "denied-outside": {
+        "before": [
+            {
+                "id": 265,
+                "public_id": "dac9bb92-d16b-4d5c-b399-cfb2361a69ba",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 266,
+                "public_id": "5103d1e8-db3d-49c3-8e3e-2e9e29b7f0c3",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "after": [
+            {
+                "id": 265,
+                "public_id": "dac9bb92-d16b-4d5c-b399-cfb2361a69ba",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 266,
+                "public_id": "5103d1e8-db3d-49c3-8e3e-2e9e29b7f0c3",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "status": 404,
+        "audit_delta": 0
+    },
+    "denied-permission": {
+        "before": [
+            {
+                "id": 267,
+                "public_id": "acbe83eb-c37a-4fd5-a0b4-5219f8acb860",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 268,
+                "public_id": "4e2c223f-3899-4405-b6ea-9794fd735379",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "after": [
+            {
+                "id": 267,
+                "public_id": "acbe83eb-c37a-4fd5-a0b4-5219f8acb860",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 268,
+                "public_id": "4e2c223f-3899-4405-b6ea-9794fd735379",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "status": 403,
+        "audit_delta": 0
+    },
+    "denied-inactive": {
+        "before": [
+            {
+                "id": 269,
+                "public_id": "8125cc14-5866-4a96-bdf7-c4dc41d1f5d2",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 270,
+                "public_id": "306ff2e6-9351-41b7-9605-6d616fdc6415",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "after": [
+            {
+                "id": 269,
+                "public_id": "8125cc14-5866-4a96-bdf7-c4dc41d1f5d2",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 270,
+                "public_id": "306ff2e6-9351-41b7-9605-6d616fdc6415",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "status": 404,
+        "audit_delta": 0
+    },
+    "denied-revoked": {
+        "before": [
+            {
+                "id": 271,
+                "public_id": "a17b5536-7410-44c1-8647-3e2b06a9729e",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 272,
+                "public_id": "3be18421-0af6-4517-b21a-f682c9e37c06",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "after": [
+            {
+                "id": 271,
+                "public_id": "a17b5536-7410-44c1-8647-3e2b06a9729e",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 272,
+                "public_id": "3be18421-0af6-4517-b21a-f682c9e37c06",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "status": 404,
+        "audit_delta": 0
+    },
+    "input_controls": {
+        "invalid_cases": 5,
+        "before": [
+            {
+                "id": 273,
+                "public_id": "9fad058f-d763-4372-87c0-49de1c71b74f",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 274,
+                "public_id": "770f2758-62ea-4ef6-b005-e4382e73ad58",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "after": [
+            {
+                "id": 273,
+                "public_id": "9fad058f-d763-4372-87c0-49de1c71b74f",
+                "code": "K4-A",
+                "name": "Disposable K4 before",
+                "is_active": true
+            },
+            {
+                "id": 274,
+                "public_id": "770f2758-62ea-4ef6-b005-e4382e73ad58",
+                "code": "K4-B",
+                "name": "Disposable K4 outside",
+                "is_active": true
+            }
+        ],
+        "protected_fields": "not persisted; record not rebound",
+        "audit_delta": 0
+    },
+    "audit_fault": {
+        "before": {
+            "id": 275,
+            "public_id": "d2cf6e56-b62e-4a45-9e3c-022082873c92",
+            "code": "K4-A",
+            "name": "Disposable K4 before",
+            "is_active": true
+        },
+        "after": {
+            "id": 275,
+            "public_id": "d2cf6e56-b62e-4a45-9e3c-022082873c92",
+            "code": "K4-A",
+            "name": "Disposable K4 before",
+            "is_active": true
+        },
+        "audit_before": 3,
+        "audit_after": 3,
+        "sink_reached_once": true,
+        "exception_marker": "ISOLATED_K4_AUDIT_FAILURE"
+    }
+}

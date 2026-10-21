@@ -1,0 +1,606 @@
+{
+  "checks": [
+    "Required validation retains the other entries without creation",
+    "Actual Create audit insertion failure rolls back institution and audit with retained input",
+    "Delivered double click creates one institution and one current-actor audit",
+    "Duplicate official ID validates without a second operation",
+    "Committed response loss remains uncertain; saved list confirms state without replay",
+    "Precommit interruption retains local input without creation or replay",
+    "Permission loss after mount denies actual browser Create",
+    "Session loss retains local input and does not replay Create"
+  ],
+  "screens": [
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-rollback",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 6.57,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.35,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 6.15,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "role": "Staff creator",
+      "name": "create-uncertain",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "target-size",
+          "nodes": 1
+        }
+      ],
+      "pairs": [
+        {
+          "selector": ".fi-btn",
+          "ratio": 8.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".fi-fo-field-label-content",
+          "ratio": 18.72,
+          "minimum": 4.5
+        },
+        {
+          "selector": ".notice",
+          "ratio": 12.03,
+          "minimum": 4.5
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions/create",
+      "status": 200,
+      "ttfb_ms": 918.1,
+      "dom_ms": 1560
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions/create",
+      "status": 200,
+      "ttfb_ms": 973.7,
+      "dom_ms": 1685.9
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions",
+      "status": 200,
+      "ttfb_ms": 1121.7,
+      "dom_ms": 1817.2
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions/create",
+      "status": 200,
+      "ttfb_ms": 1050.1,
+      "dom_ms": 1743.1
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions/create",
+      "status": 200,
+      "ttfb_ms": 1034.2,
+      "dom_ms": 1822.4
+    },
+    {
+      "role": "Staff creator",
+      "path": "/admin/institutions/create",
+      "status": 200,
+      "ttfb_ms": 942.2,
+      "dom_ms": 1683.3
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 403,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__dispatch"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 302,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "beforeunload",
+      "message": ""
+    }
+  ],
+  "keyboard": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    },
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8029",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "http://127.0.0.1:8029",
+      "method": "POST",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ],
+  "confidentialityLeaks": 0
+}

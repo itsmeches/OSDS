@@ -8,19 +8,24 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+@php($applicationSandbox = app(\App\Services\Applicants\ApplicantSandboxGuard::class)->allowed())
 <a class="skip-link" href="#applicant-content">Skip to main content</a>
 <div class="applicant-shell">
     <aside class="applicant-sidebar" aria-label="Applicant portal navigation">
-        <a class="applicant-brand" href="{{ route('applicant.home') }}">
+        <a class="applicant-brand" href="{{ route($applicationSandbox ? 'applicant.home' : 'applicant.issuance-demo') }}">
             <span class="applicant-brand-mark" aria-hidden="true">OS</span>
             <span>CHED OSDS<small>Applicant portal</small></span>
         </a>
         <button class="applicant-menu-toggle secondary" type="button" aria-expanded="false" aria-controls="applicant-navigation" data-applicant-menu>Menu</button>
         <div class="applicant-navigation" id="applicant-navigation">
         <nav aria-label="Applicant pages">
+            <a href="{{ route('applicant.issuance-demo') }}" @if(request()->routeIs('applicant.issuance-demo')) aria-current="page" @endif>Demonstration issuance form</a>
+            <a href="{{ route('applicant.forms') }}" @if(request()->routeIs('applicant.forms')) aria-current="page" @endif>Downloadable forms</a>
+            @if($applicationSandbox)
             <a @class(['active' => request()->routeIs('applicant.start')]) href="{{ route('applicant.start') }}"><span aria-hidden="true">＋</span> Start application</a>
             <a @class(['active' => request()->routeIs('applicant.home', 'applicant.drafts.*', 'applicant.applications.*')]) @if(request()->routeIs('applicant.home')) aria-current="page" @endif href="{{ route('applicant.home') }}"><span aria-hidden="true">▤</span> My applications</a>
             <a @class(['active' => request()->routeIs('applicant.account')]) href="{{ route('applicant.account') }}"><span aria-hidden="true">◎</span> Account and organization</a>
+            @endif
         </nav>
         <div class="applicant-sidebar-footer">
             <div class="theme-switcher" aria-label="Color theme">

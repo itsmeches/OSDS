@@ -1,0 +1,133 @@
+{
+    "authorized": {
+        "before": {
+            "id": 122,
+            "name": "Disposable K1 before",
+            "official_id": "K1-BEFORE",
+            "primary_region_id": 226,
+            "status": "active",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "after": {
+            "id": 122,
+            "name": "Disposable K1 edited",
+            "official_id": "K1-EDITED",
+            "primary_region_id": 227,
+            "status": "inactive",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "audit_delta": 1,
+        "audit": {
+            "action": "App\\Models\\Institution.updated",
+            "resource_type": "App\\Models\\Institution",
+            "resource_id": "122",
+            "actor_id": 480,
+            "institution_id": 122,
+            "region_id": 227,
+            "outcome": "success",
+            "metadata": {
+                "changed_fields": [
+                    "name",
+                    "official_id",
+                    "primary_region_id",
+                    "status",
+                    "updated_at"
+                ]
+            }
+        }
+    },
+    "denied": {
+        "before": [
+            {
+                "id": 124,
+                "name": "Disposable K1 before",
+                "official_id": "K1-BEFORE",
+                "primary_region_id": 229,
+                "status": "active",
+                "organization_type": "hei",
+                "is_synthetic": true
+            },
+            {
+                "id": 125,
+                "name": "Disposable outside institution",
+                "official_id": null,
+                "primary_region_id": 231,
+                "status": "active",
+                "organization_type": "hei",
+                "is_synthetic": true
+            },
+            6
+        ],
+        "after": [
+            {
+                "id": 124,
+                "name": "Disposable K1 before",
+                "official_id": "K1-BEFORE",
+                "primary_region_id": 229,
+                "status": "active",
+                "organization_type": "hei",
+                "is_synthetic": true
+            },
+            {
+                "id": 125,
+                "name": "Disposable outside institution",
+                "official_id": null,
+                "primary_region_id": 231,
+                "status": "active",
+                "organization_type": "hei",
+                "is_synthetic": true
+            },
+            6
+        ],
+        "outside_status": 404,
+        "revoked_permission_status": 403
+    },
+    "manipulated": {
+        "before": {
+            "id": 126,
+            "name": "Disposable K1 before",
+            "official_id": "K1-BEFORE",
+            "primary_region_id": 232,
+            "status": "active",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "after": {
+            "id": 126,
+            "name": "Disposable K1 before",
+            "official_id": "K1-BEFORE",
+            "primary_region_id": 232,
+            "status": "active",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "audit_delta": 0,
+        "outside_destination": "form validation rejected",
+        "non_schema_fields": "not persisted"
+    },
+    "audit_fault": {
+        "before": {
+            "id": 128,
+            "name": "Disposable K1 before",
+            "official_id": "K1-BEFORE",
+            "primary_region_id": 235,
+            "status": "active",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "after": {
+            "id": 128,
+            "name": "Disposable K1 before",
+            "official_id": "K1-BEFORE",
+            "primary_region_id": 235,
+            "status": "active",
+            "organization_type": "hei",
+            "is_synthetic": true
+        },
+        "audit_before": 6,
+        "audit_after": 6,
+        "exception": "ISOLATED_K1_AUDIT_FAILURE"
+    }
+}

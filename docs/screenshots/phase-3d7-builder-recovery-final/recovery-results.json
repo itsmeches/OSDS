@@ -1,0 +1,2401 @@
+{
+  "checks": [
+    "Immediate local dirty feedback and real canceled navigation preserve input",
+    "Required-field errors retain input; correction and duplicate-click save persist one version",
+    "Aborted save keeps RAM input, blocks editing, offers saved-state inspection and never retries",
+    "Response lost after commit shows uncertainty and prevents a second save",
+    "Actual HTTP 503 preserves local input without success feedback",
+    "Real cookie loss is caught without redirecting away or losing RAM work",
+    "Permission revocation denies direct/helper HTTP responses and blocks the open workspace",
+    "Admin role does not implicitly authorize OSDS authoring"
+  ],
+  "screens": [
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "interrupted-save",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "uncertain-committed-save",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "http-503-selected-document",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.82,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 12.34,
+          "color": "rgb(36, 54, 74)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 6.15,
+          "color": "rgb(133, 77, 14)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.15,
+          "color": "rgb(71, 85, 105)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 6.57,
+          "color": "rgb(255, 255, 255)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "true",
+      "violations": []
+    },
+    {
+      "name": "expired-session-selected-document",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".builder-header",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-stages .is-current",
+          "ratio": 10.5,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form input",
+          "ratio": 15.28,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".focused-editor-form label",
+          "ratio": 15.18,
+          "color": "rgb(231, 238, 247)"
+        },
+        {
+          "selector": ".builder-alert",
+          "ratio": 12.03,
+          "color": "rgb(253, 230, 138)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.21,
+          "color": "rgb(198, 210, 227)"
+        },
+        {
+          "selector": ".builder-header-actions .fi-btn",
+          "ratio": 8.72,
+          "color": "rgb(16, 36, 58)"
+        }
+      ],
+      "outlineExpanded": "false",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedRequests": [
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/livewire-6d26c714/update",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/livewire-6d26c714/update",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "path": "/api/",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+  ],
+  "persistence": [
+    {
+      "name": "Immediate local dirty feedback and real canceled navigation preserve input",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Required-field errors retain input; correction and duplicate-click save persist one version",
+      "locks": [
+        2,
+        2
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Corrected title",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Aborted save keeps RAM input, blocks editing, offers saved-state inspection and never retries",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Response lost after commit shows uncertainty and prevents a second save",
+      "locks": [
+        2,
+        2
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Committed despite lost response",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Actual HTTP 503 preserves local input without success feedback",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Real cookie loss is caught without redirecting away or losing RAM work",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Permission revocation denies direct/helper HTTP responses and blocks the open workspace",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    },
+    {
+      "name": "Admin role does not implicitly authorize OSDS authoring",
+      "locks": [
+        1,
+        1
+      ],
+      "states": [
+        "draft",
+        "draft"
+      ],
+      "questionLabels": {
+        "other_question": "Other question",
+        "source": "Organization category",
+        "dependent": "Conditional information",
+        "simple": "Simple information",
+        "choice_a": "First choice question",
+        "choice_b": "Second choice question"
+      },
+      "questionRules": {
+        "other_question": null,
+        "source": null,
+        "dependent": {
+          "any": [
+            {
+              "value": "Alpha",
+              "operator": "equals",
+              "question": "source"
+            },
+            {
+              "all": [
+                {
+                  "value": "Beta",
+                  "operator": "equals",
+                  "question": "source"
+                },
+                {
+                  "value": "Blocked",
+                  "operator": "not_equals",
+                  "question": "source"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "value": "Alpha",
+          "operator": "equals",
+          "question": "source"
+        },
+        "choice_a": null,
+        "choice_b": null
+      },
+      "documents": [
+        {
+          "key": "support",
+          "label": "Conditional supporting document",
+          "instructions": "Synthetic test only",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 1,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": {
+            "any": [
+              {
+                "value": "Alpha",
+                "operator": "equals",
+                "question": "source"
+              },
+              {
+                "all": [
+                  {
+                    "value": "Beta",
+                    "operator": "equals",
+                    "question": "source"
+                  },
+                  {
+                    "value": "Blocked",
+                    "operator": "not_equals",
+                    "question": "source"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "second_document",
+          "label": "Second document",
+          "instructions": "Second instruction",
+          "is_required": false,
+          "minimum_evidence": 0,
+          "maximum_evidence": 2,
+          "provider_ids": [
+            2
+          ],
+          "condition_rules": null
+        }
+      ],
+      "reviewCount": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "checks": [
+    "Keyboard opens the collapsed add-form editor"
+  ],
+  "screens": [
+    {
+      "name": "editor",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "editor",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "editor",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "editor",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failure": "Error: expect(locator).toBeEnabled() failed\n\nLocator: getByRole('button', { name: 'Publish form', exact: true })\nExpected: enabled\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeEnabled\" getByRole('button', { name: 'Publish form', exact: true }) with timeout 5000ms\n  - waiting for getByRole('button', { name: 'Publish form', exact: true })\n    8 × locator resolved to <button type=\"submit\" disabled=\"true\" wire:target=\"upload,save\" wire:loading.attr=\"disabled\" wire:loading.class=\"fi-disabled\" class=\"fi-color fi-color-primary fi-bg-color-400 hover:fi-bg-color-300 dark:fi-bg-color-600 dark:hover:fi-bg-color-700 fi-text-color-950 hover:fi-text-color-800 dark:fi-text-color-0 dark:hover:fi-text-color-0 fi-btn fi-size-md fi-disabled\">…</button>\n      - unexpected value \"disabled\"\n"
+}

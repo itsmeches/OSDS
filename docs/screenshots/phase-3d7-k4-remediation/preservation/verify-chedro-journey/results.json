@@ -1,0 +1,1201 @@
+{
+  "interactions": [
+    "intake-queue: scoped counts, search, service filter, empty result, pagination reset and keyboard",
+    "evidence-queue: scoped counts, search, service filter, empty result, pagination reset and keyboard",
+    "Application document opens through the authorized route; external content blocked",
+    "Actual screening, correction validation and committed-response-loss recovery without automatic retry",
+    "SCHOOL correction/resubmission integration and unchanged earlier submission",
+    "Separate evidence-review document opens through its own authorized route",
+    "New review/finding timestamps agree with the real database clock",
+    "Separate evidence copy, explicit finding validation, three checks and attributed history",
+    "Interrupted finding retains local remarks, shows uncertainty and performs no automatic retry",
+    "expired: actual signed-in browser has no unauthorized queue visibility",
+    "noPermission: actual signed-in browser has no unauthorized queue visibility",
+    "Revoked assignments remove scoped counts, options and rows; direct URLs denied"
+  ],
+  "screens": [
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-queue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-queue",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field input",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".staff-queue-table td",
+          "ratio": 15.18
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-correction",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "intake-history",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "light",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 6.57
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 12.34
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 6.15
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "dark",
+      "width": 768,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "evidence-findings",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "contrast": [
+        {
+          "selector": ".intake-primary-action",
+          "ratio": 8.72
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field select",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-field textarea",
+          "ratio": 15.28
+        },
+        {
+          "selector": ".intake-banner",
+          "ratio": 12.03
+        }
+      ],
+      "violations": []
+    }
+  ],
+  "errors": []
+}

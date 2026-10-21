@@ -11,9 +11,13 @@ use App\Filament\Resources\EvidenceProviderTypes\Pages\ListEvidenceProviderTypes
 use App\Filament\Resources\InstitutionRepresentatives\Pages\CreateInstitutionRepresentative;
 use App\Filament\Resources\InstitutionRepresentatives\Pages\EditInstitutionRepresentative;
 use App\Filament\Resources\InstitutionRepresentatives\Pages\ListInstitutionRepresentatives;
+use App\Filament\Resources\Institutions\Pages\CreateInstitution;
+use App\Filament\Resources\Institutions\Pages\EditInstitution;
 use App\Filament\Resources\Institutions\Pages\ListInstitutions;
 use App\Filament\Resources\OsdsModules\Pages\ListOsdsModules;
 use App\Filament\Resources\PublicationManifests\Pages\ListPublicationManifests;
+use App\Filament\Resources\Regions\Pages\CreateRegion;
+use App\Filament\Resources\Regions\Pages\EditRegion;
 use App\Filament\Resources\Regions\Pages\ListRegions;
 use App\Filament\Resources\SyntheticApplicationReviewerAssignments\Pages\CreateSyntheticApplicationReviewerAssignment;
 use App\Filament\Resources\SyntheticApplicationReviewerAssignments\Pages\ListSyntheticApplicationReviewerAssignments;
@@ -79,6 +83,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->renderHook(PanelsRenderHook::PAGE_START, fn () => view('filament.partials.staff-action-recovery'), scopes: [
                 CreateInstitutionRepresentative::class,
+                EditInstitution::class,
+                EditRegion::class,
+                CreateRegion::class,
+                CreateInstitution::class,
                 CreateUserRegionAssignment::class,
                 CreateSyntheticEvidenceReviewerAssignment::class,
                 CreateSyntheticApplicationReviewerAssignment::class,

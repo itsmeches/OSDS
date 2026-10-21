@@ -115,6 +115,65 @@ input[type='radio'] { border-radius: 50%; }
 .fi-input::placeholder, .fi-fo-textarea textarea::placeholder { color: var(--osds-color-placeholder); opacity: 1; }
 .fi-simple-main, .fi-section, .fi-modal-window, .fi-dropdown-panel, .fi-no-notification:not(.fi-color) { background-color: var(--osds-color-surface); color: var(--osds-color-text); }
 .fi-ta-header-cell, .fi-ta-cell { color: var(--osds-color-text); }
+/* Download catalogue: scoped layout using the existing OSDS theme tokens. */
+.downloads-intro, .downloads-list-heading, .downloads-card-heading, .downloads-applicant-footer, .downloads-editor-footer { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
+.downloads-intro h2 { font-size: 1.35rem; font-weight: 750; margin-block: .35rem; }
+.downloads-intro p { max-inline-size: 65ch; }
+.downloads-access, .downloads-count { flex-shrink: 0; border: 1px solid var(--osds-color-border); border-radius: 999px; padding: .35rem .75rem; background: var(--osds-color-surface); color: var(--osds-color-muted); font-size: .8125rem; font-weight: 650; }
+.downloads-editor { border: 1px solid var(--osds-color-border); border-radius: var(--osds-radius-lg); background: var(--osds-color-surface); scroll-margin-block-start: 6rem; }
+.downloads-editor > summary { cursor: pointer; padding: 1.1rem 1.25rem; color: var(--osds-color-link); font-weight: 700; min-block-size: 2.75rem; }
+.downloads-summary-help { display: block; color: var(--osds-color-muted); font-size: .875rem; font-weight: 400; margin-block-start: .3rem; }
+.downloads-editor-body { border-block-start: 1px solid var(--osds-color-border); padding: 1.25rem; }
+.downloads-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-block-start: 1.25rem; }
+.downloads-field { display: grid; align-content: start; gap: .45rem; min-inline-size: 0; }
+.issuance-applicant-form .downloads-field > input:not([type='checkbox']), .issuance-applicant-form .downloads-field > select { inline-size: 100%; min-inline-size: 0; max-inline-size: 100%; min-block-size: var(--osds-control-height); padding: .7rem .8rem; border: 1px solid var(--osds-color-border-strong); border-radius: var(--osds-radius-md); background: var(--osds-color-input); color: var(--osds-color-text); }
+.downloads-field label { font-size: .875rem; font-weight: 650; }
+.downloads-required, .downloads-help { font-size: .875rem; font-weight: 400; color: var(--osds-color-muted); }
+.downloads-field-wide { grid-column: 1 / -1; }
+.downloads-field textarea { width: 100%; resize: vertical; min-height: 5.5rem; border: 1px solid var(--osds-color-border-strong); border-radius: var(--osds-radius-md); background: var(--osds-color-input); color: var(--osds-color-text); padding: .65rem .75rem; }
+.downloads-upload { border: 1px dashed var(--osds-color-border-strong); border-radius: var(--osds-radius-md); padding: .85rem; background: var(--osds-color-surface-subtle); }
+.downloads-upload input { display: block; inline-size: 100%; min-inline-size: 0; color: var(--osds-color-text); font-size: .875rem; }
+.downloads-upload input::file-selector-button { cursor: pointer; min-height: 2.5rem; margin-inline-end: .6rem; margin-block-end: .5rem; border: 1px solid var(--osds-color-border-strong); border-radius: .4rem; padding: .45rem .65rem; background: var(--osds-color-surface); color: var(--osds-color-text); font-weight: 650; }
+.downloads-editor-footer { align-items: center; border-block-start: 1px solid var(--osds-color-border); padding-block-start: 1rem; }
+.downloads-error { color: var(--osds-color-danger); font-size: .875rem; }
+.downloads-catalogue { display: grid; gap: 1rem; }
+.downloads-list-heading { align-items: center; margin-block: .25rem 1rem; }
+.downloads-list-heading h2 { font-size: 1.1rem; font-weight: 750; }
+.downloads-card { min-inline-size: 0; overflow-wrap: anywhere; }
+.downloads-card-title { display: flex; align-items: center; gap: 1rem; min-inline-size: 0; }
+.downloads-card-title h3 { color: var(--osds-color-text); font-size: 1.075rem; font-weight: 700; line-height: 1.45; }
+.downloads-file-type { display: inline-grid; flex-shrink: 0; place-items: center; inline-size: 3.2rem; block-size: 3.6rem; border: 1px solid var(--osds-color-border); border-radius: .65rem; background: var(--osds-color-selected); color: var(--osds-color-link); font-size: .75rem; font-weight: 750; }
+.downloads-status { border-radius: 999px; padding: .25rem .65rem; background: var(--osds-color-success-surface); color: var(--osds-color-success); font-size: .8125rem; font-weight: 650; white-space: nowrap; }
+.downloads-status.is-withdrawn { background: var(--osds-color-surface-subtle); color: var(--osds-color-muted); }
+.downloads-description { margin-block-start: 1rem; white-space: pre-line; line-height: 1.6; }
+.downloads-metadata { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin-block-start: 1rem; }
+.downloads-metadata dt { color: var(--osds-color-muted); font-size: .8125rem; }
+.downloads-metadata dd { color: var(--osds-color-text); font-size: .875rem; font-weight: 600; margin-block-start: .2rem; }
+.downloads-actions, .downloads-management { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+.downloads-card-actions { justify-content: space-between; margin-block-start: 1.25rem; }
+.downloads-history { margin-block-start: 1.25rem; padding-block-start: .75rem; border-block-start: 1px solid var(--osds-color-border); }
+.downloads-history summary, .downloads-technical summary, .downloads-recovery summary { cursor: pointer; min-block-size: 2.75rem; padding-block: .65rem; font-size: .875rem; font-weight: 600; }
+.downloads-history summary > span { margin-inline-start: .5rem; }
+.downloads-history ol { display: grid; gap: .65rem; margin-block-start: .5rem; }
+.downloads-history li { padding: .85rem; border-radius: var(--osds-radius-md); background: var(--osds-color-surface-subtle); }
+.downloads-history-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: .875rem; }
+.downloads-technical code { display: block; overflow-wrap: anywhere; font-size: .75rem; color: var(--osds-color-muted); }
+.downloads-recovery a { color: var(--osds-color-link); text-decoration: underline; }
+.downloads-applicant-note { margin-block-end: 1.5rem; border-inline-start: 3px solid var(--osds-color-info); background: var(--osds-color-info-surface); color: var(--osds-color-info); padding: .85rem 1rem; border-radius: var(--osds-radius-md); }
+.downloads-applicant-footer { align-items: flex-end; flex-wrap: wrap; margin-block-start: .25rem; }
+.downloads-empty { display: grid !important; justify-items: center; text-align: center; gap: .65rem; padding: 2.5rem 1.25rem; }
+.downloads-empty h3 { font-weight: 700; font-size: 1.1rem; }
+.downloads-empty-icon { width: 2rem; height: 2rem; color: var(--osds-color-muted); }
+.downloads-editor summary:focus-visible, .downloads-history summary:focus-visible, .downloads-technical summary:focus-visible, .downloads-recovery summary:focus-visible, .downloads-field textarea:focus-visible, .downloads-upload input:focus-visible { outline: 3px solid var(--osds-focus); outline-offset: 3px; border-radius: .35rem; }
+@media (max-width: 640px) {
+    .downloads-intro, .downloads-card-heading, .downloads-editor-footer { flex-direction: column; gap: .85rem; }
+    .downloads-form { grid-template-columns: minmax(0, 1fr); }
+    .downloads-card-title { align-items: flex-start; gap: .75rem; }
+    .downloads-editor-body { padding: 1rem; }
+    .downloads-actions, .downloads-management { inline-size: 100%; }
+    .downloads-actions > *, .downloads-management > *, .downloads-applicant-footer > .button { flex: 1 1 auto; justify-content: center; text-align: center; }
+}
+
 .fi-ta-placeholder, .fi-ta-text-description { color: var(--osds-color-muted); }
 .fi-ta-content { overflow-x: auto; }
 .fi-sidebar { background: var(--osds-color-navigation); }

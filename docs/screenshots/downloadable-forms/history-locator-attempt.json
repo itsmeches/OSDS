@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "Real DOCX upload publishes one version"
+  ],
+  "screens": [],
+  "errors": [],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('2 retained version(s).', { exact: true })\nExpected: visible\nError: strict mode violation: getByText('2 retained version(s).', { exact: true }) resolved to 2 elements:\n    1) <p>2 retained version(s).</p> aka getByText('retained version(s).').first()\n    2) <p>2 retained version(s).</p> aka getByText('retained version(s).').nth(3)\n\nCall log:\n  - Expect \"toBeVisible\" getByText('2 retained version(s).', { exact: true }) with timeout 5000ms\n  - waiting for getByText('2 retained version(s).', { exact: true })\n"
+}

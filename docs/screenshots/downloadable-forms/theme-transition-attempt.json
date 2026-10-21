@@ -1,0 +1,43 @@
+{
+  "checks": [
+    "Real DOCX upload publishes one version",
+    "Replacement retains history and invalidates old download URL"
+  ],
+  "screens": [
+    {
+      "name": "staff",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "staff",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "staff",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "a[aria-current=\"page\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end"
+            ],
+            [
+              "h3"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failure": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  -   1\n+ Received  + 101\n\n- Array []\n+ Array [\n+   Object {\n+     \"description\": \"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds\",\n+     \"help\": \"Elements must meet minimum color contrast ratio thresholds\",\n+     \"helpUrl\": \"https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright\",\n+     \"id\": \"color-contrast\",\n+     \"impact\": \"serious\",\n+     \"nodes\": Array [\n+       Object {\n+         \"all\": Array [],\n+         \"any\": Array [\n+           Object {\n+             \"data\": Object {\n+               \"bgColor\": \"#3c5a7a\",\n+               \"contrastRatio\": 1.47,\n+               \"expectedContrastRatio\": \"4.5:1\",\n+               \"fgColor\": \"#5b748f\",\n+               \"fontSize\": \"10.5pt (14px)\",\n+               \"fontWeight\": \"normal\",\n+               \"messageKey\": null,\n+             },\n+             \"id\": \"color-contrast\",\n+             \"impact\": \"serious\",\n+             \"message\": \"Element has insufficient color contrast of 1.47 (foreground color: #5b748f, background color: #3c5a7a, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+             \"relatedNodes\": Array [\n+               Object {\n+                 \"html\": \"<a href=\\\"http://127.0.0.1:803...\\\" aria-current=\\\"page\\\" x-on:click=\\\"window.matchMedia(`(...\\\" x-bind:aria-label=\\\"$store.sidebar.isOpe...\\\" x-data=\\\"{ tooltip: false }\\\" x-effect=\\\"\n+                 too...\\\" x-tooltip.html=\\\"tooltip\\\" class=\\\"fi-sidebar-item-btn\\\">\",\n+                 \"target\": Array [\n+                   \"a[aria-current=\\\"page\\\"]\",\n+                 ],\n+               },\n+               Object {\n+                 \"html\": \"<div x-data=\\\"{}\\\" x-bind:class=\\\"{ 'fi-sidebar-open': $store.sidebar.isOpen }\\\" id=\\\"fi-main-sidebar\\\" class=\\\"fi-sidebar fi-main-sidebar fi-sidebar-open\\\">\",\n+                 \"target\": Array [\n+                   \"#fi-main-sidebar\",\n+                 ],\n+               },\n+             ],\n+           },\n+         ],\n+         \"failureSummary\": \"Fix any of the following:\n+   Element has insufficient color contrast of 1.47 (foreground color: #5b748f, background color: #3c5a7a, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+         \"html\": \"<span x-show=\\\"$store.sidebar.isOpen\\\" x-transition:enter=\\\"fi-transition-enter\\\" x-transition:enter-start=\\\"fi-transition-enter-start\\\" x-transition:enter-end=\\\"fi-transition-enter-end\\\" class=\\\"fi-sidebar-item-label fi-transition-enter fi-transition-enter-end\\\">\",\n+         \"impact\": \"serious\",\n+         \"none\": Array [],\n+         \"target\": Array [\n+           \"a[aria-current=\\\"page\\\"] > .fi-sidebar-item-label.fi-transition-enter.fi-transition-enter-end\",\n+         ],\n+       },\n+       Object {\n+         \"all\": Array [],\n+         \"any\": Array [\n+           Object {\n+             \"data\": Object {\n+               \"bgColor\": \"#92959c\",\n+               \"contrastRatio\": 2.99,\n+               \"expectedContrastRatio\": \"4.5:1\",\n+               \"fgColor\": \"#ffffff\",\n+               \"fontSize\": \"10.5pt (14px)\",\n+               \"fontWeight\": \"normal\",\n+               \"messageKey\": null,\n+             },\n+             \"id\": \"color-contrast\",\n+             \"impact\": \"serious\",\n+             \"message\": \"Element has insufficient color contrast of 2.99 (foreground color: #ffffff, background color: #92959c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+             \"relatedNodes\": Array [\n+               Object {\n+                 \"html\": \"<div x-data=\\\"notificationComponen...\\\" x-transition:enter-s...=\\\"fi-transition-enter-...\\\" x-transition:enter-e...=\\\"fi-transition-enter-...\\\" x-transition:leave-s...=\\\"fi-transition-leave-...\\\" x-transition:leave-e...=\\\"fi-transition-leave-...\\\" x-on:mouseenter=\\\"pauseDuration('hover...\\\" ...>\",\n+                 \"target\": Array [\n+                   \".fi-no-notification\",\n+                 ],\n+               },\n+             ],\n+           },\n+         ],\n+         \"failureSummary\": \"Fix any of the following:\n+   Element has insufficient color contrast of 2.99 (foreground color: #ffffff, background color: #92959c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+         \"html\": \"<h3 class=\\\"fi-no-notification-title\\\">\n+                                 Downloadable form published                            </h3>\",\n+         \"impact\": \"serious\",\n+         \"none\": Array [],\n+         \"target\": Array [\n+           \"h3\",\n+         ],\n+       },\n+     ],\n+     \"tags\": Array [\n+       \"cat.color\",\n+       \"wcag2aa\",\n+       \"wcag143\",\n+       \"TTv5\",\n+       \"TT13.c\",\n+       \"EN-301-549\",\n+       \"EN-9.1.4.3\",\n+       \"ACT\",\n+       \"RGAAv4\",\n+       \"RGAA-3.2.1\",\n+     ],\n+   },\n+ ]"
+}

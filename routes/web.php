@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ApplicantAuthController;
+use App\Http\Controllers\ApplicantIssuanceDemoController;
 use App\Http\Controllers\ApplicantPortalController;
+use App\Http\Controllers\DemonstrationDocumentController;
+use App\Http\Controllers\DownloadableFormController;
 use App\Http\Controllers\EvidenceLinkController;
 use App\Http\Controllers\SandboxQuestionnaireController;
 use App\Http\Middleware\EnsureAccountIsActive;
@@ -17,6 +20,14 @@ Route::middleware(['auth', EnsureAccountIsActive::class, 'can:questionnaires.pre
     ->name('questionnaires.sandbox.show');
 
 Route::get('/applicant/login', [ApplicantAuthController::class, 'create'])->name('applicant.login');
+Route::middleware(['auth', EnsureAccountIsActive::class])->group(function () {
+    Route::get('/applicant/issuance-demo', [ApplicantIssuanceDemoController::class, 'show'])->name('applicant.issuance-demo');
+    Route::post('/applicant/issuance-demo/preview', [ApplicantIssuanceDemoController::class, 'preview'])->name('applicant.issuance-demo.preview');
+    Route::post('/document-previews/issuance', [DemonstrationDocumentController::class, 'issuance'])->name('documents.demonstration.issuance');
+    Route::get('/document-previews/{version}/{kind}', [DemonstrationDocumentController::class, 'show'])->name('documents.demonstration.preview');
+    Route::get('/applicant/forms', [DownloadableFormController::class, 'index'])->name('applicant.forms');
+    Route::get('/forms/{form:public_id}/versions/{version}/download', [DownloadableFormController::class, 'download'])->whereNumber('version')->name('forms.download');
+});
 Route::post('/applicant/login', [ApplicantAuthController::class, 'store'])->name('applicant.login.store');
 Route::middleware(['auth', EnsureAccountIsActive::class])->prefix('applicant')->name('applicant.')->group(function () {
     Route::post('/logout', [ApplicantAuthController::class, 'destroy'])->name('logout');

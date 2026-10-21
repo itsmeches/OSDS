@@ -1,0 +1,303 @@
+{
+  "checks": [
+    "Keyboard clear/reselect, required validation and actual Create persist one audited assignment"
+  ],
+  "screens": [
+    {
+      "workflow": "regional",
+      "theme": "light",
+      "width": 1440,
+      "sizes": [
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        },
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "workflow": "regional",
+      "theme": "light",
+      "width": 375,
+      "sizes": [
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        },
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "workflow": "regional",
+      "theme": "dark",
+      "width": 1440,
+      "sizes": [
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        },
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "workflow": "regional",
+      "theme": "dark",
+      "width": 375,
+      "sizes": [
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        },
+        {
+          "width": 24,
+          "height": 24,
+          "label": "Clear selection"
+        }
+      ],
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "routes": [
+    {
+      "role": "CHEDRO",
+      "path": "/admin/user-region-assignments/create",
+      "status": 200,
+      "ttfb_ms": 599.7,
+      "dom_ms": 1051.6
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "authenticate"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "__lazyLoad"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "callSchemaComponentMethod"
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "calls": [
+        {
+          "method": "create"
+        }
+      ]
+    }
+  ],
+  "dialogs": [],
+  "keyboard": [
+    {
+      "theme": "light",
+      "width": 1440,
+      "index": 0,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(49, 116, 185)"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "index": 1,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(49, 116, 185)"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "index": 0,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(49, 116, 185)"
+      }
+    },
+    {
+      "theme": "light",
+      "width": 375,
+      "index": 1,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(49, 116, 185)"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "index": 0,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(120, 183, 242)"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "index": 1,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(120, 183, 242)"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "index": 0,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(120, 183, 242)"
+      }
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "index": 1,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(120, 183, 242)"
+      }
+    }
+  ],
+  "console": [],
+  "failedRequests": [
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    },
+    {
+      "origin": "https://ui-avatars.com",
+      "method": "GET",
+      "reason": "net::ERR_FAILED"
+    }
+  ]
+}

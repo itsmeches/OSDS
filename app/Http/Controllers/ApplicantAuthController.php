@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\Applicants\ApplicantSandboxGuard;
+use App\Services\Documents\DemoIssuanceFormService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,14 +12,15 @@ class ApplicantAuthController
 {
     public function create(ApplicantSandboxGuard $guard)
     {
-        abort_unless($guard->allowed(), 404);
+        abort_unless($guard->allowed() || app(DemoIssuanceFormService::class)->available(), 404);
 
-        return view('applicant.login');
+        return view('applicant.login', ['applicationSandbox' => $guard->allowed()]);
     }
 
     public function store(Request $request, ApplicantSandboxGuard $guard): RedirectResponse
     {
-        abort_unless($guard->allowed(), 404);
+        $applicationSandbox = $guard->allowed();
+        abort_unless($applicationSandbox || app(DemoIssuanceFormService::class)->available(), 404);
         $data = $request->validate(['email' => 'required|email', 'password' => 'required|string']);
         if (! Auth::attempt($data, $request->boolean('remember'))) {
             return back()->withErrors(['email' => 'The credentials did not match an active applicant account.'])->onlyInput('email');
@@ -32,13 +34,15 @@ class ApplicantAuthController
                 ? 'This SCHOOL account is awaiting verification by another authorized CHEDRO reviewer.'
                 : 'This applicant account is not active.'])->onlyInput('email');
         }
-        if (! $user->is_synthetic || ! $user->can('applicant.portal.access')) {
+        if (! $user->can('applicant.portal.access') || ($applicationSandbox && ! $user->is_synthetic)) {
             Auth::logout();
 
-            return back()->withErrors(['email' => 'This account is not enabled for the synthetic applicant sandbox.'])->onlyInput('email');
+            return back()->withErrors(['email' => $applicationSandbox
+                ? 'This account is not enabled for the synthetic applicant sandbox.'
+                : 'This account is not enabled for applicant resources.'])->onlyInput('email');
         }
 
-        return redirect()->route('applicant.home');
+        return redirect()->route($applicationSandbox ? 'applicant.home' : 'applicant.issuance-demo');
     }
 
     public function destroy(Request $request): RedirectResponse

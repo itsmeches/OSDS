@@ -21,12 +21,12 @@ class UserRegionAssignmentForm
                     modifyQueryUsing: fn (Builder $query) => app(StaffListScope::class)->users($query, auth()->user(), 'region_scopes.assign'),
                 )->getOptionLabelUsing(fn (Select $component, string $operation, ?Model $record): ?string => $operation === 'edit' && $record
                     ? $record->user()->value('name') : $component->getSelectedRecord()?->name)
-                    ->searchable()->preload()->required()->disabledOn('edit'),
+                    ->searchable()->preload()->required()->disabledOn('edit')->extraAttributes(['class' => 'authority-assignment-selector']),
                 Select::make('region_id')->relationship(
                     'region',
                     'name',
                     modifyQueryUsing: fn (Builder $query) => app(StaffListScope::class)->regions($query, auth()->user(), 'region_scopes.assign'),
-                )->searchable()->preload()->required()->disabledOn('edit'),
+                )->searchable()->preload()->required()->disabledOn('edit')->extraAttributes(['class' => 'authority-assignment-selector']),
                 DateTimePicker::make('starts_at')->label('Access starts')->required()->default(now())->helperText('Dates are shown in UTC. Editing dates does not transfer this assignment.')
                     ->disabled(fn (string $operation, ?Model $record): bool => $operation === 'edit' && ! auth()->user()?->can('update', $record)),
                 DateTimePicker::make('ends_at')->label('Access ends')->after('starts_at')->helperText('Optional. Leave blank for no scheduled end.')

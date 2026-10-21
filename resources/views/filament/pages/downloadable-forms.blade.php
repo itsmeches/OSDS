@@ -1,0 +1,54 @@
+<x-filament-panels::page>
+    <section class="downloads-intro" aria-label="About downloadable forms">
+        <div><p class="osds-eyebrow">Applicant resources</p><h2>Current forms, ready to download</h2><p class="osds-muted">{{ $manager ? 'Keep the blank forms applicants need up to date. Replace a file to publish a new version, or withdraw it when it is no longer needed.' : 'Download the current blank forms for your reference. OSDS maintains this catalogue.' }}</p></div>
+        <span class="downloads-access">{{ $manager ? 'OSDS management' : 'View and download only' }}</span>
+    </section>
+    @if($manager)
+        <details class="downloads-editor" wire:ignore.self>
+            <summary>Import forms from a ZIP<span class="downloads-summary-help">Publish each file as a separate download</span></summary>
+            <div class="downloads-editor-body">
+                <p class="osds-muted">Filenames become titles. All imported forms start as General / both modules; replace individual entries to adjust their details. Import creates new entries, not replacements. Inspect the catalogue before repeating an interrupted import.</p>
+                <form wire:submit="importArchive" class="downloads-form">
+                    <div class="downloads-field"><label for="archive-version">Imported version label (required)</label><x-filament::input.wrapper><x-filament::input id="archive-version" wire:model="archiveVersion" required maxlength="80" /></x-filament::input.wrapper>@error('archiveVersion')<p role="alert">{{ $message }}</p>@enderror @error('version_label')<p role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-field"><label for="forms-archive">Forms ZIP (required)</label><input id="forms-archive" type="file" wire:model="archive" accept=".zip" required><p class="downloads-help">ZIP up to 10 MB; 1–20 PDF/DOCX/XLSX forms. All files publish together or none publish.</p>@error('archive')<p role="alert">{{ $message }}</p>@enderror @error('upload')<p role="alert">{{ $message }}</p>@enderror @error('title')<p role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-editor-footer downloads-field-wide"><p wire:loading wire:target="archive,importArchive" role="status">Uploading or importing forms…</p><x-filament::button type="submit" wire:loading.attr="disabled" wire:target="archive,importArchive">Import and publish forms</x-filament::button></div>
+                </form>
+            </div>
+        </details>
+        <details class="downloads-editor" wire:ignore.self wire:key="download-editor-{{ $editing ?? 'new' }}-{{ $forms->total() ? 'populated' : 'empty' }}" @if($editing || !$forms->total()) open @endif @if($editing) x-data x-init="$nextTick(() => { $el.querySelector('input')?.focus(); $el.scrollIntoView({block: 'start'}); })" @endif>
+            <summary>{{ $editing ? 'Replace form with a new version' : 'Add a downloadable form' }}<span class="downloads-summary-help">{{ $editing ? 'Your current file stays available until you publish.' : 'PDF, Word or Excel · Up to 10 MB' }}</span></summary>
+            <div class="downloads-editor-body">
+                <p class="osds-muted">Publish an approved blank form. Completed applicant documents belong in the application, not this catalogue.</p>
+                <form wire:submit="save" class="downloads-form">
+                    <div class="downloads-field"><label for="download-title">Form title <span class="downloads-required">(required)</span></label><x-filament::input.wrapper><x-filament::input id="download-title" wire:model="formTitle" required maxlength="160" placeholder="e.g. Certificate of Undertaking" /></x-filament::input.wrapper>@error('title')<p class="downloads-error" role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-field"><label for="download-module">Module applicability</label><x-filament::input.wrapper><x-filament::input.select id="download-module" wire:model="moduleId"><option value="">General / both modules</option>@foreach($modules as $module)<option value="{{ $module->id }}">{{ $module->name }}</option>@endforeach</x-filament::input.select></x-filament::input.wrapper>@error('module_id')<p class="downloads-error" role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-field downloads-field-wide"><label for="download-description">Instructions (optional)</label><textarea id="download-description" wire:model="description" rows="3" maxlength="2000" placeholder="Tell applicants when to use this form."></textarea>@error('description')<p class="downloads-error" role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-field"><label for="download-version">Version label <span class="downloads-required">(required)</span></label><x-filament::input.wrapper><x-filament::input id="download-version" wire:model="versionLabel" required maxlength="80" placeholder="e.g. October 2026" /></x-filament::input.wrapper><p class="downloads-help">Use a date or revision name applicants can recognise.</p>@error('version_label')<p class="downloads-error" role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-field"><label for="download-upload">Blank form file <span class="downloads-required">(required)</span></label><div class="downloads-upload"><input id="download-upload" type="file" wire:model="upload" accept=".pdf,.docx,.xlsx" required aria-describedby="download-file-help"><p id="download-file-help" class="downloads-help">PDF, DOCX or XLSX · Maximum 10 MB · No macro-enabled files</p></div>@error('upload')<p class="downloads-error" role="alert">{{ $message }}</p>@enderror</div>
+                    <div class="downloads-editor-footer downloads-field-wide"><p class="downloads-help" wire:loading.remove wire:target="upload">{{ $editing ? 'Publishing keeps earlier versions in history.' : 'The form becomes available to applicants when published.' }}</p><p wire:loading wire:target="upload" role="status">Uploading file…</p><div class="downloads-actions"><x-filament::button type="submit" wire:loading.attr="disabled" wire:target="upload,save">{{ $editing ? 'Publish replacement' : 'Publish form' }}</x-filament::button>@if($editing)<x-filament::button type="button" color="gray" wire:click="cancel">Cancel replacement</x-filament::button>@endif</div></div>
+                </form>
+            </div>
+        </details>
+    @endif
+    <section aria-labelledby="downloads-catalogue-heading" class="downloads-catalogue">
+        <div class="downloads-list-heading"><div><h2 id="downloads-catalogue-heading">{{ $manager ? 'Forms catalogue' : 'Available forms' }}</h2><p class="osds-muted">{{ $manager ? 'Manage current downloads and review retained versions.' : 'Choose a form to download in its original format.' }}</p></div><span class="downloads-count">{{ $forms->total() }} {{ $forms->total() === 1 ? 'form' : 'forms' }}</span></div>
+        @forelse($forms as $form)
+            <article class="osds-workflow-card downloads-card" aria-labelledby="download-form-{{ $form->id }}">
+                <div class="downloads-card-heading"><div class="downloads-card-title"><span class="downloads-file-type" aria-label="File format">{{ strtoupper($form->currentVersion?->extension ?? 'FILE') }}</span><div><h3 id="download-form-{{ $form->id }}">{{ $form->title }}</h3><p class="downloads-help">{{ $form->module?->name ?? 'General / both modules' }}</p></div></div><span class="downloads-status {{ $form->withdrawn_at ? 'is-withdrawn' : '' }}">{{ $form->withdrawn_at ? 'Withdrawn' : 'Available' }}</span></div>
+                @if($form->description)<p class="downloads-description">{{ $form->description }}</p>@endif
+                @if($form->currentVersion)
+                    <dl class="downloads-metadata"><div><dt>Current version</dt><dd>{{ $form->currentVersion->version_label }}</dd></div><div><dt>File size</dt><dd>{{ number_format($form->currentVersion->size / 1024, 1) }} KB</dd></div></dl>
+                    <div class="downloads-actions downloads-card-actions">@unless($form->withdrawn_at)<x-filament::button tag="a" icon="heroicon-o-arrow-down-tray" :aria-label="'Download form: '.$form->title" :href="route('forms.download', [$form->public_id, $form->current_version_id])">Download form</x-filament::button>@endunless
+                    @if($manager)<div class="downloads-management"><x-filament::button color="gray" :aria-label="($form->withdrawn_at ? 'Upload new version: ' : 'Replace file: ').$form->title" wire:click="edit({{ $form->id }})" wire:loading.attr="disabled">{{ $form->withdrawn_at ? 'Upload new version' : 'Replace file' }}</x-filament::button>@unless($form->withdrawn_at)<x-filament::button color="danger" outlined :aria-label="'Withdraw '.$form->title" wire:click="withdraw({{ $form->id }}, {{ $form->current_version_id }})" wire:confirm="Withdraw this form from downloads? Previous versions will be retained." wire:loading.attr="disabled">Withdraw</x-filament::button>@endunless</div>@endif</div>
+                @endif
+                @if($manager)
+                    <details class="downloads-history"><summary>Version history <span class="downloads-help">{{ $form->versions_count }} {{ $form->versions_count === 1 ? 'version' : 'versions' }}</span></summary><ol>@foreach($form->versions as $version)<li><div class="downloads-history-heading"><strong>{{ $version->version_label }}</strong><span class="downloads-help">Version {{ $version->version_number }}{{ $version->id === $form->current_version_id ? ' · Current' : '' }}</span></div><p class="downloads-help">{{ $version->original_name }}</p><details class="downloads-technical"><summary>File verification details</summary><p class="downloads-help">SHA-256</p><code>{{ $version->sha256 }}</code></details></li>@endforeach</ol></details>
+                @endif
+            </article>
+        @empty
+            <div class="osds-workflow-card downloads-empty"><x-filament::icon icon="heroicon-o-document-arrow-down" class="downloads-empty-icon" /><h3>{{ $manager ? 'Your forms catalogue is ready' : 'No forms available yet' }}</h3><p class="osds-muted">{{ $manager ? 'Add the first approved blank form above. Applicants will see it here once published.' : 'OSDS has not published any forms for download. Please check again later.' }}</p></div>
+        @endforelse
+        {{ $forms->links() }}
+    </section>
+    @if($manager)<details class="downloads-recovery"><summary>Need help after an interrupted action?</summary><p class="downloads-help">Keep this page open and <a href="{{ \App\Filament\Pages\DownloadableForms::getUrl() }}" target="_blank" rel="noopener">inspect the catalogue in another tab</a> before trying again. Changes are not replayed automatically. Withdrawal removes a form from downloads; its earlier versions stay in history.</p></details>@endif
+</x-filament-panels::page>

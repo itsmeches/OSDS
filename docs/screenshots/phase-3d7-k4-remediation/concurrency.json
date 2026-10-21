@@ -1,0 +1,321 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "first": {
+      "pid": 23908,
+      "transactionDepth": 1
+    },
+    "second": {
+      "pid": 30608
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "updated"
+      },
+      {
+        "mode": "B",
+        "outcome": "updated"
+      }
+    ],
+    "before": {
+      "actor": 609,
+      "email": "k4edit-a-v9c1vhaz@example.invalid",
+      "contender": 610,
+      "scope": 602,
+      "region": 293,
+      "outside": 294,
+      "outsideCode": "K4-O-v9c1vhaz",
+      "saved": {
+        "id": 293,
+        "public_id": "f6e62401-dbb1-42a4-a450-91f1dd524dac",
+        "code": "K4-v9c1vhaz",
+        "name": "Disposable K4 v9c1vhaz",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "during": {
+      "actor": 609,
+      "email": "k4edit-a-v9c1vhaz@example.invalid",
+      "contender": 610,
+      "scope": 602,
+      "region": 293,
+      "outside": 294,
+      "outsideCode": "K4-O-v9c1vhaz",
+      "saved": {
+        "id": 293,
+        "public_id": "f6e62401-dbb1-42a4-a450-91f1dd524dac",
+        "code": "K4-v9c1vhaz",
+        "name": "Disposable K4 v9c1vhaz",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "after": {
+      "actor": 609,
+      "email": "k4edit-a-v9c1vhaz@example.invalid",
+      "contender": 610,
+      "scope": 602,
+      "region": 293,
+      "outside": 294,
+      "outsideCode": "K4-O-v9c1vhaz",
+      "saved": {
+        "id": 293,
+        "public_id": "f6e62401-dbb1-42a4-a450-91f1dd524dac",
+        "code": "K4-v9c1vhaz",
+        "name": "K4 worker B",
+        "is_active": false
+      },
+      "audits": [
+        {
+          "id": 5417,
+          "actor_id": 609,
+          "region_id": null,
+          "institution_id": null,
+          "metadata": {
+            "changed_fields": [
+              "name",
+              "is_active",
+              "updated_at"
+            ]
+          }
+        },
+        {
+          "id": 5418,
+          "actor_id": 610,
+          "region_id": null,
+          "institution_id": null,
+          "metadata": {
+            "changed_fields": [
+              "name",
+              "updated_at"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "first": {
+      "pid": 22364
+    },
+    "second": {
+      "pid": 31888
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 611,
+      "email": "k4edit-a-8g0mswxl@example.invalid",
+      "contender": 612,
+      "scope": 604,
+      "region": 295,
+      "outside": 296,
+      "outsideCode": "K4-O-8g0mswxl",
+      "saved": {
+        "id": 295,
+        "public_id": "16071474-f985-4a60-ae24-b8b5b979a978",
+        "code": "K4-8g0mswxl",
+        "name": "Disposable K4 8g0mswxl",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "during": {
+      "actor": 611,
+      "email": "k4edit-a-8g0mswxl@example.invalid",
+      "contender": 612,
+      "scope": 604,
+      "region": 295,
+      "outside": 296,
+      "outsideCode": "K4-O-8g0mswxl",
+      "saved": {
+        "id": 295,
+        "public_id": "16071474-f985-4a60-ae24-b8b5b979a978",
+        "code": "K4-8g0mswxl",
+        "name": "Disposable K4 8g0mswxl",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "after": {
+      "actor": 611,
+      "email": "k4edit-a-8g0mswxl@example.invalid",
+      "contender": 612,
+      "scope": 604,
+      "region": 295,
+      "outside": 296,
+      "outsideCode": "K4-O-8g0mswxl",
+      "saved": {
+        "id": 295,
+        "public_id": "16071474-f985-4a60-ae24-b8b5b979a978",
+        "code": "K4-8g0mswxl",
+        "name": "Disposable K4 8g0mswxl",
+        "is_active": true
+      },
+      "audits": []
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "first": {
+      "pid": 27344
+    },
+    "second": {
+      "pid": 15980
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 613,
+      "email": "k4edit-a-bwzaztbm@example.invalid",
+      "contender": 614,
+      "scope": 606,
+      "region": 297,
+      "outside": 298,
+      "outsideCode": "K4-O-bwzaztbm",
+      "saved": {
+        "id": 297,
+        "public_id": "12f64dea-8214-4e55-a8d8-e035e9ee138e",
+        "code": "K4-bwzaztbm",
+        "name": "Disposable K4 bwzaztbm",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "during": {
+      "actor": 613,
+      "email": "k4edit-a-bwzaztbm@example.invalid",
+      "contender": 614,
+      "scope": 606,
+      "region": 297,
+      "outside": 298,
+      "outsideCode": "K4-O-bwzaztbm",
+      "saved": {
+        "id": 297,
+        "public_id": "12f64dea-8214-4e55-a8d8-e035e9ee138e",
+        "code": "K4-bwzaztbm",
+        "name": "Disposable K4 bwzaztbm",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "after": {
+      "actor": 613,
+      "email": "k4edit-a-bwzaztbm@example.invalid",
+      "contender": 614,
+      "scope": 606,
+      "region": 297,
+      "outside": 298,
+      "outsideCode": "K4-O-bwzaztbm",
+      "saved": {
+        "id": 297,
+        "public_id": "12f64dea-8214-4e55-a8d8-e035e9ee138e",
+        "code": "K4-bwzaztbm",
+        "name": "Disposable K4 bwzaztbm",
+        "is_active": true
+      },
+      "audits": []
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "first": {
+      "pid": 16980
+    },
+    "second": {
+      "pid": 14356
+    },
+    "observedDatabaseLockWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "committed": true
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "actor": 615,
+      "email": "k4edit-a-vuetnxxw@example.invalid",
+      "contender": 616,
+      "scope": 608,
+      "region": 299,
+      "outside": 300,
+      "outsideCode": "K4-O-vuetnxxw",
+      "saved": {
+        "id": 299,
+        "public_id": "f919a9f2-d740-449c-8489-ab2bf58cb524",
+        "code": "K4-vuetnxxw",
+        "name": "Disposable K4 vuetnxxw",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "during": {
+      "actor": 615,
+      "email": "k4edit-a-vuetnxxw@example.invalid",
+      "contender": 616,
+      "scope": 608,
+      "region": 299,
+      "outside": 300,
+      "outsideCode": "K4-O-vuetnxxw",
+      "saved": {
+        "id": 299,
+        "public_id": "f919a9f2-d740-449c-8489-ab2bf58cb524",
+        "code": "K4-vuetnxxw",
+        "name": "Disposable K4 vuetnxxw",
+        "is_active": true
+      },
+      "audits": []
+    },
+    "after": {
+      "actor": 615,
+      "email": "k4edit-a-vuetnxxw@example.invalid",
+      "contender": 616,
+      "scope": 608,
+      "region": 299,
+      "outside": 300,
+      "outsideCode": "K4-O-vuetnxxw",
+      "saved": {
+        "id": 299,
+        "public_id": "f919a9f2-d740-449c-8489-ab2bf58cb524",
+        "code": "K4-vuetnxxw",
+        "name": "Disposable K4 vuetnxxw",
+        "is_active": true
+      },
+      "audits": []
+    }
+  }
+]

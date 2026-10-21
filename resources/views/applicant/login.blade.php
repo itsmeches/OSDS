@@ -17,12 +17,12 @@
     <main class="auth-layout">
         <section class="auth-intro" aria-labelledby="applicant-login-title">
             <p class="eyebrow">Applicant portal</p>
-            <h1 id="applicant-login-title">Continue your test application</h1>
-            <p>Sign in with an active synthetic SCHOOL account to create, save, and review a questionnaire draft.</p>
+            <h1 id="applicant-login-title">{{ $applicationSandbox ? 'Continue your test application' : 'Sign in to applicant resources' }}</h1>
+            <p>{{ $applicationSandbox ? 'Sign in with an active synthetic SCHOOL account to create, save, and review a questionnaire draft.' : 'Use an active authorized applicant account to download blank forms and answer the demonstration issuance form. Application submission is unavailable in this local setup.' }}</p>
             <div class="auth-sandbox-note"><span aria-hidden="true">ⓘ</span><span><strong>Sandbox environment</strong>This portal uses synthetic records for testing. Nothing here is an official application or submission.</span></div>
         </section>
         <section class="auth-card" aria-labelledby="sign-in-heading">
-            <div class="auth-card-heading"><p class="eyebrow">Welcome back</p><h2 id="sign-in-heading">Applicant sign in</h2><p>Enter the credentials provided for your synthetic applicant account.</p></div>
+            <div class="auth-card-heading"><p class="eyebrow">Welcome back</p><h2 id="sign-in-heading">Applicant sign in</h2><p>{{ $applicationSandbox ? 'Enter the credentials provided for your synthetic applicant account.' : 'Enter the credentials provided for your applicant account.' }}</p></div>
             <form class="form-stack auth-form" method="post" action="{{ route('applicant.login.store') }}">
                 @csrf
                 <label for="email">Email address<input id="email" name="email" type="email" value="{{ old('email') }}" autocomplete="username" required autofocus></label>

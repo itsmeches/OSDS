@@ -1,0 +1,58 @@
+{
+  "checks": [
+    "Two offices saved through actual Livewire actions",
+    "Office selection resolves corresponding director and designation",
+    "COR and ACSA POST previews merge form values with server-side office snapshot"
+  ],
+  "screens": [
+    {
+      "name": "issuance-form",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "issuance-form",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "issuance-form",
+      "theme": "dark",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "issuance-form",
+      "theme": "dark",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "cor",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "cor",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    },
+    {
+      "name": "acsa",
+      "theme": "light",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "name": "acsa",
+      "theme": "light",
+      "width": 375,
+      "axeViolations": 0
+    }
+  ],
+  "pageErrors": []
+}

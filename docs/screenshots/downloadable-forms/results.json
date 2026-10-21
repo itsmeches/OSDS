@@ -1,0 +1,70 @@
+{
+  "checks": [
+    "Real DOCX upload publishes one version",
+    "Replacement retains history and invalidates old download URL",
+    "Signed-in applicant reads current catalogue and file",
+    "Withdrawal denies download without deleting history",
+    "Management permission loss removes controls",
+    "Session loss prevents download"
+  ],
+  "screens": [
+    {
+      "name": "staff",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "staff",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "staff",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "staff",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "applicant",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "applicant",
+      "theme": "light",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "applicant",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "name": "applicant",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

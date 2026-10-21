@@ -1,5 +1,55 @@
 # Phase 3D.7 issue register
 
+## K5 / A28 remediation outcome — 21 October 2026
+
+**Targeted integrity/security, recovery and regression gates PASS.** Actual Region Create now owns one transaction spanning model insert and unchanged sole Core audit, with fresh active identity/panel/management authorization and membership locks. No current-region scope prerequisite or new event. Original rollback assertion retained; after fault Regions **0→0**, audits **1→1**. Focused **18 / 204**, four real concurrency scenarios, final browser **8 checks / 8 captures**, seven preservation journeys, full PostgreSQL **345 / 3,779**, Pint/build/diff passed. [Exact correction, initial popup timeout and limitations](phase-3d7-k5-region-create-remediation.md).
+
+The diagnostic critical stop below is historical. Initial saved-list timeout remains retained with no conclusive root-cause classification; full rerun passes after explicit popup hydration wait. No separate critical defect confirmed. Broader Batch G residual-risk/human acceptance and separate Institution selector finding remain open. Pause after K5; no Batch H/Phase 4, new inventory, commit/push or deployment.
+
+## K5 / A28 — Region Create survives mandatory Core audit failure
+
+**21 October 2026. Critical integrity defect confirmed; Batch G stopped / NOT READY.** Actual authorized control **1 / 16**, identity/permission **4 / 17**, HTTP panel **1 / 4**, corrected input **1 / 41**, default/forged state **1 / 15** passed before fault **1 / 6 / one failure**. Region count **0→1**, audit count **1→1**, before cleanup. [Contract, evidence, retained regression and harness correction](phase-3d7-k5-region-create-verification.md). No runtime remediation or unauthorized scope grant claimed. Stop for separate targeted authorization; preserve accepted K1–K4/G-INT-001–007. No Batch H/Phase 4/deployment.
+
+## K4 / A29 remediation outcome — 21 October 2026
+
+**Targeted integrity/security, recovery and regression gates PASS.** RegionUpdateService now owns actual Edit and unchanged sole Core audit, with fresh active identity/permission/exact-region scope checks and row locks. Original failing comparison retained; after fault all fields/audit count stay unchanged. Focused **20 / 210**, four independent concurrency scenarios, browser **9 checks / 8 captures** (zero axe findings), seven preservation journeys, full PostgreSQL **327 / 3,575**, Pint/build/diff passed. [Exact correction/evidence/limits](phase-3d7-k4-region-update-remediation.md). Null audit bindings, activity semantics and UUID preserved; no new governance or schema.
+
+The diagnostic stop below is historical. K5, broader Batch G closure/risk disposition, separate Institution accessibility finding and human acceptance remain open. No independent critical defect outside K4 confirmed. Pause for review; no K5/Batch H/Phase 4, commit/push or deployment.
+
+## K4 / A29 — Region Update survives mandatory Core audit failure
+
+**21 October 2026. Critical integrity defect confirmed; Batch G stopped / NOT READY.** Normal actual Edit **1 / 17**, corrected denial controls **4 / 19**, input controls **1 / 40** passed. Subsequent audit-fault regression **1 / 6 / one failure** leaves code/name/is_active updated with audit count **3→3**, before fixture cleanup. [Contract, exact persisted values, harness corrections and proposed separate scope](phase-3d7-k4-region-update-verification.md). No unauthorized access or historical incident claimed; no runtime remediation. Preserve K1–K3/G-INT-001–007. Stop for separate targeted authorization; no K5/Batch H/Phase 4/deployment.
+
+## K3 / A26 remediation outcome — 21 October 2026
+
+**Targeted integrity/security and regression gates PASS.** The actual Institution Create now uses one operation transaction spanning Eloquent insertion and its unchanged sole Core audit, with fresh existing identity/permission/region checks. Original failure retained; after-fault institutions **0→0**, audits **3→3**. Focused **16 / 211**, four real concurrency scenarios, target browser **8 checks / 8 captures**, all seven preservation journeys and complete PostgreSQL **307 / 3,365** passed. Pint/build/diff passed. [Correction, evidence and limitations](phase-3d7-k3-institution-create-remediation.md).
+
+The critical diagnostic below is historical. Existing Institution selector target-size finding remains separate; no zero-axe/full-human-acceptance claim. K4/K5 and broader Batch G closure remain open. Pause for review; no commit/push, Batch H, Phase 4 or deployment.
+
+## K3 / A26 — Institution Create survives mandatory Core audit failure
+
+**21 October 2026. Critical integrity defect confirmed; Batch G stopped / NOT READY.** Authorized actual Create passed **1 / 15**, permission/identity controls **1 / 8**, input controls **1 / 52**. Subsequent actual Create audit-fault regression failed **1 / 6 / one failure**: institution count **0→1**, audit count **3→3**, inspected before fixture cleanup. No authorization bypass or historical incident claimed. [Contract, persistence evidence and retained regression](phase-3d7-k3-institution-create-verification.md).
+
+No runtime remediation. Separate targeted authorization is required for this Create transaction boundary; K1 Update protection and G-INT-001–007 remain unchanged. K2 operational PASS / audit CONTRACT-N/A is preserved. No K4–K5, Batch H, Phase 4, commit/push or deployment.
+
+## K1 / A27 remediation outcome — 21 October 2026
+
+**Fixed under targeted authorization; integrity/security regression gates passed.** `InstitutionUpdateService::update` now owns the actual Edit transaction and unchanged sole Core audit; current identity/scope and the existing editor destination constraint are rechecked after locks. No policy/schema/routing/observer change. Original failing actual-action rollback comparison remains. Focused **22 tests / 189 assertions**, six real concurrency scenarios, target browser **7 interactions / 8 captures**, all relevant preservation and full PostgreSQL **274 / 3,020** passed. Pint/build/diff passed. [Full remediation and limitations](phase-3d7-k1-institution-update-remediation.md).
+
+**Noncritical accessibility follow-up:** target Edit captures each record one target-size node on this editor's existing selector. This is distinct from the earlier four-selector correction, which remains intact. No rule is suppressed or zero-axe claim made. Human accessibility acceptance remains open. Initial critical-stop record below is historical, not an unresolved K1 rollback failure. Pause for review; Batch G incomplete, K2–K5 not executed, no Batch H/Phase 4/deployment.
+
+## K1 / A27 — Institution Update survives mandatory Core audit failure
+
+**Critical integrity defect; confirmed 21 October 2026. Batch G stopped; no remediation.** Actual authorized Filament/Livewire Edit first passed **1 test / 14 assertions**, with exactly one matching audit. Denied and manipulated-field probes passed **1 / 6** and **1 / 13**. The subsequent actual-action audit fault failed **1 / 8 / 1 failure**: intended name/official ID/primary-region/status edits persisted without their mandatory Core audit. All four invocations used isolated `osds_test`, serially.
+
+[Reproduction, precise persistence evidence, contract limits and proposed separate scope](phase-3d7-k1-institution-update-verification.md). The original failing rollback assertion remains. No unauthorized destination bypass or historical incident claimed. No runtime changes, K2, manual-data access, commit/push or deployment. Stop for separate remediation approval; G-INT-001–007 remain preserved.
+
+## Scoped selector accessibility follow-up — 21 October 2026
+
+**Known regional/representation selector target-size finding corrected.** A local class on the four affected selects extends the existing 24px clear-target rule and adds a containing-selector focus outline. Both clear targets on each Create form measure **24 × 24 CSS px**, previously 16 × 16, in Light/Dark at 1440px/375px. The eight-state matrix runs default axe plus explicitly enabled target-size with no allowance/exclusions: zero violations. Sixteen keyboard clear/reselection cycles and both actual Create operations passed. Separate recovery preservation passed **14 interactions / 16 screen checks**, also with the former target-size allowance removed. Pint/build/diff passed.
+
+[Exact changes, screenshots, harness corrections and human limitations](phase-3d7-selector-accessibility.md). Earlier G-INT-006/007 target-size reports remain historical evidence; their security/integrity results are unchanged. Native zoom, screen readers and human usability remain pending. Batch G remains incomplete; pause for review. No commit/push, deployment, Batch H or Phase 4.
+
 ## G-INT-007 authorized remediation result — targeted development verification passed
 
 **20 October 2026. Fixed under targeted authorization; pause for review.** Generic institutional-representation Create now delegates to an operation-owned PostgreSQL transaction spanning the unchanged model insertion and sole Core observer audit. Current actor, target-role delegation, non-self and canonical institution scope are checked after relevant locks. Existing selectors, unverified initial state, attribution and duplicate constraints remain unchanged.

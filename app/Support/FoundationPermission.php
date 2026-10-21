@@ -4,6 +4,8 @@ namespace App\Support;
 
 enum FoundationPermission: string
 {
+    case ManageDownloadableForms = 'forms.downloads.manage';
+    case ViewDownloadableForms = 'forms.downloads.view';
     case AccessAdminPanel = 'platform.admin.access';
     case ViewUsers = 'users.view';
     case ManageUsers = 'users.manage';
