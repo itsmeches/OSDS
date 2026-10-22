@@ -63,4 +63,11 @@ enum FoundationPermission: string
     case RequestApplicationCorrections = 'applications.corrections.request';
     case ViewApplicationScreeningHistory = 'applications.screening.history.view';
     case ManageApplicationReviewerAssignments = 'applications.reviewer.assignments.manage';
+    case RecordApplicationEvaluation = 'applications.evaluation.record';
+    case RecordApplicationRecommendation = 'applications.recommendations.record';
+    case RecordApplicationDecision = 'applications.decisions.record';
+    case ManageIssuanceDefinitions = 'issuance.definitions.manage';
+    case ReviewIssuanceDefinitions = 'issuance.definitions.review';
+    case PublishIssuanceDefinitions = 'issuance.definitions.publish';
+    case SubmitIssuanceRequests = 'issuance.requests.submit';
 }

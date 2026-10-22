@@ -35,7 +35,7 @@ class ApplicantDraftService
             if (! $eligible) {
                 throw new AuthorizationException;
             }
-            if (Application::query()->where(['institution_id' => $institution->id, 'module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id])->whereIn('state', ['draft', 'submitted', 'under_screening', 'correction_requested', 'resubmitted'])->exists()) {
+            if (Application::query()->where(['institution_id' => $institution->id, 'module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id])->whereIn('state', ['draft', 'submitted', 'under_screening', 'correction_requested', 'resubmitted', 'approved', 'rejected'])->exists()) {
                 $this->invalid('An active test application already exists for this organization and questionnaire.');
             }
             $application = Application::query()->create(['module_id' => $manifest->module_id, 'publication_manifest_id' => $manifest->id, 'institution_id' => $institution->id, 'applicant_id' => $user->id, 'state' => 'draft', 'lock_version' => 1]);

@@ -1,0 +1,32 @@
+{
+  "errors": [],
+  "invalid": {
+    "fields": [
+      {
+        "id": "archive-version",
+        "required": true,
+        "valid": true
+      },
+      {
+        "id": "forms-archive",
+        "required": true,
+        "valid": false,
+        "files": 0
+      },
+      {
+        "id": "",
+        "valid": true
+      }
+    ],
+    "parentForm": null
+  },
+  "requests": [
+    "/livewire-6d26c714/update",
+    "/livewire-6d26c714/update",
+    "/livewire-6d26c714/upload-file",
+    "/livewire-6d26c714/update",
+    "/livewire-6d26c714/update",
+    "/livewire-6d26c714/update"
+  ],
+  "pass": true
+}

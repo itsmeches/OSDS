@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "Rejected temporary upload shows fixed guidance and retains title",
+    "Original DOCX upload and publication",
+    "Original ZIP upload and five-entry import",
+    "3 MB PDF upload above former PHP limit"
+  ],
+  "requests": [
+    {
+      "path": "/livewire-6d26c714/upload-file",
+      "status": 422
+    },
+    {
+      "path": "/livewire-6d26c714/upload-file",
+      "status": 200
+    },
+    {
+      "path": "/livewire-6d26c714/upload-file",
+      "status": 200
+    },
+    {
+      "path": "/livewire-6d26c714/upload-file",
+      "status": 200
+    }
+  ],
+  "pageErrors": []
+}

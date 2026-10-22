@@ -1,0 +1,6 @@
+{
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================"
+}

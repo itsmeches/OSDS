@@ -4,7 +4,9 @@ namespace App\Filament\Pages;
 
 use App\Filament\Pages\Concerns\ScopesReviewerQueue;
 use App\Models\Application;
+use App\Models\ApplicationDecisionStage;
 use App\Models\ApplicationSubmission;
+use App\Services\Applications\ApplicationDecisionService;
 use App\Services\Applications\ApplicationLifecycleService;
 use App\Services\Authorization\ReviewerQueueScope;
 use BackedEnum;
@@ -14,13 +16,90 @@ use Filament\Support\Icons\Heroicon;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Locked;
 use Livewire\Attributes\Url;
 
 class SyntheticApplicationIntake extends Page
 {
     use ScopesReviewerQueue;
+
+    #[Locked]
+    public ?int $decisionVersion = null;
+
+    #[Locked]
+    public ?int $decisionSubmission = null;
+
+    #[Locked]
+    public ?int $decisionPredecessor = null;
+
+    #[Locked]
+    public string $decisionKey = '';
+
+    public string $decisionSummary = '';
+
+    public string $decisionNotes = '';
+
+    public bool $decisionAttested = false;
+
+    public function mount(): void
+    {
+        $this->prepareDecision();
+    }
+
+    public function updatedApplication(): void
+    {
+        unset($this->selected, $this->submittedCopy);
+        $this->prepareDecision();
+    }
+
+    private function prepareDecision(): void
+    {
+        $case = $this->selected;
+        $this->decisionVersion = $case?->lock_version;
+        $this->decisionSubmission = $case?->current_submission_id;
+        $this->decisionPredecessor = $case ? ApplicationDecisionStage::where('application_id', $case->id)->where('submission_id', $case->current_submission_id)->max('id') : null;
+        $this->decisionKey = (string) Str::uuid();
+    }
+
+    public function recordDecisionStage(string $action): void
+    {
+        $this->resetErrorBag();
+        $case = $this->selected;
+        abort_unless($case && $this->decisionSubmission && $this->decisionVersion, 404);
+        $data = ['summary' => $this->decisionSummary, 'internal_notes' => $this->decisionNotes, 'attested' => $this->decisionAttested];
+        if ($action === 'correction_requested') {
+            $data['summary'] = $this->correctionSummary;
+            $data['items'] = [[
+                'target_kind' => $this->correctionTarget, 'form_question_id' => $this->correctionQuestion,
+                'documentary_requirement_id' => $this->correctionRequirement, 'issue_category' => $this->correctionCategory,
+                'instruction' => $this->correctionInstruction,
+            ]];
+        }
+        try {
+            app(ApplicationDecisionService::class)->act(auth()->user(), $case, $this->decisionSubmission, $this->decisionVersion,
+                $this->decisionPredecessor, $this->decisionKey, $action, $data);
+            $this->reset(['decisionSummary', 'decisionNotes', 'decisionAttested', 'correctionSummary', 'correctionInstruction']);
+            unset($this->selected, $this->submittedCopy, $this->applications);
+            $this->prepareDecision();
+            Notification::make()->title('Demonstration decision stage recorded')->success()->send();
+        } catch (ValidationException $exception) {
+            $this->reportValidationErrors($exception);
+        } catch (\Throwable $exception) {
+            $this->reportStaffFailure($exception);
+        }
+    }
+
+    #[Computed]
+    public function decisionHistory()
+    {
+        $case = $this->selected;
+
+        return $case ? $case->decisionStages()->when(! auth()->user()->can('applications.screening.history.view'),
+            fn ($query) => $query->select(['id', 'application_id', 'submission_id', 'actor_id', 'stage_role', 'action', 'applicant_summary', 'created_at']))->get() : collect();
+    }
 
     #[Url]
     public ?string $submission = null;
@@ -133,6 +212,7 @@ class SyntheticApplicationIntake extends Page
         try {
             app(ApplicationLifecycleService::class)->beginScreening(auth()->user(), $application);
             unset($this->selected, $this->submittedCopy);
+            $this->prepareDecision();
             Notification::make()->title('Screening started')->body('You can now review the submitted answers and documents.')->success()->send();
         } catch (ValidationException $exception) {
             $this->reportValidationErrors($exception);
@@ -143,6 +223,11 @@ class SyntheticApplicationIntake extends Page
 
     public function requestCorrection(): void
     {
+        if (auth()->user()?->can('applications.evaluation.record')) {
+            $this->recordDecisionStage('correction_requested');
+
+            return;
+        }
         $this->resetErrorBag();
         $application = $this->selected();
         abort_unless($application, 404);

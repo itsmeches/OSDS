@@ -1,0 +1,187 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "case": 475,
+    "first": {
+      "pid": 23948,
+      "depth": 1
+    },
+    "second": {
+      "pid": 24960
+    },
+    "observedDatabaseWait": true,
+    "uncommittedRequestInvisible": true,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "committed"
+      },
+      {
+        "mode": "B",
+        "outcome": "rejected"
+      }
+    ],
+    "before": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "during": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "after": {
+      "requests": [
+        {
+          "id": 13,
+          "state": "submitted",
+          "decision_id": 116,
+          "submission_id": 426,
+          "definition_id": 26,
+          "certificate_type": "cor",
+          "identity_snapshot": {
+            "region": "B1 synthetic region",
+            "address": "123 Fictional Demo Road",
+            "region_id": 361,
+            "decision_id": 116,
+            "organization": "B1 synthetic organization",
+            "submission_id": 426,
+            "application_id": 475,
+            "institution_id": 594,
+            "submission_hash": "9fd69ef917a9688eb71eca4bade69a527b638ef7845968782ba6459ee856ba08",
+            "certificate_type": "cor",
+            "director_actor_id": 1001,
+            "evidence_revision_ids": [
+              445
+            ],
+            "approved_institution_name": "B1 synthetic registration y0fw6P"
+          },
+          "answers": {
+            "contact_note": "Concurrent A"
+          },
+          "lock_version": 2
+        }
+      ],
+      "audits": [
+        "issuance.request_submitted"
+      ],
+      "history": 1
+    }
+  },
+  {
+    "mode": "representation",
+    "passed": true,
+    "case": 476,
+    "first": {
+      "pid": 31012
+    },
+    "second": {
+      "pid": 21988
+    },
+    "observedDatabaseWait": true,
+    "uncommittedRequestInvisible": true,
+    "outcomes": [
+      {
+        "mode": "representation",
+        "outcome": "changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "during": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "after": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "case": 477,
+    "first": {
+      "pid": 33368
+    },
+    "second": {
+      "pid": 12532
+    },
+    "observedDatabaseWait": true,
+    "uncommittedRequestInvisible": true,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "outcome": "changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "during": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "after": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    }
+  },
+  {
+    "mode": "withdrawal",
+    "passed": true,
+    "case": 478,
+    "first": {
+      "pid": 26336
+    },
+    "second": {
+      "pid": 23724
+    },
+    "observedDatabaseWait": true,
+    "uncommittedRequestInvisible": true,
+    "outcomes": [
+      {
+        "mode": "withdrawal",
+        "outcome": "changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "rejected"
+      }
+    ],
+    "before": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "during": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    },
+    "after": {
+      "requests": [],
+      "audits": [],
+      "history": 0
+    }
+  }
+]

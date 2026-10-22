@@ -3,7 +3,7 @@
         <x-reviewer-feedback />
         <div class="intake-banner" role="status">
             <strong>Test review only</strong>
-            <span>This workspace cannot approve, reject, certify, or issue an application.</span>
+            <span>Synthetic decisions only. No official certification or issuance.</span>
         </div>
 
         @php($selected = $this->selected)
@@ -17,7 +17,7 @@
             @php($copy = $this->submittedCopy)
             <a class="intake-back" href="{{ static::getUrl() }}">&larr; Assigned applications</a>
             <header class="intake-page-heading">
-                <div><p class="intake-eyebrow">{{ $selected->manifest->module->name }}</p><h1>{{ $selected->institution->display_name ?: $selected->institution->name }}</h1><div class="intake-meta"><span class="intake-status">{{ match($selected->state) { 'submitted'=>'Ready for screening', 'resubmitted'=>'Corrections received', 'under_screening'=>'Screening in progress', 'correction_requested'=>'Waiting for applicant', default=>'View application' } }}</span><span>Submitted test application</span></div></div>
+                <div><p class="intake-eyebrow">{{ $selected->manifest->module->name }}</p><h1>{{ $selected->institution->display_name ?: $selected->institution->name }}</h1><div class="intake-meta"><span class="intake-status">{{ match($selected->state) { 'submitted'=>'Ready for screening', 'resubmitted'=>'Corrections received', 'under_screening'=>'Screening in progress', 'correction_requested'=>'Waiting for applicant', 'approved'=>'Approved (demonstration)', 'rejected'=>'Rejected (demonstration)', default=>'View application' } }}</span><span>Submitted test application</span></div></div>
                 @if (in_array($selected->state, ['submitted', 'resubmitted'], true) && auth()->user()->can('applications.screening.start'))
                     <button class="intake-primary-action" wire:click="beginScreening" wire:loading.attr="disabled" wire:target="beginScreening" wire:confirm="Start screening this exact synthetic submission?"><span wire:loading.remove wire:target="beginScreening">Start screening</span><span wire:loading wire:target="beginScreening">Starting&hellip;</span></button>
                 @endif
@@ -92,6 +92,7 @@
             @if(auth()->user()->can('applications.corrections.request') && $selected->correctionRequests->isNotEmpty())
                 <details class="intake-panel intake-history"><summary>Correction instructions sent</summary><ol>@foreach($selected->correctionRequests as $request)<li><div><strong>{{ $request->applicant_summary }}</strong><ul>@foreach($request->items as $item)<li>{{ $item->instruction }}</li>@endforeach</ul></div><time>{{ $request->requested_at->timezone('Asia/Manila')->format('M j, Y g:i A') }}</time></li>@endforeach</ol></details>
             @endif
+            @include('filament.pages.partials.application-decision-stages')
             <details class="intake-panel intake-history"><summary>Status history <span>{{ $selected->history->count() }} events</span></summary><ol>@foreach($selected->history as $event)<li><span>{{ $event->applicant_summary }}</span><time>{{ $event->created_at->timezone('Asia/Manila')->format('M j, Y g:i A') }}</time></li>@endforeach</ol></details>
         @endif
     </div>

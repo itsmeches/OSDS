@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "module": "registration",
+      "outcome": "approved",
+      "chiefReturn": true,
+      "missingPrerequisiteHidden": true,
+      "immutableTerminal": true,
+      "applicantNotesPrivate": true,
+      "passed": true
+    },
+    {
+      "module": "acsa",
+      "outcome": "rejected",
+      "chiefReturn": true,
+      "missingPrerequisiteHidden": true,
+      "immutableTerminal": true,
+      "applicantNotesPrivate": true,
+      "passed": true
+    },
+    {
+      "mountedPermissionLoss": true,
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

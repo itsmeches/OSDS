@@ -1,0 +1,87 @@
+{
+    "authorized": {
+        "regions_before": 0,
+        "region": {
+            "id": 286,
+            "public_id": "f233753b-872c-43e3-887c-4c69b60599e4",
+            "code": "K5-CONTROL",
+            "name": "Disposable K5 region",
+            "is_active": false
+        },
+        "regional_grants": 0,
+        "nationwide_grants": 0,
+        "audit_before": 1,
+        "audit_after": 2,
+        "audit": {
+            "action": "App\\Models\\Region.created",
+            "resource_type": "App\\Models\\Region",
+            "resource_id": "286",
+            "actor_id": 818,
+            "region_id": null,
+            "institution_id": null,
+            "outcome": "success",
+            "metadata": {
+                "changed_fields": []
+            }
+        }
+    },
+    "denied-initial-permission": {
+        "status": 403,
+        "regions": 0,
+        "action_audit_delta": 0
+    },
+    "denied-mounted-permission": {
+        "status": 403,
+        "regions": 0,
+        "action_audit_delta": 0
+    },
+    "denied-inactive": {
+        "status": 403,
+        "regions": 0,
+        "action_audit_delta": 0
+    },
+    "denied-deactivated": {
+        "status": 403,
+        "regions": 0,
+        "action_audit_delta": 0
+    },
+    "denied-panel-http": {
+        "status": 403,
+        "regions": 0,
+        "action_audit_delta": 0
+    },
+    "invalid-input": {
+        "cases": 5,
+        "existing_region": {
+            "id": 287,
+            "code": "K5-EXISTS",
+            "name": "Disposable K5 uniqueness fixture",
+            "is_active": true
+        },
+        "new_regions": 0,
+        "action_audit_delta": 0
+    },
+    "default-and-forged": {
+        "region": {
+            "id": 288,
+            "public_id": "41e07c2d-f4ae-4528-8480-296981e75284",
+            "code": "K5-CONTROL",
+            "name": "Disposable K5 region",
+            "is_active": true
+        },
+        "audit_actor": 825,
+        "audit_region_id": null,
+        "audit_institution_id": null,
+        "audit_delta": 1,
+        "forged_timestamp_ignored": true
+    },
+    "audit_fault": {
+        "regions_before": 0,
+        "regions_after": 0,
+        "audit_before": 1,
+        "audit_after": 1,
+        "persisted_region": null,
+        "sink_reached_once": true,
+        "exception_marker": "ISOLATED_K5_AUDIT_FAILURE"
+    }
+}

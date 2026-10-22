@@ -1,0 +1,7 @@
+{
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Demonstration decision stage recorded', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Demonstration decision stage recorded', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Demonstration decision stage recorded', { exact: true })\n",
+  "url": "http://127.0.0.1:8037/admin/synthetic-application-intake?application=ff2242c7-daad-434f-9239-fb0f80582deb"
+}

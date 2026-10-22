@@ -60,4 +60,9 @@ class Application extends Model
     {
         return $this->hasMany(ApplicationStateHistory::class);
     }
+
+    public function decisionStages(): HasMany
+    {
+        return $this->hasMany(ApplicationDecisionStage::class)->orderBy('id');
+    }
 }

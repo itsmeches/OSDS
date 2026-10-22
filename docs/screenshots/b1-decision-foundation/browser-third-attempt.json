@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "module": "registration",
+      "outcome": "approved",
+      "chiefReturn": true,
+      "missingPrerequisiteHidden": true,
+      "immutableTerminal": true,
+      "applicantNotesPrivate": true,
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failure": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Demonstration decision stage recorded', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Demonstration decision stage recorded', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Demonstration decision stage recorded', { exact: true })\n",
+  "url": "http://127.0.0.1:8037/admin/synthetic-application-intake?application=49892ad0-f92d-4b67-8f8d-8d5667951036"
+}

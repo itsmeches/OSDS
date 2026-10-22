@@ -1,0 +1,116 @@
+{
+    "authorized": {
+        "row": {
+            "id": 64,
+            "institution_id": 68,
+            "module_id": 137,
+            "granted_by": 439,
+            "starts_at": "2026-10-22T06:52:59.000000Z",
+            "ends_at": "2026-10-23T07:52:59.000000Z",
+            "revoked_at": null,
+            "revoked_by": null,
+            "reason": "Disposable K2 eligibility control",
+            "created_at": "2026-10-22T07:53:00.000000Z",
+            "updated_at": "2026-10-22T07:53:00.000000Z"
+        },
+        "audit_before": 5,
+        "audit_after": 5,
+        "actor_regional_grants": 0,
+        "actor_representations": 0
+    },
+    "initial-denials": {
+        "permissionless_status": 403,
+        "guest_status": 302,
+        "grant_count": 0,
+        "route_audit_delta": 0,
+        "logout_event": "App\\Models\\User.updated",
+        "logout_audit_delta": 1
+    },
+    "denied-permission": {
+        "grant_count": 0,
+        "audit_delta": 0,
+        "status": 403
+    },
+    "denied-inactive": {
+        "grant_count": 0,
+        "audit_delta": 0,
+        "status": 403
+    },
+    "denied-deactivated": {
+        "grant_count": 0,
+        "audit_delta": 0,
+        "status": 403
+    },
+    "denied-production": {
+        "grant_count": 0,
+        "audit_delta": 0,
+        "status": 403
+    },
+    "denied-panel": {
+        "grant_count": 0,
+        "audit_delta": 0,
+        "status": 403
+    },
+    "invalid-real-institution": {
+        "field": "institution_id",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-missing-institution": {
+        "field": "institution_id",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-inactive-module": {
+        "field": "module_id",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-missing-module": {
+        "field": "module_id",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-missing-start": {
+        "field": "starts_at",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-end-before-start": {
+        "field": "ends_at",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-missing-reason": {
+        "field": "reason",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "invalid-long-reason": {
+        "field": "reason",
+        "grant_count": 0,
+        "audit_delta": 0
+    },
+    "forged": {
+        "row": {
+            "id": 65,
+            "institution_id": 98,
+            "module_id": 167,
+            "granted_by": 469,
+            "starts_at": "2026-10-22T06:53:24.000000Z",
+            "ends_at": "2026-10-23T07:53:24.000000Z",
+            "revoked_at": null,
+            "revoked_by": null,
+            "reason": "Disposable K2 eligibility control",
+            "created_at": "2026-10-22T07:53:25.000000Z",
+            "updated_at": "2026-10-22T07:53:25.000000Z"
+        },
+        "audit_delta": 0
+    },
+    "duplicate": {
+        "grant_count": 1,
+        "original_unchanged": true,
+        "constraint": "active_applicant_sandbox_eligibility_unique",
+        "audit_delta": 0
+    }
+}

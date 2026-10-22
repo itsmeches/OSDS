@@ -1,5 +1,7 @@
 # Dynamic downloadable forms — Implementation and verification
 
+See the [22 October Windows upload correction](osds-downloadable-forms-upload-fix.md) for the normal Artisan server's temporary-directory and PHP-size-limit fixes, plus actual DOCX/ZIP upload recovery evidence.
+
 ## ZIP import addition — 21 October 2026
 
 OSDS can now open **Downloadable forms → Import forms from a ZIP**, choose the supplied archive, enter a version label and select **Import and publish forms**. Each PDF/DOCX/XLSX becomes a separate new catalogue entry with its filename as title and General / both modules applicability. This does not replace existing entries or infer authoritative module applicability. Individual replacement remains available for later changes. CHEDRO and applicants cannot import.

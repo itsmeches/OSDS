@@ -44,6 +44,62 @@ class DownloadableFormsTest extends TestCase
         return $actor;
     }
 
+    public function test_multipart_zip_route_imports_original_five_forms_without_livewire_temporary_state(): void
+    {
+        $this->manager();
+        $before = AuditEvent::count();
+        $archive = UploadedFile::fake()->createWithContent('forms.zip', file_get_contents(base_path('docs/source-artifacts/downloadable-forms/original-downloadable-forms.zip')));
+        $this->post(route('forms.import-zip'), ['archive' => $archive, 'archiveVersion' => 'Native upload'])
+            ->assertRedirect(DownloadableForms::getUrl())->assertSessionHas('zip_import_success', '5 forms imported');
+        $this->assertSame(5, DownloadableForm::count());
+        $this->assertSame($before + 5, AuditEvent::count());
+        foreach (DownloadableForm::with('currentVersion')->get() as $form) {
+            Storage::disk('local')->assertExists($form->currentVersion->path);
+            $this->assertSame('Native upload', $form->currentVersion->version_label);
+        }
+    }
+
+    public function test_multipart_zip_route_rejects_missing_fields_and_non_manager(): void
+    {
+        $this->manager();
+        $this->post(route('forms.import-zip'))->assertSessionHasErrors(['archive', 'archiveVersion']);
+        $reader = User::factory()->create(['is_synthetic' => true]);
+        $reader->assignRole('CHEDRO');
+        $this->actingAs($reader)->post(route('forms.import-zip'))->assertForbidden();
+        $this->assertSame(0, DownloadableForm::count());
+    }
+
+    public function test_multipart_zip_route_audit_failure_rolls_back_and_returns_redacted_feedback(): void
+    {
+        $this->manager();
+        $before = AuditEvent::count();
+        $recorder = new AuditRecorder;
+        $this->mock(AuditRecorder::class, function ($mock) use ($recorder): void {
+            $mock->shouldReceive('record')->once()->andReturnUsing(function (...$arguments) use ($recorder) {
+                $recorder->record(...$arguments);
+                throw new RuntimeException('private ZIP fault marker');
+            });
+        });
+        $archive = UploadedFile::fake()->createWithContent('forms.zip', file_get_contents(base_path('docs/source-artifacts/downloadable-forms/original-downloadable-forms.zip')));
+        $this->post(route('forms.import-zip'), ['archive' => $archive, 'archiveVersion' => 'Retain this label'])
+            ->assertRedirect(DownloadableForms::getUrl())->assertSessionHasErrors('archive')->assertSessionHasInput('archiveVersion', 'Retain this label');
+        $this->assertStringNotContainsString('private ZIP fault marker', session('errors')->first('archive'));
+        $this->assertSame(0, DownloadableForm::count());
+        $this->assertSame($before, AuditEvent::count());
+        $this->assertSame([], Storage::disk('local')->allFiles());
+    }
+
+    public function test_zip_import_action_reports_missing_file_and_version_without_persistence(): void
+    {
+        $actor = $this->manager();
+        $before = AuditEvent::count();
+        Livewire::actingAs($actor)->test(DownloadableForms::class)->call('importArchive')->assertHasErrors(['archive', 'archiveVersion']);
+        $archive = UploadedFile::fake()->createWithContent('forms.zip', file_get_contents(base_path('docs/source-artifacts/downloadable-forms/original-downloadable-forms.zip')));
+        Livewire::actingAs($actor)->test(DownloadableForms::class)->set('archive', $archive)->call('importArchive')->assertHasErrors('archiveVersion');
+        $this->assertSame(0, DownloadableForm::count());
+        $this->assertSame($before, AuditEvent::count());
+    }
+
     public function test_actual_page_imports_original_zip_as_five_separate_downloads(): void
     {
         $actor = $this->manager();

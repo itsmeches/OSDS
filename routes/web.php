@@ -5,10 +5,12 @@ use App\Http\Controllers\ApplicantIssuanceDemoController;
 use App\Http\Controllers\ApplicantPortalController;
 use App\Http\Controllers\DemonstrationDocumentController;
 use App\Http\Controllers\DownloadableFormController;
+use App\Http\Controllers\DownloadableFormZipImportController;
 use App\Http\Controllers\EvidenceLinkController;
 use App\Http\Controllers\SandboxQuestionnaireController;
 use App\Http\Middleware\EnsureAccountIsActive;
 use App\Livewire\Applicant\DraftEditor;
+use App\Livewire\Applicant\IssuanceRequests;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,6 +23,7 @@ Route::middleware(['auth', EnsureAccountIsActive::class, 'can:questionnaires.pre
 
 Route::get('/applicant/login', [ApplicantAuthController::class, 'create'])->name('applicant.login');
 Route::middleware(['auth', EnsureAccountIsActive::class])->group(function () {
+    Route::post('/admin/downloadable-forms/import-zip', [DownloadableFormZipImportController::class, 'store'])->name('forms.import-zip');
     Route::get('/applicant/issuance-demo', [ApplicantIssuanceDemoController::class, 'show'])->name('applicant.issuance-demo');
     Route::post('/applicant/issuance-demo/preview', [ApplicantIssuanceDemoController::class, 'preview'])->name('applicant.issuance-demo.preview');
     Route::post('/document-previews/issuance', [DemonstrationDocumentController::class, 'issuance'])->name('documents.demonstration.issuance');
@@ -36,6 +39,7 @@ Route::middleware(['auth', EnsureAccountIsActive::class])->prefix('applicant')->
     Route::post('/drafts', [ApplicantPortalController::class, 'createDraft'])->name('drafts.create');
     Route::get('/drafts/{draft:public_id}', DraftEditor::class)->name('drafts.edit');
     Route::get('/applications/{application:public_id}', [ApplicantPortalController::class, 'show'])->name('applications.show');
+    Route::get('/issuance-requests', IssuanceRequests::class)->name('issuance-requests');
     Route::get('/evidence/{reference:public_id}/open', [EvidenceLinkController::class, 'own'])->name('evidence.open');
     Route::get('/account', [ApplicantPortalController::class, 'account'])->name('account');
 });

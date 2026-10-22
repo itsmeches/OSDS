@@ -1,0 +1,26 @@
+<x-filament-panels::page>
+    <section class="intake-panel"><h2>Case-linked demonstration requests</h2><p>No certificate or PDF is generated. Use the existing questionnaire builder and exact configuration review before creating a version here. Intake publication is separate.</p><a href="{{ \App\Filament\Pages\Questionnaires::getUrl() }}">Questionnaires and configuration review</a></section>
+    @if($errors->any())<div role="alert" class="intake-error">@foreach($errors->all() as $error)<p>{{ $error }}</p>@endforeach</div>@endif
+    @can('issuance.definitions.manage')
+    <section class="intake-panel"><h2>Create a version</h2><div class="intake-form-grid">
+        <label class="intake-field"><span>Definition title</span><input wire:model="titleInput" maxlength="160"></label>
+        <label class="intake-field"><span>Instructions</span><textarea wire:model="instructions" maxlength="2000"></textarea></label>
+        <label class="intake-field"><span>Module for new questionnaire</span><select wire:model="moduleId"><option value="">Choose</option>@foreach($modules as $module)<option value="{{ $module->id }}">{{ $module->name }}</option>@endforeach</select></label>
+        <button class="intake-primary-action" wire:click="createPair" wire:loading.attr="disabled">Create supplementary questionnaire in builder</button>
+        <label class="intake-field"><span>Approved supplementary configuration</span><select wire:model="approvalId"><option value="">Choose reviewed pair</option>@foreach($approvals as $approval)<option value="{{ $approval->id }}">{{ $approval->request->module->name }} — {{ $approval->request->formVersion->definition->name }} v{{ $approval->request->formVersion->version_number }} — approval {{ $approval->id }}</option>@endforeach</select></label>
+        <label class="intake-field"><span>Approved application questionnaire to bind</span><select wire:model.live="sourceFormId"><option value="">Choose source</option>@foreach($sources as $source)<option value="{{ $source->id }}">{{ $source->definition->module->name }} — {{ $source->definition->name }} v{{ $source->version_number }} ({{ $source->id }})</option>@endforeach</select></label>
+        <label class="intake-field"><span>Approved organization-name answer</span><select wire:model="nameQuestionId"><option value="">Choose answer</option>@foreach($bindings ?? [] as $q)<option value="{{ $q->id }}">{{ $q->label }}</option>@endforeach</select></label>
+        <label class="intake-field"><span>Approved address answer</span><select wire:model="addressQuestionId"><option value="">Choose answer</option>@foreach($bindings ?? [] as $q)<option value="{{ $q->id }}">{{ $q->label }}</option>@endforeach</select></label>
+    </div><p>Document requirements reuse evidence already in the exact approved submission by requirement key. This feature accepts no new supplementary uploads or public file links.</p><button class="intake-primary-action" wire:click="createDefinition" wire:loading.attr="disabled">Save immutable definition draft</button></section>
+    @endcan
+    <section class="intake-panel"><h2>Versions and publication history</h2>@foreach($definitions as $definition)<article wire:key="issuance-definition-{{ $definition->id }}"><h3>{{ $definition->title }} — version {{ $definition->version }} — {{ $definition->state }}</h3><p>{{ $definition->instructions }}</p><button wire:click="$set('previewId', {{ $definition->id }})">Preview version {{ $definition->version }}</button>
+        @if($definition->state==='draft')@can('issuance.definitions.review')<button wire:click="advanceDefinition({{ $definition->id }},{{ $definition->lock_version }},'reviewed')" wire:loading.attr="disabled">Record definition review</button>@endcan
+        @endif
+        @if($definition->state==='reviewed')@can('issuance.definitions.publish')<button wire:click="advanceDefinition({{ $definition->id }},{{ $definition->lock_version }},'published')" wire:loading.attr="disabled">Publish definition</button>@endcan
+        @endif
+        @if($definition->state==='published')@can('issuance.definitions.publish')<button wire:click="advanceDefinition({{ $definition->id }},{{ $definition->lock_version }},'withdrawn')" wire:loading.attr="disabled" wire:confirm="Withdraw this version? Existing submitted requests remain immutable.">Withdraw definition</button>@endcan
+        @endif
+        <details><summary>History for version {{ $definition->version }}</summary><ol>@foreach(\Illuminate\Support\Facades\DB::table('issuance_history')->where('definition_id',$definition->id)->whereNull('request_id')->orderBy('id')->get() as $event)<li>{{ $event->event }} · Actor {{ $event->actor_id }} · {{ $event->created_at }}</li>@endforeach</ol></details>
+    </article>@endforeach{{ $definitions->links() }}</section>
+    @if($preview)<section class="intake-panel"><h2>Preview: {{ $preview->title }}</h2><p>Preview only. No request or certificate is created.</p><p>{{ $preview->instructions }}</p>@foreach($preview->definition['questions'] as $q)<x-questionnaires.field :question="$q + ['is_required'=>$q['required'], 'help_text'=>$q['help']]" :disabled="true" />@endforeach<h3>Approved-evidence requirements</h3>@foreach($preview->definition['requirements'] as $r)<p>{{ $r['label'] }} — {{ $r['instructions'] }}</p>@endforeach</section>@endif
+</x-filament-panels::page>

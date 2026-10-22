@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "module": "registration",
+      "outcome": "approved",
+      "chiefReturn": true,
+      "missingPrerequisiteHidden": true,
+      "immutableTerminal": true,
+      "applicantNotesPrivate": true,
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "failure": "TimeoutError: page.waitForURL: Timeout 60000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"domcontentloaded\"\n============================================================",
+  "url": "http://127.0.0.1:8037/admin/login"
+}

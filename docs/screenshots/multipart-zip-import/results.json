@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "invalid": {
+    "fields": [
+      {
+        "id": "",
+        "required": false,
+        "valid": true
+      },
+      {
+        "id": "archive-version",
+        "required": true,
+        "valid": true
+      },
+      {
+        "id": "forms-archive",
+        "required": true,
+        "valid": true,
+        "files": 1
+      },
+      {
+        "id": "",
+        "valid": true
+      }
+    ],
+    "parentForm": null
+  },
+  "requests": [
+    "/livewire-6d26c714/update",
+    "/admin/downloadable-forms/import-zip"
+  ],
+  "pass": true
+}

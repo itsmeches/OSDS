@@ -1,0 +1,501 @@
+[
+  {
+    "mode": "A",
+    "passed": true,
+    "fixture": {
+      "case": 436,
+      "module": "registration"
+    },
+    "first": {
+      "pid": 15808,
+      "depth": 1
+    },
+    "second": {
+      "pid": 11296
+    },
+    "observedDatabaseWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "A",
+        "outcome": "committed"
+      },
+      {
+        "mode": "B",
+        "outcome": "stale"
+      }
+    ],
+    "before": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 4,
+          "submission_id": 387,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 726
+        },
+        {
+          "id": 5,
+          "submission_id": 387,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 727
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "during": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 4,
+          "submission_id": 387,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 726
+        },
+        {
+          "id": 5,
+          "submission_id": 387,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 727
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "after": {
+      "state": "approved",
+      "final_decision_id": 6,
+      "stages": [
+        {
+          "id": 4,
+          "submission_id": 387,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 726
+        },
+        {
+          "id": 5,
+          "submission_id": 387,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 727
+        },
+        {
+          "id": 6,
+          "submission_id": 387,
+          "stage_role": "director",
+          "action": "approved",
+          "actor_id": 728
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded",
+        "application.approved"
+      ]
+    }
+  },
+  {
+    "mode": "permission",
+    "passed": true,
+    "fixture": {
+      "case": 437,
+      "module": "registration"
+    },
+    "first": {
+      "pid": 14424
+    },
+    "second": {
+      "pid": 164
+    },
+    "observedDatabaseWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "permission",
+        "outcome": "authority_changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 7,
+          "submission_id": 388,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 733
+        },
+        {
+          "id": 8,
+          "submission_id": 388,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 734
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "during": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 7,
+          "submission_id": 388,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 733
+        },
+        {
+          "id": 8,
+          "submission_id": 388,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 734
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "after": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 7,
+          "submission_id": 388,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 733
+        },
+        {
+          "id": 8,
+          "submission_id": 388,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 734
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    }
+  },
+  {
+    "mode": "inactive",
+    "passed": true,
+    "fixture": {
+      "case": 438,
+      "module": "registration"
+    },
+    "first": {
+      "pid": 22912
+    },
+    "second": {
+      "pid": 5900
+    },
+    "observedDatabaseWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "inactive",
+        "outcome": "authority_changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 9,
+          "submission_id": 389,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 740
+        },
+        {
+          "id": 10,
+          "submission_id": 389,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 741
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "during": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 9,
+          "submission_id": 389,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 740
+        },
+        {
+          "id": 10,
+          "submission_id": 389,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 741
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "after": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 9,
+          "submission_id": 389,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 740
+        },
+        {
+          "id": 10,
+          "submission_id": 389,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 741
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    }
+  },
+  {
+    "mode": "assignment",
+    "passed": true,
+    "fixture": {
+      "case": 439,
+      "module": "registration"
+    },
+    "first": {
+      "pid": 22720
+    },
+    "second": {
+      "pid": 28636
+    },
+    "observedDatabaseWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "assignment",
+        "outcome": "authority_changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 11,
+          "submission_id": 390,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 747
+        },
+        {
+          "id": 12,
+          "submission_id": 390,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 748
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "during": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 11,
+          "submission_id": 390,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 747
+        },
+        {
+          "id": 12,
+          "submission_id": 390,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 748
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "after": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 11,
+          "submission_id": 390,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 747
+        },
+        {
+          "id": 12,
+          "submission_id": 390,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 748
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    }
+  },
+  {
+    "mode": "scope",
+    "passed": true,
+    "fixture": {
+      "case": 440,
+      "module": "registration"
+    },
+    "first": {
+      "pid": 23344
+    },
+    "second": {
+      "pid": 8492
+    },
+    "observedDatabaseWait": true,
+    "uncommittedStateInvisible": true,
+    "outcomes": [
+      {
+        "mode": "scope",
+        "outcome": "authority_changed"
+      },
+      {
+        "mode": "B",
+        "outcome": "denied"
+      }
+    ],
+    "before": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 13,
+          "submission_id": 391,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 754
+        },
+        {
+          "id": 14,
+          "submission_id": 391,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 755
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "during": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 13,
+          "submission_id": 391,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 754
+        },
+        {
+          "id": 14,
+          "submission_id": 391,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 755
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    },
+    "after": {
+      "state": "under_screening",
+      "final_decision_id": null,
+      "stages": [
+        {
+          "id": 13,
+          "submission_id": 391,
+          "stage_role": "evaluator",
+          "action": "evaluated",
+          "actor_id": 754
+        },
+        {
+          "id": 14,
+          "submission_id": 391,
+          "stage_role": "chief",
+          "action": "recommended",
+          "actor_id": 755
+        }
+      ],
+      "audits": [
+        "application.evaluation_recorded",
+        "application.recommendation_recorded"
+      ]
+    }
+  }
+]

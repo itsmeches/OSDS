@@ -8,6 +8,8 @@
     @if($application->currentWorkingRevision && !$ended)<a class="primary button" href="{{ route('applicant.drafts.edit', $application->currentWorkingRevision->draft) }}">Make corrections</a>@endif</section>
 @elseif($application->state === 'draft')
     <section class="portal-card tracking-summary"><h2>Your draft has not been sent</h2><p>Complete the questionnaire and required document links, then review your test application.</p>@if($application->currentWorkingRevision && !$ended)<a class="primary button" href="{{ route('applicant.drafts.edit', $application->currentWorkingRevision->draft) }}">Resume draft</a>@endif</section>
+@elseif(in_array($application->state, ['approved','rejected'], true))
+    <section class="portal-card tracking-summary"><h2>Demonstration application {{ $application->state }}</h2><p>The final decision applies to your exact saved submission. See the applicant-facing summary in the history below.</p><p class="field-help">Synthetic demonstration only. No certificate, official approval or issuance is produced here.</p></section>
 @else
     <section class="portal-card tracking-summary"><h2>{{ $application->state === 'resubmitted' ? 'Your corrections have been sent' : 'CHEDRO has your test copy' }}</h2><p>{{ $application->state === 'under_screening' ? 'A reviewer is screening your saved copy. If changes are needed, they will appear here.' : 'Your saved copy is waiting for CHEDRO screening. You do not need to send it again.' }}</p><p class="field-help">This is a synthetic test workflow, not an official decision or issuance.</p></section>
 @endif

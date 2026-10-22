@@ -1,5 +1,6 @@
 @extends('layouts.applicant')
 @section('content')
+@if(app(\App\Services\Applicants\ApplicantSandboxGuard::class)->allowed())<p class="notice">This unlinked layout preview is not an issuance request. <a href="{{ route('applicant.issuance-requests') }}">Open case-linked issuance requests</a> for the approved-case workflow.</p>@endif
 <header class="page-heading"><div><p class="eyebrow">Demonstration only</p><h1>{{ $form?->definition['title'] ?? 'Demonstration issuance form' }}</h1><p>No eligibility, approval or official certificate is granted.</p></div></header>
 <div class="downloads-actions"><a class="button secondary" href="{{ route('applicant.forms') }}">Download blank forms</a></div>
 <div class="downloads-applicant-note"><strong>DRAFT / DEMONSTRATION ONLY</strong><p>Use fictional details. This separate preview does not submit an application or alter a case. Answers are not saved as a submission; keep this tab open while reviewing or printing the result.</p></div>

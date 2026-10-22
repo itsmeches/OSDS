@@ -1,0 +1,55 @@
+{
+    "authorized": {
+        "institution": {
+            "id": 112,
+            "public_id": "53994d07-22b3-4875-8d14-5c5338661ff1",
+            "name": "Disposable K3 institution",
+            "official_id": "K3-CONTROL",
+            "primary_region_id": 175,
+            "status": "inactive",
+            "organization_type": "hei",
+            "is_synthetic": false
+        },
+        "audit_before": 3,
+        "audit_after": 4,
+        "audit": {
+            "action": "App\\Models\\Institution.created",
+            "resource_type": "App\\Models\\Institution",
+            "resource_id": "112",
+            "actor_id": 589,
+            "institution_id": 112,
+            "region_id": 175,
+            "outcome": "success",
+            "metadata": {
+                "changed_fields": []
+            }
+        }
+    },
+    "denied": {
+        "permission_status": 403,
+        "inactive_status": 403,
+        "institutions": 0,
+        "action_audit_delta": 0
+    },
+    "input_controls": {
+        "invalid_cases": 5,
+        "rejected_case_institution_delta": 0,
+        "rejected_case_audit_delta": 0,
+        "duplicate_official_id": "validation rejected",
+        "forged_state": {
+            "organization_type": "hei",
+            "is_synthetic": false,
+            "public_id": "4deef047-e1c0-4ba0-a319-b3b7905c16d5"
+        },
+        "audit_actor": 591
+    },
+    "audit_fault": {
+        "institutions_before": 0,
+        "institutions_after": 0,
+        "audit_before": 3,
+        "audit_after": 3,
+        "persisted_institution": null,
+        "expected_sink_reached": true,
+        "exception_marker": "ISOLATED_K3_AUDIT_FAILURE"
+    }
+}

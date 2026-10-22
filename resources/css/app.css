@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+.issuance-requests-workspace {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.issuance-requests-workspace :is(dd, dl, details, .portal-card) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 .questionnaire-field { display: grid; gap: .5rem; min-inline-size: 0; }
 .questionnaire-field-label { font-weight: 650; color: var(--osds-color-text); }
 .questionnaire-help { margin: 0; color: var(--osds-color-muted); font-size: .875rem; }
