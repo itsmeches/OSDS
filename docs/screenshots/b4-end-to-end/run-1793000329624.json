@@ -1,0 +1,12 @@
+{
+  "mode": "repair-author",
+  "checks": [
+    {
+      "module": "acsa",
+      "stage": "corrected labels saved and submitted",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

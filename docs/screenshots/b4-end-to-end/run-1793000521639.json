@@ -1,0 +1,194 @@
+{
+  "mode": "fresh-author",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "fresh saved/reloaded distinct question labels verified before review",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "fresh saved/reloaded distinct question labels verified before review",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-verified-author-light",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "targets": [
+            [
+              "button[aria-label=\"Move section 1 up\"]"
+            ],
+            [
+              "button[aria-label=\"Move section 1 down\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question up\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question down\"]"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "targets": [
+            [
+              ".focused-builder-main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "registration-verified-author-dark-mobile",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "targets": [
+            [
+              "button[aria-label=\"Move selected question up\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question down\"]"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "targets": [
+            [
+              ".focused-builder-main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "acsa-verified-author-light",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "targets": [
+            [
+              "button[aria-label=\"Move section 1 up\"]"
+            ],
+            [
+              "button[aria-label=\"Move section 1 down\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question up\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question down\"]"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "targets": [
+            [
+              ".focused-builder-main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "acsa-verified-author-dark-mobile",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "targets": [
+            [
+              "button[aria-label=\"Move selected question up\"]"
+            ],
+            [
+              "button[aria-label=\"Move selected question down\"]"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-main-is-top-level",
+          "targets": [
+            [
+              ".focused-builder-main"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-no-duplicate-main",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        },
+        {
+          "id": "landmark-unique",
+          "targets": [
+            [
+              "#fi-main-content"
+            ]
+          ]
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

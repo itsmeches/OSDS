@@ -1,0 +1,14 @@
+{
+  "mode": "repair-author",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "corrected labels saved and submitted",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": [],
+  "failure": "TimeoutError: locator.click: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.builder-outline-item').nth(2)\u001b[22m\n",
+  "url": "/admin/form-builder/582/582"
+}

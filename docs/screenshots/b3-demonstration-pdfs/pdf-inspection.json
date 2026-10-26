@@ -1,0 +1,46 @@
+[
+  {
+    "module": "registration",
+    "pages": [
+      {
+        "page": 1,
+        "watermark": true,
+        "disclaimer": true,
+        "width": 612,
+        "height": 792
+      },
+      {
+        "page": 2,
+        "watermark": true,
+        "disclaimer": true,
+        "width": 612,
+        "height": 792
+      }
+    ],
+    "checksum": "291defcda3984f3de58f95d5bfa38069cdf928401dc49e5b8fa4eed8f71b825b",
+    "size": 49605,
+    "passed": true
+  },
+  {
+    "module": "acsa",
+    "pages": [
+      {
+        "page": 1,
+        "watermark": true,
+        "disclaimer": true,
+        "width": 612,
+        "height": 792
+      },
+      {
+        "page": 2,
+        "watermark": true,
+        "disclaimer": true,
+        "width": 612,
+        "height": 792
+      }
+    ],
+    "checksum": "9b7933fc8d7ff5456288d0f55f3067497e2d621758741dd1ab1822356639b559",
+    "size": 50022,
+    "passed": true
+  }
+]

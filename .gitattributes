@@ -6,6 +6,10 @@
 *.md diff=markdown
 *.php diff=php
 
+# Preserve checksum-bearing rehearsal evidence byte-for-byte.
+docs/screenshots/b3-demonstration-pdfs/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/screenshots/b4-end-to-end/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore

@@ -1,0 +1,16 @@
+{
+  "namespace": "b4_20261026_01",
+  "database": "osds_ui_browser_test",
+  "checks": [
+    {
+      "name": "COR questionnaire created through real UI",
+      "status": "PASS",
+      "url": "/admin/form-builder/581/581"
+    }
+  ],
+  "errors": [],
+  "failure": {
+    "message": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Draft saved', { exact: true }).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Draft saved', { exact: true }).first() with timeout 5000ms\n  - waiting for getByText('Draft saved', { exact: true }).first()\n",
+    "url": "/admin/form-builder/581/581"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "mode": "withdrawal-probe",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "withdrawn template rejected from mounted generation UI, zero document rows",
+      "status": "PASS"
+    },
+    {
+      "module": "registration",
+      "stage": "replacement template created/reviewed/published through UI",
+      "version": 37,
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "withdrawn personnel rejected from mounted generation UI, zero document rows",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "replacement personnel created/reviewed/published through UI",
+      "version": 38,
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

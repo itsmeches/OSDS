@@ -1,0 +1,5 @@
+{
+  "status": "FAIL",
+  "assertion": "PDF text includes application.public_id",
+  "finding": "The inspector expected a public UUID. The existing renderer prints immutable numeric case, submission, decision, template and personnel identifiers. Inspector corrected to check those exact source bindings; no renderer or PDF changed."
+}

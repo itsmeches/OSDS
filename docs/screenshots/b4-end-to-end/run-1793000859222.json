@@ -1,0 +1,8 @@
+{
+  "mode": "applicant",
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "Error: locator.selectOption: Error: strict mode violation: getByLabel('Organization') resolved to 2 elements:\n    1) <select required=\"\" name=\"institution_id\" data-organization-select=\"\">…</select> aka getByLabel('Organization Select')\n    2) <select disabled required=\"\" name=\"manifest_id\" data-questionnaire-select=\"\">…</select> aka getByLabel('Questionnaire Choose')\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Organization')\u001b[22m\n",
+  "url": "/applicant/start"
+}

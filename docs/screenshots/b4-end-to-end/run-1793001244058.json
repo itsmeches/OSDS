@@ -1,0 +1,43 @@
+{
+  "mode": "negative-stage",
+  "checks": [
+    {
+      "role": "south",
+      "module": "registration",
+      "stage": "scope denied",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "role": "south",
+      "module": "acsa",
+      "stage": "scope denied",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "role": "cor_only",
+      "module": "acsa",
+      "stage": "scope denied",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "role": "acsa_only",
+      "module": "registration",
+      "stage": "scope denied",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "stage": "same evaluator cannot recommend",
+      "status": "PASS"
+    },
+    {
+      "stage": "mounted Chief permission revocation denied",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

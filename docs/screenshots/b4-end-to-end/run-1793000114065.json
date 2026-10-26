@@ -1,0 +1,8 @@
+{
+  "mode": "review",
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "TimeoutError: page.waitForURL: Timeout 60000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"http://127.0.0.1:8040/admin/configuration-review-requests/284\" until \"load\"\n  navigated to \"http://127.0.0.1:8040/admin/configuration-review-requests\"\n============================================================",
+  "url": "/admin/configuration-review-requests"
+}

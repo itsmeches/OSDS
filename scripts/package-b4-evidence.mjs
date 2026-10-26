@@ -1,0 +1,32 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const dir='docs/screenshots/b4-end-to-end';
+const read=path=>JSON.parse(fs.readFileSync(path,'utf8').replace(/^\uFEFF/,''));
+const runs=fs.readdirSync(dir).filter(n=>/^run-\d+\.json$/.test(n)).sort().map(file=>({file,...read(dir+'/'+file)}));
+const latest=mode=>{const matches=runs.filter(r=>r.mode===mode&&!r.failure);assert(matches.length,'Missing successful '+mode);return matches.at(-1);};
+const modes=['author-readback','applicant','resubmit','evaluation','director','publish-definitions','issuance','generate-download'];
+const captures=modes.flatMap(mode=>latest(mode).captures.map(c=>({...c,file:c.name+'.png',source:latest(mode).file,width:c.name.includes('dark-mobile')?375:1440,theme:c.name.includes('dark-mobile')?'dark':'light',sha256:createHash('sha256').update(fs.readFileSync(dir+'/'+c.name+'.png')).digest('hex')})));
+assert.equal(captures.length,32);assert.equal(new Set(captures.map(c=>c.name)).size,32);
+const observation=JSON.parse(execFileSync(process.env.TEMP+'/osds-phase1-tools/php/php.exe',['scripts/Prepare-B4.php','inspect'],{encoding:'utf8'}));
+assert.equal(observation.database,'osds_ui_browser_test');
+const journey=read('storage/app/private/b4/journey.json');
+const pdfs=read(dir+'/pdf-inspection.json');
+const cases=[];
+for(const module of ['registration','acsa']){
+ const application=observation.cases.find(c=>c.public_id===journey[module].case);assert(application);assert.equal(application.state,'approved');assert.equal(application.submissions.length,2);
+ const final=application.decision_stages.find(s=>s.id===application.final_decision_id);assert.equal(final.action,'approved');assert.equal(final.submission_id,application.current_submission_id);
+ const current=application.decision_stages.filter(s=>s.submission_id===application.current_submission_id);
+ const roles=['evaluator','chief','director'].map(role=>{const stage=current.find(s=>s.stage_role===role);assert(stage);return {role,actor:stage.actor_id,stage:stage.id};});assert.equal(new Set(roles.map(s=>s.actor)).size,3);
+ const requests=observation.requests.filter(r=>r.application_id===application.id&&r.state==='submitted');assert.equal(requests.length,1);const request=requests[0];assert.equal(request.submission_id,application.current_submission_id);assert.equal(request.decision_id,application.final_decision_id);assert.equal(request.identity_snapshot.address,'2 Revised Lane');
+ const documents=observation.documents.filter(d=>d.request_id===request.id);assert.equal(documents.length,1);const document=documents[0];assert.equal(document.state,'completed');assert.equal(document.attempt_count,1);assert.equal(document.checksum,document.actual_checksum);assert.equal(document.checksum,pdfs.find(p=>p.module===module).checksum);
+ cases.push({module,case:application.public_id,case_id:application.id,state:application.state,submissions:application.submissions.map(s=>({id:s.id,sequence:s.submission_sequence})),current_submission:application.current_submission_id,roles,request:request.public_id,definition:request.definition_id,document:document.public_id,template:document.template_id,personnel:document.personnel_id,render_attempts:document.attempt_count,checksum:document.checksum,pages:document.page_count});
+}
+const preservation=read(dir+'/preservation.json');assert.equal(preservation.source_changes.length,0);assert.equal(preservation.historical_changes.length,0);assert.equal(preservation.ten_published_json.length,10);
+const stages=['fresh-author','publish','applicant','correction','resubmit','evaluation','negative-stage','chief','director','supplementary','definitions','publish-definitions','issuance','document-config','publish-document-config','withdrawal-probe','generate-download','completed-access','author-readback'];
+const failures=captures.filter(c=>c.violations.length||c.overflow);
+const results={scope:'B4 isolated technical rehearsal; no supervisor acceptance',database:observation.database,namespace:observation.fixtures.namespace,functional_status:'PASS',accessibility_status:failures.length?'FAIL':'PASS',supervisor_status:'BLOCKED',supervisor_reason:'Actual supervisor/business review has not occurred',cases,phases:stages.map(mode=>({mode,file:latest(mode).file,checks:latest(mode).checks,uncaught_errors:latest(mode).errors})),stale_revision:read(dir+'/stale-ui-results.json'),captures:{expected:32,actual:captures.length,passed:captures.length-failures.length,failed:failures.length,overflow_count:captures.filter(c=>c.overflow).length,manifest:'capture-manifest.json'},retained_failed_attempts:runs.filter(r=>r.failure).map(r=>r.file),preservation:{source_files:preservation.source_count,historical_artifacts:preservation.historical_count,published_json:10,all_unchanged:true},limitations:['Automated sampled web accessibility failed; no runtime fixes authorized','Human accessibility, PDF accessibility/print acceptance and business acceptance remain pending','No production/nationwide capacity certification; no manual activation','Author checkpoint captures show final immutable readback; original editable and earlier theme/label attempts are retained']};
+fs.writeFileSync(dir+'/capture-manifest.json',JSON.stringify(captures,null,2));
+fs.writeFileSync(dir+'/browser-results.json',JSON.stringify(results,null,2));
+console.log(JSON.stringify({functional:results.functional_status,accessibility:results.accessibility_status,captures:results.captures,main_cases:cases.length}));

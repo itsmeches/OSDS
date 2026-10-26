@@ -17,5 +17,10 @@
     },
     "optionalDependencies": {
         "@laravel/multiplex": "^0.4.1"
+    },
+    "dependencies": {
+        "pdf-lib": "^1.17.1",
+        "pdfjs-dist": "^6.4.299",
+        "playwright": "^1.64.1"
     }
 }

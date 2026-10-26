@@ -1,0 +1,8 @@
+{
+  "mode": "issuance",
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+  "url": "/applicant/issuance-requests"
+}

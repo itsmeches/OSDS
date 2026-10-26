@@ -1,0 +1,349 @@
+[
+  {
+    "mode": "duplicate",
+    "request": 21,
+    "ready": {
+      "pid": 22144,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "second": {
+      "pid": 12784,
+      "outcome": "rejected"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 2,
+          "public_id": "e2bf6db0-11a0-4ee1-b301-4fe571939804",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 21,
+          "submission_id": 438,
+          "decision_id": 152,
+          "template_id": 3,
+          "personnel_id": 4
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 2,
+          "public_id": "e2bf6db0-11a0-4ee1-b301-4fe571939804",
+          "state": "completed",
+          "page_count": 2,
+          "byte_size": 51641,
+          "checksum": "7f1238c60e158eeb5cc0d40b2d657efb14f4c900f3c6252bf18530e8e81b2d1b",
+          "request_id": 21,
+          "submission_id": 438,
+          "decision_id": 152,
+          "template_id": 3,
+          "personnel_id": 4
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_completed"
+      ]
+    },
+    "outcome": {
+      "pid": 22144,
+      "outcome": "completed",
+      "id": 2
+    },
+    "passed": true
+  },
+  {
+    "mode": "permission",
+    "request": 22,
+    "ready": {
+      "pid": 16972,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 3,
+          "public_id": "27c3b988-a0bc-47eb-9766-8cd4682c9003",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 22,
+          "submission_id": 439,
+          "decision_id": 155,
+          "template_id": 5,
+          "personnel_id": 6
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 3,
+          "public_id": "27c3b988-a0bc-47eb-9766-8cd4682c9003",
+          "state": "failed",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 22,
+          "submission_id": 439,
+          "decision_id": 155,
+          "template_id": 5,
+          "personnel_id": 6
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_failed"
+      ]
+    },
+    "outcome": {
+      "pid": 16972,
+      "outcome": "denied"
+    },
+    "passed": true
+  },
+  {
+    "mode": "withdraw",
+    "request": 23,
+    "ready": {
+      "pid": 5748,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 4,
+          "public_id": "0a365622-b15b-4df7-8d3c-7e9bc910179b",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 23,
+          "submission_id": 440,
+          "decision_id": 158,
+          "template_id": 7,
+          "personnel_id": 8
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 4,
+          "public_id": "0a365622-b15b-4df7-8d3c-7e9bc910179b",
+          "state": "failed",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 23,
+          "submission_id": 440,
+          "decision_id": 158,
+          "template_id": 7,
+          "personnel_id": 8
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_failed"
+      ]
+    },
+    "outcome": {
+      "pid": 5748,
+      "outcome": "rejected"
+    },
+    "passed": true
+  },
+  {
+    "mode": "personnel",
+    "request": 24,
+    "ready": {
+      "pid": 17136,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 5,
+          "public_id": "a4bfd3fd-0897-42c5-b11a-1a5b8d6a43c7",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 24,
+          "submission_id": 441,
+          "decision_id": 161,
+          "template_id": 9,
+          "personnel_id": 10
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 5,
+          "public_id": "a4bfd3fd-0897-42c5-b11a-1a5b8d6a43c7",
+          "state": "failed",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 24,
+          "submission_id": 441,
+          "decision_id": 161,
+          "template_id": 9,
+          "personnel_id": 10
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_failed"
+      ]
+    },
+    "outcome": {
+      "pid": 17136,
+      "outcome": "rejected"
+    },
+    "passed": true
+  },
+  {
+    "mode": "scope",
+    "request": 25,
+    "ready": {
+      "pid": 34800,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 6,
+          "public_id": "0d22eb5d-04cc-42e7-80fd-302651f0eb40",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 25,
+          "submission_id": 442,
+          "decision_id": 164,
+          "template_id": 11,
+          "personnel_id": 12
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 6,
+          "public_id": "0d22eb5d-04cc-42e7-80fd-302651f0eb40",
+          "state": "failed",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 25,
+          "submission_id": 442,
+          "decision_id": 164,
+          "template_id": 11,
+          "personnel_id": 12
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_failed"
+      ]
+    },
+    "outcome": {
+      "pid": 34800,
+      "outcome": "denied"
+    },
+    "passed": true
+  },
+  {
+    "mode": "inactive",
+    "request": 26,
+    "ready": {
+      "pid": 27216,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 7,
+          "public_id": "16a42e9e-ea41-45c2-99a4-48be4cdb5593",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 26,
+          "submission_id": 443,
+          "decision_id": 167,
+          "template_id": 13,
+          "personnel_id": 14
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 7,
+          "public_id": "16a42e9e-ea41-45c2-99a4-48be4cdb5593",
+          "state": "failed",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 26,
+          "submission_id": 443,
+          "decision_id": 167,
+          "template_id": 13,
+          "personnel_id": 14
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_failed"
+      ]
+    },
+    "outcome": {
+      "pid": 27216,
+      "outcome": "denied"
+    },
+    "passed": true
+  }
+]

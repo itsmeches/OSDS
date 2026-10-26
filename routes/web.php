@@ -3,6 +3,7 @@
 use App\Http\Controllers\ApplicantAuthController;
 use App\Http\Controllers\ApplicantIssuanceDemoController;
 use App\Http\Controllers\ApplicantPortalController;
+use App\Http\Controllers\CaseDemonstrationDocumentController;
 use App\Http\Controllers\DemonstrationDocumentController;
 use App\Http\Controllers\DownloadableFormController;
 use App\Http\Controllers\DownloadableFormZipImportController;
@@ -23,6 +24,8 @@ Route::middleware(['auth', EnsureAccountIsActive::class, 'can:questionnaires.pre
 
 Route::get('/applicant/login', [ApplicantAuthController::class, 'create'])->name('applicant.login');
 Route::middleware(['auth', EnsureAccountIsActive::class])->group(function () {
+    Route::get('/case-demonstration-documents/{document}/download', [CaseDemonstrationDocumentController::class, 'download'])->whereUuid('document')->name('documents.b3.download');
+    Route::get('/case-demonstration-templates/{version}/preview', [CaseDemonstrationDocumentController::class, 'preview'])->whereNumber('version')->name('documents.b3.preview');
     Route::post('/admin/downloadable-forms/import-zip', [DownloadableFormZipImportController::class, 'store'])->name('forms.import-zip');
     Route::get('/applicant/issuance-demo', [ApplicantIssuanceDemoController::class, 'show'])->name('applicant.issuance-demo');
     Route::post('/applicant/issuance-demo/preview', [ApplicantIssuanceDemoController::class, 'preview'])->name('applicant.issuance-demo.preview');

@@ -1,0 +1,11 @@
+{
+  "namespace": "b4_20261026_01",
+  "database": "osds_ui_browser_test",
+  "checks": [
+    {
+      "name": "COR question saved through builder UI",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

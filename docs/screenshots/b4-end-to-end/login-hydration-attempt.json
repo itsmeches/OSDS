@@ -1,0 +1,15 @@
+{
+  "namespace": "b4_20261026_01",
+  "database": "osds_ui_browser_test",
+  "checks": [],
+  "errors": [
+    "passwordRevealFormComponent is not defined",
+    "isPasswordRevealed is not defined",
+    "isPasswordRevealed is not defined",
+    "isPasswordRevealed is not defined"
+  ],
+  "failure": {
+    "message": "page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+    "url": "/admin/login"
+  }
+}

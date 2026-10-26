@@ -1,0 +1,43 @@
+{
+  "mode": "issuance",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "issuance draft/submit UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "response loss after real submit; read-only saved inspection without replay",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "issuance draft/submit UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-07-request-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-07-request-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-07-request-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-07-request-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

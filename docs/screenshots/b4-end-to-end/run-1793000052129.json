@@ -1,0 +1,14 @@
+{
+  "mode": "review",
+  "checks": [
+    {
+      "review": 283,
+      "stage": "review requested configuration changes",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": [],
+  "failure": "Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:8040/admin/configuration-review-requests/284\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8040/admin/configuration-review-requests/284\", waiting until \"load\"\u001b[22m\n",
+  "url": "/admin/configuration-review-requests/283"
+}

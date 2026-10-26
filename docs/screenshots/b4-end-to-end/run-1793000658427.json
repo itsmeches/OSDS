@@ -1,0 +1,17 @@
+{
+  "mode": "approve",
+  "checks": [
+    {
+      "review": 287,
+      "stage": "configuration approval UI",
+      "status": "PASS"
+    },
+    {
+      "review": 288,
+      "stage": "configuration approval UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

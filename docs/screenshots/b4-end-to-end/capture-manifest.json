@@ -1,0 +1,487 @@
+[
+  {
+    "name": "registration-01-author-readback-light",
+    "violations": [
+      {
+        "id": "label-content-name-mismatch",
+        "targets": [
+          [
+            "button[aria-label=\"Move section 1 up\"]"
+          ],
+          [
+            "button[aria-label=\"Move section 1 down\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question up\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question down\"]"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-main-is-top-level",
+        "targets": [
+          [
+            ".focused-builder-main"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-main",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      }
+    ],
+    "overflow": false,
+    "file": "registration-01-author-readback-light.png",
+    "source": "run-1793003176111.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "5b26f1d48b85deb9a840bff5078c0899f67ea36dabca8cf01f5e2969170fd5c5"
+  },
+  {
+    "name": "registration-01-author-readback-dark-mobile",
+    "violations": [
+      {
+        "id": "label-content-name-mismatch",
+        "targets": [
+          [
+            "button[aria-label=\"Move selected question up\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question down\"]"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-main-is-top-level",
+        "targets": [
+          [
+            ".focused-builder-main"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-main",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      }
+    ],
+    "overflow": false,
+    "file": "registration-01-author-readback-dark-mobile.png",
+    "source": "run-1793003176111.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "304396ce5a73671e9330df3554951aea594419d4814d78ebd07eba1f9c27ccfd"
+  },
+  {
+    "name": "acsa-01-author-readback-light",
+    "violations": [
+      {
+        "id": "label-content-name-mismatch",
+        "targets": [
+          [
+            "button[aria-label=\"Move section 1 up\"]"
+          ],
+          [
+            "button[aria-label=\"Move section 1 down\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question up\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question down\"]"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-main-is-top-level",
+        "targets": [
+          [
+            ".focused-builder-main"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-main",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      }
+    ],
+    "overflow": false,
+    "file": "acsa-01-author-readback-light.png",
+    "source": "run-1793003176111.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "879cc8369194040657b611f89cc45cfcae2fb2063cd8a00aa7bf82b744c4f9a9"
+  },
+  {
+    "name": "acsa-01-author-readback-dark-mobile",
+    "violations": [
+      {
+        "id": "label-content-name-mismatch",
+        "targets": [
+          [
+            "button[aria-label=\"Move selected question up\"]"
+          ],
+          [
+            "button[aria-label=\"Move selected question down\"]"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-main-is-top-level",
+        "targets": [
+          [
+            ".focused-builder-main"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-main",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "targets": [
+          [
+            "#fi-main-content"
+          ]
+        ]
+      }
+    ],
+    "overflow": false,
+    "file": "acsa-01-author-readback-dark-mobile.png",
+    "source": "run-1793003176111.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "fe40005350351cf45ae4ea749cda65b3998102f17e87951e3ce10025e81b5829"
+  },
+  {
+    "name": "registration-02-applicant-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-02-applicant-light.png",
+    "source": "run-1793000919990.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "299d5081c0e5eec055fcc22f98a6cd0abbadc0ac22c9f6ab8bfccb40d17a52f7"
+  },
+  {
+    "name": "registration-02-applicant-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-02-applicant-dark-mobile.png",
+    "source": "run-1793000919990.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "c030e2ade600e1c4a34bdbf8a7020e352a2d99cb843bdebd38c10acd28f706c4"
+  },
+  {
+    "name": "acsa-02-applicant-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-02-applicant-light.png",
+    "source": "run-1793000919990.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "d43e2e9d3a51bfce593488d4717b0b3e421e8aa85a108df0e9e55aa9f2a52bd9"
+  },
+  {
+    "name": "acsa-02-applicant-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-02-applicant-dark-mobile.png",
+    "source": "run-1793000919990.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "aa5f456e038b59011ca4267ee30b9b2daf21b1d666b9de6e9b856a737b122392"
+  },
+  {
+    "name": "registration-03-r2-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-03-r2-light.png",
+    "source": "run-1793001070284.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "7b6d04cd069f737971237141934135c114d8c6d23b9918e9e2456ee3e843e2d8"
+  },
+  {
+    "name": "registration-03-r2-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-03-r2-dark-mobile.png",
+    "source": "run-1793001070284.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "cd7aa0070fd70ff2e23c1154b807244cfe69741b2f06a914831bde4dc16186bd"
+  },
+  {
+    "name": "acsa-03-r2-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-03-r2-light.png",
+    "source": "run-1793001070284.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "6ce4625be5212d2656890555e2b3921c9cc677a9537fb2fe99da38fa124452d7"
+  },
+  {
+    "name": "acsa-03-r2-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-03-r2-dark-mobile.png",
+    "source": "run-1793001070284.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "53816bb102a6b2883dfb224599a3fbbbcdb1ef647c8a09c011ed3b750fb9f713"
+  },
+  {
+    "name": "registration-evaluator-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-evaluator-light.png",
+    "source": "run-1793001123881.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "03ab8d370066cbc067fb843213f153ec2323ad5b28e50fc05d4c404dd2de91fc"
+  },
+  {
+    "name": "registration-evaluator-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-evaluator-dark-mobile.png",
+    "source": "run-1793001123881.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "b0a4dc25f9274a3f0444a0f69844003e708bf9edd58bf7034b9f6bb5cde35047"
+  },
+  {
+    "name": "acsa-evaluator-light",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".fi-no-notification-title"
+          ]
+        ]
+      }
+    ],
+    "overflow": false,
+    "file": "acsa-evaluator-light.png",
+    "source": "run-1793001123881.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "18b2183bc351e504c5770fa6dc4a54b4a0eb9d4e2fa459acf4d26f4910ca03c7"
+  },
+  {
+    "name": "acsa-evaluator-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-evaluator-dark-mobile.png",
+    "source": "run-1793001123881.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "cfd32c9ddfe2769ae2663b1b1feaf7dc9de17d68d0fcacd6bf0b7b0cf6404f57"
+  },
+  {
+    "name": "registration-director-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-director-light.png",
+    "source": "run-1793001400355.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "1425c43b0f2ea8b35d2c26999f9751e2707f6d28c80e66448478a38e2be5fb55"
+  },
+  {
+    "name": "registration-director-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-director-dark-mobile.png",
+    "source": "run-1793001400355.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "56744dfceafb3a13284f45333583b0f1924b4830b2fc7bba7dc45c0d4a211df4"
+  },
+  {
+    "name": "acsa-director-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-director-light.png",
+    "source": "run-1793001400355.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "008f52d9cfa65fa01a30ca2fde88ee555814ba496a637917494901ccb6aa10c5"
+  },
+  {
+    "name": "acsa-director-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-director-dark-mobile.png",
+    "source": "run-1793001400355.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "6cfc13be4093c1efd27a27cc346dac931ba9d97f79c0178a220b70f4e7e154f8"
+  },
+  {
+    "name": "registration-06-definition-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-06-definition-light.png",
+    "source": "run-1793002050353.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "bc295298040f731b75354841ef7dcb0bd72e8e74a86597f424e3c2a38e96842e"
+  },
+  {
+    "name": "registration-06-definition-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-06-definition-dark-mobile.png",
+    "source": "run-1793002050353.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "2b5211a08cf115cbf4a011cbf0fa9364ec74c1eacfc96a2136f16f01f16f6f59"
+  },
+  {
+    "name": "acsa-06-definition-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-06-definition-light.png",
+    "source": "run-1793002050353.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "c190b20e891c6c731c6f01e280861e4c7820be83645cb3dd3bc55eaa199c93ea"
+  },
+  {
+    "name": "acsa-06-definition-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-06-definition-dark-mobile.png",
+    "source": "run-1793002050353.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "77f6de5100df2eb44a7cb24e9588548a3ff0953f4cb0e72ffd4ee2105ba4e7cd"
+  },
+  {
+    "name": "registration-07-request-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-07-request-light.png",
+    "source": "run-1793002301629.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "c6653804edc0e559e6f8f8e3adf43ee079887e261602d697f7dc272bb48895fc"
+  },
+  {
+    "name": "registration-07-request-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-07-request-dark-mobile.png",
+    "source": "run-1793002301629.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "6da26696ecc4a36885cf192d448a72eb454b41d245727017af3f0e051e8deb0e"
+  },
+  {
+    "name": "acsa-07-request-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-07-request-light.png",
+    "source": "run-1793002301629.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "5ca02b6a94d0a9e0b1f9bb679e9e69ca7f016b999f7d6253b0a64d32e54e263a"
+  },
+  {
+    "name": "acsa-07-request-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-07-request-dark-mobile.png",
+    "source": "run-1793002301629.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "5e9348eb17d9e554838da2b9c58805351ac544430244913985e3990c2816445d"
+  },
+  {
+    "name": "registration-08-pdf-light",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-08-pdf-light.png",
+    "source": "run-1793002808382.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "69fbfb15d88df8541683c6f42c4fad27822bafdfe34bd0c945044341e6290b1e"
+  },
+  {
+    "name": "registration-08-pdf-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "registration-08-pdf-dark-mobile.png",
+    "source": "run-1793002808382.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "a3f955d9d9b2f083c590c908db1e728e598dd49289a234eed349a9894be45abc"
+  },
+  {
+    "name": "acsa-08-pdf-light",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-08-pdf-light.png",
+    "source": "run-1793002808382.json",
+    "width": 1440,
+    "theme": "light",
+    "sha256": "d11d0d227d880156d3f9ba723babbeacd834cba6565b7ac9f61a621bddb328b7"
+  },
+  {
+    "name": "acsa-08-pdf-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "acsa-08-pdf-dark-mobile.png",
+    "source": "run-1793002808382.json",
+    "width": 375,
+    "theme": "dark",
+    "sha256": "ae3c725c652554253f0f61ba89aaadf1eb5eaf07afb3ce6aafdfbaf68c655b59"
+  }
+]

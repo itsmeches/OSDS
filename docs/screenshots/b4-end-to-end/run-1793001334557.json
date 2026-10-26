@@ -1,0 +1,17 @@
+{
+  "mode": "chief",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "chief UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "chief UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

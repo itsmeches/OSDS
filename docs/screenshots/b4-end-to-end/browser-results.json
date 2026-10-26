@@ -1,0 +1,563 @@
+{
+  "scope": "B4 isolated technical rehearsal; no supervisor acceptance",
+  "database": "osds_ui_browser_test",
+  "namespace": "b4_20261026_01",
+  "functional_status": "PASS",
+  "accessibility_status": "FAIL",
+  "supervisor_status": "BLOCKED",
+  "supervisor_reason": "Actual supervisor/business review has not occurred",
+  "cases": [
+    {
+      "module": "registration",
+      "case": "492cc5c3-6afc-41b4-bbca-9fae123423ae",
+      "case_id": 499,
+      "state": "approved",
+      "submissions": [
+        {
+          "id": 450,
+          "sequence": 1
+        },
+        {
+          "id": 452,
+          "sequence": 2
+        }
+      ],
+      "current_submission": 452,
+      "roles": [
+        {
+          "role": "evaluator",
+          "actor": 1166,
+          "stage": 188
+        },
+        {
+          "role": "chief",
+          "actor": 1167,
+          "stage": 190
+        },
+        {
+          "role": "director",
+          "actor": 1168,
+          "stage": 192
+        }
+      ],
+      "request": "c7263a74-9d4a-45d0-a1fb-b098c5a475a6",
+      "definition": 50,
+      "document": "7fba2dcf-3d29-4fbc-b5e2-e6ba568c1178",
+      "template": 37,
+      "personnel": 34,
+      "render_attempts": 1,
+      "checksum": "f652b5405dd4efd058893fb01b0e57c0cc923793e879a7d73316d1e56f6c384d",
+      "pages": 2
+    },
+    {
+      "module": "acsa",
+      "case": "115125a8-1e78-4af8-b945-8a3ee70217d4",
+      "case_id": 500,
+      "state": "approved",
+      "submissions": [
+        {
+          "id": 453,
+          "sequence": 2
+        },
+        {
+          "id": 451,
+          "sequence": 1
+        }
+      ],
+      "current_submission": 453,
+      "roles": [
+        {
+          "role": "evaluator",
+          "actor": 1166,
+          "stage": 189
+        },
+        {
+          "role": "chief",
+          "actor": 1167,
+          "stage": 191
+        },
+        {
+          "role": "director",
+          "actor": 1168,
+          "stage": 193
+        }
+      ],
+      "request": "db217f3c-f5c1-4aae-90e9-48ac6e4ca72f",
+      "definition": 51,
+      "document": "6932dbea-4349-4321-887d-cd99f24146dd",
+      "template": 35,
+      "personnel": 38,
+      "render_attempts": 1,
+      "checksum": "3807f21c7cf3e2e95f2a252e40536cc166ac2a955bf29881ca6efbc64e58fc0d",
+      "pages": 2
+    }
+  ],
+  "phases": [
+    {
+      "mode": "fresh-author",
+      "file": "run-1793000521639.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "fresh saved/reloaded distinct question labels verified before review",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "fresh saved/reloaded distinct question labels verified before review",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "publish",
+      "file": "run-1793000809264.json",
+      "checks": [
+        {
+          "review": 287,
+          "stage": "applicant publication UI",
+          "status": "PASS"
+        },
+        {
+          "review": 288,
+          "stage": "applicant publication UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "applicant",
+      "file": "run-1793000919990.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "applicant R1 submission UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "applicant R1 submission UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "correction",
+      "file": "run-1793001012671.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "correction requested UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "correction requested UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "resubmit",
+      "file": "run-1793001070284.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "R2 resubmission UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "R2 resubmission UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "evaluation",
+      "file": "run-1793001123881.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "evaluator UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "evaluator UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "negative-stage",
+      "file": "run-1793001244058.json",
+      "checks": [
+        {
+          "role": "south",
+          "module": "registration",
+          "stage": "scope denied",
+          "status": "PASS",
+          "http": 404
+        },
+        {
+          "role": "south",
+          "module": "acsa",
+          "stage": "scope denied",
+          "status": "PASS",
+          "http": 404
+        },
+        {
+          "role": "cor_only",
+          "module": "acsa",
+          "stage": "scope denied",
+          "status": "PASS",
+          "http": 404
+        },
+        {
+          "role": "acsa_only",
+          "module": "registration",
+          "stage": "scope denied",
+          "status": "PASS",
+          "http": 404
+        },
+        {
+          "stage": "same evaluator cannot recommend",
+          "status": "PASS"
+        },
+        {
+          "stage": "mounted Chief permission revocation denied",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "chief",
+      "file": "run-1793001334557.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "chief UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "chief UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "director",
+      "file": "run-1793001400355.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "director UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "director UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "supplementary",
+      "file": "run-1793001640275.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "supplementary configuration UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "supplementary configuration UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "definitions",
+      "file": "run-1793001800742.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "case linked definition created UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "case linked definition created UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "publish-definitions",
+      "file": "run-1793002050353.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "issuance definition review/publication UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "issuance definition review/publication UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "issuance",
+      "file": "run-1793002301629.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "issuance draft/submit UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "response loss after real submit; read-only saved inspection without replay",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "issuance draft/submit UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "document-config",
+      "file": "run-1793002398075.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "template and fictional personnel configuration UI",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "template and fictional personnel configuration UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "publish-document-config",
+      "file": "run-1793002480329.json",
+      "checks": [
+        {
+          "version": 33,
+          "stage": "document configuration review/publication UI",
+          "status": "PASS"
+        },
+        {
+          "version": 35,
+          "stage": "document configuration review/publication UI",
+          "status": "PASS"
+        },
+        {
+          "version": 34,
+          "stage": "document configuration review/publication UI",
+          "status": "PASS"
+        },
+        {
+          "version": 36,
+          "stage": "document configuration review/publication UI",
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "withdrawal-probe",
+      "file": "run-1793002561461.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "withdrawn template rejected from mounted generation UI, zero document rows",
+          "status": "PASS"
+        },
+        {
+          "module": "registration",
+          "stage": "replacement template created/reviewed/published through UI",
+          "version": 37,
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "withdrawn personnel rejected from mounted generation UI, zero document rows",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "replacement personnel created/reviewed/published through UI",
+          "version": 38,
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "generate-download",
+      "file": "run-1793002808382.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "explicit staff generation and applicant exact stored PDF download UI",
+          "status": "PASS",
+          "document": "7fba2dcf-3d29-4fbc-b5e2-e6ba568c1178",
+          "request": "c7263a74-9d4a-45d0-a1fb-b098c5a475a6",
+          "submission": 452,
+          "checksum": "f652b5405dd4efd058893fb01b0e57c0cc923793e879a7d73316d1e56f6c384d",
+          "pages": 2
+        },
+        {
+          "module": "acsa",
+          "stage": "explicit duplicate handler probe returns unchanged original without new render attempt; authorized read audited",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "explicit staff generation and applicant exact stored PDF download UI",
+          "status": "PASS",
+          "document": "6932dbea-4349-4321-887d-cd99f24146dd",
+          "request": "db217f3c-f5c1-4aae-90e9-48ac6e4ca72f",
+          "submission": 453,
+          "checksum": "3807f21c7cf3e2e95f2a252e40536cc166ac2a955bf29881ca6efbc64e58fc0d",
+          "pages": 2
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "completed-access",
+      "file": "run-1793003050987.json",
+      "checks": [
+        {
+          "module": "registration",
+          "stage": "completed original unchanged/downloadable after exact template and personnel withdrawal",
+          "status": "PASS"
+        },
+        {
+          "module": "acsa",
+          "stage": "completed original unchanged/downloadable after exact template and personnel withdrawal",
+          "status": "PASS"
+        },
+        {
+          "role": "south",
+          "module": "registration",
+          "stage": "private PDF unauthorized/scope denial",
+          "http": 403,
+          "status": "PASS"
+        },
+        {
+          "role": "south",
+          "module": "acsa",
+          "stage": "private PDF unauthorized/scope denial",
+          "http": 403,
+          "status": "PASS"
+        },
+        {
+          "role": "cor_only",
+          "module": "acsa",
+          "stage": "private PDF unauthorized/scope denial",
+          "http": 403,
+          "status": "PASS"
+        },
+        {
+          "role": "acsa_only",
+          "module": "registration",
+          "stage": "private PDF unauthorized/scope denial",
+          "http": 403,
+          "status": "PASS"
+        },
+        {
+          "role": "chief",
+          "module": "registration",
+          "stage": "private PDF unauthorized/scope denial",
+          "http": 403,
+          "status": "PASS"
+        }
+      ],
+      "uncaught_errors": []
+    },
+    {
+      "mode": "author-readback",
+      "file": "run-1793003176111.json",
+      "checks": [],
+      "uncaught_errors": []
+    }
+  ],
+  "stale_revision": {
+    "checks": [
+      {
+        "stage": "mounted Chief R1 action denied after real UI R2 resubmission, no partial stage/state persistence",
+        "status": "PASS"
+      },
+      {
+        "stage": "R1 evaluation readiness does not carry to R2",
+        "status": "PASS"
+      },
+      {
+        "stage": "previous R1 evaluator denied Chief on R2 evaluated by someone else",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "case": "3c6c5b9a-ac1d-494d-bedb-fbf24590e2dc"
+  },
+  "captures": {
+    "expected": 32,
+    "actual": 32,
+    "passed": 27,
+    "failed": 5,
+    "overflow_count": 0,
+    "manifest": "capture-manifest.json"
+  },
+  "retained_failed_attempts": [
+    "run-1792999711564.json",
+    "run-1792999910373.json",
+    "run-1793000052129.json",
+    "run-1793000114065.json",
+    "run-1793000203215.json",
+    "run-1793000723603.json",
+    "run-1793000859222.json",
+    "run-1793001461170.json",
+    "run-1793001932497.json",
+    "run-1793002113770.json",
+    "run-1793002703758.json"
+  ],
+  "preservation": {
+    "source_files": 357,
+    "historical_artifacts": 1563,
+    "published_json": 10,
+    "all_unchanged": true
+  },
+  "limitations": [
+    "Automated sampled web accessibility failed; no runtime fixes authorized",
+    "Human accessibility, PDF accessibility/print acceptance and business acceptance remain pending",
+    "No production/nationwide capacity certification; no manual activation",
+    "Author checkpoint captures show final immutable readback; original editable and earlier theme/label attempts are retained"
+  ]
+}

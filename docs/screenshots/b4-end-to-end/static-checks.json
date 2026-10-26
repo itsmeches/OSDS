@@ -1,0 +1,19 @@
+{
+  "full_pint_test": "PASS",
+  "php_syntax": {
+    "scripts/Prepare-B4.php": "PASS",
+    "scripts/b4-browser-server.php": "PASS"
+  },
+  "javascript_syntax": {
+    "scripts/rehearse-b4.mjs": "PASS",
+    "scripts/verify-b4-stale-ui.mjs": "PASS",
+    "scripts/inspect-b4-pdfs.mjs": "PASS",
+    "scripts/package-b4-evidence.mjs": "PASS"
+  },
+  "tracked_diff_whitespace": "PASS",
+  "task_owned_new_file_whitespace": "PASS",
+  "b4_server": "STOPPED; port 8040 connection check returned false",
+  "complete_postgresql_suite": "NOT RERUN; unchanged-runtime B1-B3 evidence reused per approved B4 boundary",
+  "asset_build": "NOT RERUN; application assets unchanged",
+  "ide_diagnostics": "NOT CLAIMED"
+}

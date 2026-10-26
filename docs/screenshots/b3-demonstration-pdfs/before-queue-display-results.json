@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "module": "registration",
+      "templateReviewPublication": true,
+      "explicitGeneration": true,
+      "postAuditFailureRecovery": true,
+      "privateSavedPdf": true,
+      "exactSameApplicantDownload": true,
+      "pages": 2,
+      "passed": true
+    },
+    {
+      "module": "acsa",
+      "templateReviewPublication": true,
+      "explicitGeneration": true,
+      "postAuditFailureRecovery": true,
+      "privateSavedPdf": true,
+      "exactSameApplicantDownload": true,
+      "pages": 2,
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-staff-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-staff-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "leaks": 0
+}

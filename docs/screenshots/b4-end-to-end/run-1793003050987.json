@@ -1,0 +1,52 @@
+{
+  "mode": "completed-access",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "completed original unchanged/downloadable after exact template and personnel withdrawal",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "completed original unchanged/downloadable after exact template and personnel withdrawal",
+      "status": "PASS"
+    },
+    {
+      "role": "south",
+      "module": "registration",
+      "stage": "private PDF unauthorized/scope denial",
+      "http": 403,
+      "status": "PASS"
+    },
+    {
+      "role": "south",
+      "module": "acsa",
+      "stage": "private PDF unauthorized/scope denial",
+      "http": 403,
+      "status": "PASS"
+    },
+    {
+      "role": "cor_only",
+      "module": "acsa",
+      "stage": "private PDF unauthorized/scope denial",
+      "http": 403,
+      "status": "PASS"
+    },
+    {
+      "role": "acsa_only",
+      "module": "registration",
+      "stage": "private PDF unauthorized/scope denial",
+      "http": 403,
+      "status": "PASS"
+    },
+    {
+      "role": "chief",
+      "module": "registration",
+      "stage": "private PDF unauthorized/scope denial",
+      "http": 403,
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

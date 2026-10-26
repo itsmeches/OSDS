@@ -1,0 +1,10 @@
+{
+  "namespace": "b4_20261026_01",
+  "database": "osds_ui_browser_test",
+  "checks": [],
+  "errors": [],
+  "failure": {
+    "message": "locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Password', { exact: true })\u001b[22m\n",
+    "url": "/admin/login"
+  }
+}

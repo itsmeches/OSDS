@@ -1,0 +1,8 @@
+{
+  "mode": "supplementary",
+  "checks": [],
+  "captures": [],
+  "errors": [],
+  "failure": "TimeoutError: locator.selectOption: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Answer type', { exact: true })\u001b[22m\n",
+  "url": "/admin/form-builder/585/585"
+}

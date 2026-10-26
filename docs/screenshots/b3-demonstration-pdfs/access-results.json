@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "staffMountedDownloadPermissionLoss": true,
+      "passed": true
+    },
+    {
+      "applicantMountedRepresentationLoss": true,
+      "passed": true
+    },
+    {
+      "unrelatedStaffAndForgedIdDenial": true,
+      "passed": true
+    }
+  ]
+}

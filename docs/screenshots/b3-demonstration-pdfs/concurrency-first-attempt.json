@@ -1,0 +1,64 @@
+[
+  {
+    "mode": "duplicate",
+    "request": 18,
+    "ready": {
+      "pid": 33576,
+      "transactionDepth": 0,
+      "phase": "rendering_outside_transaction"
+    },
+    "second": {
+      "pid": 31052,
+      "outcome": "rejected"
+    },
+    "during": {
+      "documents": [
+        {
+          "id": 1,
+          "public_id": "46dd4098-06f4-4a79-b77a-bb23fad93300",
+          "state": "processing",
+          "page_count": null,
+          "byte_size": null,
+          "checksum": null,
+          "request_id": 18,
+          "submission_id": 435,
+          "decision_id": 143,
+          "template_id": 1,
+          "personnel_id": 2
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started"
+      ]
+    },
+    "after": {
+      "documents": [
+        {
+          "id": 1,
+          "public_id": "46dd4098-06f4-4a79-b77a-bb23fad93300",
+          "state": "completed",
+          "page_count": 2,
+          "byte_size": 51642,
+          "checksum": "ce86c676f7a4d3e2b3ada354d3730fb510648a02e14637bde4f3d702a567b1d0",
+          "request_id": 18,
+          "submission_id": 435,
+          "decision_id": 143,
+          "template_id": 1,
+          "personnel_id": 2
+        }
+      ],
+      "attempts": 1,
+      "events": [
+        "generation_started",
+        "generation_completed"
+      ]
+    },
+    "outcome": {
+      "pid": 33576,
+      "outcome": "completed",
+      "id": 1
+    },
+    "passed": true
+  }
+]

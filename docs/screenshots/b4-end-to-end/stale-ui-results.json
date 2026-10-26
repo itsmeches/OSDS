@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "stage": "mounted Chief R1 action denied after real UI R2 resubmission, no partial stage/state persistence",
+      "status": "PASS"
+    },
+    {
+      "stage": "R1 evaluation readiness does not carry to R2",
+      "status": "PASS"
+    },
+    {
+      "stage": "previous R1 evaluator denied Chief on R2 evaluated by someone else",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "case": "3c6c5b9a-ac1d-494d-bedb-fbf24590e2dc"
+}

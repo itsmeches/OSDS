@@ -70,4 +70,14 @@ enum FoundationPermission: string
     case ReviewIssuanceDefinitions = 'issuance.definitions.review';
     case PublishIssuanceDefinitions = 'issuance.definitions.publish';
     case SubmitIssuanceRequests = 'issuance.requests.submit';
+    case ManageDocumentTemplates = 'documents.templates.manage';
+    case ReviewDocumentTemplates = 'documents.templates.review';
+    case PublishDocumentTemplates = 'documents.templates.publish';
+    case ManageDocumentPersonnel = 'documents.personnel.manage';
+    case ReviewDocumentPersonnel = 'documents.personnel.review';
+    case PublishDocumentPersonnel = 'documents.personnel.publish';
+    case ViewDemonstrationDocuments = 'documents.view';
+    case GenerateDemonstrationDocuments = 'documents.generate';
+    case DownloadDemonstrationDocuments = 'documents.download';
+    case RecoverDemonstrationDocuments = 'documents.recover';
 }
