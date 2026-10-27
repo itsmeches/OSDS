@@ -1,0 +1,17 @@
+{
+  "mode": "publish",
+  "checks": [
+    {
+      "review": 291,
+      "stage": "applicant publication UI",
+      "status": "PASS"
+    },
+    {
+      "review": 292,
+      "stage": "applicant publication UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

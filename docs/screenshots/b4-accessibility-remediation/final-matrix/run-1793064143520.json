@@ -1,0 +1,27 @@
+{
+  "mode": "publish-document-config",
+  "checks": [
+    {
+      "version": 43,
+      "stage": "document configuration review/publication UI",
+      "status": "PASS"
+    },
+    {
+      "version": 44,
+      "stage": "document configuration review/publication UI",
+      "status": "PASS"
+    },
+    {
+      "version": 45,
+      "stage": "document configuration review/publication UI",
+      "status": "PASS"
+    },
+    {
+      "version": 46,
+      "stage": "document configuration review/publication UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

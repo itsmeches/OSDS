@@ -1,0 +1,38 @@
+{
+  "mode": "resubmit",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "R2 resubmission UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "R2 resubmission UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-03-r2-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-03-r2-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-03-r2-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-03-r2-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

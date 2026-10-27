@@ -1,0 +1,162 @@
+{
+  "note": "Initial numeric parser did not support OKLCH. Original files remain intact; only normalized results are valid for contrast conclusions.",
+  "converted": {
+    "oklch(0.141 0.005 285.823)": [
+      9,
+      9,
+      11,
+      1
+    ],
+    "rgb(255, 255, 255)": [
+      255,
+      255,
+      255,
+      1
+    ],
+    "rgb(17, 24, 39)": [
+      17,
+      24,
+      39,
+      1
+    ]
+  },
+  "checks": [
+    {
+      "name": "registration-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 297,
+      "minimumContrast": 1.0152126333455187,
+      "lowContrastFrames": 6,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "03182107368f075fd022445122d13b13f61418856771ffa0f35ffee03f343ed4"
+    },
+    {
+      "name": "registration-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 309,
+      "minimumContrast": 1.016557418920661,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "fad1fc763b5d55b56531a942622f2a031d5236c98aa979ea50fffbc8007c4ad6"
+    },
+    {
+      "name": "registration-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 296,
+      "minimumContrast": 1.0153558832148952,
+      "lowContrastFrames": 6,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "be00654edef96d07a42d88945e1514142f91ca6dc053d6b246a509c512981945"
+    },
+    {
+      "name": "registration-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 323,
+      "minimumContrast": 1.0163951905526787,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "d1672666e012859d90d43772d3b9b74409332714aa55cbf566d6f5bb4306af8c"
+    },
+    {
+      "name": "acsa-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 264,
+      "minimumContrast": 1.0153381754579305,
+      "lowContrastFrames": 6,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "d3186fa1643f6b35b560da2cabddb8657ef54575b1fc1ebaaced8d9a66ffe2eb"
+    },
+    {
+      "name": "acsa-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 298,
+      "minimumContrast": 1.0162446555191982,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "894e8df9c6666793ce021501ca6a885612ed1dfc163f7636fe64dd8e90fd84a4"
+    },
+    {
+      "name": "acsa-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 369,
+      "minimumContrast": 1.003331117024686,
+      "lowContrastFrames": 18,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end",
+        "fi-no-notification fi-status-success fi-transition-leave-end"
+      ],
+      "source_sha256": "27c837b514d78d27a60f3c3f80d074f5199f176f18fb727b8cdb62e841d6afbb"
+    },
+    {
+      "name": "acsa-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 334,
+      "minimumContrast": 1.016687876906548,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ],
+      "source_sha256": "c1d214dd3d16e45124ce41cb04dab626ad6ccb0ac68e46f8fb16b0b5067a3b33"
+    }
+  ]
+}

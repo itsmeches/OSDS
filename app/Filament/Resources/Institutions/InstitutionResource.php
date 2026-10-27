@@ -22,9 +22,9 @@ class InstitutionResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingLibrary;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
-    protected static ?int $navigationSort = 30;
+    protected static ?int $navigationSort = 10;
 
     public static function form(Schema $schema): Schema
     {

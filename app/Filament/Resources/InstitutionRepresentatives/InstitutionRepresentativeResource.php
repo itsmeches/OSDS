@@ -22,11 +22,11 @@ class InstitutionRepresentativeResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedIdentification;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
     protected static ?string $navigationLabel = 'Institution representatives';
 
-    protected static ?int $navigationSort = 40;
+    protected static ?int $navigationSort = 20;
 
     public static function form(Schema $schema): Schema
     {

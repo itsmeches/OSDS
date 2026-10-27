@@ -12,15 +12,24 @@ use App\Services\Applicants\ApplicantSandboxGuard;
 use App\Services\Documents\DemonstrationDocumentService;
 use App\Support\StaffActionFeedback;
 use Filament\Pages\Page;
+use Filament\Support\Icons\Heroicon;
 use Illuminate\Validation\ValidationException;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 
 class CaseDemonstrationDocuments extends Page
 {
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
+
+    protected static ?string $navigationLabel = 'Case-linked demonstration PDFs';
+
+    protected static ?int $navigationSort = 20;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Demonstration Documents';
+
     use WithFileUploads, WithPagination;
 
-    protected static ?string $title = 'Case demonstration PDFs';
+    protected static ?string $title = 'Case-linked demonstration PDFs';
 
     protected string $view = 'filament.pages.case-demonstration-documents';
 

@@ -21,13 +21,15 @@ use Filament\Tables\Table;
 
 class SyntheticEvidenceReviewerAssignmentResource extends Resource
 {
+    protected static ?int $navigationSort = 60;
+
     protected static ?string $model = SyntheticEvidenceReviewerAssignment::class;
 
     protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
-    protected static ?string $navigationLabel = 'Test evidence reviewers';
+    protected static ?string $navigationLabel = 'Evidence reviewer assignments';
 
     public static function canViewAny(): bool
     {

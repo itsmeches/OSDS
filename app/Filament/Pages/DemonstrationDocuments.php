@@ -8,7 +8,6 @@ use App\Services\Documents\DemoIssuanceFormService;
 use App\Services\Documents\DemonstrationCertificateRenderer;
 use App\Services\Documents\DemoOfficeDirectoryService;
 use App\Support\StaffActionFeedback;
-use BackedEnum;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Exceptions\Halt;
@@ -17,6 +16,10 @@ use Illuminate\Support\Str;
 
 class DemonstrationDocuments extends Page
 {
+    protected static ?int $navigationSort = 30;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Demonstration Documents';
+
     public ?string $officeKey = null;
 
     public ?int $expectedDirectory = null;
@@ -128,11 +131,11 @@ class DemonstrationDocuments extends Page
         return ['directory' => DemoOfficeDirectoryRevision::latest('id')->first()];
     }
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedEye;
 
-    protected static ?string $navigationLabel = 'Demonstration documents';
+    protected static ?string $navigationLabel = 'Unlinked layout previews';
 
-    protected static ?string $title = 'Demonstration documents';
+    protected static ?string $title = 'Unlinked layout previews';
 
     protected string $view = 'filament.pages.demonstration-documents';
 

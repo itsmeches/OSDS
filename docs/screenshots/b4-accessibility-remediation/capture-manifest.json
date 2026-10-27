@@ -1,0 +1,746 @@
+[
+  {
+    "name": "registration-verified-author-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-verified-author-light.png",
+    "source": "final-matrix/run-1793063409057.json",
+    "sha256": "F4C571B79A2BC024A713F4F0F47DE02A6BF48A9ED5A3D3AF5BFE59162356A730",
+    "axe": "final-matrix/axe-registration-verified-author-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-udxhmyuh"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-verified-author-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-verified-author-dark-mobile.png",
+    "source": "final-matrix/run-1793063409057.json",
+    "sha256": "6D0053F2C3E08106C8CEBF0AEBBD6448B7BC0E4679B252636A33A54B0698F194",
+    "axe": "final-matrix/axe-registration-verified-author-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-udxhmyuh"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-verified-author-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-verified-author-light.png",
+    "source": "final-matrix/run-1793063409057.json",
+    "sha256": "F9E87B57AF6D4630E5494BFC788FAE31F455C0808AAD62E2F7E044379C90813A",
+    "axe": "final-matrix/axe-acsa-verified-author-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-ro779q5t"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-verified-author-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-verified-author-dark-mobile.png",
+    "source": "final-matrix/run-1793063409057.json",
+    "sha256": "EC78796F3382E35E756A5FAB0A3B89DEF7752599E37DEFE46B90A8BD4164758A",
+    "axe": "final-matrix/axe-acsa-verified-author-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-ro779q5t"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-02-applicant-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-02-applicant-light.png",
+    "source": "final-matrix/run-1793063595772.json",
+    "sha256": "6BE78B73B4F5994FAFF6B0BA79EE6ADDD3E0F797E6EFA9F11CE60F0460C36862",
+    "axe": "final-matrix/axe-registration-02-applicant-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".active > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-02-applicant-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-02-applicant-dark-mobile.png",
+    "source": "final-matrix/run-1793063595772.json",
+    "sha256": "842B80EBAC3FD3C3CB4F5A391853D8359A80C6EFB2191499CB099836C471CCE8",
+    "axe": "final-matrix/axe-registration-02-applicant-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-02-applicant-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-02-applicant-light.png",
+    "source": "final-matrix/run-1793063595772.json",
+    "sha256": "BD9F597AA686CCCDC579B099FF7363212B3C332904B3D78973E17AA7F5B154D9",
+    "axe": "final-matrix/axe-acsa-02-applicant-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".active > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-02-applicant-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-02-applicant-dark-mobile.png",
+    "source": "final-matrix/run-1793063595772.json",
+    "sha256": "8BBA8EB5C05C62C05F5E7633AC1BF3AABCF3FDC19566D8D05813788967E67FAD",
+    "axe": "final-matrix/axe-acsa-02-applicant-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-03-r2-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-03-r2-light.png",
+    "source": "final-matrix/run-1793063691422.json",
+    "sha256": "4AB0B601FD1A9720E8048CA67BBA1AA5457360196399FBE0E20D4E416A14459B",
+    "axe": "final-matrix/axe-registration-03-r2-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".active > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-03-r2-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-03-r2-dark-mobile.png",
+    "source": "final-matrix/run-1793063691422.json",
+    "sha256": "9D23EE45EE5EEDB5A79A28430EC221B4B0A64127228077F5F79EC158D4E14140",
+    "axe": "final-matrix/axe-registration-03-r2-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-03-r2-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-03-r2-light.png",
+    "source": "final-matrix/run-1793063691422.json",
+    "sha256": "824FC84B5E5771518C58AD95D698F601187F7341FEADDDE39DA4E0DA97484DCE",
+    "axe": "final-matrix/axe-acsa-03-r2-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".active > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-03-r2-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-03-r2-dark-mobile.png",
+    "source": "final-matrix/run-1793063691422.json",
+    "sha256": "1CD6A36ECAB0FDD2D8347CFC322935C0698B6EBC13875C78535B2AC167AE57F2",
+    "axe": "final-matrix/axe-acsa-03-r2-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".server-save-state > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-evaluator-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-evaluator-light.png",
+    "source": "final-matrix/run-1793063741293.json",
+    "sha256": "390290C2F6D3EE55ED26C6F924EB18EE766DE1A4D69833A016BFDBF633AD02C5",
+    "axe": "final-matrix/axe-registration-evaluator-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-lmzqn111"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-evaluator-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-evaluator-dark-mobile.png",
+    "source": "final-matrix/run-1793063741293.json",
+    "sha256": "973C4D19E7DC8583EC1F83698B6616B2D7AE8294919245FC04D750DC6EDF2522",
+    "axe": "final-matrix/axe-registration-evaluator-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-lmzqn111"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-evaluator-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-evaluator-light.png",
+    "source": "final-matrix/run-1793063741293.json",
+    "sha256": "0F5921C55A9BCF04FF3239E8E6E44F3BEDDFC1EED740B99C074B5933B491054C",
+    "axe": "final-matrix/axe-acsa-evaluator-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-vvv7qlep"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-evaluator-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-evaluator-dark-mobile.png",
+    "source": "final-matrix/run-1793063741293.json",
+    "sha256": "B7AE5A6CACC74E4ED5C224591399737E30CD4B97E35968468572A2618BDB3A0A",
+    "axe": "final-matrix/axe-acsa-evaluator-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-vvv7qlep"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-director-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-director-light.png",
+    "source": "final-matrix/run-1793063812188.json",
+    "sha256": "3C7D962583DD77D729101E076A96FA9AE5C8587C9382388CF154BDB2D657A9E8",
+    "axe": "final-matrix/axe-registration-director-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-gpf9spcf"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-director-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-director-dark-mobile.png",
+    "source": "final-matrix/run-1793063812188.json",
+    "sha256": "543839696114EC1B40A457DB51416AB4168081263F4DD492BDB3F359F4DE3CF1",
+    "axe": "final-matrix/axe-registration-director-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-gpf9spcf"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-director-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-director-light.png",
+    "source": "final-matrix/run-1793063812188.json",
+    "sha256": "55CE74F7C3F132EB5609BFA899BB57CD708147DBFE750DD0BE9D6FF6D44C566B",
+    "axe": "final-matrix/axe-acsa-director-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-tnehvewx"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-director-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-director-dark-mobile.png",
+    "source": "final-matrix/run-1793063812188.json",
+    "sha256": "19EAB1BD1E71409B1969EF15C06B51E4DCE3652B64F3F41E6207F9C63FD75E57",
+    "axe": "final-matrix/axe-acsa-director-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-tnehvewx"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-06-definition-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-06-definition-light.png",
+    "source": "final-matrix/run-1793064007969.json",
+    "sha256": "EC8604398623C5D067AA8A3FE8DCC03AAAD21B1D3A399CEDF1B884006EE8899B",
+    "axe": "final-matrix/axe-registration-06-definition-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-upfvtdsb"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-06-definition-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-06-definition-dark-mobile.png",
+    "source": "final-matrix/run-1793064007969.json",
+    "sha256": "AC63E83DF8D11BD6A11C81186243EF75CF64CD529F02930320D46D8EB380E798",
+    "axe": "final-matrix/axe-registration-06-definition-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-upfvtdsb"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-06-definition-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-06-definition-light.png",
+    "source": "final-matrix/run-1793064007969.json",
+    "sha256": "A955A3EA5355F1BDB1F3E79EA813F061A7A1C30CA4899F57876A97D7EC457F0E",
+    "axe": "final-matrix/axe-acsa-06-definition-light.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-upfvtdsb"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-06-definition-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-06-definition-dark-mobile.png",
+    "source": "final-matrix/run-1793064007969.json",
+    "sha256": "6DAEB511461A3703FC32ED64A38C5388B7A906AB72F53FCF76D9085D8630B47A",
+    "axe": "final-matrix/axe-acsa-06-definition-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "aria-valid-attr-value",
+        "targets": [
+          [
+            "#fi-dropdown-trigger-upfvtdsb"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-07-request-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-07-request-light.png",
+    "source": "final-matrix/run-1793064057547.json",
+    "sha256": "FA11C42B6A8911FB025C3D286FF4C5AB6F51B0E04902A05CFA4331061552751F",
+    "axe": "final-matrix/axe-registration-07-request-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "a:nth-child(5) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-07-request-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-07-request-dark-mobile.png",
+    "source": "final-matrix/run-1793064057547.json",
+    "sha256": "03E125E38FAF8600A8EAF7C1138BAC69EBB7C531A65217A1DB482B5FAF290B27",
+    "axe": "final-matrix/axe-registration-07-request-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-07-request-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-07-request-light.png",
+    "source": "final-matrix/run-1793064057547.json",
+    "sha256": "D1479D4E8E4D9049465F1100DE3C4FB3008A247F70A2EB5ACF2EFFFD9A28A2A5",
+    "axe": "final-matrix/axe-acsa-07-request-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "a:nth-child(5) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-07-request-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-07-request-dark-mobile.png",
+    "source": "final-matrix/run-1793064057547.json",
+    "sha256": "909350617429AA82F974AAF641826C9F6147EFA689C5C980835CEF6AB33F78F9",
+    "axe": "final-matrix/axe-acsa-07-request-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-08-pdf-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-08-pdf-light.png",
+    "source": "final-matrix/run-1793064187583.json",
+    "sha256": "0CF011EC8D4B27BDE01641E13E46A1E42ED850411FB470C0C7BA3647FF5689C4",
+    "axe": "final-matrix/axe-registration-08-pdf-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "a:nth-child(5) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "registration-08-pdf-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/registration-08-pdf-dark-mobile.png",
+    "source": "final-matrix/run-1793064187583.json",
+    "sha256": "D497DB90272CBF44825479DC182AA6B4321E982B3255CC4A310B77F4EF8101E6",
+    "axe": "final-matrix/axe-registration-08-pdf-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-08-pdf-light",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-08-pdf-light.png",
+    "source": "final-matrix/run-1793064187583.json",
+    "sha256": "7544D0B404D918576295863C2844888D890A5CF920EA82286007ECB7D0514348",
+    "axe": "final-matrix/axe-acsa-08-pdf-light.json",
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "targets": [
+          [
+            ".theme-switcher"
+          ]
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "a:nth-child(5) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "a:nth-child(6) > span[aria-hidden=\"true\"]"
+          ],
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "acsa-08-pdf-dark-mobile",
+    "violations": [],
+    "overflow": false,
+    "file": "final-matrix/acsa-08-pdf-dark-mobile.png",
+    "source": "final-matrix/run-1793064187583.json",
+    "sha256": "37374442578D72AC89F2243DDFD98398F4DC9D549292F48727DDCFDFAB755C8E",
+    "axe": "final-matrix/axe-acsa-08-pdf-dark-mobile.json",
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".sandbox-banner > span[aria-hidden=\"true\"]"
+          ]
+        ]
+      }
+    ]
+  }
+]

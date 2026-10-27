@@ -17,11 +17,13 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ConfigurationReviewRequestResource extends Resource
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Forms and Requirements';
+
     protected static ?string $model = ConfigurationReviewRequest::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCheckBadge;
 
-    protected static ?string $navigationLabel = 'Questionnaire approvals';
+    protected static ?string $navigationLabel = 'Questionnaire configuration reviews';
 
     protected static ?string $modelLabel = 'questionnaire review';
 
@@ -32,7 +34,7 @@ class ConfigurationReviewRequestResource extends Resource
     public static function getNavigationLabel(): string
     {
         return auth()->user()?->can('questionnaires.review')
-            ? 'Questionnaire approvals'
+            ? 'Questionnaire configuration reviews'
             : 'My review submissions';
     }
 

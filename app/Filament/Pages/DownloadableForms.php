@@ -6,7 +6,6 @@ use App\Models\DownloadableForm;
 use App\Models\OsdsModule;
 use App\Services\Downloads\DownloadableFormService;
 use App\Support\StaffActionFeedback;
-use BackedEnum;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Exceptions\Halt;
@@ -16,14 +15,18 @@ use Livewire\WithPagination;
 
 class DownloadableForms extends Page
 {
+    protected static ?int $navigationSort = 40;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Forms and Requirements';
+
     use WithFileUploads;
     use WithPagination;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedArrowDownTray;
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedArrowDownTray;
 
-    protected static ?string $navigationLabel = 'Downloadable forms';
+    protected static ?string $navigationLabel = 'Download blank forms';
 
-    protected static ?string $title = 'Downloadable forms';
+    protected static ?string $title = 'Download blank forms';
 
     protected string $view = 'filament.pages.downloadable-forms';
 

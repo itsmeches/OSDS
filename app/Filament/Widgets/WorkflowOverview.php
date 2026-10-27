@@ -28,12 +28,22 @@ class WorkflowOverview extends StatsOverviewWidget
 
     protected function getHeading(): ?string
     {
-        return 'Your work';
+        return 'Questionnaire configuration overview';
     }
 
     protected function getDescription(): ?string
     {
-        return 'Open an available task to continue.';
+        $user = auth()->user();
+        $explanation = 'These configuration-record counts are not your personal application workload.';
+
+        if (! $user?->can(FoundationPermission::ManageQuestionnaireDrafts->value)
+            && ! $user?->can(FoundationPermission::SubmitQuestionnaireReview->value)
+            && ! $user?->can(FoundationPermission::ReviewQuestionnaires->value)
+            && ! $user?->can(FoundationPermission::ViewQuestionnairePublications->value)) {
+            return 'No configuration statistics are visible for your current access. '.$explanation;
+        }
+
+        return $explanation;
     }
 
     protected function getStats(): array
@@ -44,23 +54,23 @@ class WorkflowOverview extends StatsOverviewWidget
         if ($user?->can(FoundationPermission::ManageQuestionnaireDrafts->value)
             || $user?->can(FoundationPermission::SubmitQuestionnaireReview->value)) {
             $stats[] = Stat::make('Questionnaire drafts', FormVersion::query()->where('state', 'draft')->count())
-                ->description('Manage questions and document requirements')
+                ->description('Draft questionnaire versions; not applicant drafts.')
                 ->descriptionIcon(Heroicon::OutlinedPencilSquare)
                 ->color('primary')
                 ->url(Questionnaires::getUrl());
         }
 
         if ($user?->can(FoundationPermission::ReviewQuestionnaires->value)) {
-            $stats[] = Stat::make('Pending approvals', ConfigurationReviewRequest::query()->where('state', 'pending')->count())
-                ->description('Review exact submitted configurations')
+            $stats[] = Stat::make('Pending questionnaire reviews', ConfigurationReviewRequest::query()->where('state', 'pending')->count())
+                ->description('Configuration reviews awaiting review; not application decisions.')
                 ->descriptionIcon(Heroicon::OutlinedCheckBadge)
                 ->color('warning')
                 ->url(ConfigurationReviewRequestResource::getUrl());
         }
 
         if ($user?->can(FoundationPermission::ViewQuestionnairePublications->value)) {
-            $stats[] = Stat::make('Sandbox publications', PublicationManifest::query()->whereDoesntHave('retirement')->count())
-                ->description('Preview or review publication history')
+            $stats[] = Stat::make('Questionnaire publications (not retired)', PublicationManifest::query()->whereDoesntHave('retirement')->count())
+                ->description('May include scheduled or ended availability; not a count of open services.')
                 ->descriptionIcon(Heroicon::OutlinedEye)
                 ->color('success')
                 ->url(PublicationManifestResource::getUrl());

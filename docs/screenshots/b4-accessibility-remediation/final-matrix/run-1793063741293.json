@@ -1,0 +1,38 @@
+{
+  "mode": "evaluation",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "evaluator UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "evaluator UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-evaluator-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-evaluator-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-evaluator-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-evaluator-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

@@ -11,11 +11,20 @@ use App\Services\Documents\CaseIssuanceService;
 use App\Services\Questionnaires\QuestionnaireDraftService;
 use App\Support\StaffActionFeedback;
 use Filament\Pages\Page;
+use Filament\Support\Icons\Heroicon;
 use Illuminate\Validation\ValidationException;
 use Livewire\WithPagination;
 
 class IssuanceDefinitions extends Page
 {
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentList;
+
+    protected static ?string $navigationLabel = 'Issuance request definitions';
+
+    protected static ?int $navigationSort = 10;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Demonstration Documents';
+
     use WithPagination;
 
     protected static ?string $title = 'Issuance request definitions';

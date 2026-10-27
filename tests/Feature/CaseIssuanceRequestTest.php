@@ -216,7 +216,9 @@ class CaseIssuanceRequestTest extends TestCase
         $this->actingAs($s['manager']);
         $service->transition($s['manager'], $new, 3, 'withdrawn');
         $this->assertSame($row->id, $this->save($s, $key)->id);
-        Livewire::actingAs($s['applicant'])->withQueryParams(['application' => $s['case']->public_id])->test(IssuanceRequests::class)->assertSee('No certificate has been generated.')->assertSee('Fictional contact');
+        Livewire::actingAs($s['applicant'])->withQueryParams(['application' => $s['case']->public_id])->test(IssuanceRequests::class)
+            ->assertSee('No demonstration PDF has been generated. A saved draft is not a submitted request. Authorized staff must explicitly prepare the PDF after a qualifying request is submitted.')
+            ->assertSee('Fictional contact');
     }
 
     public function test_draft_and_definition_audit_failure_are_atomic_and_staff_authority_is_fresh(): void

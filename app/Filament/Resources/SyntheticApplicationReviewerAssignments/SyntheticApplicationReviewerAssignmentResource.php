@@ -21,13 +21,15 @@ use Filament\Tables\Table;
 
 class SyntheticApplicationReviewerAssignmentResource extends Resource
 {
+    protected static ?int $navigationSort = 50;
+
     protected static ?string $model = SyntheticApplicationReviewerAssignment::class;
 
     protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
-    protected static ?string $navigationLabel = 'Test application reviewers';
+    protected static ?string $navigationLabel = 'Application reviewer assignments';
 
     public static function canViewAny(): bool
     {

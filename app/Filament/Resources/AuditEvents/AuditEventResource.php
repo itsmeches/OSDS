@@ -16,11 +16,13 @@ use Illuminate\Database\Eloquent\Builder;
 
 class AuditEventResource extends Resource
 {
+    protected static ?int $navigationSort = 10;
+
     protected static ?string $model = AuditEvent::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShieldCheck;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Security and oversight';
+    protected static string|\UnitEnum|null $navigationGroup = 'Configuration and Audit';
 
     protected static ?string $navigationLabel = 'Audit history';
 

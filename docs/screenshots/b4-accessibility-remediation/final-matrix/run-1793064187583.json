@@ -1,0 +1,58 @@
+{
+  "mode": "generate-download",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "explicit duplicate handler probe returns unchanged original without new render attempt; authorized read audited",
+      "status": "PASS"
+    },
+    {
+      "module": "registration",
+      "stage": "explicit staff generation and applicant exact stored PDF download UI",
+      "status": "PASS",
+      "document": "cbe64977-b7b0-40f5-a87b-ccaeb9d87005",
+      "request": "853d184f-25f7-4e58-a998-cfc1b86fbbbf",
+      "submission": 464,
+      "checksum": "9bec532bded7941fc2f7769bb2e2ba7878bdc0548cab9323552d922057db4599",
+      "pages": 2
+    },
+    {
+      "module": "acsa",
+      "stage": "explicit duplicate handler probe returns unchanged original without new render attempt; authorized read audited",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "explicit staff generation and applicant exact stored PDF download UI",
+      "status": "PASS",
+      "document": "1b9b4fd2-49f4-4222-bef6-b97bfbd57492",
+      "request": "781ba9ae-20bc-41c8-a450-ea3406734e61",
+      "submission": 465,
+      "checksum": "956b7489deb46e1b76a1706c8b6a86f2907283480a8b8a19b7e7c5f314a7f827",
+      "pages": 2
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-08-pdf-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-08-pdf-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-08-pdf-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-08-pdf-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

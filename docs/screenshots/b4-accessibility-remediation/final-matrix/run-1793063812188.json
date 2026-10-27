@@ -1,0 +1,38 @@
+{
+  "mode": "director",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "director UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "director UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-director-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-director-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-director-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-director-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

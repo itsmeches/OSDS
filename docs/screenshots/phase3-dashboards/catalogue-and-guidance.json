@@ -1,0 +1,107 @@
+{
+  "catalogue": [
+    {
+      "class": "App\\Filament\\Pages\\SyntheticApplicationIntake",
+      "label": "Applications and decisions",
+      "group": "Applications and Reviews"
+    },
+    {
+      "class": "App\\Filament\\Pages\\SyntheticEvidenceReviews",
+      "label": "Assigned evidence test reviews",
+      "group": "Applications and Reviews"
+    },
+    {
+      "class": "App\\Filament\\Pages\\Questionnaires",
+      "label": "Application questionnaires",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Resources\\ConfigurationReviewRequests\\ConfigurationReviewRequestResource",
+      "label": "Questionnaire configuration reviews",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Resources\\PublicationManifests\\PublicationManifestResource",
+      "label": "Published questionnaires",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Pages\\DownloadableForms",
+      "label": "Download blank forms",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Pages\\IssuanceDefinitions",
+      "label": "Issuance request definitions",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Pages\\CaseDemonstrationDocuments",
+      "label": "Case-linked demonstration PDFs",
+      "group": "Forms and Demonstration Documents"
+    },
+    {
+      "class": "App\\Filament\\Resources\\Users\\UserResource",
+      "label": "Users",
+      "group": "Administration"
+    },
+    {
+      "class": "App\\Filament\\Resources\\Institutions\\InstitutionResource",
+      "label": "Institutions",
+      "group": "Administration"
+    },
+    {
+      "class": "App\\Filament\\Resources\\InstitutionRepresentatives\\InstitutionRepresentativeResource",
+      "label": "Institution representatives",
+      "group": "Administration"
+    },
+    {
+      "class": "App\\Filament\\Resources\\UserRegionAssignments\\UserRegionAssignmentResource",
+      "label": "Regional assignments",
+      "group": "Administration"
+    }
+  ],
+  "guidance": [
+    {
+      "state": "draft",
+      "label": "Draft — not submitted",
+      "description": "Complete and save your questionnaire and required document links, then review and submit."
+    },
+    {
+      "state": "submitted",
+      "label": "Submitted — awaiting screening",
+      "description": "Your submitted copy is saved for review. You do not need to submit another copy unless corrections are requested."
+    },
+    {
+      "state": "under_screening",
+      "label": "Under staff review",
+      "description": "Authorized staff are reviewing your current submission. Any requested corrections and applicant-facing updates will appear in your history."
+    },
+    {
+      "state": "correction_requested",
+      "label": "Corrections requested",
+      "description": "Read the requested changes, update your correction copy, save and resubmit."
+    },
+    {
+      "state": "resubmitted",
+      "label": "Corrections submitted — awaiting screening",
+      "description": "Your revised copy has been sent. Earlier submissions remain preserved."
+    },
+    {
+      "state": "approved",
+      "label": "Approved — demonstration only",
+      "description": "The Director approved this submitted revision for the demonstration. This does not issue a certificate. Check the issuance-request workspace for availability."
+    },
+    {
+      "state": "rejected",
+      "label": "Rejected — demonstration only",
+      "description": "Read the final decision summary in your history. No demonstration-document request is available from this rejected decision."
+    },
+    {
+      "state": "unknown",
+      "label": "Status unavailable",
+      "description": "Open the application history for the available details."
+    }
+  ],
+  "scope": "Metadata and source contracts only; no actual permission evaluation."
+}

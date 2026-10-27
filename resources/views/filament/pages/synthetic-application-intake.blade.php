@@ -1,4 +1,5 @@
 <x-filament-panels::page>
+    <p class="osds-navigation-context">Review assigned applications, request corrections, record evaluations, make Chief recommendations or record Director decisions. Available actions depend on your permissions and the current case stage.</p>
     <div class="intake-workspace">
         <x-reviewer-feedback />
         <div class="intake-banner" role="status">

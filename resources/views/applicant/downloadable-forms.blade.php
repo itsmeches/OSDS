@@ -1,6 +1,6 @@
 @extends('layouts.applicant')
 @section('content')
-<header class="page-heading"><div><p class="eyebrow">Applicant resources</p><h1>Downloadable forms</h1><p>Get the current blank forms you need for your application.</p></div></header>
+<header class="page-heading"><div><p class="eyebrow">Applicant resources</p><h1>Download blank forms</h1><p>Get the current blank forms you need for your application.</p></div></header>
 <div class="downloads-applicant-note"><p>Download and complete the relevant form, then follow the document instructions in your application. Downloading a form does not submit an application.</p></div>
 <div class="downloads-list-heading"><h2>Available forms</h2><span class="downloads-count">{{ $forms->total() }} {{ $forms->total() === 1 ? 'form' : 'forms' }}</span></div>
 <div class="card-list downloads-catalogue">

@@ -1,0 +1,85 @@
+{
+  "normalization": "Initial numeric parser did not support OKLCH. Original files remain intact; only normalized results are valid for contrast conclusions.",
+  "results": [
+    {
+      "name": "registration-light-1440",
+      "before_minimum": 1.0152126333455187,
+      "before_stable": 19.895357656776593,
+      "before_low_frames": 6,
+      "after_minimum": 19.895357656776593,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "registration-dark-1440",
+      "before_minimum": 1.016557418920661,
+      "before_stable": 17.73971700407407,
+      "before_low_frames": 5,
+      "after_minimum": 17.73971700407407,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "registration-light-375",
+      "before_minimum": 1.0153558832148952,
+      "before_stable": 19.895357656776593,
+      "before_low_frames": 6,
+      "after_minimum": 19.895357656776593,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "registration-dark-375",
+      "before_minimum": 1.0163951905526787,
+      "before_stable": 17.73971700407407,
+      "before_low_frames": 5,
+      "after_minimum": 17.73971700407407,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "acsa-light-1440",
+      "before_minimum": 1.0153381754579305,
+      "before_stable": 19.895357656776593,
+      "before_low_frames": 6,
+      "after_minimum": 19.895357656776593,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "acsa-dark-1440",
+      "before_minimum": 1.0162446555191982,
+      "before_stable": 17.73971700407407,
+      "before_low_frames": 5,
+      "after_minimum": 17.73971700407407,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "acsa-light-375",
+      "before_minimum": 1.003331117024686,
+      "before_stable": 19.895357656776593,
+      "before_low_frames": 18,
+      "after_minimum": 19.895357656776593,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    },
+    {
+      "name": "acsa-dark-375",
+      "before_minimum": 1.016687876906548,
+      "before_stable": 17.73971700407407,
+      "before_low_frames": 5,
+      "after_minimum": 17.73971700407407,
+      "after_low_frames": 0,
+      "after_axe": [],
+      "status": "PASS"
+    }
+  ]
+}

@@ -9,7 +9,6 @@ use App\Models\ApplicationSubmission;
 use App\Services\Applications\ApplicationDecisionService;
 use App\Services\Applications\ApplicationLifecycleService;
 use App\Services\Authorization\ReviewerQueueScope;
-use BackedEnum;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
@@ -24,6 +23,8 @@ use Livewire\Attributes\Url;
 
 class SyntheticApplicationIntake extends Page
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Applications and Reviews';
+
     use ScopesReviewerQueue;
 
     #[Locked]
@@ -104,13 +105,13 @@ class SyntheticApplicationIntake extends Page
     #[Url]
     public ?string $submission = null;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedInboxArrowDown;
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedInboxArrowDown;
 
-    protected static ?string $navigationLabel = 'Application intake';
+    protected static ?string $navigationLabel = 'Applications and decisions';
 
-    protected static ?string $title = 'Application intake';
+    protected static ?string $title = 'Applications and decisions';
 
-    protected static ?int $navigationSort = 14;
+    protected static ?int $navigationSort = 10;
 
     protected string $view = 'filament.pages.synthetic-application-intake';
 

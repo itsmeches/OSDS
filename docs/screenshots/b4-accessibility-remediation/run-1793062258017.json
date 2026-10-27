@@ -1,0 +1,38 @@
+{
+  "mode": "fresh-author",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "fresh saved/reloaded distinct question labels verified before review",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "fresh saved/reloaded distinct question labels verified before review",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-verified-author-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-verified-author-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-verified-author-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-verified-author-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "configurationCountExpressions": [
+    "FormVersion::query()->where('state', 'draft')->count()",
+    "ConfigurationReviewRequest::query()->where('state', 'pending')->count()",
+    "PublicationManifest::query()->whereDoesntHave('retirement')->count()"
+  ],
+  "configurationVisibilityUnchanged": true,
+  "requestBindingsUnchanged": true,
+  "requestQueryExpressionsUnchanged": 4,
+  "presenterDatabaseFree": true,
+  "taskUsesDestinationAccessChecks": true,
+  "applicationDraftActionGuardsUnchanged": true,
+  "scope": "Static source comparisons and catalogue inspection; not authenticated verification."
+}

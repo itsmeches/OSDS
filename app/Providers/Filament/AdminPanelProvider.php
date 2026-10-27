@@ -63,6 +63,13 @@ class AdminPanelProvider extends PanelProvider
             ->themeSwitcher()
             ->defaultThemeMode(ThemeMode::System)
             ->maxContentWidth(Width::SevenExtraLarge)
+            ->navigationGroups([
+                'Applications and Reviews',
+                'Forms and Requirements',
+                'Demonstration Documents',
+                'Institutions and Access',
+                'Configuration and Audit',
+            ])
             ->sidebarWidth('17rem')
             ->sidebarCollapsibleOnDesktop()
             ->unsavedChangesAlerts()

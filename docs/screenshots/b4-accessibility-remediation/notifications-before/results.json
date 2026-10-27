@@ -1,0 +1,135 @@
+{
+  "phase": "before",
+  "checks": [
+    {
+      "name": "registration-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 297,
+      "minimumContrast": 1.0144858721871908,
+      "lowContrastFrames": 7,
+      "stableMinimum": 7.30792872554194,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "registration-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 309,
+      "minimumContrast": 1.016557418920661,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "registration-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 296,
+      "minimumContrast": 1.0146221490985168,
+      "lowContrastFrames": 7,
+      "stableMinimum": 7.30792872554194,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "registration-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 323,
+      "minimumContrast": 1.0163951905526787,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "acsa-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 264,
+      "minimumContrast": 1.0146053034309817,
+      "lowContrastFrames": 7,
+      "stableMinimum": 7.30792872554194,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "acsa-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 298,
+      "minimumContrast": 1.0162446555191982,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    },
+    {
+      "name": "acsa-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 369,
+      "minimumContrast": 1.003174304442297,
+      "lowContrastFrames": 19,
+      "stableMinimum": 7.30792872554194,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end",
+        "fi-no-notification fi-status-success fi-transition-leave-end"
+      ]
+    },
+    {
+      "name": "acsa-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 334,
+      "minimumContrast": 1.016687876906548,
+      "lowContrastFrames": 5,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": [
+        "fi-no-notification fi-status-success fi-transition-enter-end"
+      ]
+    }
+  ],
+  "errors": []
+}

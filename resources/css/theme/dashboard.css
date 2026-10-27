@@ -1,0 +1,38 @@
+/* Dashboard and applicant guidance only; no navigation, landing or token changes. */
+.osds-dashboard { display: grid; gap: 1.5rem; min-inline-size: 0; }
+.osds-dashboard :is(h2, h3, h4, p, li, span), .applicant-guidance :is(h2, h3, p, a, dd, dt, small) { overflow-wrap: anywhere; }
+.osds-dashboard-intro h2 { font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
+.osds-dashboard-intro p { max-inline-size: 75ch; margin-block-start: .5rem; color: var(--osds-color-muted); line-height: 1.7; }
+.osds-dashboard-section { display: grid; gap: .75rem; }
+.osds-dashboard-section > h3, .osds-dashboard-empty h3 { font-size: 1rem; font-weight: 700; line-height: 1.5; }
+.osds-dashboard-grid { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
+.osds-task-card { min-inline-size: 0; padding: 1rem; border: 1px solid var(--osds-color-border); border-radius: var(--osds-radius-lg); background: var(--osds-color-surface); color: var(--osds-color-text); }
+.osds-task-card h4 { font-weight: 700; }
+.osds-task-card h4 a { display: flex; align-items: flex-start; gap: .65rem; min-block-size: 2.75rem; padding-block: .35rem; color: var(--osds-color-link); text-decoration: underline; text-underline-offset: .2em; line-height: 1.6; }
+.osds-task-card h4 a svg { flex: 0 0 1.25rem; inline-size: 1.25rem; block-size: 1.25rem; margin-block-start: .2rem; }
+.osds-task-card p, .osds-task-responsibilities { color: var(--osds-color-muted); font-size: .875rem; line-height: 1.7; }
+.osds-task-responsibilities { list-style: disc; padding-inline-start: 1.25rem; margin-block-start: .75rem; }
+.osds-task-responsibilities li + li { margin-block-start: .5rem; }
+.osds-task-card .osds-task-boundary { margin-block-start: .75rem; padding-block-start: .75rem; border-block-start: 1px solid var(--osds-color-border); }
+.osds-dashboard-empty { padding: 1.25rem; border: 1px solid var(--osds-color-border); border-radius: var(--osds-radius-lg); background: var(--osds-color-surface); }
+.osds-dashboard-empty p { margin-block-start: .5rem; color: var(--osds-color-muted); line-height: 1.7; }
+.osds-dashboard a:focus-visible, .applicant-guidance :is(a, button, summary):focus-visible { outline: 3px solid var(--osds-focus); outline-offset: 3px; }
+.applicant-guidance .applicant-workspace-intro { max-inline-size: 75ch; margin-block-end: 1.25rem; color: var(--osds-color-muted); line-height: 1.7; }
+.applicant-guidance .status { margin-block: .5rem; }
+.applicant-guidance .application-list-card { align-items: start; }
+.applicant-guidance .application-card-action { min-inline-size: 0; max-inline-size: 22rem; }
+.applicant-guidance .applicant-guidance-link { display: inline-flex; align-items: center; min-block-size: 2.75rem; line-height: 1.5; }
+.applicant-guidance .applicant-availability-note { margin-block: .75rem; padding: .85rem; border-inline-start: 3px solid var(--osds-color-warning); background: var(--osds-color-warning-surface); color: var(--osds-color-warning); line-height: 1.6; }
+.applicant-guidance .applicant-resource-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-block-start: 1.25rem; }
+.applicant-guidance .applicant-resource-links a { display: inline-flex; align-items: center; min-block-size: 2.75rem; color: var(--osds-color-link); text-decoration: underline; text-underline-offset: .2em; }
+.applicant-guidance.issuance-requests-workspace > a, .applicant-guidance.issuance-requests-workspace article > a { display: inline-flex; align-items: center; min-block-size: 2.75rem; color: var(--osds-color-link); text-decoration: underline; }
+@media (min-width: 48rem) {
+    .osds-dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 80rem) {
+    .osds-dashboard-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 48rem) {
+    .applicant-guidance .application-list-card { grid-template-columns: minmax(0, 1fr); }
+    .applicant-guidance .application-card-action { max-inline-size: 100%; }
+}

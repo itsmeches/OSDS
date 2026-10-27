@@ -19,11 +19,13 @@ use Filament\Tables\Table;
 
 class ApplicantSandboxEligibilityGrantResource extends Resource
 {
+    protected static ?int $navigationSort = 70;
+
     protected static ?string $model = ApplicantSandboxEligibilityGrant::class;
 
     protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedKey;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
     protected static ?string $navigationLabel = 'Applicant sandbox eligibility';
 

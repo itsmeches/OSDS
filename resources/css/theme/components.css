@@ -86,6 +86,9 @@ input[type='radio'] { border-radius: 50%; }
 .staff-queue-pager button { border: 1px solid var(--osds-color-border-strong); padding: .65rem; border-radius: var(--osds-radius-md); color: var(--osds-color-link); min-height: 2.75rem; }
 .staff-queue-pager button:disabled { color: var(--osds-color-disabled); background: var(--osds-color-disabled-surface); }
 .fi-no-notification:not(.fi-color) .fi-no-notification-body { color: var(--osds-color-muted); }
+/* Keep success-notice text readable throughout its existing position transition. */
+.fi-no-notification.fi-status-success.fi-transition-enter-start,
+.fi-no-notification.fi-status-success.fi-transition-leave-end { opacity: 1; }
 .intake-workspace { min-width: 0; }
 .intake-workspace [hidden] { display: none !important; }
 .intake-panel { min-width: 0; }

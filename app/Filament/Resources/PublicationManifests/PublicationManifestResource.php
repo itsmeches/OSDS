@@ -20,6 +20,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 class PublicationManifestResource extends Resource
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Forms and Requirements';
+
     protected static ?string $model = PublicationManifest::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedEye;

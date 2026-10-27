@@ -7,7 +7,6 @@ use App\Models\EvidenceReferenceRevision;
 use App\Models\SyntheticEvidenceReviewCase;
 use App\Services\Authorization\ReviewerQueueScope;
 use App\Services\Evidence\SyntheticEvidenceReviewService;
-use BackedEnum;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -19,15 +18,17 @@ use Livewire\Attributes\Url;
 
 class SyntheticEvidenceReviews extends Page
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Applications and Reviews';
+
     use ScopesReviewerQueue;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentMagnifyingGlass;
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentMagnifyingGlass;
 
-    protected static ?string $navigationLabel = 'Assigned test reviews';
+    protected static ?string $navigationLabel = 'Assigned evidence test reviews';
 
-    protected static ?string $title = 'Assigned test reviews';
+    protected static ?string $title = 'Assigned evidence test reviews';
 
-    protected static ?int $navigationSort = 15;
+    protected static ?int $navigationSort = 20;
 
     protected string $view = 'filament.pages.synthetic-evidence-reviews';
 

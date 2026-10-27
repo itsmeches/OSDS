@@ -1,5 +1,14 @@
 @import '../../../../vendor/filament/filament/resources/css/theme.css';
 @import '../../theme/tokens.css';
+@import '../../theme/dashboard.css';
+
+/* Preserve Filament's drawer/collapse behavior while allowing longer labels. */
+.fi-sidebar-item-label { white-space: normal; overflow-wrap: anywhere; }
+.fi-sidebar-group-label { overflow-wrap: anywhere; }
+.fi-sidebar-item-btn { min-block-size: 2.75rem; }
+.fi-sidebar-item-btn:focus-visible,
+.fi-sidebar-group-btn:focus-visible { outline: 3px solid var(--osds-focus); outline-offset: -3px; }
+.osds-navigation-context { color: var(--osds-color-muted); line-height: 1.6; }
 
 .questionnaire-field { display: grid; gap: .5rem; min-width: 0; }
 .questionnaire-field-label { font-weight: 650; }

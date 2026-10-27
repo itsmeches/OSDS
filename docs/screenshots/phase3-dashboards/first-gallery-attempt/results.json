@@ -1,0 +1,1569 @@
+{
+  "scope": "Standalone Blade previews of changed templates with synthetic in-memory data and simulated task visibility. Shared component wrappers/icons and route helpers are substituted; existing request queries are replaced with inert collections. No Laravel bootstrap, account, application server, database or actual authorization is exercised.",
+  "captures": [
+    {
+      "profile": "none",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "none-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "none-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "none-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "none-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "none-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "none-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "none-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "none",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "none-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "BODY",
+        "label": "Component preview: noneSimulated data and visibility; no authenticated account or live case.\n    \n  ",
+        "focusVisible": false
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "review-only-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "review-only-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "review-only-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "review-only-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "review-only-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "review-only-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "review-only-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "review-only",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "review-only-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "configuration-only-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "configuration-only-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "configuration-only-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "configuration-only-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "configuration-only-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "configuration-only-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "configuration-only-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "configuration-only",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "configuration-only-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Application questionnaires",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "combined-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "combined-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "combined-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "combined-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "combined-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "combined-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "combined-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "combined-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "applicant-states-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "applicant-states-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "applicant-states-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "applicant-states-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "applicant-states-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "applicant-states-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "applicant-states-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "applicant-states-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 375,
+      "mode": "light",
+      "textScale": false,
+      "capture": "request-pdf-states-light-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 375,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "request-pdf-states-dark-375.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 768,
+      "mode": "light",
+      "textScale": false,
+      "capture": "request-pdf-states-light-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 768,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "request-pdf-states-dark-768.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 1024,
+      "mode": "light",
+      "textScale": false,
+      "capture": "request-pdf-states-light-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 1024,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "request-pdf-states-dark-1024.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 1440,
+      "mode": "light",
+      "textScale": false,
+      "capture": "request-pdf-states-light-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "request-pdf-states",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "request-pdf-states-dark-1440.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "All issuance cases",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "supplemental": [
+    {
+      "profile": "combined",
+      "width": 320,
+      "mode": "light",
+      "textScale": false,
+      "capture": "combined-light-320.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 375,
+      "mode": "light",
+      "textScale": true,
+      "capture": "combined-light-375-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1440,
+      "mode": "light",
+      "textScale": true,
+      "capture": "combined-light-1440-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 320,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "combined-dark-320.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 375,
+      "mode": "dark",
+      "textScale": true,
+      "capture": "combined-dark-375-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "combined",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": true,
+      "capture": "combined-dark-1440-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Applications and decisions",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 320,
+      "mode": "light",
+      "textScale": false,
+      "capture": "applicant-states-light-320.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 375,
+      "mode": "light",
+      "textScale": true,
+      "capture": "applicant-states-light-375-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1440,
+      "mode": "light",
+      "textScale": true,
+      "capture": "applicant-states-light-1440-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 320,
+      "mode": "dark",
+      "textScale": false,
+      "capture": "applicant-states-dark-320.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 375,
+      "mode": "dark",
+      "textScale": true,
+      "capture": "applicant-states-dark-375-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    },
+    {
+      "profile": "applicant-states",
+      "width": 1440,
+      "mode": "dark",
+      "textScale": true,
+      "capture": "applicant-states-dark-1440-text200.png",
+      "overflow": false,
+      "keyboard": {
+        "tag": "A",
+        "label": "Start application",
+        "focusVisible": true
+      },
+      "errors": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ],
+          "description": "Ensure landmarks are unique",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "landmark-is-unique",
+                  "data": {
+                    "role": "navigation",
+                    "accessibleText": "application resources"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+                      "target": [
+                        ".applicant-guidance:nth-child(14) > nav"
+                      ]
+                    }
+                  ],
+                  "impact": "moderate",
+                  "message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "moderate",
+              "html": "<nav class=\"applicant-resource-links\" aria-label=\"Application resources\"><a href=\"#preview-applicant-issuance-requests\">Issuance requests</a><a href=\"#preview-applicant-forms\">Download blank forms</a></nav>",
+              "target": [
+                ".applicant-guidance:nth-child(4) > nav"
+              ],
+              "failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "incomplete": []
+    }
+  ]
+}

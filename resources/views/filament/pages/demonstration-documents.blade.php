@@ -1,4 +1,5 @@
 <x-filament-panels::page>
+    <p class="osds-navigation-context">Configure standalone layout previews. These do not create case-linked issuance requests or stored case demonstration PDFs.</p>
     <x-filament::section heading="Applicant issuance form settings" description="Publish an editable demonstration form for signed-in applicants. This does not establish eligibility or official issuance.">
         <p>Customize labels and instructions, add up to 12 questions, and enable or withdraw applicant access. Certificate merge fields stay required. Additional answers print in a separate demonstration appendix; they cannot change certificate type, director or validity.</p>
         <form wire:submit="publishIssuanceForm" class="downloads-form">

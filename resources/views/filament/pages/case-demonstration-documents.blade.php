@@ -1,4 +1,5 @@
 <x-filament-panels::page>
+    <p class="osds-navigation-context">Manage templates and personnel mappings for case-linked demonstration PDFs. Generation remains subject to the existing approved-case and request checks.</p>
 <p role="status">Synthetic demonstration PDFs only. No official issuance, signature or legal validity. Generation requires an explicit staff action.</p>
 @if($errors->any())<div role="alert">@foreach($errors->all() as $error)<p>{{ $error }}</p>@endforeach</div>@endif
 @if(collect(['documents.templates.manage','documents.templates.review','documents.templates.publish','documents.personnel.manage','documents.personnel.review','documents.personnel.publish'])->contains(fn($permission)=>auth()->user()->can($permission)))

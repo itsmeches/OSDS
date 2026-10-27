@@ -1,0 +1,38 @@
+{
+    "scope":  "Compared to pre-Phase-1 working tree, including pending remediation and historical evidence",
+    "changedFiles":  [
+                         "app/Filament/Pages/CaseDemonstrationDocuments.php",
+                         "app/Filament/Pages/DemonstrationDocuments.php",
+                         "app/Filament/Pages/DownloadableForms.php",
+                         "app/Filament/Pages/IssuanceDefinitions.php",
+                         "app/Filament/Pages/Questionnaires.php",
+                         "app/Filament/Pages/SyntheticApplicationIntake.php",
+                         "app/Filament/Pages/SyntheticEvidenceReviews.php",
+                         "app/Filament/Resources/ApplicantSandboxEligibilityGrants/ApplicantSandboxEligibilityGrantResource.php",
+                         "app/Filament/Resources/AuditEvents/AuditEventResource.php",
+                         "app/Filament/Resources/ConfigurationReviewRequests/ConfigurationReviewRequestResource.php",
+                         "app/Filament/Resources/InstitutionRepresentatives/InstitutionRepresentativeResource.php",
+                         "app/Filament/Resources/Institutions/InstitutionResource.php",
+                         "app/Filament/Resources/PublicationManifests/PublicationManifestResource.php",
+                         "app/Filament/Resources/SyntheticApplicationReviewerAssignments/SyntheticApplicationReviewerAssignmentResource.php",
+                         "app/Filament/Resources/SyntheticEvidenceReviewerAssignments/SyntheticEvidenceReviewerAssignmentResource.php",
+                         "app/Filament/Resources/UserRegionAssignments/UserRegionAssignmentResource.php",
+                         "app/Filament/Resources/Users/UserResource.php",
+                         "app/Providers/Filament/AdminPanelProvider.php",
+                         "resources/css/filament/admin/theme.css",
+                         "resources/css/theme/applicant.css",
+                         "resources/views/applicant/downloadable-forms.blade.php",
+                         "resources/views/filament/pages/case-demonstration-documents.blade.php",
+                         "resources/views/filament/pages/demonstration-documents.blade.php",
+                         "resources/views/filament/pages/issuance-definitions.blade.php",
+                         "resources/views/filament/pages/synthetic-application-intake.blade.php",
+                         "resources/views/layouts/applicant.blade.php"
+                     ],
+    "preservedPdfCount":  71,
+    "identicalFiles":  2561,
+    "date":  "2026-10-27",
+    "baselineFiles":  2587,
+    "missingFiles":  [
+
+                     ]
+}

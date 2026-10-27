@@ -216,3 +216,5 @@ body {
 
 @import './theme/components.css';
 @import './theme/applicant.css';
+@import './theme/landing.css';
+@import './theme/dashboard.css';

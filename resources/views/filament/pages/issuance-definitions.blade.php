@@ -1,4 +1,5 @@
 <x-filament-panels::page>
+    <p class="osds-navigation-context">Configure the versioned form used for case-linked issuance requests. This is separate from application questionnaires and standalone layout previews.</p>
     <section class="intake-panel"><h2>Case-linked demonstration requests</h2><p>No certificate or PDF is generated. Use the existing questionnaire builder and exact configuration review before creating a version here. Intake publication is separate.</p><a href="{{ \App\Filament\Pages\Questionnaires::getUrl() }}">Questionnaires and configuration review</a></section>
     @if($errors->any())<div role="alert" class="intake-error">@foreach($errors->all() as $error)<p>{{ $error }}</p>@endforeach</div>@endif
     @can('issuance.definitions.manage')

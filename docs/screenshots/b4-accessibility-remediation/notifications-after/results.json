@@ -1,0 +1,118 @@
+{
+  "phase": "after",
+  "checks": [
+    {
+      "name": "registration-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 284,
+      "minimumContrast": 19.895357656776593,
+      "lowContrastFrames": 0,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "registration-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 343,
+      "minimumContrast": 17.73971700407407,
+      "lowContrastFrames": 0,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "registration-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 393,
+      "minimumContrast": 19.895357656776593,
+      "lowContrastFrames": 0,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "registration-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 392,
+      "minimumContrast": 17.73971700407407,
+      "lowContrastFrames": 0,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "acsa-light-1440",
+      "theme": "light",
+      "width": 1440,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 397,
+      "minimumContrast": 19.895357656776593,
+      "lowContrastFrames": 0,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "acsa-dark-1440",
+      "theme": "dark",
+      "width": 1440,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 390,
+      "minimumContrast": 17.73971700407407,
+      "lowContrastFrames": 0,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "acsa-light-375",
+      "theme": "light",
+      "width": 375,
+      "actualTheme": [
+        "light"
+      ],
+      "samples": 395,
+      "minimumContrast": 19.895357656776593,
+      "lowContrastFrames": 0,
+      "stableMinimum": 19.895357656776593,
+      "axeViolations": [],
+      "lowClasses": []
+    },
+    {
+      "name": "acsa-dark-375",
+      "theme": "dark",
+      "width": 375,
+      "actualTheme": [
+        "dark"
+      ],
+      "samples": 400,
+      "minimumContrast": 17.73971700407407,
+      "lowContrastFrames": 0,
+      "stableMinimum": 17.73971700407407,
+      "axeViolations": [],
+      "lowClasses": []
+    }
+  ],
+  "errors": []
+}

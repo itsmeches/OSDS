@@ -1,0 +1,1161 @@
+{
+  "scope": "Source-derived static landing page with built application CSS/JS and shared theme components. Laravel helpers are replaced with the existing destinations; no authentication or application server is exercised.",
+  "captures": [
+    {
+      "width": 375,
+      "mode": "light",
+      "capture": "light-375.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 80.203125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 301,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 301,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 375,
+      "mode": "dark",
+      "capture": "dark-375.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 80.203125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 301,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 301,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "capture": "light-768.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "capture": "dark-768.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1024,
+      "mode": "light",
+      "capture": "light-1024.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1024,
+      "mode": "dark",
+      "capture": "dark-1024.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "mode": "light",
+      "capture": "light-1440.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "capture": "dark-1440.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 56.578125,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 160.609375,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 123.90625,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "unexpectedRequests": [],
+      "keyboard": "PASS: skip link first, Enter focuses main, subsequent Tab reaches applicant sign-in",
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "supplemental": [
+    {
+      "width": 320,
+      "textScale": false,
+      "mode": "light",
+      "capture": "light-320-reflow-320.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 80.203125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 246,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 246,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 375,
+      "textScale": true,
+      "mode": "light",
+      "capture": "light-375-text-200.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 82.015625,
+          "height": 88
+        },
+        {
+          "label": "Demonstration process",
+          "width": 304.296875,
+          "height": 88
+        },
+        {
+          "label": "Access",
+          "width": 86.359375,
+          "height": 88
+        },
+        {
+          "label": "Light",
+          "width": 86.5625,
+          "height": 88
+        },
+        {
+          "label": "Dark",
+          "width": 82.4375,
+          "height": 88
+        },
+        {
+          "label": "System",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 229,
+          "height": 129.96875
+        },
+        {
+          "label": "Staff sign in",
+          "width": 229,
+          "height": 129.96875
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "textScale": true,
+      "mode": "light",
+      "capture": "light-1440-text-200.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 82.015625,
+          "height": 88
+        },
+        {
+          "label": "Demonstration process",
+          "width": 304.296875,
+          "height": 88
+        },
+        {
+          "label": "Access",
+          "width": 86.359375,
+          "height": 88
+        },
+        {
+          "label": "Light",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Dark",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "System",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 319.21875,
+          "height": 88
+        },
+        {
+          "label": "Staff sign in",
+          "width": 245.796875,
+          "height": 88
+        }
+      ],
+      "headerOverlap": false,
+      "dark": false,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 320,
+      "textScale": false,
+      "mode": "dark",
+      "capture": "dark-320-reflow-320.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 41.015625,
+          "height": 44
+        },
+        {
+          "label": "Demonstration process",
+          "width": 152.15625,
+          "height": 44
+        },
+        {
+          "label": "Access",
+          "width": 43.1875,
+          "height": 44
+        },
+        {
+          "label": "Light",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Dark",
+          "width": 80.203125,
+          "height": 44
+        },
+        {
+          "label": "System",
+          "width": 80.1875,
+          "height": 44
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 246,
+          "height": 44.375
+        },
+        {
+          "label": "Staff sign in",
+          "width": 246,
+          "height": 44.375
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 375,
+      "textScale": true,
+      "mode": "dark",
+      "capture": "dark-375-text-200.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 82.015625,
+          "height": 88
+        },
+        {
+          "label": "Demonstration process",
+          "width": 304.296875,
+          "height": 88
+        },
+        {
+          "label": "Access",
+          "width": 86.359375,
+          "height": 88
+        },
+        {
+          "label": "Light",
+          "width": 86.5625,
+          "height": 88
+        },
+        {
+          "label": "Dark",
+          "width": 82.4375,
+          "height": 88
+        },
+        {
+          "label": "System",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 229,
+          "height": 129.96875
+        },
+        {
+          "label": "Staff sign in",
+          "width": 229,
+          "height": 129.96875
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "textScale": true,
+      "mode": "dark",
+      "capture": "dark-1440-text-200.png",
+      "overflow": false,
+      "links": [
+        {
+          "text": "Skip to main content",
+          "href": "#landing-content"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Demonstration process",
+          "href": "#process"
+        },
+        {
+          "text": "Access",
+          "href": "#access"
+        },
+        {
+          "text": "Applicant sign in",
+          "href": "/applicant/login"
+        },
+        {
+          "text": "Staff sign in",
+          "href": "/admin"
+        }
+      ],
+      "controls": [
+        {
+          "label": "About",
+          "width": 82.015625,
+          "height": 88
+        },
+        {
+          "label": "Demonstration process",
+          "width": 304.296875,
+          "height": 88
+        },
+        {
+          "label": "Access",
+          "width": 86.359375,
+          "height": 88
+        },
+        {
+          "label": "Light",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Dark",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "System",
+          "width": 113.15625,
+          "height": 88
+        },
+        {
+          "label": "Applicant sign in",
+          "width": 319.21875,
+          "height": 88
+        },
+        {
+          "label": "Staff sign in",
+          "width": 245.796875,
+          "height": 88
+        }
+      ],
+      "headerOverlap": false,
+      "dark": true,
+      "errors": [],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "theme": {
+    "transitions": [
+      {
+        "mode": "dark",
+        "pressed": "true",
+        "dark": true
+      },
+      {
+        "mode": "light",
+        "pressed": "true",
+        "dark": false
+      },
+      {
+        "mode": "system",
+        "pressed": "true",
+        "dark": false
+      }
+    ],
+    "followsSystemDark": true,
+    "followsSystemLight": true,
+    "errors": []
+  },
+  "blockedStorage": {
+    "darkControlWorks": true,
+    "errors": []
+  }
+}

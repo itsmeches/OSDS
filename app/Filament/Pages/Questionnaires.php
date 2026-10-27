@@ -10,7 +10,6 @@ use App\Models\RequirementSetVersion;
 use App\Services\Questionnaires\QuestionnaireDraftService;
 use App\Services\Questionnaires\QuestionnairePublicationService;
 use App\Support\FoundationPermission;
-use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -21,11 +20,13 @@ use Livewire\Attributes\Url;
 
 class Questionnaires extends Page
 {
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentList;
+    protected static string|\UnitEnum|null $navigationGroup = 'Forms and Requirements';
 
-    protected static ?string $navigationLabel = 'Questionnaires';
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentList;
 
-    protected static ?string $title = 'Questionnaires';
+    protected static ?string $navigationLabel = 'Application questionnaires';
+
+    protected static ?string $title = 'Application questionnaires';
 
     protected static ?int $navigationSort = 10;
 

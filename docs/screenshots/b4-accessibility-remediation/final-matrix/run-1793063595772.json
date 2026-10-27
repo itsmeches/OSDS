@@ -1,0 +1,38 @@
+{
+  "mode": "applicant",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "applicant R1 submission UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "applicant R1 submission UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [
+    {
+      "name": "registration-02-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "registration-02-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-02-applicant-light",
+      "violations": [],
+      "overflow": false
+    },
+    {
+      "name": "acsa-02-applicant-dark-mobile",
+      "violations": [],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

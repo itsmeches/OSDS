@@ -1,0 +1,17 @@
+{
+  "mode": "supplementary",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "supplementary configuration UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "supplementary configuration UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

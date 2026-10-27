@@ -1,0 +1,17 @@
+{
+  "mode": "document-config",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "template and fictional personnel configuration UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "template and fictional personnel configuration UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

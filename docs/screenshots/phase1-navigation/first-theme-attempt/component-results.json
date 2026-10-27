@@ -1,0 +1,1357 @@
+{
+  "scope": "Database-free applicant navigation component with actual source markup, built CSS and JS; all sandbox links shown. No authorization or authenticated staff UI coverage.",
+  "results": [
+    {
+      "width": 375,
+      "mode": "light",
+      "capture": "light-375.png",
+      "keyboard": "PASS: collapsed, Enter opens, Tab reaches first link, Escape closes and restores focus",
+      "overflow": false,
+      "errors": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.07,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+                      "target": [
+                        "button[data-theme-option=\"light\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+              "target": [
+                "button[data-theme-option=\"light\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"dark\" aria-pressed=\"false\">Dark</button>",
+              "target": [
+                "button[data-theme-option=\"dark\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"system\" aria-pressed=\"false\">System</button>",
+              "target": [
+                "button[data-theme-option=\"system\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "mode": "dark",
+      "capture": "dark-375.png",
+      "keyboard": "PASS: collapsed, Enter opens, Tab reaches first link, Escape closes and restores focus",
+      "overflow": false,
+      "errors": [],
+      "violations": [],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "mode": "light",
+      "capture": "light-768.png",
+      "keyboard": "PASS: collapsed, Enter opens, Tab reaches first link, Escape closes and restores focus",
+      "overflow": false,
+      "errors": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.07,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+                      "target": [
+                        "button[data-theme-option=\"light\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+              "target": [
+                "button[data-theme-option=\"light\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"dark\" aria-pressed=\"false\">Dark</button>",
+              "target": [
+                "button[data-theme-option=\"dark\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"system\" aria-pressed=\"false\">System</button>",
+              "target": [
+                "button[data-theme-option=\"system\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "mode": "dark",
+      "capture": "dark-768.png",
+      "keyboard": "PASS: collapsed, Enter opens, Tab reaches first link, Escape closes and restores focus",
+      "overflow": false,
+      "errors": [],
+      "violations": [],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "mode": "light",
+      "capture": "light-1024.png",
+      "keyboard": "not applicable: desktop navigation remains visible",
+      "overflow": false,
+      "errors": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.07,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+                      "target": [
+                        "button[data-theme-option=\"light\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+              "target": [
+                "button[data-theme-option=\"light\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"dark\" aria-pressed=\"false\">Dark</button>",
+              "target": [
+                "button[data-theme-option=\"dark\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"system\" aria-pressed=\"false\">System</button>",
+              "target": [
+                "button[data-theme-option=\"system\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#ffffff",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1.08,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #ffffff, background color: #f3f6fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button class=\"sign-out\" type=\"submit\">Sign out</button>",
+              "target": [
+                ".sign-out"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #ffffff, background color: #f3f6fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Issuance requests</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(3) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Download blank forms</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(4) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Account and organization</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(5) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h2 id=\"demonstration-tools-heading\">Secondary demonstration tools</h2>",
+              "target": [
+                "#demonstration-tools-heading"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>Try a sample layout. This does not submit an issuance request or create a case-linked document.</p>",
+              "target": [
+                "section > p"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Layout preview</span>",
+              "target": [
+                "nav[aria-label=\"Secondary demonstration tools\"] > a[href$=\"#component-preview\"] > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "mode": "dark",
+      "capture": "dark-1024.png",
+      "keyboard": "not applicable: desktop navigation remains visible",
+      "overflow": false,
+      "errors": [],
+      "violations": [],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Issuance requests</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(3) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "mode": "light",
+      "capture": "light-1440.png",
+      "keyboard": "not applicable: desktop navigation remains visible",
+      "overflow": false,
+      "errors": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 1.07,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+                      "target": [
+                        "button[data-theme-option=\"light\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"light\" aria-pressed=\"true\">Light</button>",
+              "target": [
+                "button[data-theme-option=\"light\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.07 (foreground color: #f3f7fc, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"dark\" aria-pressed=\"false\">Dark</button>",
+              "target": [
+                "button[data-theme-option=\"dark\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f8fafc",
+                    "contrastRatio": 1.02,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<div class=\"theme-switcher auth-theme\" role=\"group\" aria-label=\"Color theme\">",
+                      "target": [
+                        ".theme-switcher"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button type=\"button\" data-theme-option=\"system\" aria-pressed=\"false\">System</button>",
+              "target": [
+                "button[data-theme-option=\"system\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.02 (foreground color: #f3f7fc, background color: #f8fafc, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#ffffff",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1.08,
+                    "fontSize": "12.0pt (16px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 1.08 (foreground color: #ffffff, background color: #f3f6fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button class=\"sign-out\" type=\"submit\">Sign out</button>",
+              "target": [
+                ".sign-out"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.08 (foreground color: #ffffff, background color: #f3f6fa, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Issuance requests</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(3) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Download blank forms</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(4) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Account and organization</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(5) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "10.5pt (14px)",
+                    "fontWeight": "bold",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<h2 id=\"demonstration-tools-heading\">Secondary demonstration tools</h2>",
+              "target": [
+                "#demonstration-tools-heading"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>Try a sample layout. This does not submit an issuance request or create a case-linked document.</p>",
+              "target": [
+                "section > p"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#f3f7fc",
+                    "bgColor": "#f3f6fa",
+                    "contrastRatio": 1,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "equalRatio",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element has a 1:1 contrast ratio with the background"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Layout preview</span>",
+              "target": [
+                "nav[aria-label=\"Secondary demonstration tools\"] > a[href$=\"#component-preview\"] > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has a 1:1 contrast ratio with the background"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "mode": "dark",
+      "capture": "dark-1440.png",
+      "keyboard": "not applicable: desktop navigation remains visible",
+      "overflow": false,
+      "errors": [],
+      "violations": [],
+      "targetSizeViolations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "13.8pt (18.4px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span>Issuance requests</span>",
+              "target": [
+                "a[href$=\"#component-preview\"]:nth-child(3) > span"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "messageKey": "nonBmp"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element content contains only non-text characters"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span aria-hidden=\"true\">ⓘ</span>",
+              "target": [
+                ".sandbox-banner > span[aria-hidden=\"true\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

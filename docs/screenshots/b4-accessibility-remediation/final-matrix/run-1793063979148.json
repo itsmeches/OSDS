@@ -1,0 +1,17 @@
+{
+  "mode": "definitions",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "case linked definition created UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "case linked definition created UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}

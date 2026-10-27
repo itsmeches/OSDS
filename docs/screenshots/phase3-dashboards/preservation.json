@@ -1,0 +1,20 @@
+{
+    "pdfs":  71,
+    "changedFiles":  [
+                         "app/Filament/Pages/Dashboard.php",
+                         "app/Filament/Widgets/WorkflowOverview.php",
+                         "resources/css/app.css",
+                         "resources/css/filament/admin/theme.css",
+                         "resources/views/applicant/home.blade.php",
+                         "resources/views/applicant/track.blade.php",
+                         "resources/views/components/applicant-status.blade.php",
+                         "resources/views/livewire/applicant/issuance-requests.blade.php"
+                     ],
+    "identicalFiles":  2630,
+    "date":  "2026-10-27",
+    "scope":  "Compared against pre-Phase-3 working tree; excludes new additions",
+    "baselineFiles":  2638,
+    "missingFiles":  [
+
+                     ]
+}

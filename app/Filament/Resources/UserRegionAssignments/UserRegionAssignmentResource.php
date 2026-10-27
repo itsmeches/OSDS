@@ -22,7 +22,7 @@ class UserRegionAssignmentResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMapPin;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'User and access management';
+    protected static string|\UnitEnum|null $navigationGroup = 'Institutions and Access';
 
     protected static ?string $navigationLabel = 'Regional assignments';
 
@@ -30,7 +30,7 @@ class UserRegionAssignmentResource extends Resource
 
     protected static ?string $pluralModelLabel = 'regional assignments';
 
-    protected static ?int $navigationSort = 50;
+    protected static ?int $navigationSort = 40;
 
     public static function form(Schema $schema): Schema
     {

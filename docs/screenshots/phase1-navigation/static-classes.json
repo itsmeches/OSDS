@@ -1,0 +1,128 @@
+[
+    {
+        "file": "app\/Filament\/Pages\/CaseDemonstrationDocuments.php",
+        "class_loaded": true,
+        "group": "Demonstration Documents",
+        "order": 20,
+        "label": "Case-linked demonstration PDFs"
+    },
+    {
+        "file": "app\/Filament\/Pages\/DemonstrationDocuments.php",
+        "class_loaded": true,
+        "group": "Demonstration Documents",
+        "order": 30,
+        "label": "Unlinked layout previews"
+    },
+    {
+        "file": "app\/Filament\/Pages\/DownloadableForms.php",
+        "class_loaded": true,
+        "group": "Forms and Requirements",
+        "order": 40,
+        "label": "Download blank forms"
+    },
+    {
+        "file": "app\/Filament\/Pages\/IssuanceDefinitions.php",
+        "class_loaded": true,
+        "group": "Demonstration Documents",
+        "order": 10,
+        "label": "Issuance request definitions"
+    },
+    {
+        "file": "app\/Filament\/Pages\/Questionnaires.php",
+        "class_loaded": true,
+        "group": "Forms and Requirements",
+        "order": 10,
+        "label": "Application questionnaires"
+    },
+    {
+        "file": "app\/Filament\/Pages\/SyntheticApplicationIntake.php",
+        "class_loaded": true,
+        "group": "Applications and Reviews",
+        "order": 10,
+        "label": "Applications and decisions"
+    },
+    {
+        "file": "app\/Filament\/Pages\/SyntheticEvidenceReviews.php",
+        "class_loaded": true,
+        "group": "Applications and Reviews",
+        "order": 20,
+        "label": "Assigned evidence test reviews"
+    },
+    {
+        "file": "app\/Filament\/Resources\/ApplicantSandboxEligibilityGrants\/ApplicantSandboxEligibilityGrantResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 70,
+        "label": "Applicant sandbox eligibility"
+    },
+    {
+        "file": "app\/Filament\/Resources\/AuditEvents\/AuditEventResource.php",
+        "class_loaded": true,
+        "group": "Configuration and Audit",
+        "order": 10,
+        "label": "Audit history"
+    },
+    {
+        "file": "app\/Filament\/Resources\/ConfigurationReviewRequests\/ConfigurationReviewRequestResource.php",
+        "class_loaded": true,
+        "group": "Forms and Requirements",
+        "order": 20,
+        "label": "Questionnaire configuration reviews"
+    },
+    {
+        "file": "app\/Filament\/Resources\/InstitutionRepresentatives\/InstitutionRepresentativeResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 20,
+        "label": "Institution representatives"
+    },
+    {
+        "file": "app\/Filament\/Resources\/Institutions\/InstitutionResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 10,
+        "label": null
+    },
+    {
+        "file": "app\/Filament\/Resources\/PublicationManifests\/PublicationManifestResource.php",
+        "class_loaded": true,
+        "group": "Forms and Requirements",
+        "order": 30,
+        "label": "Published questionnaires"
+    },
+    {
+        "file": "app\/Filament\/Resources\/SyntheticApplicationReviewerAssignments\/SyntheticApplicationReviewerAssignmentResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 50,
+        "label": "Application reviewer assignments"
+    },
+    {
+        "file": "app\/Filament\/Resources\/SyntheticEvidenceReviewerAssignments\/SyntheticEvidenceReviewerAssignmentResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 60,
+        "label": "Evidence reviewer assignments"
+    },
+    {
+        "file": "app\/Filament\/Resources\/UserRegionAssignments\/UserRegionAssignmentResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 40,
+        "label": "Regional assignments"
+    },
+    {
+        "file": "app\/Filament\/Resources\/Users\/UserResource.php",
+        "class_loaded": true,
+        "group": "Institutions and Access",
+        "order": 30,
+        "label": null
+    },
+    {
+        "file": "app\/Providers\/Filament\/AdminPanelProvider.php",
+        "class_loaded": true,
+        "group": null,
+        "order": null,
+        "label": null
+    }
+]

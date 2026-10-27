@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import {chromium} from '@playwright/test';
+import {createHash} from 'node:crypto';
+const dir='docs/screenshots/b4-accessibility-remediation/notifications-before';
+const result=JSON.parse(fs.readFileSync(dir+'/results.json','utf8'));
+if(result.failure||result.checks.length!==8)throw Error('Complete raw diagnostic matrix required');
+const raw=result.checks.map(c=>({check:c,bytes:fs.readFileSync(dir+'/'+c.name+'-frames.json')}));
+const colors=[...new Set(raw.flatMap(r=>JSON.parse(r.bytes).flatMap(f=>[f.foreground,f.background])))];
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage();await page.goto('about:blank');
+const converted=await page.evaluate(values=>{const canvas=document.createElement('canvas');canvas.width=canvas.height=1;const context=canvas.getContext('2d',{willReadFrequently:true}),output={};for(const value of values){context.clearRect(0,0,1,1);context.fillStyle=value;context.fillRect(0,0,1,1);const [r,g,b,a]=context.getImageData(0,0,1,1).data;output[value]=[r,g,b,a/255];}return output;},colors);
+await browser.close();
+const mix=(fg,bg,a)=>fg.slice(0,3).map((v,i)=>v*a+bg[i]*(1-a));
+const luminance=c=>c.map(v=>{const n=v/255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;}).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);
+const checks=[];
+for(const {check,bytes} of raw){const frames=JSON.parse(bytes).map(frame=>{if(frame.backdrop.slice(0,3).some(v=>v<0||v>255))throw Error('Unresolved backdrop conversion');const f=converted[frame.foreground],b=converted[frame.background],effectiveForeground=mix(f,frame.backdrop,frame.ancestorOpacity*f[3]),effectiveBackground=mix(b,frame.backdrop,frame.ancestorOpacity*b[3]),l1=luminance(effectiveForeground),l2=luminance(effectiveBackground);return {...frame,effectiveForeground,effectiveBackground,contrast:(Math.max(l1,l2)+.05)/(Math.min(l1,l2)+.05),normalization:'Chrome canvas sRGB conversion of retained computed CSS colors'};});
+ const visible=frames.filter(f=>f.visibility==='visible'&&f.ancestorOpacity>0),low=visible.filter(f=>f.contrast<4.5),stable=visible.filter(f=>f.ancestorOpacity===1);
+ fs.writeFileSync(dir+'/'+check.name+'-normalized-frames.json',JSON.stringify(frames,null,2));checks.push({...check,source_sha256:createHash('sha256').update(bytes).digest('hex'),minimumContrast:Math.min(...visible.map(f=>f.contrast)),stableMinimum:Math.min(...stable.map(f=>f.contrast)),lowContrastFrames:low.length,lowClasses:[...new Set(low.map(f=>f.classes))]});
+}
+fs.writeFileSync(dir+'/normalized-results.json',JSON.stringify({note:'Initial numeric parser did not support OKLCH. Original files remain intact; only normalized results are valid for contrast conclusions.',converted,checks},null,2));console.log(JSON.stringify(checks));

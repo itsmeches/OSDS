@@ -1,0 +1,17 @@
+{
+  "mode": "correction",
+  "checks": [
+    {
+      "module": "registration",
+      "stage": "correction requested UI",
+      "status": "PASS"
+    },
+    {
+      "module": "acsa",
+      "stage": "correction requested UI",
+      "status": "PASS"
+    }
+  ],
+  "captures": [],
+  "errors": []
+}
