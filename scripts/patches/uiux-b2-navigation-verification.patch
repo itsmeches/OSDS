@@ -1,0 +1,35 @@
+--- a/scripts/verify-uiux-b2-attempt-06.mjs
++++ b/scripts/verify-uiux-b2-attempt-06.mjs
+@@ -80,5 +80,27 @@
+- mark('navigation-check-start');
+- await page.waitForURL(u=>u.origin===base&&u.pathname==='/admin',{waitUntil:'domcontentloaded'});
+- mark('navigation-check-complete');mark('auth-link-check-start');
+- await expect(page.getByRole('link',{name:'Case-linked demonstration PDFs',exact:true})).toBeVisible();
+- mark('auth-link-check-complete');
++ mark('navigation-check-start');
++ const atAdmin=()=>{try{const url=new URL(page.url());return url.origin===base&&url.pathname==='/admin';}catch{return false;}};
++ try{
++  await Promise.race([
++   expect.poll(()=>{if(readinessAborted)throw Error('Existing fatal event');return atAdmin();},{timeout:30000}).toBe(true),
++   failed,
++  ]);
++  if(readinessAborted)throw Error('Existing fatal event');
++ }catch{
++  result.verificationConditionFailure=readinessAborted?'EXISTING_FATAL_EVENT':'DESTINATION_CONDITION_FAILED';
++  throw Error('Destination verification blocked');
++ }
++ mark('navigation-check-complete');mark('auth-link-check-start');
++ try{
++  if(!atAdmin()){result.verificationConditionFailure='DESTINATION_CHANGED';throw Error('Destination changed');}
++  await Promise.race([
++   expect(page.getByRole('link',{name:'Case-linked demonstration PDFs',exact:true})).toBeVisible(),
++   failed,
++  ]);
++  if(readinessAborted)throw Error('Existing fatal event');
++  if(!atAdmin()){result.verificationConditionFailure='DESTINATION_CHANGED';throw Error('Destination changed');}
++ }catch{
++  if(readinessAborted)result.verificationConditionFailure='EXISTING_FATAL_EVENT';
++  else result.verificationConditionFailure??='AUTHORIZED_UI_CONDITION_FAILED';
++  throw Error('Authorized navigation verification blocked');
++ }
++ mark('auth-link-check-complete');

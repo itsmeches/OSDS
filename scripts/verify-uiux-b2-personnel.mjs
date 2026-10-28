@@ -17,22 +17,46 @@ const result={status:'BLOCKED',steps:[],errors:[]};
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const contexts=[];
 function inspect(stage){const out=execFileSync(php,[dir+'/Inspect-UiUxB2Personnel.php',stage],{encoding:'utf8'});const status=JSON.parse(out.trim());if(status.status!=='PASS')throw new Error('Inspection failed: '+stage);return JSON.parse(fs.readFileSync(dir+'/'+stage+'.json','utf8'));}
-async function idle(page){await page.waitForLoadState('networkidle');}
+let infrastructureFailure;
+let rejectInfrastructure;
+const infrastructure = new Promise((_,reject)=>{rejectInfrastructure=reject;});
+infrastructure.catch(()=>{});
+function failInfrastructure(message){
+ if(!infrastructureFailure){infrastructureFailure=new Error(message);result.errors.push(message);rejectInfrastructure(infrastructureFailure);}
+}
+async function idle(page){
+ await Promise.race([page.waitForLoadState('domcontentloaded'),infrastructure]);
+ if(infrastructureFailure)throw infrastructureFailure;
+}
 async function login(role){
  const context=await browser.newContext({viewport:{width:1440,height:1000}});contexts.push(context);
  let updatePath=null;
  await context.route('**/*',async route=>{
+  try{
   const req=route.request(),url=new URL(req.url());
   if(url.origin!==base)return route.abort();
   if(req.method()==='POST'){
-   if(url.pathname!==updatePath){result.errors.push('Blocked unexpected POST path: '+url.pathname);return route.abort();}
+   if(url.pathname!==updatePath){failInfrastructure('Blocked unexpected POST path: '+url.pathname);return route.abort();}
    const data=req.postDataJSON();
-   for(const component of data.components??[]){for(const call of component.calls??[]){if(!['authenticate','saveOffice','createPersonnel','advance','newOffice','$refresh'].includes(call.method)){result.errors.push('Blocked Livewire action: '+call.method);return route.abort();}}}
+   if(!Array.isArray(data.components)||!data.components.length){failInfrastructure('Invalid Livewire envelope');return route.abort();}
+   for(const component of data.components){
+    let snapshot;try{snapshot=JSON.parse(component.snapshot);}catch{failInfrastructure('Invalid component snapshot');return route.abort();}
+    for(const call of component.calls??[]){
+     // Only the observed session-notification pull, never arbitrary dispatch payloads.
+     const notificationPull=snapshot.memo?.name==='Filament\\Livewire\\Notifications'
+      && call.method==='__dispatch' && JSON.stringify(call.params)===JSON.stringify(['notificationsSent',[]])
+      && Object.keys(component.updates??{}).length===0;
+     if(!notificationPull&&!['authenticate','saveOffice','createPersonnel','advance','newOffice','$refresh'].includes(call.method)){
+      failInfrastructure('Blocked Livewire action: '+snapshot.memo?.name+' / '+call.method);return route.abort();
+     }
+    }
+   }
   }
   if(req.method()==='GET'&&url.pathname.startsWith('/admin/')&&!['/admin/login','/admin/demonstration-documents','/admin/case-demonstration-documents'].includes(url.pathname))return route.abort();
   return route.continue();
+  }catch{failInfrastructure('Request filter could not validate request');return route.abort();}
  });
- const page=await context.newPage();page.setDefaultTimeout(30000);page.on('pageerror',e=>result.errors.push(e.message));
+ const page=await context.newPage();page.setDefaultTimeout(30000);page.on('pageerror',e=>failInfrastructure(e.message));
  await page.goto(base+'/admin/login');await idle(page);
  const endpoint=new URL(await page.locator('script[data-update-uri]').getAttribute('data-update-uri'),base);
  if(endpoint.origin!==base||!/^\/livewire-[a-f0-9]+\/update$/.test(endpoint.pathname))throw new Error('Unexpected rendered Livewire endpoint');
@@ -40,12 +64,12 @@ async function login(role){
  await page.locator('input[type=email]').fill(credentials[role].email);
  await page.locator('input[type=password]').fill(credentials[role].password);
  await page.getByRole('button',{name:'Sign in',exact:true}).click();
- await page.waitForURL(u=>!u.pathname.endsWith('/login'));await idle(page);
+ await Promise.race([page.waitForURL(u=>!u.pathname.endsWith('/login')),infrastructure]);await idle(page);
  result.steps.push({action:'real login',role,status:'PASS'});
  await context.tracing.start({screenshots:true,snapshots:true});
  return {page,context,role};
 }
-try{
+async function workflow(){
  const author=await login('osds');const page=author.page;
  await page.goto(base+'/admin/demonstration-documents');await idle(page);
  const pageName='App\\Filament\\Pages\\DemonstrationDocuments';
@@ -97,7 +121,9 @@ try{
  await review.screenshot({path:dir+'/browser-attempt-01/published.png',fullPage:true});
  if(result.errors.length)throw new Error('Uncaught browser errors recorded');
  result.status='PASS';
-}catch(error){let message=error.message;for(const c of Object.values(credentials)){message=message.replaceAll(c.password,'[REDACTED]');}result.error=message;}
+}
+try{await Promise.race([workflow(),infrastructure]);}
+catch(error){let message=error.message;for(const c of Object.values(credentials)){message=message.replaceAll(c.password,'[REDACTED]');}result.error=message;}
 finally{for(let i=0;i<contexts.length;i++){try{await contexts[i].tracing.stop({path:dir+'/browser-attempt-01/context-'+i+'.zip'});}catch{}await contexts[i].close();}await browser.close();fs.writeFileSync(dir+'/browser-attempt-01/results.json',JSON.stringify(result,null,2));}
 console.log(JSON.stringify({status:result.status,steps:result.steps,error:result.error??null}));
 if(result.status!=='PASS')process.exitCode=1;

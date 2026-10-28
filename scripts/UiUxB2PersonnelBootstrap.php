@@ -7,13 +7,32 @@ use Illuminate\Database\Connectors\PostgresConnector;
 use Illuminate\Database\PostgresConnection;
 
 $root = dirname(__DIR__);
-$dir = $root.'/storage/app/private/uiux-consolidated-acceptance/gate-b2-ui-personnel';
+$dir = $root.'/storage/app/private/uiux-consolidated-acceptance/gate-b2-reviewer-only/attempt-05';
+// A future authorized launcher must reserve this fixed directory first.
+if (! is_dir($dir)) {
+    throw new RuntimeException('Reserved reviewer-only evidence directory required');
+}
+$reservation = json_decode(file_get_contents($dir.'/reserved.json'), true, flags: JSON_THROW_ON_ERROR);
+$sessionPath = realpath($dir.'/sessions');
+if (($reservation['attempt'] ?? null) !== 'b2-reviewer-only-attempt-05' || $sessionPath === false
+    || ! is_writable($sessionPath) || basename($sessionPath) !== 'sessions' || realpath(dirname($sessionPath)) !== realpath($dir)
+    || $sessionPath !== realpath($reservation['sessions'] ?? '')) {
+    throw new RuntimeException('Reserved writable attempt-local sessions required');
+}
+define('UIUX_B2_SESSION_DIRECTORY', $sessionPath);
+define('UIUX_B2_IDENTITY_LOG', $dir.'/identities.jsonl');
 require $root.'/vendor/autoload.php';
 // Reuse fixed guards and read-verification functions, never the preparation CLI.
 $source = file_get_contents($root.'/scripts/Prepare-UiUxBrowser.php');
 $uses = substr($source, strpos($source, 'use App\\Models'), strpos($source, 'if ($argc') - strpos($source, 'use App\\Models'));
 $start = strpos($source, 'function b2Target');
-eval($uses.substr($source, $start, strpos($source, '$pdo = null;') - $start));
+$functions = substr($source, $start, strpos($source, '$pdo = null;') - $start);
+// Bind the logger locally; Laravel includes must not redirect a mutable global.
+if (substr_count($functions, 'global $dir;') !== 1) {
+    throw new RuntimeException('Unexpected identity logger source');
+}
+$functions = str_replace('global $dir;', '$dir = dirname(UIUX_B2_IDENTITY_LOG);', $functions);
+eval($uses.$functions);
 if (is_file($root.'/bootstrap/cache/config.php')) {
     throw new RuntimeException('Cached configuration prohibited');
 }
@@ -61,4 +80,4 @@ foreach (['sqlite', 'mysql', 'mariadb', 'sqlsrv'] as $driver) {
 }
 $app = require $root.'/bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
-config(['session.files' => $dir.'/sessions']);
+config(['session.files' => UIUX_B2_SESSION_DIRECTORY]);
