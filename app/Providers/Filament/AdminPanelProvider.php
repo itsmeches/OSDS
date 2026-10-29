@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\AvatarProviders\LocalAvatarProvider;
 use App\Filament\Pages\Dashboard;
 use App\Filament\Resources\ApplicantSandboxEligibilityGrants\Pages\ListApplicantSandboxEligibilityGrants;
 use App\Filament\Resources\AuditEvents\Pages\ListAuditEvents;
@@ -58,6 +59,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('CHED OSDS Management Platform')
+            ->defaultAvatarProvider(LocalAvatarProvider::class)
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->darkMode()
             ->themeSwitcher()

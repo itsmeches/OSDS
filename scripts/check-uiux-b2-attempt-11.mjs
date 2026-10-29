@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+let checks=0;
+const eq=(a,b)=>{assert.deepEqual(a,b);checks++;};
+const read=p=>fs.readFileSync(p,'utf8');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const rename=s=>s.replaceAll('attempt-10','attempt-11').replaceAll('Attempt10','Attempt11').replaceAll('Attempt 10','Attempt 11').replaceAll('UIUX_B210','UIUX_B211').replaceAll('b210','b211');
+const pins=JSON.parse(read('scripts/uiux-b2-attempt-11-pins.json'));
+eq(pins.sources.length,24);
+for(const pin of pins.sources)eq(hash(pin.path),pin.sha256);
+eq(hash('scripts/uiux-b2-shared-dashboard-readiness.mjs'),'49f91c5697e392a85198c8c3ba423e5927765bccb6e131772ac3cf57c4b6861a');
+eq(fs.existsSync(pins.path),false);
+for(const file of ['Run-UiUxB2Attempt10.mjs','UiUxB2Attempt10Bootstrap.php','Inspect-UiUxB2Attempt10.php','uiux-b2-attempt-10-server.php'])eq(read('scripts/'+rename(file)),rename(read('scripts/'+file)));
+const old=rename(read('scripts/verify-uiux-b2-attempt-10.mjs')),driver=read('scripts/verify-uiux-b2-attempt-11.mjs');
+eq(driver.slice(driver.indexOf('async function workflow(){'),driver.indexOf(" mark('navigation-check-start');")),old.slice(old.indexOf('async function workflow(){'),old.indexOf(" mark('navigation-check-start');")));
+eq(driver.slice(driver.indexOf(" if(readinessAborted)throw Error('Existing fatal event');",driver.indexOf('verifiedNavigation=await')) ,driver.indexOf('\ntry{await Promise.race([workflow(),failed])')),old.slice(old.indexOf(" if(readinessAborted)throw Error('Existing fatal event');",old.indexOf(' const verifiedNavigation=await')),old.indexOf('\ntry{await Promise.race([workflow(),failed])')));
+eq((driver.match(/await ready\(\)/g)||[]).length,2);
+eq((driver.match(/\.fill\(credentials.email\)/g)||[]).length,1);
+eq((driver.match(/\.fill\(credentials.password\)/g)||[]).length,1);
+eq((driver.match(/name:'Sign in',exact:true}\)\.click\(\)/g)||[]).length,1);
+eq(driver.includes('expect.poll'),false);
+eq(driver.includes('await verifiedNavigation.dispose()'),true);
+eq(driver.indexOf('verifiedNavigation=await navigationVerificationPending')<driver.indexOf('loginState.authenticationConfirmed=true'),true);
+eq(driver.includes("mark('navigation-check-start');\n navigationVerificationPending=verifyAttempt11Navigation"),true);
+eq(driver.includes('if(navigationVerificationPending)await navigationVerificationPending.catch(()=>{});'),true);
+const provenance=pins.approvedSharedReadiness.validation;
+eq(hash(provenance.path),provenance.sha256);
+const validation=JSON.parse(read(provenance.path));eq(validation.status,'PASS');eq(validation.cases.length,22);eq(validation.cases.every(c=>c.status==='PASS'),true);
+// Execute the existing controlled orchestration cases through the actual new
+// adapter. Dependencies remain synthetic; no protected driver is imported.
+let suite=read('scripts/check-uiux-b2-shared-dashboard-readiness.mjs');
+suite=suite.replace("import {createSharedDashboardBudget, verifySharedDashboardCandidate} from './uiux-b2-shared-dashboard-readiness.mjs';",`import {createSharedDashboardBudget} from '${new URL('./uiux-b2-shared-dashboard-readiness.mjs',import.meta.url).href}';\nimport {verifyAttempt11Navigation as verifySharedDashboardCandidate} from '${new URL('./uiux-b2-attempt-11-navigation.mjs',import.meta.url).href}';`);
+suite=suite.replace('const result={},records=[];', 'const result={},records=[],rootPhases=[];');
+suite=suite.replace('hasFailed:()=>fatal,result,clock:', "hasFailed:()=>fatal,result,mark:()=>{},observeRoots:async phase=>{rootPhases.push(phase);},clock:");
+suite=suite.replace('equal(auth,spec===', "equal(new Set(rootPhases).size,rootPhases.length);equal(rootPhases.includes('AFTER_ADMIN_DESTINATION'),true);equal(rootPhases.includes('DASHBOARD_FAILURE'),['LOGIN','MALFORMED','DUPLICATE','HEADING_HIDDEN','FATAL','DESTINATION','DOCUMENT','EXPIRED'].includes(spec));\n equal(auth,spec===");
+await import('data:text/javascript;base64,'+Buffer.from(suite).toString('base64'));
+console.log(JSON.stringify({packageChecks:checks,adapterOrchestrationCases:11}));

@@ -7,6 +7,7 @@
 *.php diff=php
 
 # Preserve checksum-bearing rehearsal evidence byte-for-byte.
+scripts/uiux-b2-attempt-12-pins.json -text whitespace=cr-at-eol
 docs/screenshots/b3-demonstration-pdfs/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/screenshots/b4-end-to-end/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 

@@ -1,0 +1,170 @@
+{
+    "attempt":  "b2-reviewer-only-attempt-12",
+    "scope":  "login-and-read-only-reviewer-navigation; lifecycle forbidden",
+    "target":  {
+                   "driver":  "pgsql",
+                   "host":  "127.0.0.1",
+                   "port":  55432,
+                   "database":  "osds_ui_browser_test"
+               },
+    "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-reviewer-only/attempt-12",
+    "sources":  [
+                    {
+                        "path":  "scripts/Run-UiUxB2Attempt12.mjs",
+                        "sha256":  "2351f21191e3fc45a6c39120837c1641d7ddc9045869c0972d3ac439cb4be2f4"
+                    },
+                    {
+                        "path":  "scripts/UiUxB2Attempt12Bootstrap.php",
+                        "sha256":  "23fdee28796b00e1af0fe3db325eb80a31b679dd10c12f3103b014c51decceb5"
+                    },
+                    {
+                        "path":  "scripts/Inspect-UiUxB2Attempt12.php",
+                        "sha256":  "fc7113883dc96d701728f68dca186367e3e1a0b44e951d4767903077c47736cf"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-attempt-12-server.php",
+                        "sha256":  "422c6da2745696a4c532a5da46fb2c50237922cd91a45ab05c170b3019279622"
+                    },
+                    {
+                        "path":  "scripts/verify-uiux-b2-attempt-12.mjs",
+                        "sha256":  "b9bbb63c07bcafc8bcd5f5f95f44fb7dce32f22cfffd5602828c5a70a4e84dfe"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-login-readiness.mjs",
+                        "sha256":  "55b4b6a6b82cbbe7d71554fb0730542463583572cfff552b0b22e5cf2a9117a0"
+                    },
+                    {
+                        "path":  "scripts/verify-uiux-b2-reviewer-only.mjs",
+                        "sha256":  "ba9d4b03d1c6c8c16708c959735484a063432e9acaca6efb5a6d2374b5db15ad"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-reviewer-policy.mjs",
+                        "sha256":  "46f4c674034ac598fe3b8b598f780b071304c4c52830d39db5665595b2ccbc31"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-error-diagnostics.mjs",
+                        "sha256":  "9cf7a4504b72f4a85a3a663dbc297bed51b65a584f7a3ca2f5e30d5c4eff4b6d"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-attempt-files.mjs",
+                        "sha256":  "cc9e81c64bb52e79987ef4cb6659dc8a616366ab519e632a1076d296a8b5eb7c"
+                    },
+                    {
+                        "path":  "scripts/Prepare-UiUxBrowser.php",
+                        "sha256":  "4821806794f9f33ebe22b02fa9a2e6f91eceab0ee1eeaab136448c34cb827be8"
+                    },
+                    {
+                        "path":  "scripts/Run-UiUxAcceptance.php",
+                        "sha256":  "8bf4eaf66be2bc60f81b6bc1fc4b6c4af2d006f87bb31d3d292fed22f4e53d1e"
+                    },
+                    {
+                        "path":  "vendor/composer/installed.json",
+                        "sha256":  "8533ba8b45d92629a8ad471fbe506ad0267b6e97613c979c7b95d4b6bd07b4e0"
+                    },
+                    {
+                        "path":  "vendor/livewire/livewire/dist/livewire.js",
+                        "sha256":  "fa03bcdfae501c8ef5c93e525ce0f5a658929accd98758651203c1e242dab3d3"
+                    },
+                    {
+                        "path":  "vendor/filament/support/dist/index.js",
+                        "sha256":  "31c6fb14c605144dbce0235ee32879d27ac78ddb52a4e5ddc74b12ada548acb3"
+                    },
+                    {
+                        "path":  "vendor/filament/forms/src/Components/TextInput.php",
+                        "sha256":  "53c885e033ea8ba24dc8cc3680e3bef3bab0f9bbb77a39a75641b96fda672776"
+                    },
+                    {
+                        "path":  "vendor/filament/filament/src/Auth/Pages/Login.php",
+                        "sha256":  "944120c5edce2c1b1e2f8fc8c5353a919a270cbeb29252198472aa1df43341ab"
+                    },
+                    {
+                        "path":  "public/js/filament/support/support.js",
+                        "sha256":  "31c6fb14c605144dbce0235ee32879d27ac78ddb52a4e5ddc74b12ada548acb3"
+                    },
+                    {
+                        "path":  "public/js/filament/forms/components/text-input/password-reveal.js",
+                        "sha256":  "3ec263cf243077557155d8ceddc0e1ec3b7073419cb441ae79ea37e5506c8cc0"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-sidebar-navigation.mjs",
+                        "sha256":  "336a5d26c4afc4ce7738fda28eb9d68160e49be962edfba84a7db1093cca5692"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-attempt-12-navigation.mjs",
+                        "sha256":  "2436e68736854d06d3936d9658041f5a8f0f300a79462b10f1667069946757d8"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-dashboard-diagnostics-candidate.mjs",
+                        "sha256":  "42090bfca5026a5a8461d825d7743a57fdd736e9eb1b7d142e68bfbf2cb8ae8d"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-root-availability.mjs",
+                        "sha256":  "68cc4348d7666fbe6c88b328b8972c84c0c5255c4c273c684f4fa55e3215fa4c"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-shared-dashboard-readiness.mjs",
+                        "sha256":  "49f91c5697e392a85198c8c3ba423e5927765bccb6e131772ac3cf57c4b6861a"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-first-fatal-candidate.mjs",
+                        "sha256":  "7f53af6bd54f80ad92b5297d5a81d517f49905ac365bde38806dff544e17c484"
+                    },
+                    {
+                        "path":  "scripts/uiux-b2-attempt-12-fatal.mjs",
+                        "sha256":  "5374e4d5ce33a590555f98690c58bade181c396adc7a8aead22b8bc2904e2fa1"
+                    }
+                ],
+    "approvedNavigation":  {
+                               "baselineSha256":  "5f80a44f898fd39bbca4521b4c0ba5e3f2618a66f01c033467fc17a34281d708",
+                               "candidateSha256":  "bf018314155537fd6b3b21340ac39901210a63d29ece192e5e11dfd4c9027a26",
+                               "blockSha256":  "75ef45179c393befd489cc3ca7b062f538e98c6b478881ad35c26df20f3c1e51",
+                               "patchSha256":  "ecc5de2d5ca02eea4acbe35ad519194aa383cf15cd818c0f36f519161aca7cb5",
+                               "validations":  [
+                                                   {
+                                                       "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-navigation-disposable-validation/browser-validation-01/result.json",
+                                                       "sha256":  "12bde28262b8561c0e8d6f845ba1261abfef50127787f957a7c56d8ec5b26289"
+                                                   },
+                                                   {
+                                                       "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-navigation-disposable-validation/browser-validation-02/result.json",
+                                                       "sha256":  "46c8cb6c4d03b7e2656484c25eb8f90dfbcae9c7a2f6a5adbec6b82221fed10a"
+                                                   }
+                                               ]
+                           },
+    "approvedSidebar":  {
+                            "baseline":  "c431dc5541890f710a250b8f635d953795932eb91954ae7a4a2bbc633c7f6fb3",
+                            "candidate":  "0222faf0daf5dacf06dfa09dd6be4596eff25646592975aa62c54dbdba5fb9ba",
+                            "helper":  "336a5d26c4afc4ce7738fda28eb9d68160e49be962edfba84a7db1093cca5692",
+                            "validation":  {
+                                               "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-sidebar-validation/browser-validation-01/result.json",
+                                               "sha256":  "f9153fc5c818cfd798f0b2406e7674bd8f7732a8233329ec523b8cfff5c7c31c"
+                                           }
+                        },
+    "approvedDashboard":  {
+                              "candidateSha256":  "42090bfca5026a5a8461d825d7743a57fdd736e9eb1b7d142e68bfbf2cb8ae8d",
+                              "validation":  {
+                                                 "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-dashboard-diagnostics-validation/browser-validation-02/result.json",
+                                                 "sha256":  "5ab1bbcfedf5d3cff1d9e720d62a616d89a5589953d423d07c91b3a618a15984"
+                                             }
+                          },
+    "approvedRootAvailability":  {
+                                     "sha256":  "68cc4348d7666fbe6c88b328b8972c84c0c5255c4c273c684f4fa55e3215fa4c",
+                                     "validation":  {
+                                                        "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-root-availability-validation/browser-validation-01/result.json",
+                                                        "sha256":  "f0b180c0bbae9fe3e5392dc584abe599b12dd12483146fb34105db57fa86ac6c"
+                                                    }
+                                 },
+    "approvedSharedReadiness":  {
+                                    "sha256":  "49f91c5697e392a85198c8c3ba423e5927765bccb6e131772ac3cf57c4b6861a",
+                                    "validation":  {
+                                                       "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-shared-dashboard-validation/browser-validation-02/result.json",
+                                                       "sha256":  "a95b4c732ad2c84bf71914d4676c596f1667ee422d7e4ffbcf9c062455c076c8"
+                                                   }
+                                },
+    "approvedFirstFatal":  {
+                               "sha256":  "7f53af6bd54f80ad92b5297d5a81d517f49905ac365bde38806dff544e17c484",
+                               "validation":  {
+                                                  "path":  "storage/app/private/uiux-consolidated-acceptance/gate-b2-first-fatal-validation/browser-validation-01/result.json",
+                                                  "sha256":  "5db5e2222ec6cbd2bde1bec3ec5e0db5a09504eda25726015dd7b1eed7358e6e"
+                                              }
+                           }
+}
